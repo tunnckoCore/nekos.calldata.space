@@ -88,231 +88,248 @@ export function GalleryFilters() {
 
   return (
     <div className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex flex-col gap-3 px-4 py-3">
-        {/* Search Input with Loading State */}
-        <InputGroup className="w-full">
-          <InputGroupInput
-            ref={inputRef}
-            autoFocus
-            placeholder="Search by name or ID..."
-            value={filters.search}
-            onChange={(e) => handleSetFilters("search", e.target.value)}
-          />
-          {isPending && (
-            <InputGroupAddon align="inline-end">
-              <Spinner />
-            </InputGroupAddon>
-          )}
-          {!isPending && (
-            <InputGroupAddon align="inline-end">
-              <KbdGroup>
-                <Kbd>⌘</Kbd>
-                <Kbd>K</Kbd>
-              </KbdGroup>
-            </InputGroupAddon>
-          )}
-        </InputGroup>
+      <div className="px-4 py-3">
+        {/* All Filters on One Line */}
+        <div className="flex items-center gap-3">
+          {/* Search Input with Loading State */}
+          <InputGroup className="flex-1 min-w-48">
+            <InputGroupInput
+              ref={inputRef}
+              autoFocus
+              placeholder="Search by name or ID..."
+              value={filters.search}
+              onChange={(e) => handleSetFilters("search", e.target.value)}
+            />
+            {isPending && (
+              <InputGroupAddon align="inline-end">
+                <Spinner />
+              </InputGroupAddon>
+            )}
+            {!isPending && (
+              <InputGroupAddon align="inline-end">
+                <KbdGroup>
+                  <Kbd>⌘</Kbd>
+                  <Kbd>K</Kbd>
+                </KbdGroup>
+              </InputGroupAddon>
+            )}
+          </InputGroup>
 
-        {/* Filters Row */}
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Trait Selects Group */}
-          <div className="flex flex-wrap items-center gap-2">
+          {/* Trait Selects Group - Wrapped in InputGroup */}
+          <InputGroup className="flex-none flex w-auto">
             {/* Cat Color */}
-            <Select
-              value={filters.cat || "all"}
-              onValueChange={(val) =>
-                handleSetFilters("cat", val === "all" ? "" : val)
-              }
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-28 h-9 cursor-pointer">
-                <SelectValue placeholder="Cat" />
-              </SelectTrigger>
-              <SelectContent className="max-h-64">
-                <SelectItem value="all" className="cursor-pointer">
-                  All Cats
-                </SelectItem>
-                {traitOptions.cats.map((option) => (
-                  <SelectItem
-                    key={option.value}
-                    value={option.value}
-                    className="cursor-pointer"
-                  >
-                    {option.value} ({option.count})
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.cat || "all"}
+                onValueChange={(val) =>
+                  handleSetFilters("cat", val === "all" ? "" : val)
+                }
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-28 h-9 cursor-pointer">
+                  <SelectValue placeholder="Cat" />
+                </SelectTrigger>
+                <SelectContent className="max-h-64">
+                  <SelectItem value="all" className="cursor-pointer">
+                    All Cats
                   </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                  {traitOptions.cats.map((option) => (
+                    <SelectItem
+                      key={option.value}
+                      value={option.value}
+                      className="cursor-pointer"
+                    >
+                      {option.value} ({option.count})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Eyes */}
-            <Select
-              value={filters.eyes || "all"}
-              onValueChange={(val) =>
-                handleSetFilters("eyes", val === "all" ? "" : val)
-              }
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-28 h-9 cursor-pointer">
-                <SelectValue placeholder="Eyes" />
-              </SelectTrigger>
-              <SelectContent className="max-h-64">
-                <SelectItem value="all" className="cursor-pointer">
-                  All Eyes
-                </SelectItem>
-                {traitOptions.eyes.map((option) => (
-                  <SelectItem
-                    key={option.value}
-                    value={option.value}
-                    className="cursor-pointer"
-                  >
-                    {option.value} ({option.count})
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.eyes || "all"}
+                onValueChange={(val) =>
+                  handleSetFilters("eyes", val === "all" ? "" : val)
+                }
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-28 h-9 cursor-pointer">
+                  <SelectValue placeholder="Eyes" />
+                </SelectTrigger>
+                <SelectContent className="max-h-64">
+                  <SelectItem value="all" className="cursor-pointer">
+                    All Eyes
                   </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                  {traitOptions.eyes.map((option) => (
+                    <SelectItem
+                      key={option.value}
+                      value={option.value}
+                      className="cursor-pointer"
+                    >
+                      {option.value} ({option.count})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Background */}
-            <Select
-              value={filters.background || "all"}
-              onValueChange={(val) =>
-                handleSetFilters("background", val === "all" ? "" : val)
-              }
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-28 h-9 cursor-pointer">
-                <SelectValue placeholder="BG" />
-              </SelectTrigger>
-              <SelectContent className="max-h-64">
-                <SelectItem value="all" className="cursor-pointer">
-                  All BG
-                </SelectItem>
-                {traitOptions.backgrounds.map((option) => (
-                  <SelectItem
-                    key={option.value}
-                    value={option.value}
-                    className="cursor-pointer"
-                  >
-                    {option.value} ({option.count})
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.background || "all"}
+                onValueChange={(val) =>
+                  handleSetFilters("background", val === "all" ? "" : val)
+                }
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-28 h-9 cursor-pointer">
+                  <SelectValue placeholder="BG" />
+                </SelectTrigger>
+                <SelectContent className="max-h-64">
+                  <SelectItem value="all" className="cursor-pointer">
+                    All BG
                   </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                  {traitOptions.backgrounds.map((option) => (
+                    <SelectItem
+                      key={option.value}
+                      value={option.value}
+                      className="cursor-pointer"
+                    >
+                      {option.value} ({option.count})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Generation */}
-            <Select
-              value={filters.gen || "all"}
-              onValueChange={(val) =>
-                handleSetFilters("gen", val === "all" ? "" : val)
-              }
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-28 h-9 cursor-pointer">
-                <SelectValue placeholder="Gen" />
-              </SelectTrigger>
-              <SelectContent className="max-h-64">
-                <SelectItem value="all" className="cursor-pointer">
-                  All Gens
-                </SelectItem>
-                {traitOptions.gens.map((option) => (
-                  <SelectItem
-                    key={option.value}
-                    value={option.value}
-                    className="cursor-pointer"
-                  >
-                    {option.value} ({option.count})
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.gen || "all"}
+                onValueChange={(val) =>
+                  handleSetFilters("gen", val === "all" ? "" : val)
+                }
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-28 h-9 cursor-pointer">
+                  <SelectValue placeholder="Gen" />
+                </SelectTrigger>
+                <SelectContent className="max-h-64">
+                  <SelectItem value="all" className="cursor-pointer">
+                    All Gens
                   </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                  {traitOptions.gens.map((option) => (
+                    <SelectItem
+                      key={option.value}
+                      value={option.value}
+                      className="cursor-pointer"
+                    >
+                      {option.value} ({option.count})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Cursor */}
-            <Select
-              value={filters.cursor || "all"}
-              onValueChange={(val) =>
-                handleSetFilters("cursor", val === "all" ? "" : val)
-              }
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-28 h-9 cursor-pointer">
-                <SelectValue placeholder="Cursor" />
-              </SelectTrigger>
-              <SelectContent className="max-h-64">
-                <SelectItem value="all" className="cursor-pointer">
-                  All Cursors
-                </SelectItem>
-                {traitOptions.cursors.map((option) => (
-                  <SelectItem
-                    key={option.value}
-                    value={option.value}
-                    className="cursor-pointer"
-                  >
-                    {option.value} ({option.count})
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.cursor || "all"}
+                onValueChange={(val) =>
+                  handleSetFilters("cursor", val === "all" ? "" : val)
+                }
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-28 h-9 cursor-pointer">
+                  <SelectValue placeholder="Cursor" />
+                </SelectTrigger>
+                <SelectContent className="max-h-64">
+                  <SelectItem value="all" className="cursor-pointer">
+                    All Cursors
                   </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                  {traitOptions.cursors.map((option) => (
+                    <SelectItem
+                      key={option.value}
+                      value={option.value}
+                      className="cursor-pointer"
+                    >
+                      {option.value} ({option.count})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Year */}
-            <Select
-              value={filters.year || "all"}
-              onValueChange={(val) =>
-                handleSetFilters("year", val === "all" ? "" : val)
-              }
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-28 h-9 cursor-pointer">
-                <SelectValue placeholder="Year" />
-              </SelectTrigger>
-              <SelectContent className="max-h-64">
-                <SelectItem value="all" className="cursor-pointer">
-                  All Years
-                </SelectItem>
-                {traitOptions.years.map((option) => (
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.year || "all"}
+                onValueChange={(val) =>
+                  handleSetFilters("year", val === "all" ? "" : val)
+                }
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-28 h-9 cursor-pointer">
+                  <SelectValue placeholder="Year" />
+                </SelectTrigger>
+                <SelectContent className="max-h-64">
+                  <SelectItem value="all" className="cursor-pointer">
+                    All Years
+                  </SelectItem>
+                  {traitOptions.years.map((option) => (
+                    <SelectItem
+                      key={option.value}
+                      value={option.value}
+                      className="cursor-pointer"
+                    >
+                      {option.value} ({option.count})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </InputGroup>
+
+          {/* Sort, Order and Clear Group - Wrapped in InputGroup */}
+          <InputGroup className="flex-none flex w-auto">
+            {/* Sort By */}
+            <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+              <Select
+                value={filters.sort}
+                onValueChange={(val) => handleSetFilters("sort", val)}
+                disabled={isPending}
+              >
+                <SelectTrigger className="w-32 h-9 cursor-pointer">
+                  <SelectValue placeholder="Sort" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="created_at" className="cursor-pointer">
+                    Created At
+                  </SelectItem>
+                  <SelectItem value="block_number" className="cursor-pointer">
+                    Block
+                  </SelectItem>
                   <SelectItem
-                    key={option.value}
-                    value={option.value}
+                    value="transaction_fee"
                     className="cursor-pointer"
                   >
-                    {option.value} ({option.count})
+                    Fee
                   </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          {/* Sort and Clear Group */}
-          <div className="flex items-center gap-2 ml-auto">
-            {/* Sort By */}
-            <Select
-              value={filters.sort}
-              onValueChange={(val) => handleSetFilters("sort", val)}
-              disabled={isPending}
-            >
-              <SelectTrigger className="w-32 h-9 cursor-pointer">
-                <SelectValue placeholder="Sort" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="created_at" className="cursor-pointer">
-                  Created At
-                </SelectItem>
-                <SelectItem value="block_number" className="cursor-pointer">
-                  Block
-                </SelectItem>
-                <SelectItem value="transaction_fee" className="cursor-pointer">
-                  Fee
-                </SelectItem>
-                <SelectItem
-                  value="transaction_index"
-                  className="cursor-pointer"
-                >
-                  Index
-                </SelectItem>
-              </SelectContent>
-            </Select>
+                  <SelectItem
+                    value="transaction_index"
+                    className="cursor-pointer"
+                  >
+                    Index
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Order Toggle */}
             <Button
-              variant="outline"
+              variant="ghost"
               size="sm"
               onClick={() =>
                 handleSetFilters(
@@ -321,7 +338,7 @@ export function GalleryFilters() {
                 )
               }
               disabled={isPending}
-              className="h-9 gap-2"
+              className="h-9 gap-2 rounded-none border-0 shadow-none"
             >
               {filters.order === "asc" ? (
                 <ArrowUp className="h-4 w-4" />
@@ -333,11 +350,11 @@ export function GalleryFilters() {
 
             {/* Clear All Button */}
             <Button
-              variant={isFiltered ? "default" : "outline"}
+              variant="ghost"
               size="sm"
               onClick={handleClearAll}
               disabled={isPending || !isFiltered}
-              className="h-9 gap-2"
+              className="h-9 gap-2 rounded-none border-0 shadow-none"
             >
               {isPending ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -346,7 +363,7 @@ export function GalleryFilters() {
               )}
               Clear
             </Button>
-          </div>
+          </InputGroup>
         </div>
       </div>
     </div>

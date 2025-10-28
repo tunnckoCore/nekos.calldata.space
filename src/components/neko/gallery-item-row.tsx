@@ -8,8 +8,8 @@ interface GalleryItemRowProps {
 }
 
 export function GalleryItemRow({ item }: GalleryItemRowProps) {
-  const cursorItem = allCursors.find((c) => c.name === item.traits.cursor);
-  const cursorEmoji = cursorItem ? cursorItem.emoji : "✨";
+  const cursorItem = allCursors.find((c) => c.name === item.traits.cursor)!;
+  const cursorEmoji = cursorItem.emoji;
 
   return (
     <div className="relative mb-0 flex w-full flex-col flex-wrap gap-0 lg:flex-1">
@@ -17,7 +17,6 @@ export function GalleryItemRow({ item }: GalleryItemRowProps) {
         <div
           className="flex w-full xs:border-none p-2 lg:w-1/2 lg:pr-6"
           data-cat-color={item.traits.cat}
-          data-cat-trait={item.traits.cat}
           style={{ backgroundColor: item.traits.cat }}
         >
           <div className="flex w-full">
