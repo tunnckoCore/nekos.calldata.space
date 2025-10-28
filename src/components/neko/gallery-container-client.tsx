@@ -3,8 +3,8 @@
 import { useNekoGallery, useAllNekos } from "@/lib/queries";
 import { useMemo, useEffect, useRef } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { useRouter } from "next/navigation";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
+import { GalleryItemRow } from "./gallery-item-row";
 
 interface GalleryContainerClientProps {
   filters: GalleryFilters;
@@ -13,7 +13,6 @@ interface GalleryContainerClientProps {
 export function GalleryContainerClient({
   filters,
 }: GalleryContainerClientProps) {
-  const router = useRouter();
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
 
   // Fetch paginated gallery data with infinite scroll
@@ -119,30 +118,9 @@ export function GalleryContainerClient({
                   data-index={virtualItem.index}
                   key={virtualItem.key}
                   ref={virtualizer.measureElement}
-                  className="border-b border-border/50 p-4 last:border-b-0 hover:bg-card/80 transition-colors"
+                  className="border-b border-border/50 last:border-b-0"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{item.name}</p>
-                      <p className="text-sm text-muted-foreground truncate">
-                        ID: {item.id}
-                      </p>
-                    </div>
-                    <div className="flex gap-2 ml-4 flex-shrink-0">
-                      <span
-                        className="inline-block h-4 w-4 rounded-full flex-shrink-0"
-                        style={{
-                          backgroundColor: item.traits.background,
-                        }}
-                        title={item.traits.background}
-                      />
-                      <span
-                        className="inline-block h-4 w-4 rounded-full flex-shrink-0"
-                        style={{ backgroundColor: item.traits.cat }}
-                        title={item.traits.cat}
-                      />
-                    </div>
-                  </div>
+                  <GalleryItemRow item={item} />
                 </div>
               );
             })}
