@@ -12,8 +12,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "@/components/ui/input-group";
+import { Kbd, KbdGroup } from "@/components/ui/kbd";
+import { Spinner } from "@/components/ui/spinner";
 import { useFilters } from "@/lib/gallery-search-params";
 import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
 
@@ -83,15 +89,29 @@ export function GalleryFilters() {
   return (
     <div className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex flex-wrap items-center gap-2 px-4 py-3">
-        {/* Search Input */}
-        <Input
-          ref={inputRef}
-          autoFocus
-          placeholder="Search by name or ID..."
-          value={filters.search}
-          onChange={(e) => handleSetFilters("search", e.target.value)}
-          className="flex-1 min-w-[200px] h-9"
-        />
+        {/* Search Input with Loading State */}
+        <InputGroup className="flex-1 min-w-[200px]">
+          <InputGroupInput
+            ref={inputRef}
+            autoFocus
+            placeholder="Search by name or ID..."
+            value={filters.search}
+            onChange={(e) => handleSetFilters("search", e.target.value)}
+          />
+          {isPending && (
+            <InputGroupAddon align="inline-end">
+              <Spinner />
+            </InputGroupAddon>
+          )}
+          {!isPending && (
+            <InputGroupAddon align="inline-end">
+              <KbdGroup>
+                <Kbd>⌘</Kbd>
+                <Kbd>K</Kbd>
+              </KbdGroup>
+            </InputGroupAddon>
+          )}
+        </InputGroup>
 
         {/* Cat Color */}
         <Select

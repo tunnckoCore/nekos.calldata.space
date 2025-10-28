@@ -1,5 +1,6 @@
 import crypto from "crypto";
 import { NekoSchema, type Neko } from "./neko";
+import { initFuzzySearch, fuzzySearch } from "./fuzzy-search";
 
 const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
 const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
@@ -132,6 +133,9 @@ export async function fetchAllNekos(): Promise<{
       etag,
       timestamp: Date.now(),
     };
+
+    // Initialize fuzzy search index for faster searching
+    initFuzzySearch(merged);
 
     return {
       data: merged,
@@ -276,14 +280,7 @@ export function getTraitOptions(
 
   return Array.from(counts.entries())
     .map(([value, count]) => ({ value: String(value), count }))
-    .sort((a, b) => {
-      const aNum = Number(a.value);
-      const bNum = Number(b.value);
-      if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
-        return aNum - bNum;
-      }
-      return a.value.localeCompare(b.value);
-    });
+    .sort((a, b) => b.count - a.count);
 }
 
 /**
@@ -381,16 +378,12 @@ export async function getPaginatedNekos({
 
   let filtered = [...allNekos];
 
-  // Apply search filter
+  // Apply search filter using fuzzy search
   if (search && search.trim()) {
-    const searchLower = search.toLowerCase();
-    filtered = filtered.filter((neko) => {
-      return (
-        neko.name.toLowerCase().includes(searchLower) ||
-        neko.id.toLowerCase().includes(searchLower) ||
-        neko.creator.toLowerCase().includes(searchLower)
-      );
-    });
+    const searchResults = fuzzySearch(search);
+    filtered = filtered.filter((neko) =>
+      searchResults.some((result) => result.id === neko.id),
+    );
   }
 
   // Apply trait filters

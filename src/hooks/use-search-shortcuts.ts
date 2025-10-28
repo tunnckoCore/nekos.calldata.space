@@ -5,6 +5,7 @@ import { useEffect, RefObject } from "react";
  * - Ctrl+K / Cmd+K: focus and select search input
  * - "/": focus search input
  * - Shift+"/": focus search input
+ * - Escape: blur search input
  */
 export function useSearchShortcuts(
   inputRef: RefObject<HTMLInputElement | null>,
@@ -30,6 +31,12 @@ export function useSearchShortcuts(
       if (e.shiftKey && e.key === "?" && !inputRef.current.matches(":focus")) {
         e.preventDefault();
         inputRef.current.focus();
+      }
+
+      // Escape to blur/unfocus search input
+      if (e.key === "Escape" && inputRef.current.matches(":focus")) {
+        e.preventDefault();
+        inputRef.current.blur();
       }
     };
 
