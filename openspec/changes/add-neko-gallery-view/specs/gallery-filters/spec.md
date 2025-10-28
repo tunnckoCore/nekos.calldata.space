@@ -52,10 +52,11 @@ The system SHALL populate filter dropdowns with available trait values and their
 The system SHALL provide sort field and sort order controls to allow users to reorder results.
 
 #### Scenario: User changes sort field
-- **WHEN** user selects "block_timestamp" from sort dropdown
-- **THEN** URL updates to `?sort=block_timestamp`
-- **AND** gallery re-sorts items by block timestamp
+- **WHEN** user selects "created_at" from sort dropdown
+- **THEN** URL updates to `?sort=created_at`
+- **AND** gallery re-sorts items by creation timestamp (block_timestamp)
 - **AND** sort state persists on page reload
+- **AND** default sort (when not specified) is "internal_index" which preserves the stable merge order (NFTs → Ordinals → Ethscriptions)
 
 #### Scenario: User reverses sort order
 - **WHEN** user toggles order button to "desc"

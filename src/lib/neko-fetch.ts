@@ -16,7 +16,7 @@ interface CacheEntry {
 
 // In-memory cache for the merged dataset
 let dataCache: CacheEntry | null = null;
-const CACHE_TTL = 0; // Disable caching - always fetch fresh
+const CACHE_TTL = 1000 * 60 * 60; // Cache for 1 hour to ensure consistent ordering across paginated requests
 
 /**
  * Generates an ETag for a dataset
@@ -63,7 +63,8 @@ async function fetchAndValidateSource(url: string): Promise<Neko[] | null> {
 
 /**
  * Fetches and merges all Neko data from 3 CDN sources
- * Caches result for 1 year with ETag support
+ * Uses sequential fetching to guarantee consistent merge order: NFTs → Ordinals → Ethscriptions
+ * Caches result for 1 hour with ETag support
  */
 export async function fetchAllNekos(): Promise<{
   data: Neko[];
@@ -78,12 +79,10 @@ export async function fetchAllNekos(): Promise<{
   }
 
   try {
-    // Fetch all three sources in parallel
-    const [nfts, ords, eths] = await Promise.all([
-      fetchAndValidateSource(NFTS_URL),
-      fetchAndValidateSource(ORDS_URL),
-      fetchAndValidateSource(ETHS_URL),
-    ]);
+    // Fetch all three sources sequentially to guarantee merge order
+    const nfts = await fetchAndValidateSource(NFTS_URL);
+    const ords = await fetchAndValidateSource(ORDS_URL);
+    const eths = await fetchAndValidateSource(ETHS_URL);
 
     if (!nfts || !ords || !eths) {
       console.warn("One or more sources failed to fetch valid Neko data");
@@ -92,24 +91,31 @@ export async function fetchAllNekos(): Promise<{
       return dataCache ?? Promise.reject(new Error("No cached data available"));
     }
 
-    const merged = [...nfts, ...ords, ...eths].map((item) => {
+    const merged = [...nfts, ...ords, ...eths].map((item, idx) => {
       const isNft = item.traits.gen.toLowerCase().includes("og");
       const isOrdinal = item.traits.gen.toLowerCase().includes("ordinal");
 
+      // Create a copy before applying patches to avoid mutating cached objects
+      const patchedItem = {
+        ...item,
+        traits: { ...item.traits },
+        internal_index: idx,
+      };
+
       // patches for HTML of bugged cats
-      if ((isOrdinal || isNft) && item.index === 4) {
-        item.traits.eyes = "red";
+      if ((isOrdinal || isNft) && patchedItem.index === 4) {
+        patchedItem.traits.eyes = "red";
       }
-      if ((isOrdinal || isNft) && item.index === 16) {
-        item.traits.cat = "gold";
-        item.traits.eyes = "red";
+      if ((isOrdinal || isNft) && patchedItem.index === 16) {
+        patchedItem.traits.cat = "gold";
+        patchedItem.traits.eyes = "red";
       }
-      if ((isOrdinal || isNft) && item.index === 97) {
-        item.traits.cat = "gold";
-        item.traits.eyes = "red";
+      if ((isOrdinal || isNft) && patchedItem.index === 97) {
+        patchedItem.traits.cat = "gold";
+        patchedItem.traits.eyes = "red";
       }
 
-      return item;
+      return patchedItem;
     });
 
     if (merged.length === 0) {
@@ -198,11 +204,12 @@ export function filterNekosByTraits(
 
 /**
  * Sorts Neko array by field and order
- * When sorting by block_number, also sorts by transaction_index as secondary (except Ordinals)
+ * internal_index: stable merge order (NFTs → Ordinals → Ethscriptions)
+ * created_at: block_timestamp (blockchain creation time)
  */
 export function sortNekos(
   nekos: Neko[],
-  field: string = "block_timestamp",
+  field: string = "internal_index",
   order: "asc" | "desc" = "asc",
 ): Neko[] {
   const sorted = [...nekos];
@@ -210,8 +217,11 @@ export function sortNekos(
     let aVal: any;
     let bVal: any;
 
-    // Default sort is by block_timestamp
-    if (field === "block_timestamp" || field === "index") {
+    // Sort by requested field
+    if (field === "internal_index") {
+      aVal = a.internal_index ?? 0;
+      bVal = b.internal_index ?? 0;
+    } else if (field === "created_at" || field === "block_timestamp") {
       aVal = a.block_timestamp;
       bVal = b.block_timestamp;
     } else if (field === "block_number") {
@@ -223,9 +233,12 @@ export function sortNekos(
     } else if (field === "transaction_index") {
       aVal = a.transaction_index ?? 0;
       bVal = b.transaction_index ?? 0;
+    } else if (field === "index") {
+      aVal = a.index;
+      bVal = b.index;
     } else {
-      aVal = a.block_timestamp;
-      bVal = b.block_timestamp;
+      aVal = a.internal_index ?? 0;
+      bVal = b.internal_index ?? 0;
     }
 
     let comparison = aVal - bVal;
@@ -391,10 +404,11 @@ export async function getPaginatedNekos({
 
   const total = filtered.length;
 
-  // Apply sorting only if explicitly requested (preserve natural order by default)
-  if (sort) {
-    filtered = sortNekos(filtered, sort, order);
-  }
+  // Apply sorting: default to internal_index (stable merge order)
+  // This ensures consistent ordering across all pages, even with filters
+  const sortField = sort || "internal_index";
+  const sortOrder = order;
+  filtered = sortNekos(filtered, sortField, sortOrder);
 
   // Apply pagination
   const items = filtered.slice(skip, skip + take);

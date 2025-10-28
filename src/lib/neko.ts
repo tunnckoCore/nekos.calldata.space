@@ -47,6 +47,7 @@ export const NekoSchema = z.object({
   number: z.number(),
   event_log_index: z.number().nullable(),
   sat_ordinal: z.number().optional(),
+  internal_index: z.number().optional(), // Added by fetchAllNekos for stable ordering
   traits: z.object({
     block: z.number(),
     year: z.number(),
@@ -61,6 +62,8 @@ export const NekoSchema = z.object({
 export type Neko = z.infer<typeof NekoSchema>;
 
 export type SortField =
+  | "internal_index"
+  | "created_at"
   | "index"
   | "transaction_index"
   | "block_number"

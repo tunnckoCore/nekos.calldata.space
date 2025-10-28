@@ -56,7 +56,7 @@ export function GalleryFilters() {
     filters.cursor ||
     filters.gen ||
     filters.year ||
-    filters.sort !== "block_timestamp" ||
+    filters.sort !== "internal_index" ||
     filters.order !== "asc";
 
   // Clear all filters
@@ -260,8 +260,11 @@ export function GalleryFilters() {
             <SelectValue placeholder="Sort" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="block_timestamp" className="cursor-pointer">
-              Time
+            <SelectItem value="internal_index" className="cursor-pointer">
+              Default
+            </SelectItem>
+            <SelectItem value="created_at" className="cursor-pointer">
+              Created At
             </SelectItem>
             <SelectItem value="block_number" className="cursor-pointer">
               Block

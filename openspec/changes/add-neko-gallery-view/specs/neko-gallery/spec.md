@@ -7,10 +7,10 @@ The system SHALL fetch and merge Neko metadata from three external CDN sources (
 
 #### Scenario: Successful data fetch and merge
 - **WHEN** the aggregation service initializes
-- **THEN** it fetches all three datasets in parallel
+- **THEN** it fetches all three datasets sequentially in order (NFTs, then Ordinals, then Ethscriptions)
 - **AND** validates each against NekoSchema
-- **AND** merges results with index-based deduplication
-- **AND** caches the result for 1 year (immutable)
+- **AND** merges results maintaining sequential order (no reordering between generations)
+- **AND** caches the result for 1 hour (immutable within cache window)
 
 #### Scenario: Handle partial failures
 - **WHEN** one CDN source is unavailable
@@ -36,9 +36,16 @@ The system SHALL provide a paginated API endpoint for gallery browse/search with
 
 #### Scenario: Paginated browse with defaults
 - **WHEN** client requests `GET /api/neko/paginated?skip=0&take=50`
-- **THEN** return first 50 items
+- **THEN** return first 50 items in natural merge order (NFTs → Ordinals → Ethscriptions)
 - **AND** include `total` count and `hasMore` boolean
 - **AND** Cache-Control: `public, max-age=3600` (1hr, revalidate for filter changes)
+- **AND** every paginated request returns items in consistent order regardless of page number
+
+#### Scenario: Consistent ordering across pages
+- **WHEN** client requests multiple pages (e.g., `skip=0` then `skip=50` then `skip=100`)
+- **THEN** item order MUST be consistent across all pages
+- **AND** items at indices 0-49, 50-99, 100-149 appear in the same relative order as the full dataset
+- **AND** natural merge order is preserved: NFTs before Ordinals before Ethscriptions
 
 #### Scenario: Filter by traits
 - **WHEN** client requests `GET /api/neko/paginated?background=khaki&cat=white&eyes=lightsea green`
@@ -54,7 +61,8 @@ The system SHALL provide a paginated API endpoint for gallery browse/search with
 #### Scenario: Sort results
 - **WHEN** client requests `GET /api/neko/paginated?sort=block_number&order=desc`
 - **THEN** return results sorted by specified field in given order
-- **AND** default sort is `index` ascending
+- **AND** when sort parameter is NOT provided, preserve the natural merge order (NFTs → Ordinals → Ethscriptions) using internal_index
+- **AND** supported sort fields: `internal_index` (default, stable merge order), `created_at` (block_timestamp), `block_number`, `transaction_fee`, `transaction_index`, `index`
 
 ### Requirement: Server-Side Data Hydration
 The system SHALL prefetch and hydrate initial gallery data on the server to enable fast First Contentful Paint and TanStack Query dehydration.
