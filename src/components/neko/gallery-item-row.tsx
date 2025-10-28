@@ -79,128 +79,6 @@ export function GalleryItemRow({
     </div>
   );
 
-  if (isMobile) {
-    /* Mobile Layout - Reversed badges */
-    return (
-      <div className="relative mb-0 flex w-full flex-col flex-wrap gap-0">
-        <button
-          onClick={onToggleExpand}
-          className="flex w-full cursor-pointer flex-col"
-          type="button"
-        >
-          {/* Top section: gen badge and eyes */}
-          <div
-            className="flex w-full items-center justify-between p-2"
-            data-bg-color={item.traits.background}
-            data-bg-trait={item.traits.background}
-            style={{ backgroundColor: item.traits.background }}
-          >
-            <div className="flex items-center justify-start gap-2">
-              {genBadge}
-            </div>
-            <div className="flex items-center justify-end gap-2">
-              {eyeBadges}
-              {onToggleExpand && (
-                <ChevronDown
-                  className={`h-4 w-4 transition-transform ${
-                    isExpanded ? "rotate-180" : ""
-                  }`}
-                />
-              )}
-            </div>
-          </div>
-
-          {/* Bottom section: name and cursor */}
-          <div
-            className="flex w-full items-center justify-between p-2"
-            data-cat-color={item.traits.cat}
-            style={{ backgroundColor: item.traits.cat }}
-          >
-            <div className="flex items-center justify-start gap-2">
-              {nameBadge}
-            </div>
-            <div className="flex items-center justify-end gap-2">
-              {cursorBadge}
-            </div>
-          </div>
-        </button>
-
-        {/* Expanded content */}
-        {isExpanded && onToggleExpand && (
-          <div
-            className="w-full border-t border-border/50 p-3 bg-muted/30 space-y-2 max-h-[85vh] overflow-y-auto"
-            data-cat-color={item.traits.cat}
-            style={{
-              backgroundColor: `${item.traits.cat}20`,
-              borderTopColor: item.traits.cat,
-            }}
-          >
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div>
-                <span className="font-semibold text-muted-foreground">
-                  Generation:
-                </span>
-                <p className="text-foreground">
-                  {item.traits.gen.toLowerCase().includes("og")
-                    ? "NFT"
-                    : item.traits.gen}
-                </p>
-              </div>
-              <div>
-                <span className="font-semibold text-muted-foreground">
-                  Number:
-                </span>
-                <p className="text-foreground">#{item.number}</p>
-              </div>
-              <div>
-                <span className="font-semibold text-muted-foreground">
-                  Cat:
-                </span>
-                <p
-                  className="rounded px-2 py-1 text-white"
-                  style={{ backgroundColor: item.traits.cat }}
-                >
-                  {item.traits.cat}
-                </p>
-              </div>
-              <div>
-                <span className="font-semibold text-muted-foreground">
-                  Eyes:
-                </span>
-                <p
-                  className="rounded px-2 py-1 text-white"
-                  style={{ backgroundColor: item.traits.eyes }}
-                >
-                  {item.traits.eyes}
-                </p>
-              </div>
-              <div>
-                <span className="font-semibold text-muted-foreground">
-                  Background:
-                </span>
-                <p
-                  className="rounded px-2 py-1 text-white"
-                  style={{ backgroundColor: item.traits.background }}
-                >
-                  {item.traits.background}
-                </p>
-              </div>
-              <div>
-                <span className="font-semibold text-muted-foreground">
-                  Cursor:
-                </span>
-                <p className="text-foreground">
-                  {cursorEmoji} {item.traits.cursor}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  /* Desktop Layout - Original layout */
   return (
     <div className="relative mb-0 flex w-full flex-col flex-wrap gap-0 lg:flex-1">
       <button
@@ -221,16 +99,13 @@ export function GalleryItemRow({
           </div>
         </div>
         <div
-          className="flex w-full items-center justify-end p-4 pr-2 lg:w-1/2 lg:justify-start lg:pl-4"
+          className="flex w-full items-center p-4 pr-2 lg:w-1/2 lg:pl-4 lg:justify-start"
           data-bg-color={item.traits.background}
           data-bg-trait={item.traits.background}
           style={{ backgroundColor: item.traits.background }}
         >
-          <div className="flex w-full items-center justify-between">
-            <div className="flex items-center justify-start gap-2">
-              {cursorBadge}
-            </div>
-            <div className="flex items-center justify-end gap-2">
+          <div className="flex w-full items-center justify-between lg:justify-between flex-row-reverse lg:flex-row">
+            <div className="flex items-center justify-end lg:justify-end gap-2">
               {genBadge}
               {onToggleExpand && (
                 <ChevronDown
@@ -239,6 +114,9 @@ export function GalleryItemRow({
                   }`}
                 />
               )}
+            </div>
+            <div className="flex items-center justify-start lg:justify-start gap-2">
+              {cursorBadge}
             </div>
           </div>
         </div>

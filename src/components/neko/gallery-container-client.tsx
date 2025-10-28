@@ -89,13 +89,17 @@ export function GalleryContainerClient({
 
   // Handle row expansion - close previous and open new
   const handleToggleExpand = (itemId: string) => {
-    setExpandedItemId((prevId) => {
-      const newId = prevId === itemId ? null : itemId;
-      // Remeasure virtualizer when expanded state changes
-      virtualizer.measure();
-      return newId;
-    });
+    setExpandedItemId((prevId) => (prevId === itemId ? null : itemId));
   };
+
+  // Remeasure virtualizer after expanded state changes
+  useEffect(() => {
+    // Use setTimeout to ensure DOM has updated
+    const timer = setTimeout(() => {
+      virtualizer.measure();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [expandedItemId, virtualizer]);
 
   return (
     <div className="flex flex-col h-full w-full">
