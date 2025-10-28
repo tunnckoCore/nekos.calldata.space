@@ -3,7 +3,7 @@
 import { debounce } from "nuqs";
 import { useAllNekos } from "@/lib/queries";
 import { getDynamicTraitOptions } from "@/lib/neko-fetch";
-import { useMemo, useTransition } from "react";
+import { useMemo, useTransition, useRef } from "react";
 import { Loader2, X, ArrowUp, ArrowDown } from "lucide-react";
 import {
   Select,
@@ -15,10 +15,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useFilters } from "@/lib/gallery-search-params";
+import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
 
 export function GalleryFilters() {
   const [isPending, startTransition] = useTransition();
   const { data: allNekos } = useAllNekos();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [filters, setFilters] = useFilters({
     startTransition,
@@ -65,21 +67,35 @@ export function GalleryFilters() {
   };
 
   const handleSetFilters = (key: string, val: any) => {
-    startTransition(async () => {
-      await setFilters(
+    // Don't wrap search in startTransition to prevent focus loss
+    if (key === "search") {
+      setFilters(
         { [key]: val },
         {
-          limitUrlUpdates: val && key === "search" ? debounce(250) : undefined,
+          limitUrlUpdates: debounce(250),
         },
       );
-    });
+    } else {
+      startTransition(async () => {
+        await setFilters(
+          { [key]: val },
+          {
+            limitUrlUpdates: undefined,
+          },
+        );
+      });
+    }
   };
+
+  // Set up keyboard shortcuts for search input
+  useSearchShortcuts(inputRef);
 
   return (
     <div className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex flex-wrap items-center gap-2 px-4 py-3">
         {/* Search Input */}
         <Input
+          ref={inputRef}
           autoFocus
           placeholder="Search by name or ID..."
           value={filters.search}
