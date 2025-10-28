@@ -4,6 +4,8 @@ const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e4
 const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
 const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
 
+const SITE_URL_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL_ORIGIN;
+
 interface CacheEntry {
   hash: string;
   data: Neko[];
@@ -57,10 +59,10 @@ export async function extractProperColors(item: Neko): Promise<{
   const isOrdinal = item.traits.gen.toLowerCase().includes("ordinal");
 
   const txt = isNft
-    ? await fetch(`http://localhost:3000/api/content/${item.number}?gen=og`, {
+    ? await fetch(`${SITE_URL_ORIGIN}/api/content/${item.number}?gen=og`, {
         cache: "force-cache",
       }).then((x) => x.text())
-    : await fetch(`http://localhost:3000/api/content/${item.id}?gen=ordinals`, {
+    : await fetch(`${SITE_URL_ORIGIN}/api/content/${item.id}?gen=ordinals`, {
         cache: "force-cache",
       }).then((x) => x.text());
 
@@ -318,7 +320,7 @@ export async function getAllNekos(): Promise<CacheEntry> {
     return dataCache;
   }
 
-  const res = await fetch("http://localhost:3000/0xnekos.json");
+  const res = await fetch("${SITE_URL_ORIGIN}/0xnekos.json");
   if (!res.ok) {
     throw new Error(`Failed to fetch nekos: ${res.status} ${res.statusText}`);
   }
