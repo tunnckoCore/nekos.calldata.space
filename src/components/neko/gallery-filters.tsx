@@ -67,24 +67,14 @@ export function GalleryFilters() {
   };
 
   const handleSetFilters = (key: string, val: any) => {
-    // Don't wrap search in startTransition to prevent focus loss
-    if (key === "search") {
-      setFilters(
+    startTransition(async () => {
+      await setFilters(
         { [key]: val },
         {
-          limitUrlUpdates: debounce(250),
+          limitUrlUpdates: key === "search" ? debounce(250) : undefined,
         },
       );
-    } else {
-      startTransition(async () => {
-        await setFilters(
-          { [key]: val },
-          {
-            limitUrlUpdates: undefined,
-          },
-        );
-      });
-    }
+    });
   };
 
   // Set up keyboard shortcuts for search input
@@ -101,7 +91,6 @@ export function GalleryFilters() {
           value={filters.search}
           onChange={(e) => handleSetFilters("search", e.target.value)}
           className="flex-1 min-w-[200px] h-9"
-          disabled={isPending}
         />
 
         {/* Cat Color */}
