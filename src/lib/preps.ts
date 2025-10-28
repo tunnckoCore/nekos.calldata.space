@@ -4,7 +4,10 @@ const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e4
 const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
 const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
 
-const SITE_URL_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL_ORIGIN;
+const SITE_URL_ORIGIN =
+  process.env.NODE_ENV === "production"
+    ? "https://next16-nekos-oct28.vercel.app"
+    : "http://localhost:3000";
 
 interface CacheEntry {
   hash: string;
@@ -320,7 +323,7 @@ export async function getAllNekos(): Promise<CacheEntry> {
     return dataCache;
   }
 
-  const res = await fetch("${SITE_URL_ORIGIN}/0xnekos.json");
+  const res = await fetch(`${SITE_URL_ORIGIN}/0xnekos.json`);
   if (!res.ok) {
     throw new Error(`Failed to fetch nekos: ${res.status} ${res.statusText}`);
   }

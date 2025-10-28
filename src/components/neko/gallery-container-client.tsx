@@ -10,7 +10,10 @@ interface GalleryContainerClientProps {
   filters: GalleryFilters;
 }
 
-const SITE_URL_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL_ORIGIN;
+const SITE_URL_ORIGIN =
+  typeof window !== "undefined"
+    ? new URL(window.location.href).origin
+    : "http://localhost:3000";
 
 export function GalleryContainerClient({
   filters,

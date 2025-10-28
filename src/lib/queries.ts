@@ -5,7 +5,10 @@ import {
 } from "@tanstack/react-query";
 import type { Neko } from "./neko";
 
-const SITE_URL_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL_ORIGIN;
+const SITE_URL_ORIGIN =
+  typeof window !== "undefined"
+    ? new URL(window.location.href).origin
+    : "http://localhost:3000";
 
 interface PaginatedResponse {
   items: Neko[];
@@ -37,7 +40,7 @@ export function useAllNekos() {
   return useQuery({
     queryKey: ["nekos", "all"],
     queryFn: async () => {
-      const response = await fetch("${SITE_URL_ORIGIN}/api/neko");
+      const response = await fetch(`${SITE_URL_ORIGIN}/api/neko`);
       if (!response.ok) throw new Error("Failed to fetch all Nekos");
       return (await response.json()) as Neko[];
     },
@@ -101,7 +104,7 @@ export function useNekoById(id: string | undefined) {
   return useQuery({
     queryKey: ["neko", id],
     queryFn: async () => {
-      const allNekos = await fetch("${SITE_URL_ORIGIN}/api/neko").then((r) =>
+      const allNekos = await fetch(`${SITE_URL_ORIGIN}/api/neko`).then((r) =>
         r.json(),
       );
       return (allNekos as Neko[]).find((n) => n.id === id);
@@ -117,7 +120,7 @@ export async function prefetchAllNekos(queryClient: QueryClient) {
   return queryClient.prefetchQuery({
     queryKey: ["nekos", "all"],
     queryFn: async () => {
-      const response = await fetch("${SITE_URL_ORIGIN}/api/neko");
+      const response = await fetch(`${SITE_URL_ORIGIN}/api/neko`);
       if (!response.ok) throw new Error("Failed to prefetch Nekos");
       return (await response.json()) as Neko[];
     },
@@ -147,7 +150,7 @@ export async function prefetchPaginatedNekos(
   return queryClient.prefetchInfiniteQuery({
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
-      const url = new URL("${SITE_URL_ORIGIN}/api/neko/paginated");
+      const url = new URL(`${SITE_URL_ORIGIN}/api/neko/paginated`);
       url.searchParams.set("skip", String(pageParam));
       url.searchParams.set("take", "50");
 
