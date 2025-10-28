@@ -154,8 +154,8 @@ export async function prefetchPaginatedNekos(
       if (filters.cursor) url.searchParams.set("cursor", filters.cursor);
       if (filters.gen) url.searchParams.set("gen", filters.gen);
       if (filters.year) url.searchParams.set("year", filters.year);
-      url.searchParams.set("sort", filters.sort || "block_timestamp");
-      url.searchParams.set("order", filters.order || "asc");
+      if (filters.sort) url.searchParams.set("sort", filters.sort);
+      if (filters.order) url.searchParams.set("order", filters.order);
 
       const response = await fetch(url.toString());
       if (!response.ok) throw new Error("Failed to prefetch paginated Nekos");

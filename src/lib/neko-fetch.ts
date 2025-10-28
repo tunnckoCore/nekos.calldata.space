@@ -1,9 +1,12 @@
 import crypto from "crypto";
 import { NekoSchema, type Neko } from "./neko";
 
-const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
 const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
 const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
+const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
+
+// Natural sort order: OG (NFTs) > Ordinals > Ethscriptions
+// This order is maintained by fetchAllNekos() and preserved by default in getPaginatedNekos()
 
 interface CacheEntry {
   data: Neko[];
@@ -13,7 +16,7 @@ interface CacheEntry {
 
 // In-memory cache for the merged dataset
 let dataCache: CacheEntry | null = null;
-const CACHE_TTL = 1000 * 60 * 60 * 24 * 365; // 1 year
+const CACHE_TTL = 0; // Disable caching - always fetch fresh
 
 /**
  * Generates an ETag for a dataset
@@ -338,7 +341,7 @@ export async function getPaginatedNekos({
   cursor,
   gen,
   year,
-  sort = "block_timestamp",
+  sort,
   order = "asc",
 }: {
   skip?: number;
@@ -388,8 +391,10 @@ export async function getPaginatedNekos({
 
   const total = filtered.length;
 
-  // Apply sorting
-  filtered = sortNekos(filtered, sort, order);
+  // Apply sorting only if explicitly requested (preserve natural order by default)
+  if (sort) {
+    filtered = sortNekos(filtered, sort, order);
+  }
 
   // Apply pagination
   const items = filtered.slice(skip, skip + take);

@@ -29,7 +29,7 @@ export async function GET(request: Request) {
     const cursor = searchParams.get("cursor") || undefined;
     const gen = searchParams.get("gen") || undefined;
     const year = searchParams.get("year") || undefined;
-    const sort = searchParams.get("sort") || "block_timestamp";
+    const sort = searchParams.get("sort") || undefined;
     const order = (searchParams.get("order") || "asc") as "asc" | "desc";
 
     // Fetch paginated data

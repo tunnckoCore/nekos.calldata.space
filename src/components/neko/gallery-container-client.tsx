@@ -17,14 +17,8 @@ export function GalleryContainerClient({
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
 
   // Fetch paginated gallery data with infinite scroll
-  const {
-    data,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    isLoading,
-    error,
-  } = useNekoGallery(filters);
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
+    useNekoGallery(filters);
 
   // Fetch all nekos for filter options
   const { data: allNekos } = useAllNekos();
