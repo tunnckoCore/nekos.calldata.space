@@ -14,7 +14,7 @@ export const filters = {
   cursor: parseAsString.withDefault(""),
   gen: parseAsString.withDefault(""),
   year: parseAsString.withDefault(""),
-  sort: parseAsString.withDefault("internal_index"),
+  sort: parseAsString.withDefault("created_at"),
   order: parseAsStringLiteral(["asc", "desc"] as const).withDefault("asc"),
 } as const;
 

@@ -56,7 +56,7 @@ export function GalleryFilters() {
     filters.cursor ||
     filters.gen ||
     filters.year ||
-    filters.sort !== "internal_index" ||
+    filters.sort !== "created_at" ||
     filters.order !== "asc";
 
   // Clear all filters
@@ -260,9 +260,6 @@ export function GalleryFilters() {
             <SelectValue placeholder="Sort" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="internal_index" className="cursor-pointer">
-              Default
-            </SelectItem>
             <SelectItem value="created_at" className="cursor-pointer">
               Created At
             </SelectItem>
@@ -280,7 +277,7 @@ export function GalleryFilters() {
 
         {/* Order Toggle */}
         <Button
-          variant={filters.order === "asc" ? "default" : "outline"}
+          variant="outline"
           size="sm"
           onClick={() =>
             handleSetFilters("order", filters.order === "asc" ? "desc" : "asc")
