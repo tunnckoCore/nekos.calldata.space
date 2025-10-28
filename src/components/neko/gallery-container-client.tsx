@@ -1,7 +1,7 @@
 "use client";
 
 import { useNekoGallery, useAllNekos } from "@/lib/queries";
-import { useMemo, useEffect, useRef } from "react";
+import { useMemo, useEffect, useRef, useState } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
 import { GalleryItemRow } from "./gallery-item-row";
@@ -14,6 +14,7 @@ export function GalleryContainerClient({
   filters,
 }: GalleryContainerClientProps) {
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
+  const [expandedItemId, setExpandedItemId] = useState<string | null>(null);
 
   // Fetch paginated gallery data with infinite scroll
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
@@ -86,6 +87,16 @@ export function GalleryContainerClient({
 
   const virtualTotalSize = virtualizer.getTotalSize();
 
+  // Handle row expansion - close previous and open new
+  const handleToggleExpand = (itemId: string) => {
+    setExpandedItemId((prevId) => {
+      const newId = prevId === itemId ? null : itemId;
+      // Remeasure virtualizer when expanded state changes
+      virtualizer.measure();
+      return newId;
+    });
+  };
+
   return (
     <div className="flex flex-col h-full w-full">
       {/* Item count header */}
@@ -113,6 +124,9 @@ export function GalleryContainerClient({
               const item = items[virtualItem.index];
               if (!item) return null;
 
+              const itemId = `neko-${item.id}`;
+              const isItemExpanded = expandedItemId === itemId;
+
               return (
                 <div
                   data-index={virtualItem.index}
@@ -120,7 +134,11 @@ export function GalleryContainerClient({
                   ref={virtualizer.measureElement}
                   className="border-b border-border/50 last:border-b-0"
                 >
-                  <GalleryItemRow item={item} />
+                  <GalleryItemRow
+                    item={item}
+                    isExpanded={isItemExpanded}
+                    onToggleExpand={() => handleToggleExpand(itemId)}
+                  />
                 </div>
               );
             })}
