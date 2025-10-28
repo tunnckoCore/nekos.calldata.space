@@ -5,6 +5,7 @@ import {
   prefetchPaginatedNekos,
 } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
+import { GalleryFilters } from "./gallery-filters";
 import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
 import type { SearchParams } from "nuqs/server";
 
@@ -13,10 +14,8 @@ interface GalleryContentProps {
 }
 
 export async function GalleryContent({ searchParams }: GalleryContentProps) {
-  // NUQS already handles parsing, validation, and normalization
   const filters = await gallerySearchParamsCache.parse(searchParams);
 
-  // Create server-side QueryClient
   const queryClient = createQueryClient();
 
   try {
@@ -33,7 +32,15 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   return (
     <HydrationBoundary state={dehydratedState}>
-      <GalleryContainerClient filters={filters} />
+      <div className="flex flex-col h-full w-full">
+        {/* Sticky filter bar at top */}
+        <GalleryFilters />
+
+        {/* Full-height virtualizable gallery container */}
+        <div className="flex-1 overflow-hidden">
+          <GalleryContainerClient filters={filters} />
+        </div>
+      </div>
     </HydrationBoundary>
   );
 }

@@ -43,7 +43,7 @@ async function fetchAndValidateSource(url: string): Promise<Neko[] | null> {
     for (const item of items) {
       const parsed = NekoSchema.safeParse(item);
       if (parsed.success) {
-        let data = parsed.data;
+        const data = parsed.data;
 
         validated.push(data);
       } else {
@@ -263,11 +263,66 @@ export function getTraitOptions(
     .sort((a, b) => {
       const aNum = Number(a.value);
       const bNum = Number(b.value);
-      if (!isNaN(aNum) && !isNaN(bNum)) {
+      if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
         return aNum - bNum;
       }
       return a.value.localeCompare(b.value);
     });
+}
+
+/**
+ * Gets dynamic trait options filtered by current filters
+ * Used to show counts only for items matching other active filters (faceted search)
+ */
+export function getDynamicTraitOptions(
+  nekos: Neko[],
+  trait: "block" | "year" | "gen" | "background" | "cat" | "eyes" | "cursor",
+  filters: {
+    search?: string;
+    background?: string;
+    cat?: string;
+    eyes?: string;
+    cursor?: string;
+    gen?: string;
+    year?: string;
+  } = {},
+): { value: string; count: number }[] {
+  // First apply all current filters EXCEPT the trait we're getting options for
+  const filtersCopy = { ...filters };
+
+  // Remove the current trait from filters to get options for that trait
+  delete filtersCopy[trait as keyof typeof filtersCopy];
+
+  // Apply remaining filters
+  let filtered = nekos;
+  for (const [key, value] of Object.entries(filtersCopy)) {
+    if (!value) continue;
+
+    if (key === "search") {
+      const searchLower = value.toLowerCase();
+      filtered = filtered.filter(
+        (neko) =>
+          neko.name.toLowerCase().includes(searchLower) ||
+          neko.id.toLowerCase().includes(searchLower) ||
+          neko.creator.toLowerCase().includes(searchLower),
+      );
+    } else if (key === "year") {
+      filtered = filtered.filter((n) => n.traits.year === parseInt(value));
+    } else if (key === "gen") {
+      filtered = filtered.filter((n) => n.traits.gen === value);
+    } else if (key === "background") {
+      filtered = filtered.filter((n) => n.traits.background === value);
+    } else if (key === "cat") {
+      filtered = filtered.filter((n) => n.traits.cat === value);
+    } else if (key === "eyes") {
+      filtered = filtered.filter((n) => n.traits.eyes === value);
+    } else if (key === "cursor") {
+      filtered = filtered.filter((n) => n.traits.cursor === value);
+    }
+  }
+
+  // Now get trait options from filtered dataset
+  return getTraitOptions(filtered, trait);
 }
 
 /**

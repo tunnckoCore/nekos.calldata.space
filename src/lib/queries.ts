@@ -1,4 +1,9 @@
-import { QueryClient, useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import {
+  QueryClient,
+  useInfiniteQuery,
+  useSuspenseInfiniteQuery,
+  useQuery,
+} from "@tanstack/react-query";
 import type { Neko } from "./neko";
 
 interface PaginatedResponse {
@@ -17,8 +22,8 @@ export function createQueryClient() {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: Infinity, // Data is immutable and never becomes stale
-        gcTime: Infinity, // Keep in cache indefinitely
+        staleTime: 30, // Data is immutable and never becomes stale
+        gcTime: 30, // Keep in cache indefinitely
       },
     },
   });
@@ -41,6 +46,7 @@ export function useAllNekos() {
 /**
  * Fetch paginated, filtered Nekos with infinite scroll support
  * Accepts filters object directly from URL params
+ * Uses Suspense for proper SSR hydration
  */
 export function useNekoGallery(filters: {
   search?: string;
@@ -55,7 +61,7 @@ export function useNekoGallery(filters: {
 }) {
   const queryKey = ["nekos", "paginated", filters];
 
-  return useInfiniteQuery({
+  return useSuspenseInfiniteQuery({
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const params = new URLSearchParams();

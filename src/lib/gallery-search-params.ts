@@ -1,15 +1,12 @@
+import { useQueryStates } from "nuqs";
 import {
   createSearchParamsCache,
+  type Options,
   parseAsString,
   parseAsStringLiteral,
 } from "nuqs/server";
 
-/**
- * Gallery filter search params schema using NUQS server-side cache
- * This cache can be used in both server components and API routes
- * NUQS handles all parsing, validation, and normalization
- */
-export const gallerySearchParamsCache = createSearchParamsCache({
+export const filters = {
   search: parseAsString.withDefault(""),
   background: parseAsString.withDefault(""),
   cat: parseAsString.withDefault(""),
@@ -19,7 +16,14 @@ export const gallerySearchParamsCache = createSearchParamsCache({
   year: parseAsString.withDefault(""),
   sort: parseAsString.withDefault("block_timestamp"),
   order: parseAsStringLiteral(["asc", "desc"] as const).withDefault("asc"),
-});
+} as const;
+
+/**
+ * Gallery filter search params schema using NUQS server-side cache
+ * This cache can be used in both server components and API routes
+ * NUQS handles all parsing, validation, and normalization
+ */
+export const gallerySearchParamsCache = createSearchParamsCache(filters);
 
 /**
  * Type-safe filter object inferred from NUQS cache
@@ -28,3 +32,6 @@ export const gallerySearchParamsCache = createSearchParamsCache({
 export type GalleryFilters = Awaited<
   ReturnType<typeof gallerySearchParamsCache.parse>
 >;
+
+export const useFilters = (options: Options = {}) =>
+  useQueryStates(filters, { ...options, shallow: false });
