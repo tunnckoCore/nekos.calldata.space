@@ -1,7 +1,7 @@
 "use client";
 
 import { useNekoGallery, useAllNekos } from "@/lib/queries";
-import { useMemo, useEffect, useRef, useState } from "react";
+import { useMemo, useEffect, useRef } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
 import { GalleryItemRow } from "./gallery-item-row";
@@ -14,7 +14,6 @@ export function GalleryContainerClient({
   filters,
 }: GalleryContainerClientProps) {
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
-  const [expandedItemId, setExpandedItemId] = useState<string | null>(null);
 
   // Fetch paginated gallery data with infinite scroll
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
@@ -61,6 +60,7 @@ export function GalleryContainerClient({
   });
 
   const virtualItems = virtualizer.getVirtualItems();
+  const virtualTotalSize = virtualizer.getTotalSize();
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: it's ok!
   useEffect(() => {
@@ -85,26 +85,10 @@ export function GalleryContainerClient({
     );
   }
 
-  const virtualTotalSize = virtualizer.getTotalSize();
-
-  // Handle row expansion - close previous and open new
-  const handleToggleExpand = (itemId: string) => {
-    setExpandedItemId((prevId) => (prevId === itemId ? null : itemId));
-  };
-
-  // Remeasure virtualizer after expanded state changes
-  useEffect(() => {
-    // Use setTimeout to ensure DOM has updated
-    const timer = setTimeout(() => {
-      virtualizer.measure();
-    }, 0);
-    return () => clearTimeout(timer);
-  }, [expandedItemId, virtualizer]);
-
   return (
     <div className="flex flex-col h-full w-full">
       {/* Item count header */}
-      <div className="px-4 py-2 border-b border-border bg-background/50 text-xs text-muted-foreground flex-shrink-0">
+      <div className="px-4 py-2 bg-background/50 text-xs text-muted-foreground shrink-0">
         Showing {items.length} items{" "}
         {allNekos && `from ${allNekos.length} total`}
       </div>
@@ -128,21 +112,52 @@ export function GalleryContainerClient({
               const item = items[virtualItem.index];
               if (!item) return null;
 
-              const itemId = `neko-${item.id}`;
-              const isItemExpanded = expandedItemId === itemId;
+              const isEthscription = item.traits.gen
+                .toLowerCase()
+                .includes("eths");
+              const isOrdinals = item.traits.gen.toLowerCase().includes("ord");
+              const isNfts = item.traits.gen.toLowerCase().includes("og");
+
+              const patchedColors = item.colors || item.traits;
 
               return (
                 <div
                   data-index={virtualItem.index}
                   key={virtualItem.key}
                   ref={virtualizer.measureElement}
-                  className="border-b border-border/50 last:border-b-0"
                 >
-                  <GalleryItemRow
-                    item={item}
-                    isExpanded={isItemExpanded}
-                    onToggleExpand={() => handleToggleExpand(itemId)}
-                  />
+                  <GalleryItemRow item={item}>
+                    {isNfts && (
+                      <iframe
+                        className="m-0 block h-[80dvh] w-full border-0 p-0"
+                        sandbox="allow-scripts"
+                        src={`http://localhost:3000/api/content/${item.number}?gen=og`}
+                        style={{
+                          backgroundColor: patchedColors.background,
+                        }}
+                      />
+                    )}
+                    {isOrdinals && (
+                      <iframe
+                        className="m-0 block h-[80dvh] w-full border-0 p-0"
+                        sandbox="allow-scripts"
+                        src={`http://localhost:3000/api/content/${item.id}?gen=ordinals`}
+                        style={{
+                          backgroundColor: patchedColors.background,
+                        }}
+                      />
+                    )}
+                    {isEthscription && (
+                      <iframe
+                        className="m-0 block h-[80dvh] w-full border-0 p-0"
+                        sandbox="allow-scripts"
+                        src={`https://mainnet.api.calldata.space/ethscriptions/${item.id}/content`}
+                        style={{
+                          backgroundColor: patchedColors.background,
+                        }}
+                      />
+                    )}
+                  </GalleryItemRow>
                 </div>
               );
             })}

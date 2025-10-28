@@ -1,6 +1,5 @@
 import {
   QueryClient,
-  useInfiniteQuery,
   useSuspenseInfiniteQuery,
   useQuery,
 } from "@tanstack/react-query";
@@ -36,7 +35,7 @@ export function useAllNekos() {
   return useQuery({
     queryKey: ["nekos", "all"],
     queryFn: async () => {
-      const response = await fetch("/api/neko");
+      const response = await fetch("http://localhost:3000/api/neko");
       if (!response.ok) throw new Error("Failed to fetch all Nekos");
       return (await response.json()) as Neko[];
     },
@@ -79,7 +78,9 @@ export function useNekoGallery(filters: {
       if (filters.sort) params.set("sort", filters.sort);
       if (filters.order) params.set("order", filters.order);
 
-      const response = await fetch(`/api/neko/paginated?${params}`);
+      const response = await fetch(
+        `http://localhost:3000/api/neko/paginated?${params}`,
+      );
       if (!response.ok) throw new Error("Failed to fetch paginated Nekos");
       return (await response.json()) as PaginatedResponse;
     },
@@ -98,7 +99,9 @@ export function useNekoById(id: string | undefined) {
   return useQuery({
     queryKey: ["neko", id],
     queryFn: async () => {
-      const allNekos = await fetch("/api/neko").then((r) => r.json());
+      const allNekos = await fetch("http://localhost:3000/api/neko").then((r) =>
+        r.json(),
+      );
       return (allNekos as Neko[]).find((n) => n.id === id);
     },
     enabled: !!id,

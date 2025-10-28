@@ -47,7 +47,6 @@ export const NekoSchema = z.object({
   number: z.number(),
   event_log_index: z.number().nullable(),
   sat_ordinal: z.number().optional(),
-  internal_index: z.number().optional(), // Added by fetchAllNekos for stable ordering
   traits: z.object({
     block: z.number(),
     year: z.number(),
@@ -57,18 +56,26 @@ export const NekoSchema = z.object({
     eyes: z.string(),
     cursor: z.string(),
   }),
+  sequence: z.number().optional(), // Added by fetchAllNekos for stable ordering
+  colors: z
+    .object({
+      background: z.string(),
+      cat: z.string(),
+      eyes: z.string(),
+    })
+    .optional(),
 });
 
 export type Neko = z.infer<typeof NekoSchema>;
 
 export type SortField =
-  | "internal_index"
+  | "sequence"
   | "created_at"
   | "index"
   | "transaction_index"
   | "block_number"
   | "transaction_fee"
-  | "ethscription_number";
+  | "number";
 
 export type SortOrder = "asc" | "desc";
 

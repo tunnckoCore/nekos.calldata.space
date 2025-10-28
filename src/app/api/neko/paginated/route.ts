@@ -1,26 +1,21 @@
 // "use cache";
 
 import { getPaginatedNekos } from "@/lib/neko-fetch";
-import { cacheLife } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  // Cache this endpoint for 1 hour for filtered queries
-  // cacheLife({
-  //   stale: 3600, // 1 hour
-  //   revalidate: 3600,
-  //   expire: 3600,
-  // });
-
   try {
     const url = new URL(request.url);
     const searchParams = url.searchParams;
 
     // Parse query parameters
-    const skip = Math.max(0, parseInt(searchParams.get("skip") || "0"));
+    const skip = Math.max(
+      0,
+      Number.parseInt(searchParams.get("skip") || "0", 10),
+    );
     const take = Math.min(
       100,
-      Math.max(1, parseInt(searchParams.get("take") || "50")),
+      Math.max(1, Number.parseInt(searchParams.get("take") || "50", 10)),
     );
     const search = searchParams.get("search") || undefined;
     const background = searchParams.get("background") || undefined;

@@ -66,7 +66,7 @@ export function GalleryFilters() {
     filters.cursor ||
     filters.gen ||
     filters.year ||
-    filters.sort !== "created_at" ||
+    filters.sort !== "sequence" ||
     filters.order !== "asc";
 
   // Clear all filters

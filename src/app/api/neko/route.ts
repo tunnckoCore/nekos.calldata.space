@@ -1,20 +1,11 @@
-// "use cache";
-
-// import { cacheLife } from "next/cache";
-import { fetchAllNekos } from "@/lib/neko-fetch";
+import { getAllNekos } from "@/lib/preps";
 
 export async function GET(request: Request) {
-  // cacheLife({
-  //   stale: 31536000, // 1 year
-  //   revalidate: 31536000, // 1 year
-  //   expire: 31536000, // 1 year
-  // });
-
   try {
     const clientETag = request.headers.get("if-none-match");
 
     // Fetch merged data
-    const { data, etag } = await fetchAllNekos();
+    const { data, etag } = await getAllNekos();
 
     // ETag validation - if client has matching ETag, return 304
     if (clientETag === etag) {
