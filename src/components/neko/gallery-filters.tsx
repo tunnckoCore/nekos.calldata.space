@@ -347,11 +347,11 @@ export function GalleryFilters() {
                 className="h-9 gap-2 rounded-none border-0 shadow-none"
               >
                 {filters.order === "asc" ? (
-                  <ArrowUp className="h-4 w-4" />
-                ) : (
                   <ArrowDown className="h-4 w-4" />
+                ) : (
+                  <ArrowUp className="h-4 w-4" />
                 )}
-                {filters.order === "asc" ? "Ascending" : "Descending"}
+                {filters.order === "asc" ? "Descending" : "Ascending"}
               </Button>
 
               {/* Clear All Button */}
