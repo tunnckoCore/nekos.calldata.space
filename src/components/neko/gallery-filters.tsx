@@ -99,7 +99,7 @@ export function GalleryFilters() {
           <SelectTrigger className="w-28 h-9 cursor-pointer">
             <SelectValue placeholder="Cat" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
               All Cats
             </SelectItem>
@@ -126,7 +126,7 @@ export function GalleryFilters() {
           <SelectTrigger className="w-28 h-9 cursor-pointer">
             <SelectValue placeholder="Eyes" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
               All Eyes
             </SelectItem>
@@ -153,7 +153,7 @@ export function GalleryFilters() {
           <SelectTrigger className="w-28 h-9 cursor-pointer">
             <SelectValue placeholder="BG" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
               All BG
             </SelectItem>
@@ -180,7 +180,7 @@ export function GalleryFilters() {
           <SelectTrigger className="w-28 h-9 cursor-pointer">
             <SelectValue placeholder="Gen" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
               All Gens
             </SelectItem>
@@ -207,7 +207,7 @@ export function GalleryFilters() {
           <SelectTrigger className="w-28 h-9 cursor-pointer">
             <SelectValue placeholder="Cursor" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
               All Cursors
             </SelectItem>
@@ -234,7 +234,7 @@ export function GalleryFilters() {
           <SelectTrigger className="w-28 h-9 cursor-pointer">
             <SelectValue placeholder="Year" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
               All Years
             </SelectItem>
@@ -290,12 +290,12 @@ export function GalleryFilters() {
           ) : (
             <ArrowDown className="h-4 w-4" />
           )}
-          {filters.order === "asc" ? "Asc" : "Desc"}
+          {filters.order === "asc" ? "Ascending" : "Descending"}
         </Button>
 
         {/* Clear All Button - Fixed Right */}
         <Button
-          variant="outline"
+          variant={isFiltered ? "default" : "outline"}
           size="sm"
           onClick={handleClearAll}
           disabled={isPending || !isFiltered}
