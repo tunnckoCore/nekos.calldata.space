@@ -1,222 +1,344 @@
+import crypto from "crypto";
 import { NekoSchema, type Neko } from "./neko";
 
-const ETHS_URL =
-  "https://gistcdn.githack.com/xaxa/f5a4b8a3c5f8e9d2a1b6c5d4e3f2a1b6/raw/0xnekos-eths.json";
-const NFTS_URL =
-  "https://gistcdn.githack.com/xaxa/f5a4b8a3c5f8e9d2a1b6c5d4e3f2a1b6/raw/0xnekos-nfts.json";
-const ORDS_URL =
-  "https://gistcdn.githack.com/xaxa/f5a4b8a3c5f8e9d2a1b6c5d4e3f2a1b6/raw/0xnekos-ords.json";
+const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
+const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
+const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
 
-let cachedData: Neko[] | null = null;
-let cachedETag: string | null = null;
+interface CacheEntry {
+  data: Neko[];
+  etag: string;
+  timestamp: number;
+}
+
+// In-memory cache for the merged dataset
+let dataCache: CacheEntry | null = null;
+const CACHE_TTL = 1000 * 60 * 60 * 24 * 365; // 1 year
 
 /**
- * Fetch and validate data from a single source
+ * Generates an ETag for a dataset
  */
-async function fetchAndValidateSource(url: string): Promise<Neko[]> {
-  try {
-    const response = await fetch(url, {
-      cache: "no-store",
-      headers: {
-        "User-Agent": "Neko-Gallery/1.0",
-      },
-    });
+function generateETag(data: Neko[]): string {
+  const hash = crypto.createHash("sha256");
+  hash.update(JSON.stringify(data));
+  return `"${hash.digest("hex").slice(0, 16)}"`;
+}
 
+/**
+ * Fetches and validates data from a single CDN source
+ */
+async function fetchAndValidateSource(url: string): Promise<Neko[] | null> {
+  try {
+    const response = await fetch(url);
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status} from ${url}`);
+      console.error(`Failed to fetch ${url}: ${response.statusText}`);
+      return null;
     }
 
-    const data = await response.json();
-    const items = Array.isArray(data) ? data : data.items || [];
+    const json = await response.json();
+    const items = Array.isArray(json) ? json : [json];
 
     // Validate each item against schema
     const validated: Neko[] = [];
     for (const item of items) {
-      try {
-        const parsed = NekoSchema.parse(item);
-        validated.push(parsed);
-      } catch (error) {
-        console.warn(`Invalid item in ${url}:`, item, error);
-        // Continue with other items
+      const parsed = NekoSchema.safeParse(item);
+      if (parsed.success) {
+        let data = parsed.data;
+
+        validated.push(data);
+      } else {
+        console.warn(`Validation error for item:`, parsed.error);
       }
     }
 
     return validated;
   } catch (error) {
-    console.error(`Error fetching from ${url}:`, error);
-    return [];
+    console.error(`Error fetching ${url}:`, error);
+    return null;
   }
 }
 
 /**
- * Merge and deduplicate Neko data from all 3 sources
+ * Fetches and merges all Neko data from 3 CDN sources
+ * Caches result for 1 year with ETag support
  */
-export async function fetchAndMergeNekoData(): Promise<{
+export async function fetchAllNekos(): Promise<{
   data: Neko[];
   etag: string;
 }> {
+  // Check cache validity
+  if (dataCache && Date.now() - dataCache.timestamp < CACHE_TTL) {
+    return {
+      data: dataCache.data,
+      etag: dataCache.etag,
+    };
+  }
+
   try {
-    // Fetch all 3 sources in parallel
-    const [ethsData, nftsData, ordsData] = await Promise.all([
-      fetchAndValidateSource(ETHS_URL),
+    // Fetch all three sources in parallel
+    const [nfts, ords, eths] = await Promise.all([
       fetchAndValidateSource(NFTS_URL),
       fetchAndValidateSource(ORDS_URL),
+      fetchAndValidateSource(ETHS_URL),
     ]);
 
-    // Merge arrays
-    const merged = [...ethsData, ...nftsData, ...ordsData];
+    if (!nfts || !ords || !eths) {
+      console.warn("One or more sources failed to fetch valid Neko data");
+      // Return cached data if available, even if expired
 
-    // Deduplicate by index (prefer earliest source)
-    const seen = new Set<number>();
-    const deduplicated = merged.filter((item) => {
-      if (seen.has(item.index)) {
-        return false;
+      return dataCache ?? Promise.reject(new Error("No cached data available"));
+    }
+
+    const merged = [...nfts, ...ords, ...eths].map((item) => {
+      const isNft = item.traits.gen.toLowerCase().includes("og");
+      const isOrdinal = item.traits.gen.toLowerCase().includes("ordinal");
+
+      // patches for HTML of bugged cats
+      if ((isOrdinal || isNft) && item.index === 4) {
+        item.traits.eyes = "red";
       }
-      seen.add(item.index);
-      return true;
+      if ((isOrdinal || isNft) && item.index === 16) {
+        item.traits.cat = "gold";
+        item.traits.eyes = "red";
+      }
+      if ((isOrdinal || isNft) && item.index === 97) {
+        item.traits.cat = "gold";
+        item.traits.eyes = "red";
+      }
+
+      return item;
     });
 
-    // Sort by index ascending
-    deduplicated.sort((a, b) => a.index - b.index);
+    if (merged.length === 0) {
+      console.warn("No valid Neko data found from any source");
+      // Return cached data if available, even if expired
 
-    // Generate ETag from data hash
-    const dataString = JSON.stringify(deduplicated);
-    const etag = generateETag(dataString);
+      return dataCache ?? Promise.reject(new Error("No cached data available"));
+    }
+
+    // Generate ETag and update cache
+    const etag = generateETag(merged);
+    dataCache = {
+      data: merged,
+      etag,
+      timestamp: Date.now(),
+    };
 
     return {
-      data: deduplicated,
+      data: merged,
       etag,
     };
   } catch (error) {
-    console.error("Fatal error in fetchAndMergeNekoData:", error);
+    console.error("Error in fetchAllNekos:", error);
+
+    // Fallback to cached data if fetch fails
+    if (dataCache) {
+      return {
+        data: dataCache.data,
+        etag: dataCache.etag,
+      };
+    }
+
     throw error;
   }
 }
 
 /**
- * Get cached data with optional revalidation
+ * Filters Neko array by traits
  */
-export async function getNekoData(
-  clientETag?: string
-): Promise<{
-  data: Neko[] | null;
-  etag: string;
-  notModified: boolean;
-}> {
-  // If we have cached data and client ETag matches, return 304
-  if (cachedData && clientETag && clientETag === cachedETag) {
-    return {
-      data: null,
-      etag: cachedETag,
-      notModified: true,
-    };
-  }
+export function filterNekosByTraits(
+  nekos: Neko[],
+  filters: Partial<Record<string, string>>,
+): Neko[] {
+  return nekos.filter((neko) => {
+    for (const [key, value] of Object.entries(filters)) {
+      if (!value) continue;
 
-  // Otherwise fetch fresh data
-  const { data, etag } = await fetchAndMergeNekoData();
-
-  // Cache it
-  cachedData = data;
-  cachedETag = etag;
-
-  return {
-    data,
-    etag,
-    notModified: false,
-  };
+      if (key === "search") {
+        const searchLower = value.toLowerCase();
+        if (
+          !neko.name.toLowerCase().includes(searchLower) &&
+          !neko.id.toLowerCase().includes(searchLower) &&
+          !neko.creator.toLowerCase().includes(searchLower)
+        ) {
+          return false;
+        }
+      } else if (key === "year") {
+        if (neko.traits.year !== parseInt(value)) {
+          return false;
+        }
+      } else if (key === "gen") {
+        if (neko.traits.gen !== value) {
+          return false;
+        }
+      } else if (key === "background") {
+        if (neko.traits.background !== value) {
+          return false;
+        }
+      } else if (key === "cat") {
+        if (neko.traits.cat !== value) {
+          return false;
+        }
+      } else if (key === "eyes") {
+        if (neko.traits.eyes !== value) {
+          return false;
+        }
+      } else if (key === "cursor") {
+        if (neko.traits.cursor !== value) {
+          return false;
+        }
+      }
+    }
+    return true;
+  });
 }
 
 /**
- * Get paginated, filtered, and sorted Neko data
+ * Sorts Neko array by field and order
+ * When sorting by block_number, also sorts by transaction_index as secondary (except Ordinals)
  */
-export async function getPaginatedNekoData({
+export function sortNekos(
+  nekos: Neko[],
+  field: string = "block_timestamp",
+  order: "asc" | "desc" = "asc",
+): Neko[] {
+  const sorted = [...nekos];
+  sorted.sort((a, b) => {
+    let aVal: any;
+    let bVal: any;
+
+    // Default sort is by block_timestamp
+    if (field === "block_timestamp" || field === "index") {
+      aVal = a.block_timestamp;
+      bVal = b.block_timestamp;
+    } else if (field === "block_number") {
+      aVal = a.block_number;
+      bVal = b.block_number;
+    } else if (field === "transaction_fee") {
+      aVal = a.transaction_fee;
+      bVal = b.transaction_fee;
+    } else if (field === "transaction_index") {
+      aVal = a.transaction_index ?? 0;
+      bVal = b.transaction_index ?? 0;
+    } else {
+      aVal = a.block_timestamp;
+      bVal = b.block_timestamp;
+    }
+
+    let comparison = aVal - bVal;
+
+    // If sorting by block_number and values are equal, use transaction_index as tiebreaker
+    // (except for Ordinals which don't have meaningful transaction indices)
+    if (field === "block_number" && comparison === 0) {
+      const aIsOrdinal = a.traits.gen === "Ordinals";
+      const bIsOrdinal = b.traits.gen === "Ordinals";
+
+      if (!aIsOrdinal && !bIsOrdinal) {
+        comparison = (a.transaction_index ?? 0) - (b.transaction_index ?? 0);
+      }
+    }
+
+    return order === "asc" ? comparison : -comparison;
+  });
+
+  return sorted;
+}
+
+/**
+ * Gets unique trait values with counts from a Neko array
+ */
+export function getTraitOptions(
+  nekos: Neko[],
+  trait: "block" | "year" | "gen" | "background" | "cat" | "eyes" | "cursor",
+) {
+  const counts = new Map<string | number, number>();
+
+  for (const neko of nekos) {
+    const value = neko.traits[trait];
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+
+  return Array.from(counts.entries())
+    .map(([value, count]) => ({ value: String(value), count }))
+    .sort((a, b) => {
+      const aNum = Number(a.value);
+      const bNum = Number(b.value);
+      if (!isNaN(aNum) && !isNaN(bNum)) {
+        return aNum - bNum;
+      }
+      return a.value.localeCompare(b.value);
+    });
+}
+
+/**
+ * Gets paginated, filtered, sorted Neko data for API
+ */
+export async function getPaginatedNekos({
   skip = 0,
   take = 50,
   search,
-  filters,
-  sort = "index",
+  background,
+  cat,
+  eyes,
+  cursor,
+  gen,
+  year,
+  sort = "block_timestamp",
   order = "asc",
 }: {
   skip?: number;
   take?: number;
   search?: string;
-  filters?: Record<string, string>;
+  background?: string;
+  cat?: string;
+  eyes?: string;
+  cursor?: string;
+  gen?: string;
+  year?: string;
   sort?: string;
   order?: "asc" | "desc";
-}): Promise<{
+} = {}): Promise<{
   items: Neko[];
   total: number;
   hasMore: boolean;
 }> {
-  // Get all data
-  const { data } = await fetchAndMergeNekoData();
+  const { data: allNekos } = await fetchAllNekos();
 
-  if (!data) {
+  if (!allNekos || allNekos.length === 0) {
     return { items: [], total: 0, hasMore: false };
   }
 
-  let filtered = [...data];
+  let filtered = [...allNekos];
 
   // Apply search filter
   if (search && search.trim()) {
     const searchLower = search.toLowerCase();
-    filtered = filtered.filter((item) => {
+    filtered = filtered.filter((neko) => {
       return (
-        item.name.toLowerCase().includes(searchLower) ||
-        item.id.toLowerCase().includes(searchLower) ||
-        item.creator.toLowerCase().includes(searchLower)
+        neko.name.toLowerCase().includes(searchLower) ||
+        neko.id.toLowerCase().includes(searchLower) ||
+        neko.creator.toLowerCase().includes(searchLower)
       );
     });
   }
 
   // Apply trait filters
-  if (filters && Object.keys(filters).length > 0) {
-    filtered = filtered.filter((item) => {
-      return Object.entries(filters).every(([key, value]) => {
-        if (!value) return true;
-        const traitValue = item.traits[key as keyof typeof item.traits];
-        return traitValue === value;
-      });
-    });
-  }
+  if (background)
+    filtered = filtered.filter((n) => n.traits.background === background);
+  if (cat) filtered = filtered.filter((n) => n.traits.cat === cat);
+  if (eyes) filtered = filtered.filter((n) => n.traits.eyes === eyes);
+  if (cursor) filtered = filtered.filter((n) => n.traits.cursor === cursor);
+  if (gen) filtered = filtered.filter((n) => n.traits.gen === gen);
+  if (year) filtered = filtered.filter((n) => n.traits.year === parseInt(year));
 
   const total = filtered.length;
 
   // Apply sorting
-  filtered.sort((a, b) => {
-    let aVal: number | string = a[sort as keyof Neko] || 0;
-    let bVal: number | string = b[sort as keyof Neko] || 0;
-
-    if (typeof aVal === "object" || typeof bVal === "object") {
-      aVal = 0;
-      bVal = 0;
-    }
-
-    if (typeof aVal === "string") {
-      aVal = aVal.localeCompare(bVal as string);
-      bVal = 0;
-    }
-
-    const comparison = (aVal as number) - (bVal as number);
-    return order === "asc" ? comparison : -comparison;
-  });
+  filtered = sortNekos(filtered, sort, order);
 
   // Apply pagination
   const items = filtered.slice(skip, skip + take);
   const hasMore = skip + take < total;
 
   return { items, total, hasMore };
-}
-
-/**
- * Generate a simple ETag hash
- */
-function generateETag(data: string): string {
-  let hash = 0;
-  for (let i = 0; i < data.length; i++) {
-    const char = data.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash; // Convert to 32bit integer
-  }
-  return `"${Math.abs(hash).toString(16)}"`;
 }
