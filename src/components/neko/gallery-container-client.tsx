@@ -31,6 +31,10 @@ export function GalleryContainerClient({
   const items = useMemo(() => {
     return data?.pages.flatMap((page) => page.items) ?? [];
   }, [data]);
+  const selectedItems = useMemo(() => {
+    return data?.pages.flatMap((page) => page.total) ?? [];
+  }, [data]);
+  const itemsCount = selectedItems[0] ?? 0;
 
   // Create ref for scrollable container
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -94,8 +98,7 @@ export function GalleryContainerClient({
     <div className="flex flex-col h-full w-full">
       {/* Item count header */}
       <div className="px-4 py-2 bg-background/50 text-xs text-muted-foreground shrink-0">
-        Showing {items.length} items{" "}
-        {allNekos && `from ${allNekos.length} total`}
+        Showing {items.length} items {allNekos && `from ${itemsCount} total`}
       </div>
 
       {/* Virtualized scrollable container - key: overflow-y-auto with proper ref */}
