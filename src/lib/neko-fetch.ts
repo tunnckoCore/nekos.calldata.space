@@ -72,8 +72,15 @@ export function sortNekos(
       aVal = a.sequence ?? 0;
       bVal = b.sequence ?? 0;
     } else if (field === "created_at" || field === "block_timestamp") {
-      aVal = a.block_timestamp;
-      bVal = b.block_timestamp;
+      // Sort by block_timestamp (primary) with sequence as tiebreaker
+      aVal = a.block_timestamp || 0;
+      bVal = b.block_timestamp || 0;
+      let comparison = aVal - bVal;
+      if (comparison === 0) {
+        // If timestamps are equal, use sequence as tiebreaker
+        comparison = (a.sequence ?? 0) - (b.sequence ?? 0);
+      }
+      return order === "asc" ? comparison : -comparison;
     } else if (field === "block_number") {
       aVal = a.block_number;
       bVal = b.block_number;
@@ -86,6 +93,9 @@ export function sortNekos(
     } else if (field === "index") {
       aVal = a.index;
       bVal = b.index;
+    } else if (field === "number") {
+      aVal = a.number;
+      bVal = b.number;
     } else {
       aVal = a.sequence ?? 0;
       bVal = b.sequence ?? 0;
@@ -93,7 +103,7 @@ export function sortNekos(
 
     let comparison = aVal - bVal;
 
-    // If sorting by block_number and values are equal, use transaction_index as tiebreaker
+    // If sorting by block_number (Block & Index) and values are equal, use transaction_index as tiebreaker
     // (except for Ordinals which don't have meaningful transaction indices)
     if (field === "block_number" && comparison === 0) {
       const aIsOrdinal = a.traits.gen === "Ordinals";
