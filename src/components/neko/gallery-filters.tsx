@@ -188,11 +188,11 @@ export function GalleryFilters() {
                     <SelectValue placeholder="Sort" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="created_at" className="cursor-pointer">
+                    <SelectItem value="sequence" className="cursor-pointer">
                       Created At
                     </SelectItem>
                     <SelectItem value="block_number" className="cursor-pointer">
-                      Block
+                      Block & Index
                     </SelectItem>
                     <SelectItem
                       value="transaction_fee"
@@ -200,11 +200,8 @@ export function GalleryFilters() {
                     >
                       Fee
                     </SelectItem>
-                    <SelectItem
-                      value="transaction_index"
-                      className="cursor-pointer"
-                    >
-                      Index
+                    <SelectItem value="number" className="cursor-pointer">
+                      Number
                     </SelectItem>
                   </SelectContent>
                 </Select>
@@ -311,11 +308,11 @@ export function GalleryFilters() {
                     <SelectValue placeholder="Sort" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="created_at" className="cursor-pointer">
+                    <SelectItem value="sequence" className="cursor-pointer">
                       Created At
                     </SelectItem>
                     <SelectItem value="block_number" className="cursor-pointer">
-                      Block
+                      Block & Index
                     </SelectItem>
                     <SelectItem
                       value="transaction_fee"
@@ -323,11 +320,8 @@ export function GalleryFilters() {
                     >
                       Fee
                     </SelectItem>
-                    <SelectItem
-                      value="transaction_index"
-                      className="cursor-pointer"
-                    >
-                      Index
+                    <SelectItem value="number" className="cursor-pointer">
+                      Number
                     </SelectItem>
                   </SelectContent>
                 </Select>
