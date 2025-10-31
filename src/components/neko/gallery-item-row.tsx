@@ -31,6 +31,7 @@ export function GalleryItemRow({
           ? (rankings?.openRarity?.rank ?? 0)
           : (rankings?.jungle?.rank ?? 0);
 
+  alert(JSON.stringify(rankings));
   return (
     <div
       // href={`/items/${item.traits.gen.toLowerCase()}/${item.id}`}
