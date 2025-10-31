@@ -1,8 +1,8 @@
 // "use cache";
 
 import { NextResponse } from "next/server";
-import { getPaginatedNekos } from "@/lib/neko-fetch";
 import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
+import { getPaginatedNekos } from "@/lib/neko-fetch";
 
 export async function GET(request: Request) {
   try {
