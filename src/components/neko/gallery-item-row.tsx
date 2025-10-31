@@ -1,9 +1,9 @@
 "use client";
 
 import { useQueryState } from "nuqs";
+import { Badge } from "@/components/ui/badge";
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
-import { Badge } from "@/components/ui/badge";
 
 // import { Button } from "@/components/ui/button";
 
@@ -113,10 +113,7 @@ export function GalleryItemRow({
           data-bg-trait={item.traits.background}
           data-bg-color={patchedColors.background}
           style={{
-            backgroundColor:
-              item.index === 1 && item.traits.gen.toLowerCase().includes("eths")
-                ? "#c9e0ff"
-                : patchedColors.background,
+            backgroundColor: patchedColors.background,
           }}
         >
           <div className="flex w-full justify-start">

@@ -794,7 +794,7 @@
       },
       "sequence": 16,
       "colors": {
-        "background": "#3d3d3d",
+        "background": "#c9e0ff",
         "cat": "gold",
         "eyes": "red"
       },
@@ -6846,7 +6846,7 @@
       },
       "sequence": 134,
       "colors": {
-        "background": "#3d3d3d",
+        "background": "#c9e0ff",
         "cat": "gold",
         "eyes": "red"
       },
@@ -9705,7 +9705,7 @@
       },
       "sequence": 189,
       "colors": {
-        "background": "blue",
+        "background": "#c9e0ff",
         "cat": "gold",
         "eyes": "red"
       },

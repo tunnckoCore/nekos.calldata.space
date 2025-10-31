@@ -123,8 +123,7 @@ export function GalleryContainerClient({
                 .includes("eths");
               const isOrdinals = item.traits.gen.toLowerCase().includes("ord");
               const isNfts = item.traits.gen.toLowerCase().includes("og");
-
-              const patchedColors = item.colors || item.traits;
+              const patchedColors = item.colors;
 
               if (item.index === 1) {
                 console.log({ item });
@@ -167,7 +166,7 @@ export function GalleryContainerClient({
                       <iframe
                         className="m-0 block h-[80dvh] w-full border-0 p-0"
                         sandbox="allow-scripts"
-                        src={`https://api.ethscriptions.com/v2/ethscriptions/${item.id}/data`}
+                        src={`https://mainnet.api.calldata.space/ethscriptions/${item.id}/data`}
                         style={{
                           backgroundColor: patchedColors.background,
                         }}
