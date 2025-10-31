@@ -1,5 +1,9 @@
-import { type Neko } from "./neko";
 import { fuzzySearch } from "./fuzzy-search";
+import {
+  GalleryFilters,
+  type GalleryFiltersWithPagination,
+} from "./gallery-search-params";
+import type { Neko } from "./neko";
 import { getAllNekos } from "./preps";
 
 /**
@@ -96,6 +100,18 @@ export function sortNekos(
     } else if (field === "number") {
       aVal = a.number;
       bVal = b.number;
+    } else if (field === "rank_global") {
+      aVal = a.rankings?.global?.rank ?? Infinity;
+      bVal = b.rankings?.global?.rank ?? Infinity;
+    } else if (field === "rank_open_rarity") {
+      aVal = a.rankings?.openRarity?.rank ?? Infinity;
+      bVal = b.rankings?.openRarity?.rank ?? Infinity;
+    } else if (field === "rank_jungle") {
+      aVal = a.rankings?.jungle?.rank ?? Infinity;
+      bVal = b.rankings?.jungle?.rank ?? Infinity;
+    } else if (field === "rank_rarity") {
+      aVal = a.rankings?.rarity?.rank ?? Infinity;
+      bVal = b.rankings?.rarity?.rank ?? Infinity;
     } else {
       aVal = a.sequence ?? 0;
       bVal = b.sequence ?? 0;
@@ -146,15 +162,7 @@ export function getTraitOptions(
 export function getDynamicTraitOptions(
   nekos: Neko[],
   trait: "block" | "year" | "gen" | "background" | "cat" | "eyes" | "cursor",
-  filters: {
-    search?: string;
-    background?: string;
-    cat?: string;
-    eyes?: string;
-    cursor?: string;
-    gen?: string;
-    year?: string;
-  } = {},
+  filters?: GalleryFiltersWithPagination,
 ): { value: string; count: number }[] {
   // First apply all current filters EXCEPT the trait we're getting options for
   const filtersCopy = { ...filters };
@@ -168,27 +176,29 @@ export function getDynamicTraitOptions(
     if (!value) continue;
 
     if (key === "search") {
-      const searchLower = value.toLowerCase();
+      const searchLower = String(value).toLowerCase();
       filtered = filtered.filter(
         (neko) =>
           neko.name.toLowerCase().includes(searchLower) ||
           neko.id.toLowerCase().includes(searchLower) ||
           neko.creator.toLowerCase().includes(searchLower),
       );
-    } else if (key === "year") {
+    } else if (key === "year" && typeof value === "number") {
       filtered = filtered.filter(
-        (n) => n.traits.year === Number.parseInt(value, 10),
+        (n) => n.traits.year === Number.parseInt(String(value), 10),
       );
-    } else if (key === "gen") {
-      filtered = filtered.filter((n) => n.traits.gen === value);
-    } else if (key === "background") {
-      filtered = filtered.filter((n) => n.traits.background === value);
-    } else if (key === "cat") {
-      filtered = filtered.filter((n) => n.traits.cat === value);
-    } else if (key === "eyes") {
-      filtered = filtered.filter((n) => n.traits.eyes === value);
-    } else if (key === "cursor") {
-      filtered = filtered.filter((n) => n.traits.cursor === value);
+    } else if (typeof value === "string") {
+      if (key === "gen") {
+        filtered = filtered.filter((n) => n.traits.gen === value);
+      } else if (key === "background") {
+        filtered = filtered.filter((n) => n.traits.background === value);
+      } else if (key === "cat") {
+        filtered = filtered.filter((n) => n.traits.cat === value);
+      } else if (key === "eyes") {
+        filtered = filtered.filter((n) => n.traits.eyes === value);
+      } else if (key === "cursor") {
+        filtered = filtered.filter((n) => n.traits.cursor === value);
+      }
     }
   }
 
@@ -199,36 +209,28 @@ export function getDynamicTraitOptions(
 /**
  * Gets paginated, filtered, sorted Neko data for API
  */
-export async function getPaginatedNekos({
-  skip = 0,
-  take = 50,
-  search,
-  background,
-  cat,
-  eyes,
-  cursor,
-  gen,
-  year,
-  sort,
-  order = "asc",
-}: {
-  skip?: number;
-  take?: number;
-  search?: string;
-  background?: string;
-  cat?: string;
-  eyes?: string;
-  cursor?: string;
-  gen?: string;
-  year?: string;
-  sort?: string;
-  order?: "asc" | "desc";
-} = {}): Promise<{
+export async function getPaginatedNekos(
+  baseURL: string,
+  opts: GalleryFiltersWithPagination,
+): Promise<{
   items: Neko[];
   total: number;
   hasMore: boolean;
 }> {
-  const { data: allNekos } = await getAllNekos();
+  const {
+    skip = 0,
+    take = 50,
+    search,
+    background,
+    cat,
+    eyes,
+    cursor,
+    gen,
+    year,
+    sort,
+    order = "asc",
+  } = { ...opts };
+  const { data: allNekos } = await getAllNekos(baseURL);
 
   if (!allNekos || allNekos.length === 0) {
     return { items: [], total: 0, hasMore: false };
@@ -245,13 +247,26 @@ export async function getPaginatedNekos({
   }
 
   // Apply trait filters
-  if (background)
+  if (background) {
     filtered = filtered.filter((n) => n.traits.background === background);
-  if (cat) filtered = filtered.filter((n) => n.traits.cat === cat);
-  if (eyes) filtered = filtered.filter((n) => n.traits.eyes === eyes);
-  if (cursor) filtered = filtered.filter((n) => n.traits.cursor === cursor);
-  if (gen) filtered = filtered.filter((n) => n.traits.gen === gen);
-  if (year) filtered = filtered.filter((n) => n.traits.year === parseInt(year));
+  }
+  if (cat) {
+    filtered = filtered.filter((n) => n.traits.cat === cat);
+  }
+  if (eyes) {
+    filtered = filtered.filter((n) => n.traits.eyes === eyes);
+  }
+  if (cursor) {
+    filtered = filtered.filter((n) => n.traits.cursor === cursor);
+  }
+  if (gen) {
+    filtered = filtered.filter((n) => n.traits.gen === gen);
+  }
+  if (year) {
+    filtered = filtered.filter(
+      (n) => n.traits.year === Number.parseInt(year, 10),
+    );
+  }
 
   const total = filtered.length;
 

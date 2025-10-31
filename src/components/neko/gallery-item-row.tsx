@@ -1,7 +1,9 @@
 "use client";
 
+import { useQueryState } from "nuqs";
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
+import { Badge } from "../ui/badge";
 // import { Button } from "@/components/ui/button";
 
 export function GalleryItemRow({
@@ -11,11 +13,25 @@ export function GalleryItemRow({
   item: Neko;
   children: React.ReactNode;
 }) {
+  const [sort] = useQueryState("sort");
+
   const cursorItem = allCursors.find((c) => c.name === item.traits.cursor);
   const cursorEmoji = cursorItem!.emoji;
 
   const patchedColors = item.colors || item.traits;
+  const rankings = item.rankings;
 
+  const globalRank = rankings?.global?.rank ?? 0;
+  const itemRank =
+    sort === "rank_rarity"
+      ? (rankings?.rarity?.rank ?? 0)
+      : sort === "rank_jungle"
+        ? (rankings?.jungle?.rank ?? 0)
+        : sort === "rank_open_rarity"
+          ? (rankings?.openRarity?.rank ?? 0)
+          : (rankings?.jungle?.rank ?? 0);
+
+  console.log({ rankings });
   return (
     <div
       // href={`/items/${item.traits.gen.toLowerCase()}/${item.id}`}
@@ -28,7 +44,7 @@ export function GalleryItemRow({
         style={{ backgroundColor: patchedColors.cat }}
       >
         <div className="flex w-full justify-start">
-          {item.traits.gen.toLowerCase().includes("og") && (
+          {/*{item.traits.gen.toLowerCase().includes("og") && (
             <div
               className="relative z-20 rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
 
@@ -36,7 +52,7 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              0xNeko OG #{item.index}
+              {item.index}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("ordinal") && (
@@ -48,31 +64,43 @@ export function GalleryItemRow({
             >
               0xNeko Ordinals #{item.index}
             </div>
-          )}
-          {item.traits.gen.toLowerCase().includes("eths") && (
+          )}*/}
+          {/*{item.traits.gen.toLowerCase().includes("eths") && (*/}
+          {
             <div
               className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
               // href={`https://etherscan.io/tx/${item.transaction_hash}`}
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              0xNeko Ethscriptions #{item.index}
+              {item.name} 💠 {globalRank}
             </div>
-          )}
+          }
         </div>
         <div className="flex w-full justify-end gap-2">
-          <span
+          <div
             className="rounded-full p-4 shadow-lg drop-shadow-md"
             data-eyes-trait={item.traits.eyes}
             data-eyes-color={patchedColors.eyes}
             style={{ backgroundColor: patchedColors.eyes }}
           />
-          <span
+          <div
             className="rounded-full p-4 shadow-lg drop-shadow-md"
             data-eyes-trait={item.traits.eyes}
             data-eyes-color={patchedColors.eyes}
             style={{ backgroundColor: patchedColors.eyes }}
           />
+          {/*<Badge variant="secondary" className="px-2.5">
+            {item.sequence}
+          </Badge>*/}
+          {/*<div
+            className="text-xs bg-slate-100 flex items-center justify-center rounded-md px-2 text-slate-800 shadow-lg drop-shadow-md"
+            // href={`https://etherscan.io/tx/${item.transaction_hash}`}
+            // rel="noopener noreferrer"
+            // target="_blank"
+          >
+            💎 {rankings.jungle.rank}
+          </div>*/}
         </div>
       </div>
       <div
@@ -99,7 +127,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              NFT #{item.number.toLocaleString()}
+              NFT #{item.number.toLocaleString()}{" "}
+              {itemRank ? `💎 ${itemRank}` : ""}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("ordinal") && (
@@ -109,7 +138,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              Ordinal #{item.number.toLocaleString()}
+              Ordinal #{item.number.toLocaleString()}{" "}
+              {itemRank ? `💎 ${itemRank}` : ""}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("eths") && (
@@ -119,7 +149,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              Ethscription #{item.number.toLocaleString()}
+              Ethscription #{item.number.toLocaleString()}{" "}
+              {itemRank ? `💎 ${itemRank}` : ""}
             </div>
           )}
           {/*{item.traits.gen.toLowerCase().includes("og") && (

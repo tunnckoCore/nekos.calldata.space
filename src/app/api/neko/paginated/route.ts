@@ -1,12 +1,14 @@
-// "use cache";
-
-import { getPaginatedNekos } from "@/lib/neko-fetch";
 import { NextResponse } from "next/server";
+import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
+import { getPaginatedNekos } from "@/lib/neko-fetch";
 
 export async function GET(request: Request) {
   try {
     const url = new URL(request.url);
     const searchParams = url.searchParams;
+    const filters = await gallerySearchParamsCache.parse(
+      Promise.resolve(searchParams),
+    );
 
     // Parse query parameters
     const skip = Math.max(
@@ -17,29 +19,12 @@ export async function GET(request: Request) {
       100,
       Math.max(1, Number.parseInt(searchParams.get("take") || "50", 10)),
     );
-    const search = searchParams.get("search") || undefined;
-    const background = searchParams.get("background") || undefined;
-    const cat = searchParams.get("cat") || undefined;
-    const eyes = searchParams.get("eyes") || undefined;
-    const cursor = searchParams.get("cursor") || undefined;
-    const gen = searchParams.get("gen") || undefined;
-    const year = searchParams.get("year") || undefined;
-    const sort = searchParams.get("sort") || undefined;
-    const order = (searchParams.get("order") || "asc") as "asc" | "desc";
 
     // Fetch paginated data
-    const { items, total, hasMore } = await getPaginatedNekos({
+    const { items, total, hasMore } = await getPaginatedNekos(url.origin, {
       skip,
       take,
-      search,
-      background,
-      cat,
-      eyes,
-      cursor,
-      gen,
-      year,
-      sort,
-      order,
+      ...filters,
     });
 
     return NextResponse.json(

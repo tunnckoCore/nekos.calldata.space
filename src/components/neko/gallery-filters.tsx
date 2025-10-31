@@ -1,17 +1,8 @@
 "use client";
 
+import { ArrowDown, ArrowUp, Loader2, X } from "lucide-react";
 import { debounce } from "nuqs";
-import { useAllNekos } from "@/lib/queries";
-import { getDynamicTraitOptions } from "@/lib/neko-fetch";
-import { useMemo, useTransition, useRef } from "react";
-import { Loader2, X, ArrowUp, ArrowDown } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { useMemo, useRef, useTransition } from "react";
 import { Button } from "@/components/ui/button";
 import {
   InputGroup,
@@ -19,10 +10,19 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group";
 import { Kbd, KbdGroup } from "@/components/ui/kbd";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Spinner } from "@/components/ui/spinner";
-import { useFilters } from "@/lib/gallery-search-params";
-import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
+import { useFilters } from "@/lib/gallery-search-params";
+import { getDynamicTraitOptions } from "@/lib/neko-fetch";
+import { useAllNekos } from "@/lib/queries";
 
 export function GalleryFilters() {
   const [isPending, startTransition] = useTransition();
@@ -138,7 +138,7 @@ export function GalleryFilters() {
               <InputGroupInput
                 ref={inputRef}
                 autoFocus
-                placeholder="Search by name or ID..."
+                placeholder="Browse 0xNekos..."
                 value={filters.search}
                 onChange={(e) => handleSetFilters("search", e.target.value)}
                 className="text-sm"
@@ -203,6 +203,30 @@ export function GalleryFilters() {
                     <SelectItem value="number" className="cursor-pointer">
                       Number
                     </SelectItem>
+                    <SelectItem value="rank_global" className="cursor-pointer">
+                      Global Rank
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_open_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: OpenRarity
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_jungle"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: Jungle
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: RarityScore
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -251,7 +275,7 @@ export function GalleryFilters() {
               <InputGroupInput
                 ref={inputRef}
                 autoFocus
-                placeholder="Search by name or ID..."
+                placeholder="Browse 0xNekos..."
                 value={filters.search}
                 onChange={(e) => handleSetFilters("search", e.target.value)}
               />
@@ -276,9 +300,9 @@ export function GalleryFilters() {
               {renderTraitSelect("eyes", "All Eyes", traitOptions.eyes, "Eyes")}
               {renderTraitSelect(
                 "background",
-                "All BG",
+                "All Backgrounds",
                 traitOptions.backgrounds,
-                "BG",
+                "Backgrounds",
               )}
               {renderTraitSelect("gen", "All Gens", traitOptions.gens, "Gen")}
               {renderTraitSelect(
@@ -304,7 +328,7 @@ export function GalleryFilters() {
                   onValueChange={(val) => handleSetFilters("sort", val)}
                   disabled={isPending}
                 >
-                  <SelectTrigger className="w-32 h-9 cursor-pointer">
+                  <SelectTrigger className="w-full h-9 cursor-pointer">
                     <SelectValue placeholder="Sort" />
                   </SelectTrigger>
                   <SelectContent>
@@ -318,10 +342,34 @@ export function GalleryFilters() {
                       value="transaction_fee"
                       className="cursor-pointer"
                     >
-                      Fee
+                      Transaction Fee
                     </SelectItem>
                     <SelectItem value="number" className="cursor-pointer">
-                      Number
+                      Protocol Number
+                    </SelectItem>
+                    <SelectItem value="rank_global" className="cursor-pointer">
+                      Global Rank
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_open_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: OpenRarity
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_jungle"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: Jungle
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: RarityScore
                     </SelectItem>
                   </SelectContent>
                 </Select>

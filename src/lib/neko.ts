@@ -1,4 +1,6 @@
-import { z } from "zod";
+import z from "zod/v4";
+
+z.email();
 
 const ethereumAddressSchema = z
   .string()
@@ -56,15 +58,37 @@ export const NekoSchema = z.object({
     eyes: z.string(),
     cursor: z.string(),
   }),
-  sequence: z.number().optional(), // Added by fetchAllNekos for stable ordering
+  sequence: z.number(),
   colors: z
     .object({
       background: z.string(),
       cat: z.string(),
       eyes: z.string(),
     })
-    .optional(),
+    .strict(),
+  rankings: z
+    .object({
+      openRarity: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+      rarity: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+      jungle: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+      global: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+    })
+    .strict(),
 });
+
+export const NekoListSchema = z.array(NekoSchema);
 
 export type Neko = z.infer<typeof NekoSchema>;
 
@@ -75,7 +99,11 @@ export type SortField =
   | "transaction_index"
   | "block_number"
   | "transaction_fee"
-  | "number";
+  | "number"
+  | "rank_global"
+  | "rank_open_rarity"
+  | "rank_jungle"
+  | "rank_rarity";
 
 export type SortOrder = "asc" | "desc";
 

@@ -1,9 +1,9 @@
 "use client";
 
-import { useNekoGallery, useAllNekos } from "@/lib/queries";
-import { useMemo, useEffect, useRef } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import { useEffect, useMemo, useRef } from "react";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
+import { useAllNekos, useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
 
 interface GalleryContainerClientProps {
@@ -24,8 +24,11 @@ export function GalleryContainerClient({
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
     useNekoGallery(filters);
 
+  console.log({ useNekoGallery: data });
+
   // Fetch all nekos for filter options
   const { data: allNekos } = useAllNekos();
+  console.log({ useAllNekos: allNekos });
 
   // Flatten paginated results into single array
   const items = useMemo(() => {
@@ -65,7 +68,7 @@ export function GalleryContainerClient({
     count: items.length,
     getScrollElement: () => scrollerRef.current,
     estimateSize: () => 72,
-    overscan: 10,
+    overscan: 15,
   });
 
   const virtualItems = virtualizer.getVirtualItems();
@@ -127,6 +130,10 @@ export function GalleryContainerClient({
               const isNfts = item.traits.gen.toLowerCase().includes("og");
 
               const patchedColors = item.colors || item.traits;
+
+              if (item.index === 1) {
+                console.log({ item });
+              }
 
               return (
                 <div

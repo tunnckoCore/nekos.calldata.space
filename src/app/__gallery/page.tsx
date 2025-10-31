@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import type { SearchParams } from "nuqs/server";
 import { Suspense } from "react";
 import { GalleryContent } from "@/components/neko/gallery-content";
-import type { SearchParams } from "nuqs/server";
 
 export const metadata: Metadata = {
   title: "Gallery | 0xNeko",
