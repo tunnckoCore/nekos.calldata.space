@@ -324,6 +324,7 @@ export async function getAllNekos(): Promise<CacheEntry> {
     return dataCache;
   }
 
+  console.log({ SITE_URL_ORIGIN });
   const res = await fetch(`${SITE_URL_ORIGIN}/0xnekos.json`);
   if (!res.ok) {
     throw new Error(`Failed to fetch nekos: ${res.status} ${res.statusText}`);
@@ -335,7 +336,10 @@ export async function getAllNekos(): Promise<CacheEntry> {
     throw new Error("No valid Neko data found");
   }
 
+  console.log("after schema validation");
   result.data = NekoListSchema.parse(result.data);
+
+  console.log("after schema is valid");
 
   dataCache = result;
 
