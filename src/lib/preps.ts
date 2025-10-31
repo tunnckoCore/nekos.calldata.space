@@ -18,7 +18,7 @@ interface CacheEntry {
 }
 
 // In-memory cache for the merged dataset
-const dataCache: CacheEntry | null = null;
+let dataCache: CacheEntry | null = null;
 const CACHE_TTL = 1000 * 60 * 60; // Cache for 1 hour to ensure consistent ordering across paginated requests
 
 /**
@@ -336,6 +336,8 @@ export async function getAllNekos(): Promise<CacheEntry> {
   }
 
   result.data = NekoListSchema.parse(result.data);
+
+  dataCache = result;
 
   initFuzzySearch(result.data);
   return result;
