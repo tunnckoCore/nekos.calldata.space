@@ -96,6 +96,18 @@ export function sortNekos(
     } else if (field === "number") {
       aVal = a.number;
       bVal = b.number;
+    } else if (field === "rank_global") {
+      aVal = a.rankings?.global?.rank ?? Infinity;
+      bVal = b.rankings?.global?.rank ?? Infinity;
+    } else if (field === "rank_open_rarity") {
+      aVal = a.rankings?.openRarity?.rank ?? Infinity;
+      bVal = b.rankings?.openRarity?.rank ?? Infinity;
+    } else if (field === "rank_jungle") {
+      aVal = a.rankings?.jungle?.rank ?? Infinity;
+      bVal = b.rankings?.jungle?.rank ?? Infinity;
+    } else if (field === "rank_rarity") {
+      aVal = a.rankings?.rarity?.rank ?? Infinity;
+      bVal = b.rankings?.rarity?.rank ?? Infinity;
     } else {
       aVal = a.sequence ?? 0;
       bVal = b.sequence ?? 0;

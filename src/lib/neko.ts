@@ -95,7 +95,11 @@ export type SortField =
   | "transaction_index"
   | "block_number"
   | "transaction_fee"
-  | "number";
+  | "number"
+  | "rank_global"
+  | "rank_open_rarity"
+  | "rank_jungle"
+  | "rank_rarity";
 
 export type SortOrder = "asc" | "desc";
 

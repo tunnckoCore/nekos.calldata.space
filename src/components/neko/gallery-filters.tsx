@@ -203,6 +203,30 @@ export function GalleryFilters() {
                     <SelectItem value="number" className="cursor-pointer">
                       Number
                     </SelectItem>
+                    <SelectItem value="rank_global" className="cursor-pointer">
+                      Global Rank
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_open_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: OpenRarity
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_jungle"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: Jungle
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: RarityScore
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -304,7 +328,7 @@ export function GalleryFilters() {
                   onValueChange={(val) => handleSetFilters("sort", val)}
                   disabled={isPending}
                 >
-                  <SelectTrigger className="w-32 h-9 cursor-pointer">
+                  <SelectTrigger className="w-48 h-9 cursor-pointer">
                     <SelectValue placeholder="Sort" />
                   </SelectTrigger>
                   <SelectContent>
@@ -322,6 +346,30 @@ export function GalleryFilters() {
                     </SelectItem>
                     <SelectItem value="number" className="cursor-pointer">
                       Number
+                    </SelectItem>
+                    <SelectItem value="rank_global" className="cursor-pointer">
+                      Global Rank
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_open_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: OpenRarity
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_jungle"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: Jungle
+                    </SelectItem>
+                    <SelectItem
+                      value="rank_rarity"
+                      className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                      disabled={!filters.gen}
+                    >
+                      Rank: RarityScore
                     </SelectItem>
                   </SelectContent>
                 </Select>
