@@ -19,17 +19,17 @@ export function GalleryItemRow({
   const cursorEmoji = cursorItem!.emoji;
 
   const patchedColors = item.colors || item.traits;
-  const rankings = item.rankings!;
+  const rankings = item.rankings;
 
   const sortMethod = params.get("sort");
   const itemRank =
     sortMethod === "rank_rarity"
-      ? rankings.rarity.rank
+      ? (rankings?.rarity?.rank ?? 0)
       : sortMethod === "rank_jungle"
-        ? rankings.jungle.rank
+        ? (rankings?.jungle?.rank ?? 0)
         : sortMethod === "rank_open_rarity"
-          ? rankings.openRarity.rank
-          : rankings.jungle.rank;
+          ? (rankings?.openRarity?.rank ?? 0)
+          : (rankings?.jungle?.rank ?? 0);
 
   return (
     <div
@@ -72,7 +72,7 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              {item.name} 💠 {rankings.global.rank}
+              {item.name} 💠 {rankings?.global?.rank ?? "zzz"}
             </div>
           }
         </div>
