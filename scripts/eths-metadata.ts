@@ -154,16 +154,20 @@ export async function generateMetadata(items) {
   return collection;
 }
 
-export function nekoMerkle(id: string | number, verify = false) {
-  const nekoItems = getNekoEthscriptionItems(nekos.data);
+export function getMerkleFor(
+  id: string | number,
+  verify = false,
+  items?: any[],
+) {
+  const nekoItems = items || getNekoEthscriptionItems(nekos.data);
   const NEKO_IDS = nekoItems.map((item) => item.id);
   const MERKLE_ROOT = calculateMerkleRoot(NEKO_IDS);
   const cleanId = String(id).replaceAll(",", "").replaceAll(".", "");
   const ID =
     Number.isNaN(Number(cleanId)) || cleanId.startsWith("0x")
       ? cleanId
-      : nekoItems.find((item) => item.ethscription_number === Number(cleanId))
-          ?.id;
+      : nekoItems.find((item) => item?.ethscription_number === Number(cleanId))
+          ?.id || cleanId;
 
   const proof = generateMerkleProof(NEKO_IDS, ID);
 
@@ -171,10 +175,10 @@ export function nekoMerkle(id: string | number, verify = false) {
 }
 
 // console.log(
-//   nekoMerkle(
+//   getMerkleFor(
 //     `0xa67a38870b5b9f60064bc380f7de2f244fe9adff7fdba1abe945a6df36928d08`,
 //   ),
-//   nekoMerkle(
+//   getMerkleFor(
 //     `0xa67a38870b5b9f60064bc380f7de2f244fe9adff7fdba1abe945a6df36928d08`,
 //     true,
 //   ),
