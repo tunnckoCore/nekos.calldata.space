@@ -1,5 +1,3 @@
-// "use cache";
-
 import { NextResponse } from "next/server";
 import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
 import { getPaginatedNekos } from "@/lib/neko-fetch";
