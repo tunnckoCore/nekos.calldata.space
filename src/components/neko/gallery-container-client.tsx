@@ -65,7 +65,7 @@ export function GalleryContainerClient({
     count: items.length,
     getScrollElement: () => scrollerRef.current,
     estimateSize: () => 72,
-    overscan: 10,
+    overscan: 15,
   });
 
   const virtualItems = virtualizer.getVirtualItems();

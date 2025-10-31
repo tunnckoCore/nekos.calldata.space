@@ -15,6 +15,7 @@ export function GalleryItemRow({
   const cursorEmoji = cursorItem!.emoji;
 
   const patchedColors = item.colors || item.traits;
+  const rankings = item.rankings!;
 
   return (
     <div
@@ -28,7 +29,7 @@ export function GalleryItemRow({
         style={{ backgroundColor: patchedColors.cat }}
       >
         <div className="flex w-full justify-start">
-          {item.traits.gen.toLowerCase().includes("og") && (
+          {/*{item.traits.gen.toLowerCase().includes("og") && (
             <div
               className="relative z-20 rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
 
@@ -36,7 +37,7 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              0xNeko OG #{item.index}
+              {item.index}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("ordinal") && (
@@ -48,31 +49,48 @@ export function GalleryItemRow({
             >
               0xNeko Ordinals #{item.index}
             </div>
-          )}
-          {item.traits.gen.toLowerCase().includes("eths") && (
+          )}*/}
+          {/*{item.traits.gen.toLowerCase().includes("eths") && (*/}
+          {
             <div
               className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
               // href={`https://etherscan.io/tx/${item.transaction_hash}`}
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              0xNeko Ethscriptions #{item.index}
+              {item.name} 💠 {rankings.global.rank}
             </div>
-          )}
+          }
         </div>
         <div className="flex w-full justify-end gap-2">
-          <span
+          <div
             className="rounded-full p-4 shadow-lg drop-shadow-md"
             data-eyes-trait={item.traits.eyes}
             data-eyes-color={patchedColors.eyes}
             style={{ backgroundColor: patchedColors.eyes }}
           />
-          <span
+          <div
             className="rounded-full p-4 shadow-lg drop-shadow-md"
             data-eyes-trait={item.traits.eyes}
             data-eyes-color={patchedColors.eyes}
             style={{ backgroundColor: patchedColors.eyes }}
           />
+          {/*<div
+            className="text-xs bg-slate-100 flex items-center justify-center rounded-md px-2 text-slate-800 shadow-lg drop-shadow-md"
+            // href={`https://etherscan.io/tx/${item.transaction_hash}`}
+            // rel="noopener noreferrer"
+            // target="_blank"
+          >
+            💠 {rankings.global.rank}
+          </div>*/}
+          {/*<div
+            className="text-xs bg-slate-100 flex items-center justify-center rounded-md px-2 text-slate-800 shadow-lg drop-shadow-md"
+            // href={`https://etherscan.io/tx/${item.transaction_hash}`}
+            // rel="noopener noreferrer"
+            // target="_blank"
+          >
+            💎 {rankings.jungle.rank}
+          </div>*/}
         </div>
       </div>
       <div
@@ -99,7 +117,7 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              NFT #{item.number.toLocaleString()}
+              NFT #{item.number.toLocaleString()} 💎 {rankings.openRarity.rank}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("ordinal") && (
@@ -109,7 +127,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              Ordinal #{item.number.toLocaleString()}
+              Ordinal #{item.number.toLocaleString()} 💎{" "}
+              {rankings.openRarity.rank}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("eths") && (
@@ -119,7 +138,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              Ethscription #{item.number.toLocaleString()}
+              Ethscription #{item.number.toLocaleString()} 💎{" "}
+              {rankings.jungle.rank}
             </div>
           )}
           {/*{item.traits.gen.toLowerCase().includes("og") && (

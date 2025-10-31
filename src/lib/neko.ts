@@ -64,6 +64,26 @@ export const NekoSchema = z.object({
       eyes: z.string(),
     })
     .optional(),
+  rankings: z
+    .object({
+      openRarity: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+      rarity: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+      jungle: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+      global: z.object({
+        score: z.number(),
+        rank: z.number(),
+      }),
+    })
+    .optional(),
 });
 
 export type Neko = z.infer<typeof NekoSchema>;

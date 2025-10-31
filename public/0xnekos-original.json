@@ -1,5 +1,5 @@
 {
-  "hash": "4c64582484c8fe58786f866b46ecd8b5371a26c54e295d92faca5ebca30b0bef",
+  "hash": "1a217924833a2a6dfc3161bba93e32a437bcfc6cf0f8f7938dc270c85aedc7b4",
   "data": [
     {
       "id": "0xc8208bb58d4879c26d5a87df0c8709ac0ca405b27f60d96cf58c9c57b6aa2e61e231",
@@ -32,24 +32,6 @@
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.621,
-          "rank": 34
-        },
-        "rarity": {
-          "score": 27.11,
-          "rank": 38
-        },
-        "jungle": {
-          "score": 47.54,
-          "rank": 42
-        },
-        "global": {
-          "score": 1142.16,
-          "rank": 282
-        }
       }
     },
     {
@@ -83,24 +65,6 @@
         "background": "#bbbbbb",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.582,
-          "rank": 41
-        },
-        "rarity": {
-          "score": 24.95,
-          "rank": 51
-        },
-        "jungle": {
-          "score": 45.35,
-          "rank": 49
-        },
-        "global": {
-          "score": 1133.59,
-          "rank": 284
-        }
       }
     },
     {
@@ -134,24 +98,6 @@
         "background": "#c9e0ff",
         "cat": "#ffffff",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.38,
-          "rank": 81
-        },
-        "rarity": {
-          "score": 21.79,
-          "rank": 79
-        },
-        "jungle": {
-          "score": 39.9,
-          "rank": 76
-        },
-        "global": {
-          "score": 924.22,
-          "rank": 361
-        }
       }
     },
     {
@@ -185,24 +131,6 @@
         "background": "#3d3d3d",
         "cat": "#979797",
         "eyes": "red"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.949,
-          "rank": 16
-        },
-        "rarity": {
-          "score": 34.89,
-          "rank": 17
-        },
-        "jungle": {
-          "score": 59.41,
-          "rank": 21
-        },
-        "global": {
-          "score": 1709.8,
-          "rank": 226
-        }
       }
     },
     {
@@ -236,24 +164,6 @@
         "background": "#bbbbbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.394,
-          "rank": 78
-        },
-        "rarity": {
-          "score": 22.42,
-          "rank": 73
-        },
-        "jungle": {
-          "score": 41.54,
-          "rank": 69
-        },
-        "global": {
-          "score": 1142.52,
-          "rank": 281
-        }
       }
     },
     {
@@ -287,24 +197,6 @@
         "background": "#ebc9ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.707,
-          "rank": 28
-        },
-        "rarity": {
-          "score": 27.86,
-          "rank": 36
-        },
-        "jungle": {
-          "score": 49.93,
-          "rank": 34
-        },
-        "global": {
-          "score": 1363.25,
-          "rank": 250
-        }
       }
     },
     {
@@ -338,24 +230,6 @@
         "background": "#d5ffc9",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.666,
-          "rank": 32
-        },
-        "rarity": {
-          "score": 28.13,
-          "rank": 30
-        },
-        "jungle": {
-          "score": 53.24,
-          "rank": 32
-        },
-        "global": {
-          "score": 1415.72,
-          "rank": 246
-        }
       }
     },
     {
@@ -389,24 +263,6 @@
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#fff324"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.511,
-          "rank": 1
-        },
-        "rarity": {
-          "score": 67.44,
-          "rank": 1
-        },
-        "jungle": {
-          "score": 121.23,
-          "rank": 1
-        },
-        "global": {
-          "score": 3450.25,
-          "rank": 193
-        }
       }
     },
     {
@@ -440,24 +296,6 @@
         "background": "#ebc9ff",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.441,
-          "rank": 71
-        },
-        "rarity": {
-          "score": 22.36,
-          "rank": 74
-        },
-        "jungle": {
-          "score": 40.46,
-          "rank": 75
-        },
-        "global": {
-          "score": 1064.92,
-          "rank": 322
-        }
       }
     },
     {
@@ -491,24 +329,6 @@
         "background": "#d5ffc9",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.468,
-          "rank": 65
-        },
-        "rarity": {
-          "score": 25.31,
-          "rank": 47
-        },
-        "jungle": {
-          "score": 48.31,
-          "rank": 40
-        },
-        "global": {
-          "score": 1246.15,
-          "rank": 263
-        }
       }
     },
     {
@@ -542,24 +362,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.238,
-          "rank": 97
-        },
-        "rarity": {
-          "score": 19.1,
-          "rank": 97
-        },
-        "jungle": {
-          "score": 33.71,
-          "rank": 97
-        },
-        "global": {
-          "score": 864.11,
-          "rank": 375
-        }
       }
     },
     {
@@ -593,24 +395,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.517,
-          "rank": 53
-        },
-        "rarity": {
-          "score": 23.76,
-          "rank": 61
-        },
-        "jungle": {
-          "score": 42.98,
-          "rank": 61
-        },
-        "global": {
-          "score": 1095.7,
-          "rank": 301
-        }
       }
     },
     {
@@ -644,24 +428,6 @@
         "background": "#bbbbbb",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.475,
-          "rank": 64
-        },
-        "rarity": {
-          "score": 23.18,
-          "rank": 69
-        },
-        "jungle": {
-          "score": 42.34,
-          "rank": 66
-        },
-        "global": {
-          "score": 1036.38,
-          "rank": 335
-        }
       }
     },
     {
@@ -695,24 +461,6 @@
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.432,
-          "rank": 72
-        },
-        "rarity": {
-          "score": 21.85,
-          "rank": 77
-        },
-        "jungle": {
-          "score": 38.08,
-          "rank": 86
-        },
-        "global": {
-          "score": 972.17,
-          "rank": 345
-        }
       }
     },
     {
@@ -746,24 +494,6 @@
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.718,
-          "rank": 27
-        },
-        "rarity": {
-          "score": 37.81,
-          "rank": 12
-        },
-        "jungle": {
-          "score": 76.79,
-          "rank": 8
-        },
-        "global": {
-          "score": 2115.72,
-          "rank": 206
-        }
       }
     },
     {
@@ -797,24 +527,6 @@
         "background": "#3d3d3d",
         "cat": "gold",
         "eyes": "red"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.224,
-          "rank": 6
-        },
-        "rarity": {
-          "score": 43.13,
-          "rank": 8
-        },
-        "jungle": {
-          "score": 74.52,
-          "rank": 10
-        },
-        "global": {
-          "score": 2133.58,
-          "rank": 205
-        }
       }
     },
     {
@@ -848,24 +560,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.484,
-          "rank": 61
-        },
-        "rarity": {
-          "score": 23.42,
-          "rank": 62
-        },
-        "jungle": {
-          "score": 42.94,
-          "rank": 62
-        },
-        "global": {
-          "score": 1037.1,
-          "rank": 331
-        }
       }
     },
     {
@@ -899,24 +593,6 @@
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.45,
-          "rank": 69
-        },
-        "rarity": {
-          "score": 25.05,
-          "rank": 50
-        },
-        "jungle": {
-          "score": 44.45,
-          "rank": 52
-        },
-        "global": {
-          "score": 1169.68,
-          "rank": 278
-        }
       }
     },
     {
@@ -950,24 +626,6 @@
         "background": "#fffcc9",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.687,
-          "rank": 29
-        },
-        "rarity": {
-          "score": 29.16,
-          "rank": 29
-        },
-        "jungle": {
-          "score": 55.77,
-          "rank": 28
-        },
-        "global": {
-          "score": 1403.66,
-          "rank": 247
-        }
       }
     },
     {
@@ -1001,24 +659,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.514,
-          "rank": 54
-        },
-        "rarity": {
-          "score": 23.22,
-          "rank": 66
-        },
-        "jungle": {
-          "score": 39.89,
-          "rank": 78
-        },
-        "global": {
-          "score": 1073.86,
-          "rank": 313
-        }
       }
     },
     {
@@ -1052,24 +692,6 @@
         "background": "#fffcc9",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.403,
-          "rank": 76
-        },
-        "rarity": {
-          "score": 25.68,
-          "rank": 45
-        },
-        "jungle": {
-          "score": 50.2,
-          "rank": 33
-        },
-        "global": {
-          "score": 1335.09,
-          "rank": 255
-        }
       }
     },
     {
@@ -1103,24 +725,6 @@
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.563,
-          "rank": 47
-        },
-        "rarity": {
-          "score": 24.04,
-          "rank": 55
-        },
-        "jungle": {
-          "score": 43.08,
-          "rank": 60
-        },
-        "global": {
-          "score": 1128.66,
-          "rank": 289
-        }
       }
     },
     {
@@ -1154,24 +758,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.794,
-          "rank": 24
-        },
-        "rarity": {
-          "score": 27.88,
-          "rank": 35
-        },
-        "jungle": {
-          "score": 49.16,
-          "rank": 38
-        },
-        "global": {
-          "score": 1337.19,
-          "rank": 254
-        }
       }
     },
     {
@@ -1205,24 +791,6 @@
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.38,
-          "rank": 82
-        },
-        "rarity": {
-          "score": 21.79,
-          "rank": 80
-        },
-        "jungle": {
-          "score": 39.9,
-          "rank": 77
-        },
-        "global": {
-          "score": 941.53,
-          "rank": 349
-        }
       }
     },
     {
@@ -1256,24 +824,6 @@
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.322,
-          "rank": 89
-        },
-        "rarity": {
-          "score": 21.15,
-          "rank": 86
-        },
-        "jungle": {
-          "score": 38.93,
-          "rank": 81
-        },
-        "global": {
-          "score": 905.42,
-          "rank": 365
-        }
       }
     },
     {
@@ -1307,24 +857,6 @@
         "background": "#ebc9ff",
         "cat": "#ffffff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.253,
-          "rank": 96
-        },
-        "rarity": {
-          "score": 19.82,
-          "rank": 96
-        },
-        "jungle": {
-          "score": 36.05,
-          "rank": 93
-        },
-        "global": {
-          "score": 892.03,
-          "rank": 369
-        }
       }
     },
     {
@@ -1358,24 +890,6 @@
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.322,
-          "rank": 90
-        },
-        "rarity": {
-          "score": 21.15,
-          "rank": 87
-        },
-        "jungle": {
-          "score": 38.93,
-          "rank": 82
-        },
-        "global": {
-          "score": 937.16,
-          "rank": 355
-        }
       }
     },
     {
@@ -1409,24 +923,6 @@
         "background": "#d5ffc9",
         "cat": "#535353",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.893,
-          "rank": 17
-        },
-        "rarity": {
-          "score": 33.97,
-          "rank": 19
-        },
-        "jungle": {
-          "score": 63.45,
-          "rank": 17
-        },
-        "global": {
-          "score": 1619.82,
-          "rank": 229
-        }
       }
     },
     {
@@ -1460,24 +956,6 @@
         "background": "#ff9d9d",
         "cat": "#ffffff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.32,
-          "rank": 92
-        },
-        "rarity": {
-          "score": 20.99,
-          "rank": 89
-        },
-        "jungle": {
-          "score": 38.22,
-          "rank": 85
-        },
-        "global": {
-          "score": 926.9,
-          "rank": 359
-        }
       }
     },
     {
@@ -1511,24 +989,6 @@
         "background": "#ffdb9d",
         "cat": "#535353",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.686,
-          "rank": 30
-        },
-        "rarity": {
-          "score": 29.92,
-          "rank": 27
-        },
-        "jungle": {
-          "score": 55.5,
-          "rank": 29
-        },
-        "global": {
-          "score": 1385.95,
-          "rank": 249
-        }
       }
     },
     {
@@ -1562,24 +1022,6 @@
         "background": "#d5ffc9",
         "cat": "#c2ab99",
         "eyes": "#ff5555"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.096,
-          "rank": 8
-        },
-        "rarity": {
-          "score": 39.68,
-          "rank": 11
-        },
-        "jungle": {
-          "score": 70.56,
-          "rank": 12
-        },
-        "global": {
-          "score": 2141.47,
-          "rank": 204
-        }
       }
     },
     {
@@ -1613,24 +1055,6 @@
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.478,
-          "rank": 63
-        },
-        "rarity": {
-          "score": 23.19,
-          "rank": 68
-        },
-        "jungle": {
-          "score": 42.23,
-          "rank": 68
-        },
-        "global": {
-          "score": 1061.59,
-          "rank": 323
-        }
       }
     },
     {
@@ -1664,24 +1088,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.349,
-          "rank": 86
-        },
-        "rarity": {
-          "score": 20.49,
-          "rank": 93
-        },
-        "jungle": {
-          "score": 35.81,
-          "rank": 94
-        },
-        "global": {
-          "score": 899.45,
-          "rank": 367
-        }
       }
     },
     {
@@ -1715,24 +1121,6 @@
         "background": "#c9e0ff",
         "cat": "#ffffff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.647,
-          "rank": 33
-        },
-        "rarity": {
-          "score": 26.12,
-          "rank": 41
-        },
-        "jungle": {
-          "score": 46.39,
-          "rank": 47
-        },
-        "global": {
-          "score": 1192.11,
-          "rank": 271
-        }
       }
     },
     {
@@ -1766,24 +1154,6 @@
         "background": "#ffdb9d",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.828,
-          "rank": 20
-        },
-        "rarity": {
-          "score": 30.72,
-          "rank": 25
-        },
-        "jungle": {
-          "score": 56.36,
-          "rank": 26
-        },
-        "global": {
-          "score": 1419.88,
-          "rank": 244
-        }
       }
     },
     {
@@ -1817,24 +1187,6 @@
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.485,
-          "rank": 60
-        },
-        "rarity": {
-          "score": 26.7,
-          "rank": 40
-        },
-        "jungle": {
-          "score": 47.38,
-          "rank": 44
-        },
-        "global": {
-          "score": 1287.89,
-          "rank": 260
-        }
       }
     },
     {
@@ -1868,24 +1220,6 @@
         "background": "#bbbbbb",
         "cat": "#feff55",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.782,
-          "rank": 25
-        },
-        "rarity": {
-          "score": 31.45,
-          "rank": 23
-        },
-        "jungle": {
-          "score": 57,
-          "rank": 24
-        },
-        "global": {
-          "score": 1429.03,
-          "rank": 241
-        }
       }
     },
     {
@@ -1919,24 +1253,6 @@
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#fff324"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.059,
-          "rank": 9
-        },
-        "rarity": {
-          "score": 49.59,
-          "rank": 6
-        },
-        "jungle": {
-          "score": 81.05,
-          "rank": 7
-        },
-        "global": {
-          "score": 2382.36,
-          "rank": 201
-        }
       }
     },
     {
@@ -1970,24 +1286,6 @@
         "background": "#ebc9ff",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.328,
-          "rank": 87
-        },
-        "rarity": {
-          "score": 20.94,
-          "rank": 90
-        },
-        "jungle": {
-          "score": 38.33,
-          "rank": 84
-        },
-        "global": {
-          "score": 1096.82,
-          "rank": 300
-        }
       }
     },
     {
@@ -2021,24 +1319,6 @@
         "background": "#c9e0ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.493,
-          "rank": 58
-        },
-        "rarity": {
-          "score": 23.21,
-          "rank": 67
-        },
-        "jungle": {
-          "score": 42.38,
-          "rank": 65
-        },
-        "global": {
-          "score": 1052.04,
-          "rank": 327
-        }
       }
     },
     {
@@ -2072,24 +1352,6 @@
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.465,
-          "rank": 66
-        },
-        "rarity": {
-          "score": 22.78,
-          "rank": 71
-        },
-        "jungle": {
-          "score": 41.19,
-          "rank": 71
-        },
-        "global": {
-          "score": 1089.42,
-          "rank": 303
-        }
       }
     },
     {
@@ -2123,24 +1385,6 @@
         "background": "#c9e0ff",
         "cat": "#535353",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.051,
-          "rank": 10
-        },
-        "rarity": {
-          "score": 34.41,
-          "rank": 18
-        },
-        "jungle": {
-          "score": 60.99,
-          "rank": 19
-        },
-        "global": {
-          "score": 1542.05,
-          "rank": 233
-        }
       }
     },
     {
@@ -2174,24 +1418,6 @@
         "background": "#c9e0ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.428,
-          "rank": 2
-        },
-        "rarity": {
-          "score": 57.13,
-          "rank": 2
-        },
-        "jungle": {
-          "score": 94.72,
-          "rank": 2
-        },
-        "global": {
-          "score": 2434.34,
-          "rank": 195
-        }
       }
     },
     {
@@ -2225,24 +1451,6 @@
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.394,
-          "rank": 79
-        },
-        "rarity": {
-          "score": 21.28,
-          "rank": 84
-        },
-        "jungle": {
-          "score": 37.33,
-          "rank": 91
-        },
-        "global": {
-          "score": 938.06,
-          "rank": 353
-        }
       }
     },
     {
@@ -2276,24 +1484,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.524,
-          "rank": 51
-        },
-        "rarity": {
-          "score": 24.04,
-          "rank": 56
-        },
-        "jungle": {
-          "score": 43.87,
-          "rank": 54
-        },
-        "global": {
-          "score": 1071.97,
-          "rank": 316
-        }
       }
     },
     {
@@ -2327,24 +1517,6 @@
         "background": "#ffdb9d",
         "cat": "#ffffff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.415,
-          "rank": 73
-        },
-        "rarity": {
-          "score": 23.3,
-          "rank": 65
-        },
-        "jungle": {
-          "score": 43.41,
-          "rank": 59
-        },
-        "global": {
-          "score": 983.53,
-          "rank": 342
-        }
       }
     },
     {
@@ -2378,24 +1550,6 @@
         "background": "#d5ffc9",
         "cat": "#35bed7",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.001,
-          "rank": 14
-        },
-        "rarity": {
-          "score": 35.15,
-          "rank": 16
-        },
-        "jungle": {
-          "score": 64.88,
-          "rank": 14
-        },
-        "global": {
-          "score": 1930.72,
-          "rank": 218
-        }
       }
     },
     {
@@ -2429,24 +1583,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.413,
-          "rank": 74
-        },
-        "rarity": {
-          "score": 22.14,
-          "rank": 75
-        },
-        "jungle": {
-          "score": 40.54,
-          "rank": 74
-        },
-        "global": {
-          "score": 1132.92,
-          "rank": 288
-        }
       }
     },
     {
@@ -2480,24 +1616,6 @@
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.082,
-          "rank": 99
-        },
-        "rarity": {
-          "score": 17.04,
-          "rank": 99
-        },
-        "jungle": {
-          "score": 30.27,
-          "rank": 99
-        },
-        "global": {
-          "score": 832.11,
-          "rank": 376
-        }
       }
     },
     {
@@ -2531,24 +1649,6 @@
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.324,
-          "rank": 88
-        },
-        "rarity": {
-          "score": 20.6,
-          "rank": 91
-        },
-        "jungle": {
-          "score": 37.57,
-          "rank": 87
-        },
-        "global": {
-          "score": 1083.94,
-          "rank": 307
-        }
       }
     },
     {
@@ -2582,24 +1682,6 @@
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.351,
-          "rank": 85
-        },
-        "rarity": {
-          "score": 21.36,
-          "rank": 83
-        },
-        "jungle": {
-          "score": 39.06,
-          "rank": 80
-        },
-        "global": {
-          "score": 1121.31,
-          "rank": 291
-        }
       }
     },
     {
@@ -2633,24 +1715,6 @@
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.178,
-          "rank": 98
-        },
-        "rarity": {
-          "score": 18.43,
-          "rank": 98
-        },
-        "jungle": {
-          "score": 32.36,
-          "rank": 98
-        },
-        "global": {
-          "score": 767.26,
-          "rank": 379
-        }
       }
     },
     {
@@ -2684,24 +1748,6 @@
         "background": "#c9e0ff",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.322,
-          "rank": 91
-        },
-        "rarity": {
-          "score": 21.15,
-          "rank": 88
-        },
-        "jungle": {
-          "score": 38.93,
-          "rank": 83
-        },
-        "global": {
-          "score": 919.85,
-          "rank": 363
-        }
       }
     },
     {
@@ -2735,24 +1781,6 @@
         "background": "#fffcc9",
         "cat": "#ffffff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.78,
-          "rank": 26
-        },
-        "rarity": {
-          "score": 31.09,
-          "rank": 24
-        },
-        "jungle": {
-          "score": 58.31,
-          "rank": 22
-        },
-        "global": {
-          "score": 1516.85,
-          "rank": 235
-        }
       }
     },
     {
@@ -2786,24 +1814,6 @@
         "background": "#ffdb9d",
         "cat": "#feff55",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.011,
-          "rank": 13
-        },
-        "rarity": {
-          "score": 35.82,
-          "rank": 15
-        },
-        "jungle": {
-          "score": 64.81,
-          "rank": 15
-        },
-        "global": {
-          "score": 1741.74,
-          "rank": 223
-        }
       }
     },
     {
@@ -2837,24 +1847,6 @@
         "background": "#fffcc9",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.565,
-          "rank": 46
-        },
-        "rarity": {
-          "score": 27.95,
-          "rank": 33
-        },
-        "jungle": {
-          "score": 54.21,
-          "rank": 30
-        },
-        "global": {
-          "score": 1484.07,
-          "rank": 237
-        }
       }
     },
     {
@@ -2888,24 +1880,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.455,
-          "rank": 67
-        },
-        "rarity": {
-          "score": 22.78,
-          "rank": 72
-        },
-        "jungle": {
-          "score": 41.5,
-          "rank": 70
-        },
-        "global": {
-          "score": 1037.1,
-          "rank": 332
-        }
       }
     },
     {
@@ -2939,24 +1913,6 @@
         "background": "#ebc9ff",
         "cat": "#ffffff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.592,
-          "rank": 40
-        },
-        "rarity": {
-          "score": 24.93,
-          "rank": 52
-        },
-        "jungle": {
-          "score": 43.72,
-          "rank": 57
-        },
-        "global": {
-          "score": 1192.11,
-          "rank": 272
-        }
       }
     },
     {
@@ -2990,24 +1946,6 @@
         "background": "#bbbbbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.507,
-          "rank": 55
-        },
-        "rarity": {
-          "score": 23.83,
-          "rank": 59
-        },
-        "jungle": {
-          "score": 43.67,
-          "rank": 58
-        },
-        "global": {
-          "score": 1110.63,
-          "rank": 295
-        }
       }
     },
     {
@@ -3041,24 +1979,6 @@
         "background": "#1d1d1d",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.965,
-          "rank": 15
-        },
-        "rarity": {
-          "score": 41.49,
-          "rank": 9
-        },
-        "jungle": {
-          "score": 82.65,
-          "rank": 6
-        },
-        "global": {
-          "score": 2188.08,
-          "rank": 203
-        }
       }
     },
     {
@@ -3092,24 +2012,6 @@
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.598,
-          "rank": 39
-        },
-        "rarity": {
-          "score": 28.12,
-          "rank": 31
-        },
-        "jungle": {
-          "score": 49.5,
-          "rank": 35
-        },
-        "global": {
-          "score": 1224.27,
-          "rank": 266
-        }
       }
     },
     {
@@ -3143,24 +2045,6 @@
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.011,
-          "rank": 100
-        },
-        "rarity": {
-          "score": 16.26,
-          "rank": 100
-        },
-        "jungle": {
-          "score": 29.11,
-          "rank": 100
-        },
-        "global": {
-          "score": 799.92,
-          "rank": 377
-        }
       }
     },
     {
@@ -3194,24 +2078,6 @@
         "background": "#ebc9ff",
         "cat": "#535353",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.578,
-          "rank": 42
-        },
-        "rarity": {
-          "score": 27.19,
-          "rank": 37
-        },
-        "jungle": {
-          "score": 49.27,
-          "rank": 37
-        },
-        "global": {
-          "score": 1325.42,
-          "rank": 258
-        }
       }
     },
     {
@@ -3245,24 +2111,6 @@
         "background": "#d5ffc9",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.795,
-          "rank": 22
-        },
-        "rarity": {
-          "score": 31.81,
-          "rank": 22
-        },
-        "jungle": {
-          "score": 59.86,
-          "rank": 20
-        },
-        "global": {
-          "score": 1721.44,
-          "rank": 224
-        }
       }
     },
     {
@@ -3296,24 +2144,6 @@
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.488,
-          "rank": 59
-        },
-        "rarity": {
-          "score": 24.1,
-          "rank": 54
-        },
-        "jungle": {
-          "score": 44.96,
-          "rank": 51
-        },
-        "global": {
-          "score": 1044.74,
-          "rank": 328
-        }
       }
     },
     {
@@ -3347,24 +2177,6 @@
         "background": "#ebc9ff",
         "cat": "#ffffff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.53,
-          "rank": 50
-        },
-        "rarity": {
-          "score": 23.94,
-          "rank": 58
-        },
-        "jungle": {
-          "score": 42.24,
-          "rank": 67
-        },
-        "global": {
-          "score": 1133.51,
-          "rank": 286
-        }
       }
     },
     {
@@ -3398,24 +2210,6 @@
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.499,
-          "rank": 56
-        },
-        "rarity": {
-          "score": 23,
-          "rank": 70
-        },
-        "jungle": {
-          "score": 41.18,
-          "rank": 72
-        },
-        "global": {
-          "score": 1078.92,
-          "rank": 309
-        }
       }
     },
     {
@@ -3449,24 +2243,6 @@
         "background": "#fffcc9",
         "cat": "#a27555",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.678,
-          "rank": 31
-        },
-        "rarity": {
-          "score": 29.37,
-          "rank": 28
-        },
-        "jungle": {
-          "score": 56.09,
-          "rank": 27
-        },
-        "global": {
-          "score": 1430.06,
-          "rank": 240
-        }
       }
     },
     {
@@ -3500,24 +2276,6 @@
         "background": "#ff9d9d",
         "cat": "#535353",
         "eyes": "#ff5555"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.147,
-          "rank": 7
-        },
-        "rarity": {
-          "score": 40.71,
-          "rank": 10
-        },
-        "jungle": {
-          "score": 69.95,
-          "rank": 13
-        },
-        "global": {
-          "score": 2019.28,
-          "rank": 215
-        }
       }
     },
     {
@@ -3551,24 +2309,6 @@
         "background": "#fffcc9",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.578,
-          "rank": 43
-        },
-        "rarity": {
-          "score": 28.09,
-          "rank": 32
-        },
-        "jungle": {
-          "score": 53.8,
-          "rank": 31
-        },
-        "global": {
-          "score": 1330.07,
-          "rank": 256
-        }
       }
     },
     {
@@ -3602,24 +2342,6 @@
         "background": "#ffdb9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.613,
-          "rank": 36
-        },
-        "rarity": {
-          "score": 26.12,
-          "rank": 42
-        },
-        "jungle": {
-          "score": 48.35,
-          "rank": 39
-        },
-        "global": {
-          "score": 1153.09,
-          "rank": 279
-        }
       }
     },
     {
@@ -3653,24 +2375,6 @@
         "background": "#d5ffc9",
         "cat": "#a27555",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.845,
-          "rank": 18
-        },
-        "rarity": {
-          "score": 30.72,
-          "rank": 26
-        },
-        "jungle": {
-          "score": 56.77,
-          "rank": 25
-        },
-        "global": {
-          "score": 1555.9,
-          "rank": 231
-        }
       }
     },
     {
@@ -3704,24 +2408,6 @@
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#ff5555"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.034,
-          "rank": 12
-        },
-        "rarity": {
-          "score": 36.29,
-          "rank": 14
-        },
-        "jungle": {
-          "score": 61.87,
-          "rank": 18
-        },
-        "global": {
-          "score": 1783.27,
-          "rank": 220
-        }
       }
     },
     {
@@ -3755,24 +2441,6 @@
         "background": "#c9e0ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.555,
-          "rank": 48
-        },
-        "rarity": {
-          "score": 24.19,
-          "rank": 53
-        },
-        "jungle": {
-          "score": 43.86,
-          "rank": 56
-        },
-        "global": {
-          "score": 1078.92,
-          "rank": 310
-        }
       }
     },
     {
@@ -3806,24 +2474,6 @@
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.621,
-          "rank": 35
-        },
-        "rarity": {
-          "score": 27.11,
-          "rank": 39
-        },
-        "jungle": {
-          "score": 47.54,
-          "rank": 43
-        },
-        "global": {
-          "score": 1173.89,
-          "rank": 276
-        }
       }
     },
     {
@@ -3857,24 +2507,6 @@
         "background": "#bbbbbb",
         "cat": "#35bed7",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.37,
-          "rank": 3
-        },
-        "rarity": {
-          "score": 56.48,
-          "rank": 3
-        },
-        "jungle": {
-          "score": 93.75,
-          "rank": 3
-        },
-        "global": {
-          "score": 2415.54,
-          "rank": 197
-        }
       }
     },
     {
@@ -3908,24 +2540,6 @@
         "background": "#ffdb9d",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.45,
-          "rank": 70
-        },
-        "rarity": {
-          "score": 23.8,
-          "rank": 60
-        },
-        "jungle": {
-          "score": 44.16,
-          "rank": 53
-        },
-        "global": {
-          "score": 1003.36,
-          "rank": 340
-        }
       }
     },
     {
@@ -3959,24 +2573,6 @@
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.288,
-          "rank": 95
-        },
-        "rarity": {
-          "score": 20.38,
-          "rank": 94
-        },
-        "jungle": {
-          "score": 35.29,
-          "rank": 96
-        },
-        "global": {
-          "score": 1041.4,
-          "rank": 330
-        }
       }
     },
     {
@@ -4010,24 +2606,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.484,
-          "rank": 62
-        },
-        "rarity": {
-          "score": 23.42,
-          "rank": 63
-        },
-        "jungle": {
-          "score": 42.94,
-          "rank": 63
-        },
-        "global": {
-          "score": 1068.83,
-          "rank": 320
-        }
       }
     },
     {
@@ -4061,24 +2639,6 @@
         "background": "#ffc9f7",
         "cat": "#35bed7",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.569,
-          "rank": 45
-        },
-        "rarity": {
-          "score": 25.93,
-          "rank": 43
-        },
-        "jungle": {
-          "score": 45.43,
-          "rank": 48
-        },
-        "global": {
-          "score": 1202.19,
-          "rank": 270
-        }
       }
     },
     {
@@ -4112,24 +2672,6 @@
         "background": "#1d1d1d",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.605,
-          "rank": 37
-        },
-        "rarity": {
-          "score": 36.4,
-          "rank": 13
-        },
-        "jungle": {
-          "score": 74.31,
-          "rank": 11
-        },
-        "global": {
-          "score": 2019.63,
-          "rank": 214
-        }
       }
     },
     {
@@ -4163,24 +2705,6 @@
         "background": "#ff9d9d",
         "cat": "#feff55",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.828,
-          "rank": 21
-        },
-        "rarity": {
-          "score": 31.93,
-          "rank": 21
-        },
-        "jungle": {
-          "score": 57.24,
-          "rank": 23
-        },
-        "global": {
-          "score": 1434.7,
-          "rank": 238
-        }
       }
     },
     {
@@ -4214,24 +2738,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.495,
-          "rank": 57
-        },
-        "rarity": {
-          "score": 23.4,
-          "rank": 64
-        },
-        "jungle": {
-          "score": 42.43,
-          "rank": 64
-        },
-        "global": {
-          "score": 1071.97,
-          "rank": 317
-        }
       }
     },
     {
@@ -4265,24 +2771,6 @@
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.599,
-          "rank": 38
-        },
-        "rarity": {
-          "score": 25.49,
-          "rank": 46
-        },
-        "jungle": {
-          "score": 47.06,
-          "rank": 45
-        },
-        "global": {
-          "score": 1111.81,
-          "rank": 293
-        }
       }
     },
     {
@@ -4316,24 +2804,6 @@
         "background": "#d5ffc9",
         "cat": "#ffffff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.455,
-          "rank": 68
-        },
-        "rarity": {
-          "score": 25.18,
-          "rank": 48
-        },
-        "jungle": {
-          "score": 48.11,
-          "rank": 41
-        },
-        "global": {
-          "score": 1218.33,
-          "rank": 268
-        }
       }
     },
     {
@@ -4367,24 +2837,6 @@
         "background": "#bbbbbb",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.384,
-          "rank": 80
-        },
-        "rarity": {
-          "score": 22.13,
-          "rank": 76
-        },
-        "jungle": {
-          "score": 41.01,
-          "rank": 73
-        },
-        "global": {
-          "score": 1114.12,
-          "rank": 292
-        }
       }
     },
     {
@@ -4418,24 +2870,6 @@
         "background": "#bbbbbb",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.524,
-          "rank": 52
-        },
-        "rarity": {
-          "score": 24.04,
-          "rank": 57
-        },
-        "jungle": {
-          "score": 43.87,
-          "rank": 55
-        },
-        "global": {
-          "score": 1089.27,
-          "rank": 305
-        }
       }
     },
     {
@@ -4469,24 +2903,6 @@
         "background": "#ffdb9d",
         "cat": "#ffffff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.04,
-          "rank": 11
-        },
-        "rarity": {
-          "score": 50.75,
-          "rank": 5
-        },
-        "jungle": {
-          "score": 84.59,
-          "rank": 5
-        },
-        "global": {
-          "score": 2051.48,
-          "rank": 212
-        }
       }
     },
     {
@@ -4520,24 +2936,6 @@
         "background": "#fffcc9",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.844,
-          "rank": 19
-        },
-        "rarity": {
-          "score": 33.59,
-          "rank": 20
-        },
-        "jungle": {
-          "score": 63.88,
-          "rank": 16
-        },
-        "global": {
-          "score": 1778.48,
-          "rank": 222
-        }
       }
     },
     {
@@ -4571,24 +2969,6 @@
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.401,
-          "rank": 77
-        },
-        "rarity": {
-          "score": 21.8,
-          "rank": 78
-        },
-        "jungle": {
-          "score": 37.41,
-          "rank": 90
-        },
-        "global": {
-          "score": 1009.51,
-          "rank": 338
-        }
       }
     },
     {
@@ -4622,24 +3002,6 @@
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.795,
-          "rank": 23
-        },
-        "rarity": {
-          "score": 27.93,
-          "rank": 34
-        },
-        "jungle": {
-          "score": 49.34,
-          "rank": 36
-        },
-        "global": {
-          "score": 1337.95,
-          "rank": 252
-        }
       }
     },
     {
@@ -4673,24 +3035,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.313,
-          "rank": 93
-        },
-        "rarity": {
-          "score": 20.22,
-          "rank": 95
-        },
-        "jungle": {
-          "score": 35.39,
-          "rank": 95
-        },
-        "global": {
-          "score": 887.08,
-          "rank": 373
-        }
       }
     },
     {
@@ -4724,24 +3068,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#fff324"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.289,
-          "rank": 5
-        },
-        "rarity": {
-          "score": 53.18,
-          "rank": 4
-        },
-        "jungle": {
-          "score": 87.58,
-          "rank": 4
-        },
-        "global": {
-          "score": 2399.45,
-          "rank": 199
-        }
       }
     },
     {
@@ -4775,24 +3101,6 @@
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.362,
-          "rank": 84
-        },
-        "rarity": {
-          "score": 21.77,
-          "rank": 81
-        },
-        "jungle": {
-          "score": 39.86,
-          "rank": 79
-        },
-        "global": {
-          "score": 940.3,
-          "rank": 351
-        }
       }
     },
     {
@@ -4826,24 +3134,6 @@
         "background": "#ff9d9d",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.293,
-          "rank": 94
-        },
-        "rarity": {
-          "score": 20.51,
-          "rank": 92
-        },
-        "jungle": {
-          "score": 37.49,
-          "rank": 89
-        },
-        "global": {
-          "score": 888.12,
-          "rank": 371
-        }
       }
     },
     {
@@ -4877,24 +3167,6 @@
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.376,
-          "rank": 83
-        },
-        "rarity": {
-          "score": 21.25,
-          "rank": 85
-        },
-        "jungle": {
-          "score": 37.3,
-          "rank": 92
-        },
-        "global": {
-          "score": 936.82,
-          "rank": 357
-        }
       }
     },
     {
@@ -4928,24 +3200,6 @@
         "background": "#3d3d3d",
         "cat": "gold",
         "eyes": "red"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.322,
-          "rank": 4
-        },
-        "rarity": {
-          "score": 43.98,
-          "rank": 7
-        },
-        "jungle": {
-          "score": 74.89,
-          "rank": 9
-        },
-        "global": {
-          "score": 2104.82,
-          "rank": 207
-        }
       }
     },
     {
@@ -4979,24 +3233,6 @@
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.55,
-          "rank": 49
-        },
-        "rarity": {
-          "score": 25.08,
-          "rank": 49
-        },
-        "jungle": {
-          "score": 46.44,
-          "rank": 46
-        },
-        "global": {
-          "score": 1103.35,
-          "rank": 298
-        }
       }
     },
     {
@@ -5030,24 +3266,6 @@
         "background": "#ffc9f7",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.578,
-          "rank": 44
-        },
-        "rarity": {
-          "score": 25.72,
-          "rank": 44
-        },
-        "jungle": {
-          "score": 45.11,
-          "rank": 50
-        },
-        "global": {
-          "score": 1175.78,
-          "rank": 274
-        }
       }
     },
     {
@@ -5081,24 +3299,6 @@
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.411,
-          "rank": 75
-        },
-        "rarity": {
-          "score": 21.48,
-          "rank": 82
-        },
-        "jungle": {
-          "score": 37.53,
-          "rank": 88
-        },
-        "global": {
-          "score": 948.44,
-          "rank": 347
-        }
       }
     },
     {
@@ -5133,24 +3333,6 @@
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.245,
-          "rank": 81
-        },
-        "rarity": {
-          "score": 20.08,
-          "rank": 79
-        },
-        "jungle": {
-          "score": 34.66,
-          "rank": 85
-        },
-        "global": {
-          "score": 980.84,
-          "rank": 344
-        }
       }
     },
     {
@@ -5185,24 +3367,6 @@
         "background": "#d5ffc9",
         "cat": "#35bed7",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.1,
-          "rank": 7
-        },
-        "rarity": {
-          "score": 38.9,
-          "rank": 12
-        },
-        "jungle": {
-          "score": 72.5,
-          "rank": 11
-        },
-        "global": {
-          "score": 1870.16,
-          "rank": 219
-        }
       }
     },
     {
@@ -5237,24 +3401,6 @@
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.349,
-          "rank": 69
-        },
-        "rarity": {
-          "score": 20.69,
-          "rank": 75
-        },
-        "jungle": {
-          "score": 36.39,
-          "rank": 78
-        },
-        "global": {
-          "score": 938.06,
-          "rank": 354
-        }
       }
     },
     {
@@ -5289,24 +3435,6 @@
         "background": "#c9e0ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.45,
-          "rank": 2
-        },
-        "rarity": {
-          "score": 55.1,
-          "rank": 2
-        },
-        "jungle": {
-          "score": 92.4,
-          "rank": 2
-        },
-        "global": {
-          "score": 2434.34,
-          "rank": 196
-        }
       }
     },
     {
@@ -5341,24 +3469,6 @@
         "background": "#ffdb9d",
         "cat": "#fff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.926,
-          "rank": 14
-        },
-        "rarity": {
-          "score": 45.32,
-          "rank": 6
-        },
-        "jungle": {
-          "score": 75.46,
-          "rank": 10
-        },
-        "global": {
-          "score": 2051.48,
-          "rank": 213
-        }
       }
     },
     {
@@ -5393,24 +3503,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.403,
-          "rank": 63
-        },
-        "rarity": {
-          "score": 21.92,
-          "rank": 66
-        },
-        "jungle": {
-          "score": 39.95,
-          "rank": 65
-        },
-        "global": {
-          "score": 1037.1,
-          "rank": 333
-        }
       }
     },
     {
@@ -5445,24 +3537,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.531,
-          "rank": 45
-        },
-        "rarity": {
-          "score": 24.25,
-          "rank": 49
-        },
-        "jungle": {
-          "score": 44.55,
-          "rank": 48
-        },
-        "global": {
-          "score": 1071.97,
-          "rank": 318
-        }
       }
     },
     {
@@ -5497,24 +3571,6 @@
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#fff324"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.075,
-          "rank": 10
-        },
-        "rarity": {
-          "score": 46.87,
-          "rank": 5
-        },
-        "jungle": {
-          "score": 77.77,
-          "rank": 7
-        },
-        "global": {
-          "score": 2321.8,
-          "rank": 202
-        }
       }
     },
     {
@@ -5549,24 +3605,6 @@
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.179,
-          "rank": 84
-        },
-        "rarity": {
-          "score": 19,
-          "rank": 84
-        },
-        "jungle": {
-          "score": 34.89,
-          "rank": 83
-        },
-        "global": {
-          "score": 905.42,
-          "rank": 366
-        }
       }
     },
     {
@@ -5601,24 +3639,6 @@
         "background": "#ffdb9d",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.87,
-          "rank": 19
-        },
-        "rarity": {
-          "score": 31.64,
-          "rank": 21
-        },
-        "jungle": {
-          "score": 57.2,
-          "rank": 22
-        },
-        "global": {
-          "score": 1419.88,
-          "rank": 245
-        }
       }
     },
     {
@@ -5653,24 +3673,6 @@
         "background": "#ffdb9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.558,
-          "rank": 41
-        },
-        "rarity": {
-          "score": 24.74,
-          "rank": 45
-        },
-        "jungle": {
-          "score": 45.4,
-          "rank": 43
-        },
-        "global": {
-          "score": 1153.09,
-          "rank": 280
-        }
       }
     },
     {
@@ -5705,24 +3707,6 @@
         "background": "#d5ffc9",
         "cat": "#535353",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.926,
-          "rank": 15
-        },
-        "rarity": {
-          "score": 35.05,
-          "rank": 17
-        },
-        "jungle": {
-          "score": 66.33,
-          "rank": 14
-        },
-        "global": {
-          "score": 1619.82,
-          "rank": 230
-        }
       }
     },
     {
@@ -5757,24 +3741,6 @@
         "background": "#ffdb9d",
         "cat": "#feff55",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.972,
-          "rank": 13
-        },
-        "rarity": {
-          "score": 35.13,
-          "rank": 16
-        },
-        "jungle": {
-          "score": 62.97,
-          "rank": 16
-        },
-        "global": {
-          "score": 1681.17,
-          "rank": 228
-        }
       }
     },
     {
@@ -5809,24 +3775,6 @@
         "background": "#fffcc9",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.569,
-          "rank": 39
-        },
-        "rarity": {
-          "score": 28.29,
-          "rank": 27
-        },
-        "jungle": {
-          "score": 55,
-          "rank": 27
-        },
-        "global": {
-          "score": 1423.5,
-          "rank": 243
-        }
       }
     },
     {
@@ -5861,24 +3809,6 @@
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#fff324"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.544,
-          "rank": 1
-        },
-        "rarity": {
-          "score": 68.2,
-          "rank": 1
-        },
-        "jungle": {
-          "score": 125.77,
-          "rank": 1
-        },
-        "global": {
-          "score": 3389.68,
-          "rank": 194
-        }
       }
     },
     {
@@ -5913,24 +3843,6 @@
         "background": "#fffcc9",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.626,
-          "rank": 30
-        },
-        "rarity": {
-          "score": 29.71,
-          "rank": 25
-        },
-        "jungle": {
-          "score": 56.44,
-          "rank": 25
-        },
-        "global": {
-          "score": 1330.07,
-          "rank": 257
-        }
       }
     },
     {
@@ -5965,24 +3877,6 @@
         "background": "#bbb",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.426,
-          "rank": 60
-        },
-        "rarity": {
-          "score": 22.22,
-          "rank": 64
-        },
-        "jungle": {
-          "score": 40.3,
-          "rank": 62
-        },
-        "global": {
-          "score": 1036.38,
-          "rank": 336
-        }
       }
     },
     {
@@ -6017,24 +3911,6 @@
         "background": "#c9e0ff",
         "cat": "#fff",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.326,
-          "rank": 75
-        },
-        "rarity": {
-          "score": 21.35,
-          "rank": 72
-        },
-        "jungle": {
-          "score": 39.51,
-          "rank": 69
-        },
-        "global": {
-          "score": 924.22,
-          "rank": 362
-        }
       }
     },
     {
@@ -6069,24 +3945,6 @@
         "background": "#bbb",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.304,
-          "rank": 77
-        },
-        "rarity": {
-          "score": 20.81,
-          "rank": 74
-        },
-        "jungle": {
-          "score": 38.28,
-          "rank": 72
-        },
-        "global": {
-          "score": 1053.56,
-          "rank": 326
-        }
       }
     },
     {
@@ -6121,24 +3979,6 @@
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.524,
-          "rank": 46
-        },
-        "rarity": {
-          "score": 24.92,
-          "rank": 44
-        },
-        "jungle": {
-          "score": 43.8,
-          "rank": 50
-        },
-        "global": {
-          "score": 1142.16,
-          "rank": 283
-        }
       }
     },
     {
@@ -6173,24 +4013,6 @@
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 1.964,
-          "rank": 88
-        },
-        "rarity": {
-          "score": 15.74,
-          "rank": 88
-        },
-        "jungle": {
-          "score": 28.16,
-          "rank": 88
-        },
-        "global": {
-          "score": 739.35,
-          "rank": 381
-        }
       }
     },
     {
@@ -6225,24 +4047,6 @@
         "background": "#d5ffc9",
         "cat": "#fff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.444,
-          "rank": 56
-        },
-        "rarity": {
-          "score": 26.48,
-          "rank": 36
-        },
-        "jungle": {
-          "score": 51.61,
-          "rank": 29
-        },
-        "global": {
-          "score": 1218.33,
-          "rank": 269
-        }
       }
     },
     {
@@ -6277,24 +4081,6 @@
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#f55"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.081,
-          "rank": 9
-        },
-        "rarity": {
-          "score": 37.57,
-          "rank": 13
-        },
-        "jungle": {
-          "score": 63.55,
-          "rank": 15
-        },
-        "global": {
-          "score": 1783.27,
-          "rank": 221
-        }
       }
     },
     {
@@ -6329,24 +4115,6 @@
         "background": "#d5ffc9",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.515,
-          "rank": 48
-        },
-        "rarity": {
-          "score": 27.57,
-          "rank": 30
-        },
-        "jungle": {
-          "score": 53.24,
-          "rank": 28
-        },
-        "global": {
-          "score": 1246.15,
-          "rank": 264
-        }
       }
     },
     {
@@ -6381,24 +4149,6 @@
         "background": "#ff9d9d",
         "cat": "#fff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.256,
-          "rank": 80
-        },
-        "rarity": {
-          "score": 20.02,
-          "rank": 80
-        },
-        "jungle": {
-          "score": 36.41,
-          "rank": 77
-        },
-        "global": {
-          "score": 926.9,
-          "rank": 360
-        }
       }
     },
     {
@@ -6433,24 +4183,6 @@
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.362,
-          "rank": 66
-        },
-        "rarity": {
-          "score": 21.96,
-          "rank": 65
-        },
-        "jungle": {
-          "score": 40.63,
-          "rank": 60
-        },
-        "global": {
-          "score": 1060.75,
-          "rank": 325
-        }
       }
     },
     {
@@ -6485,24 +4217,6 @@
         "background": "#ff9d9d",
         "cat": "#535353",
         "eyes": "#f55"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.086,
-          "rank": 8
-        },
-        "rarity": {
-          "score": 39.6,
-          "rank": 11
-        },
-        "jungle": {
-          "score": 67.65,
-          "rank": 12
-        },
-        "global": {
-          "score": 1958.71,
-          "rank": 217
-        }
       }
     },
     {
@@ -6537,24 +4251,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.513,
-          "rank": 50
-        },
-        "rarity": {
-          "score": 23.39,
-          "rank": 55
-        },
-        "jungle": {
-          "score": 40.21,
-          "rank": 63
-        },
-        "global": {
-          "score": 1073.86,
-          "rank": 314
-        }
       }
     },
     {
@@ -6589,24 +4285,6 @@
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.589,
-          "rank": 35
-        },
-        "rarity": {
-          "score": 24.67,
-          "rank": 46
-        },
-        "jungle": {
-          "score": 44.7,
-          "rank": 47
-        },
-        "global": {
-          "score": 1128.66,
-          "rank": 290
-        }
       }
     },
     {
@@ -6641,24 +4319,6 @@
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.095,
-          "rank": 86
-        },
-        "rarity": {
-          "score": 17.43,
-          "rank": 86
-        },
-        "jungle": {
-          "score": 30.69,
-          "rank": 86
-        },
-        "global": {
-          "score": 767.26,
-          "rank": 380
-        }
       }
     },
     {
@@ -6693,24 +4353,6 @@
         "background": "#fffcc9",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.345,
-          "rank": 71
-        },
-        "rarity": {
-          "score": 25.37,
-          "rank": 42
-        },
-        "jungle": {
-          "score": 49.94,
-          "rank": 31
-        },
-        "global": {
-          "score": 1274.53,
-          "rank": 261
-        }
       }
     },
     {
@@ -6745,24 +4387,6 @@
         "background": "#bbb",
         "cat": "#35bed7",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.304,
-          "rank": 3
-        },
-        "rarity": {
-          "score": 52.76,
-          "rank": 3
-        },
-        "jungle": {
-          "score": 87.78,
-          "rank": 3
-        },
-        "global": {
-          "score": 2415.54,
-          "rank": 198
-        }
       }
     },
     {
@@ -6797,24 +4421,6 @@
         "background": "#1d1d1d",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.595,
-          "rank": 34
-        },
-        "rarity": {
-          "score": 40.04,
-          "rank": 10
-        },
-        "jungle": {
-          "score": 82.94,
-          "rank": 6
-        },
-        "global": {
-          "score": 1959.07,
-          "rank": 216
-        }
       }
     },
     {
@@ -6849,24 +4455,6 @@
         "background": "#3d3d3d",
         "cat": "gold",
         "eyes": "red"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.256,
-          "rank": 5
-        },
-        "rarity": {
-          "score": 44.73,
-          "rank": 7
-        },
-        "jungle": {
-          "score": 77.37,
-          "rank": 8
-        },
-        "global": {
-          "score": 2073.01,
-          "rank": 209
-        }
       }
     },
     {
@@ -6901,24 +4489,6 @@
         "background": "#ebc9ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.836,
-          "rank": 20
-        },
-        "rarity": {
-          "score": 30.84,
-          "rank": 23
-        },
-        "jungle": {
-          "score": 55.4,
-          "rank": 26
-        },
-        "global": {
-          "score": 1363.25,
-          "rank": 251
-        }
       }
     },
     {
@@ -6953,24 +4523,6 @@
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.241,
-          "rank": 82
-        },
-        "rarity": {
-          "score": 19.87,
-          "rank": 82
-        },
-        "jungle": {
-          "score": 36.19,
-          "rank": 81
-        },
-        "global": {
-          "score": 940.3,
-          "rank": 352
-        }
       }
     },
     {
@@ -7005,24 +4557,6 @@
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.779,
-          "rank": 22
-        },
-        "rarity": {
-          "score": 42.39,
-          "rank": 9
-        },
-        "jungle": {
-          "score": 87.05,
-          "rank": 4
-        },
-        "global": {
-          "score": 2055.16,
-          "rank": 211
-        }
       }
     },
     {
@@ -7057,24 +4591,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.6,
-          "rank": 33
-        },
-        "rarity": {
-          "score": 25.29,
-          "rank": 43
-        },
-        "jungle": {
-          "score": 45,
-          "rank": 45
-        },
-        "global": {
-          "score": 1095.7,
-          "rank": 302
-        }
       }
     },
     {
@@ -7109,24 +4625,6 @@
         "background": "#ebc9ff",
         "cat": "#fff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.225,
-          "rank": 83
-        },
-        "rarity": {
-          "score": 19.82,
-          "rank": 83
-        },
-        "jungle": {
-          "score": 36.61,
-          "rank": 76
-        },
-        "global": {
-          "score": 892.03,
-          "rank": 370
-        }
       }
     },
     {
@@ -7161,24 +4659,6 @@
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.641,
-          "rank": 29
-        },
-        "rarity": {
-          "score": 26.33,
-          "rank": 37
-        },
-        "jungle": {
-          "score": 47.57,
-          "rank": 38
-        },
-        "global": {
-          "score": 1103.35,
-          "rank": 299
-        }
       }
     },
     {
@@ -7213,24 +4693,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#fff324"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.304,
-          "rank": 4
-        },
-        "rarity": {
-          "score": 50.29,
-          "rank": 4
-        },
-        "jungle": {
-          "score": 83.6,
-          "rank": 5
-        },
-        "global": {
-          "score": 2399.45,
-          "rank": 200
-        }
       }
     },
     {
@@ -7265,24 +4727,6 @@
         "background": "#3d3d3d",
         "cat": "#979797",
         "eyes": "red"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.029,
-          "rank": 11
-        },
-        "rarity": {
-          "score": 36.67,
-          "rank": 14
-        },
-        "jungle": {
-          "score": 61.97,
-          "rank": 18
-        },
-        "global": {
-          "score": 1709.8,
-          "rank": 227
-        }
       }
     },
     {
@@ -7317,24 +4761,6 @@
         "background": "#c9e0ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.707,
-          "rank": 25
-        },
-        "rarity": {
-          "score": 27.07,
-          "rank": 33
-        },
-        "jungle": {
-          "score": 48.67,
-          "rank": 33
-        },
-        "global": {
-          "score": 1078.92,
-          "rank": 311
-        }
       }
     },
     {
@@ -7369,24 +4795,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.554,
-          "rank": 42
-        },
-        "rarity": {
-          "score": 24.62,
-          "rank": 47
-        },
-        "jungle": {
-          "score": 45.1,
-          "rank": 44
-        },
-        "global": {
-          "score": 1068.83,
-          "rank": 321
-        }
       }
     },
     {
@@ -7421,24 +4829,6 @@
         "background": "#ebc9ff",
         "cat": "#fff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.507,
-          "rank": 51
-        },
-        "rarity": {
-          "score": 24.15,
-          "rank": 51
-        },
-        "jungle": {
-          "score": 43.11,
-          "rank": 53
-        },
-        "global": {
-          "score": 1133.51,
-          "rank": 287
-        }
       }
     },
     {
@@ -7473,24 +4863,6 @@
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.61,
-          "rank": 32
-        },
-        "rarity": {
-          "score": 26.16,
-          "rank": 40
-        },
-        "jungle": {
-          "score": 45.65,
-          "rank": 41
-        },
-        "global": {
-          "score": 1173.89,
-          "rank": 277
-        }
       }
     },
     {
@@ -7525,24 +4897,6 @@
         "background": "#d5ffc9",
         "cat": "#a27555",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.91,
-          "rank": 16
-        },
-        "rarity": {
-          "score": 33.16,
-          "rank": 20
-        },
-        "jungle": {
-          "score": 62.21,
-          "rank": 17
-        },
-        "global": {
-          "score": 1555.9,
-          "rank": 232
-        }
       }
     },
     {
@@ -7577,24 +4931,6 @@
         "background": "#ebc9ff",
         "cat": "#fff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.704,
-          "rank": 26
-        },
-        "rarity": {
-          "score": 27.52,
-          "rank": 31
-        },
-        "jungle": {
-          "score": 48.16,
-          "rank": 35
-        },
-        "global": {
-          "score": 1192.11,
-          "rank": 273
-        }
       }
     },
     {
@@ -7629,24 +4965,6 @@
         "background": "#bbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.515,
-          "rank": 49
-        },
-        "rarity": {
-          "score": 23.64,
-          "rank": 53
-        },
-        "jungle": {
-          "score": 42.65,
-          "rank": 54
-        },
-        "global": {
-          "score": 1110.63,
-          "rank": 296
-        }
       }
     },
     {
@@ -7681,24 +4999,6 @@
         "background": "#c9e0ff",
         "cat": "#535353",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.014,
-          "rank": 12
-        },
-        "rarity": {
-          "score": 33.3,
-          "rank": 19
-        },
-        "jungle": {
-          "score": 59.3,
-          "rank": 20
-        },
-        "global": {
-          "score": 1542.05,
-          "rank": 234
-        }
       }
     },
     {
@@ -7733,24 +5033,6 @@
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.532,
-          "rank": 44
-        },
-        "rarity": {
-          "score": 24.16,
-          "rank": 50
-        },
-        "jungle": {
-          "score": 43.93,
-          "rank": 49
-        },
-        "global": {
-          "score": 1089.42,
-          "rank": 304
-        }
       }
     },
     {
@@ -7785,24 +5067,6 @@
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.029,
-          "rank": 87
-        },
-        "rarity": {
-          "score": 16.48,
-          "rank": 87
-        },
-        "jungle": {
-          "score": 29.26,
-          "rank": 87
-        },
-        "global": {
-          "score": 771.55,
-          "rank": 378
-        }
       }
     },
     {
@@ -7837,24 +5101,6 @@
         "background": "#d5ffc9",
         "cat": "#c2ab99",
         "eyes": "#f55"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 3.161,
-          "rank": 6
-        },
-        "rarity": {
-          "score": 42.7,
-          "rank": 8
-        },
-        "jungle": {
-          "score": 76.75,
-          "rank": 9
-        },
-        "global": {
-          "score": 2080.9,
-          "rank": 208
-        }
       }
     },
     {
@@ -7889,24 +5135,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.36,
-          "rank": 67
-        },
-        "rarity": {
-          "score": 20.66,
-          "rank": 77
-        },
-        "jungle": {
-          "score": 36.12,
-          "rank": 82
-        },
-        "global": {
-          "score": 899.45,
-          "rank": 368
-        }
       }
     },
     {
@@ -7941,24 +5169,6 @@
         "background": "#bbb",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.612,
-          "rank": 31
-        },
-        "rarity": {
-          "score": 25.62,
-          "rank": 41
-        },
-        "jungle": {
-          "score": 45.63,
-          "rank": 42
-        },
-        "global": {
-          "score": 1133.59,
-          "rank": 285
-        }
       }
     },
     {
@@ -7993,24 +5203,6 @@
         "background": "#c9e0ff",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.33,
-          "rank": 74
-        },
-        "rarity": {
-          "score": 21.71,
-          "rank": 67
-        },
-        "jungle": {
-          "score": 40.04,
-          "rank": 64
-        },
-        "global": {
-          "score": 919.85,
-          "rank": 364
-        }
       }
     },
     {
@@ -8045,24 +5237,6 @@
         "background": "#fffcc9",
         "cat": "#fff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.725,
-          "rank": 24
-        },
-        "rarity": {
-          "score": 30.82,
-          "rank": 24
-        },
-        "jungle": {
-          "score": 58.11,
-          "rank": 21
-        },
-        "global": {
-          "score": 1516.85,
-          "rank": 236
-        }
       }
     },
     {
@@ -8097,24 +5271,6 @@
         "background": "#ffdb9d",
         "cat": "#fff",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.322,
-          "rank": 76
-        },
-        "rarity": {
-          "score": 21.49,
-          "rank": 69
-        },
-        "jungle": {
-          "score": 39.71,
-          "rank": 67
-        },
-        "global": {
-          "score": 983.53,
-          "rank": 343
-        }
       }
     },
     {
@@ -8149,24 +5305,6 @@
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.265,
-          "rank": 78
-        },
-        "rarity": {
-          "score": 20.24,
-          "rank": 78
-        },
-        "jungle": {
-          "score": 36.74,
-          "rank": 75
-        },
-        "global": {
-          "score": 937.16,
-          "rank": 356
-        }
       }
     },
     {
@@ -8201,24 +5339,6 @@
         "background": "#fffcc9",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.885,
-          "rank": 18
-        },
-        "rarity": {
-          "score": 35.3,
-          "rank": 15
-        },
-        "jungle": {
-          "score": 67.1,
-          "rank": 13
-        },
-        "global": {
-          "score": 1717.92,
-          "rank": 225
-        }
       }
     },
     {
@@ -8253,24 +5373,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.465,
-          "rank": 54
-        },
-        "rarity": {
-          "score": 22.79,
-          "rank": 59
-        },
-        "jungle": {
-          "score": 41.25,
-          "rank": 56
-        },
-        "global": {
-          "score": 1071.97,
-          "rank": 319
-        }
       }
     },
     {
@@ -8305,24 +5407,6 @@
         "background": "#ffc9f7",
         "cat": "#35bed7",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.573,
-          "rank": 37
-        },
-        "rarity": {
-          "score": 26.49,
-          "rank": 35
-        },
-        "jungle": {
-          "score": 46.55,
-          "rank": 40
-        },
-        "global": {
-          "score": 1175.78,
-          "rank": 275
-        }
       }
     },
     {
@@ -8357,24 +5441,6 @@
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.572,
-          "rank": 38
-        },
-        "rarity": {
-          "score": 24.57,
-          "rank": 48
-        },
-        "jungle": {
-          "score": 44.92,
-          "rank": 46
-        },
-        "global": {
-          "score": 1111.81,
-          "rank": 294
-        }
       }
     },
     {
@@ -8409,24 +5475,6 @@
         "background": "#ffdb9d",
         "cat": "#535353",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.586,
-          "rank": 36
-        },
-        "rarity": {
-          "score": 27.13,
-          "rank": 32
-        },
-        "jungle": {
-          "score": 50.05,
-          "rank": 30
-        },
-        "global": {
-          "score": 1325.39,
-          "rank": 259
-        }
       }
     },
     {
@@ -8461,24 +5509,6 @@
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.385,
-          "rank": 64
-        },
-        "rarity": {
-          "score": 21.07,
-          "rank": 73
-        },
-        "jungle": {
-          "score": 36.85,
-          "rank": 74
-        },
-        "global": {
-          "score": 948.44,
-          "rank": 348
-        }
       }
     },
     {
@@ -8513,24 +5543,6 @@
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.773,
-          "rank": 23
-        },
-        "rarity": {
-          "score": 27.6,
-          "rank": 29
-        },
-        "jungle": {
-          "score": 48.6,
-          "rank": 34
-        },
-        "global": {
-          "score": 1337.95,
-          "rank": 253
-        }
       }
     },
     {
@@ -8565,24 +5577,6 @@
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#57c657"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.414,
-          "rank": 61
-        },
-        "rarity": {
-          "score": 22.28,
-          "rank": 62
-        },
-        "jungle": {
-          "score": 37.96,
-          "rank": 73
-        },
-        "global": {
-          "score": 1009.51,
-          "rank": 339
-        }
       }
     },
     {
@@ -8617,24 +5611,6 @@
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.52,
-          "rank": 47
-        },
-        "rarity": {
-          "score": 23.57,
-          "rank": 54
-        },
-        "jungle": {
-          "score": 40.6,
-          "rank": 61
-        },
-        "global": {
-          "score": 972.17,
-          "rank": 346
-        }
       }
     },
     {
@@ -8669,24 +5645,6 @@
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.414,
-          "rank": 62
-        },
-        "rarity": {
-          "score": 22.28,
-          "rank": 63
-        },
-        "jungle": {
-          "score": 38.55,
-          "rank": 71
-        },
-        "global": {
-          "score": 887.08,
-          "rank": 374
-        }
       }
     },
     {
@@ -8721,24 +5679,6 @@
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.469,
-          "rank": 53
-        },
-        "rarity": {
-          "score": 23.38,
-          "rank": 56
-        },
-        "jungle": {
-          "score": 43.25,
-          "rank": 51
-        },
-        "global": {
-          "score": 1037.1,
-          "rank": 334
-        }
       }
     },
     {
@@ -8773,24 +5713,6 @@
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.478,
-          "rank": 52
-        },
-        "rarity": {
-          "score": 26.89,
-          "rank": 34
-        },
-        "jungle": {
-          "score": 47.67,
-          "rank": 37
-        },
-        "global": {
-          "score": 1227.33,
-          "rank": 265
-        }
       }
     },
     {
@@ -8825,24 +5747,6 @@
         "background": "#ebc9ff",
         "cat": "#191919",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.336,
-          "rank": 72
-        },
-        "rarity": {
-          "score": 21.47,
-          "rank": 70
-        },
-        "jungle": {
-          "score": 39.78,
-          "rank": 66
-        },
-        "global": {
-          "score": 1036.25,
-          "rank": 337
-        }
       }
     },
     {
@@ -8877,24 +5781,6 @@
         "background": "#fffcc9",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.694,
-          "rank": 27
-        },
-        "rarity": {
-          "score": 29.56,
-          "rank": 26
-        },
-        "jungle": {
-          "score": 56.81,
-          "rank": 23
-        },
-        "global": {
-          "score": 1403.66,
-          "rank": 248
-        }
       }
     },
     {
@@ -8929,24 +5815,6 @@
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.43,
-          "rank": 59
-        },
-        "rarity": {
-          "score": 22.4,
-          "rank": 61
-        },
-        "jungle": {
-          "score": 40.79,
-          "rank": 59
-        },
-        "global": {
-          "score": 1061.59,
-          "rank": 324
-        }
       }
     },
     {
@@ -8981,24 +5849,6 @@
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.385,
-          "rank": 65
-        },
-        "rarity": {
-          "score": 21.69,
-          "rank": 68
-        },
-        "jungle": {
-          "score": 39.6,
-          "rank": 68
-        },
-        "global": {
-          "score": 1072.36,
-          "rank": 315
-        }
       }
     },
     {
@@ -9033,24 +5883,6 @@
         "background": "#ff9d9d",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.179,
-          "rank": 85
-        },
-        "rarity": {
-          "score": 19,
-          "rank": 85
-        },
-        "jungle": {
-          "score": 34.89,
-          "rank": 84
-        },
-        "global": {
-          "score": 888.12,
-          "rank": 372
-        }
       }
     },
     {
@@ -9085,24 +5917,6 @@
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.36,
-          "rank": 68
-        },
-        "rarity": {
-          "score": 23.08,
-          "rank": 57
-        },
-        "jungle": {
-          "score": 41.03,
-          "rank": 58
-        },
-        "global": {
-          "score": 1109.12,
-          "rank": 297
-        }
       }
     },
     {
@@ -9137,24 +5951,6 @@
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.26,
-          "rank": 79
-        },
-        "rarity": {
-          "score": 19.88,
-          "rank": 81
-        },
-        "jungle": {
-          "score": 36.21,
-          "rank": 80
-        },
-        "global": {
-          "score": 941.53,
-          "rank": 350
-        }
       }
     },
     {
@@ -9189,24 +5985,6 @@
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.331,
-          "rank": 73
-        },
-        "rarity": {
-          "score": 20.68,
-          "rank": 76
-        },
-        "jungle": {
-          "score": 36.38,
-          "rank": 79
-        },
-        "global": {
-          "score": 936.82,
-          "rank": 358
-        }
       }
     },
     {
@@ -9241,24 +6019,6 @@
         "background": "#bbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.346,
-          "rank": 70
-        },
-        "rarity": {
-          "score": 21.44,
-          "rank": 71
-        },
-        "jungle": {
-          "score": 39.35,
-          "rank": 70
-        },
-        "global": {
-          "score": 1081.96,
-          "rank": 308
-        }
       }
     },
     {
@@ -9293,24 +6053,6 @@
         "background": "#bbb",
         "cat": "#feff55",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.794,
-          "rank": 21
-        },
-        "rarity": {
-          "score": 31.53,
-          "rank": 22
-        },
-        "jungle": {
-          "score": 56.47,
-          "rank": 24
-        },
-        "global": {
-          "score": 1429.03,
-          "rank": 242
-        }
       }
     },
     {
@@ -9345,24 +6087,6 @@
         "background": "#bbb",
         "cat": "#191919",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.465,
-          "rank": 55
-        },
-        "rarity": {
-          "score": 22.79,
-          "rank": 60
-        },
-        "jungle": {
-          "score": 41.25,
-          "rank": 57
-        },
-        "global": {
-          "score": 1089.27,
-          "rank": 306
-        }
       }
     },
     {
@@ -9397,24 +6121,6 @@
         "background": "#ebc9ff",
         "cat": "#535353",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.537,
-          "rank": 43
-        },
-        "rarity": {
-          "score": 26.19,
-          "rank": 39
-        },
-        "jungle": {
-          "score": 48.03,
-          "rank": 36
-        },
-        "global": {
-          "score": 1264.85,
-          "rank": 262
-        }
       }
     },
     {
@@ -9449,24 +6155,6 @@
         "background": "#ff9d9d",
         "cat": "#feff55",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.891,
-          "rank": 17
-        },
-        "rarity": {
-          "score": 33.52,
-          "rank": 18
-        },
-        "jungle": {
-          "score": 59.45,
-          "rank": 19
-        },
-        "global": {
-          "score": 1434.7,
-          "rank": 239
-        }
       }
     },
     {
@@ -9501,24 +6189,6 @@
         "background": "#ffdb9d",
         "cat": "#fff",
         "eyes": "#3d3d3d"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.442,
-          "rank": 58
-        },
-        "rarity": {
-          "score": 23.84,
-          "rank": 52
-        },
-        "jungle": {
-          "score": 43.24,
-          "rank": 52
-        },
-        "global": {
-          "score": 1003.36,
-          "rank": 341
-        }
       }
     },
     {
@@ -9553,24 +6223,6 @@
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.562,
-          "rank": 40
-        },
-        "rarity": {
-          "score": 27.85,
-          "rank": 28
-        },
-        "jungle": {
-          "score": 49.11,
-          "rank": 32
-        },
-        "global": {
-          "score": 1224.27,
-          "rank": 267
-        }
       }
     },
     {
@@ -9605,24 +6257,6 @@
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.444,
-          "rank": 57
-        },
-        "rarity": {
-          "score": 22.96,
-          "rank": 58
-        },
-        "jungle": {
-          "score": 42.51,
-          "rank": 55
-        },
-        "global": {
-          "score": 1044.74,
-          "rank": 329
-        }
       }
     },
     {
@@ -9657,24 +6291,6 @@
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 2.673,
-          "rank": 28
-        },
-        "rarity": {
-          "score": 26.27,
-          "rank": 38
-        },
-        "jungle": {
-          "score": 46.87,
-          "rank": 39
-        },
-        "global": {
-          "score": 1078.92,
-          "rank": 312
-        }
       }
     },
     {
@@ -9708,24 +6324,6 @@
         "background": "blue",
         "cat": "gold",
         "eyes": "red"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.815,
-          "rank": 135
-        },
-        "rarity": {
-          "score": 362.22,
-          "rank": 93
-        },
-        "jungle": {
-          "score": 9634.62,
-          "rank": 74
-        },
-        "global": {
-          "score": 2073.01,
-          "rank": 210
-        }
       }
     },
     {
@@ -9759,24 +6357,6 @@
         "background": "cadetblue",
         "cat": "aquamarine",
         "eyes": "snow"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 48
-        },
-        "rarity": {
-          "score": 369.92,
-          "rank": 80
-        },
-        "jungle": {
-          "score": 8789.54,
-          "rank": 105
-        },
-        "global": {
-          "score": 17970.5,
-          "rank": 92
-        }
       }
     },
     {
@@ -9810,24 +6390,6 @@
         "background": "whitesmoke",
         "cat": "navajowhite",
         "eyes": "maroon"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.154,
-          "rank": 73
-        },
-        "rarity": {
-          "score": 375.28,
-          "rank": 73
-        },
-        "jungle": {
-          "score": 9735.78,
-          "rank": 62
-        },
-        "global": {
-          "score": 19759.08,
-          "rank": 58
-        }
       }
     },
     {
@@ -9861,24 +6423,6 @@
         "background": "mediumpurple",
         "cat": "darkgoldenrod",
         "eyes": "lightskyblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.244,
-          "rank": 57
-        },
-        "rarity": {
-          "score": 381.4,
-          "rank": 71
-        },
-        "jungle": {
-          "score": 9662.64,
-          "rank": 71
-        },
-        "global": {
-          "score": 19632.84,
-          "rank": 65
-        }
       }
     },
     {
@@ -9912,24 +6456,6 @@
         "background": "crimson",
         "cat": "lightpink",
         "eyes": "slateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.285,
-          "rank": 189
-        },
-        "rarity": {
-          "score": 189.78,
-          "rank": 189
-        },
-        "jungle": {
-          "score": 4819.37,
-          "rank": 187
-        },
-        "global": {
-          "score": 9809.16,
-          "rank": 182
-        }
       }
     },
     {
@@ -9963,24 +6489,6 @@
         "background": "darkslateblue",
         "cat": "chocolate",
         "eyes": "darkcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.45,
-          "rank": 180
-        },
-        "rarity": {
-          "score": 290.01,
-          "rank": 131
-        },
-        "jungle": {
-          "score": 7398.25,
-          "rank": 126
-        },
-        "global": {
-          "score": 15292.14,
-          "rank": 120
-        }
       }
     },
     {
@@ -10014,24 +6522,6 @@
         "background": "mediumorchid",
         "cat": "palevioletred",
         "eyes": "lightyellow"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.78,
-          "rank": 146
-        },
-        "rarity": {
-          "score": 347.91,
-          "rank": 106
-        },
-        "jungle": {
-          "score": 9017.04,
-          "rank": 95
-        },
-        "global": {
-          "score": 18354.42,
-          "rank": 87
-        }
       }
     },
     {
@@ -10065,24 +6555,6 @@
         "background": "darkslategrey",
         "cat": "lightpink",
         "eyes": "darkolivegreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.631,
-          "rank": 167
-        },
-        "rarity": {
-          "score": 336.49,
-          "rank": 116
-        },
-        "jungle": {
-          "score": 8928.56,
-          "rank": 100
-        },
-        "global": {
-          "score": 18086.76,
-          "rank": 90
-        }
       }
     },
     {
@@ -10116,24 +6588,6 @@
         "background": "lemonchiffon",
         "cat": "whitesmoke",
         "eyes": "lightyellow"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 107
-        },
-        "rarity": {
-          "score": 442.64,
-          "rank": 30
-        },
-        "jungle": {
-          "score": 11488.22,
-          "rank": 29
-        },
-        "global": {
-          "score": 23435.05,
-          "rank": 24
-        }
       }
     },
     {
@@ -10167,24 +6621,6 @@
         "background": "lavender",
         "cat": "peru",
         "eyes": "deeppink"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 108
-        },
-        "rarity": {
-          "score": 394.39,
-          "rank": 60
-        },
-        "jungle": {
-          "score": 10342.28,
-          "rank": 52
-        },
-        "global": {
-          "score": 20934.73,
-          "rank": 47
-        }
       }
     },
     {
@@ -10218,24 +6654,6 @@
         "background": "rebeccapurple",
         "cat": "blue",
         "eyes": "darkviolet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.696,
-          "rank": 10
-        },
-        "rarity": {
-          "score": 498.58,
-          "rank": 12
-        },
-        "jungle": {
-          "score": 12243.44,
-          "rank": 18
-        },
-        "global": {
-          "score": 15456.18,
-          "rank": 118
-        }
       }
     },
     {
@@ -10269,24 +6687,6 @@
         "background": "ivory",
         "cat": "plum",
         "eyes": "crimson"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.512,
-          "rank": 20
-        },
-        "rarity": {
-          "score": 424.6,
-          "rank": 37
-        },
-        "jungle": {
-          "score": 10697.03,
-          "rank": 34
-        },
-        "global": {
-          "score": 21802.73,
-          "rank": 30
-        }
       }
     },
     {
@@ -10320,24 +6720,6 @@
         "background": "snow",
         "cat": "moccasin",
         "eyes": "dodgerblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 49
-        },
-        "rarity": {
-          "score": 321.67,
-          "rank": 120
-        },
-        "jungle": {
-          "score": 7390.29,
-          "rank": 127
-        },
-        "global": {
-          "score": 15160.63,
-          "rank": 121
-        }
       }
     },
     {
@@ -10371,24 +6753,6 @@
         "background": "lawngreen",
         "cat": "indigo",
         "eyes": "orchid"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.03,
-          "rank": 96
-        },
-        "rarity": {
-          "score": 396.16,
-          "rank": 57
-        },
-        "jungle": {
-          "score": 10476.6,
-          "rank": 42
-        },
-        "global": {
-          "score": 21283.36,
-          "rank": 36
-        }
       }
     },
     {
@@ -10422,24 +6786,6 @@
         "background": "honeydew",
         "cat": "aqua",
         "eyes": "navajowhite"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.488,
-          "rank": 177
-        },
-        "rarity": {
-          "score": 235.32,
-          "rank": 167
-        },
-        "jungle": {
-          "score": 6077.81,
-          "rank": 164
-        },
-        "global": {
-          "score": 12377.49,
-          "rank": 158
-        }
       }
     },
     {
@@ -10473,24 +6819,6 @@
         "background": "silver",
         "cat": "pink",
         "eyes": "lightsteelblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.946,
-          "rank": 3
-        },
-        "rarity": {
-          "score": 546.83,
-          "rank": 7
-        },
-        "jungle": {
-          "score": 13260.71,
-          "rank": 6
-        },
-        "global": {
-          "score": 27225.63,
-          "rank": 6
-        }
       }
     },
     {
@@ -10524,24 +6852,6 @@
         "background": "honeydew",
         "cat": "chocolate",
         "eyes": "violet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.55,
-          "rank": 173
-        },
-        "rarity": {
-          "score": 193,
-          "rank": 188
-        },
-        "jungle": {
-          "score": 4201.77,
-          "rank": 192
-        },
-        "global": {
-          "score": 8707.44,
-          "rank": 188
-        }
       }
     },
     {
@@ -10575,24 +6885,6 @@
         "background": "sienna",
         "cat": "cyan",
         "eyes": "cornflowerblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.625,
-          "rank": 168
-        },
-        "rarity": {
-          "score": 240.01,
-          "rank": 165
-        },
-        "jungle": {
-          "score": 6114.14,
-          "rank": 160
-        },
-        "global": {
-          "score": 12463.1,
-          "rank": 154
-        }
       }
     },
     {
@@ -10626,24 +6918,6 @@
         "background": "lightcoral",
         "cat": "ivory",
         "eyes": "dimgrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.884,
-          "rank": 123
-        },
-        "rarity": {
-          "score": 363.99,
-          "rank": 90
-        },
-        "jungle": {
-          "score": 9624.18,
-          "rank": 75
-        },
-        "global": {
-          "score": 19568.86,
-          "rank": 67
-        }
       }
     },
     {
@@ -10677,24 +6951,6 @@
         "background": "lightblue",
         "cat": "mediumslateblue",
         "eyes": "darksalmon"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.696,
-          "rank": 160
-        },
-        "rarity": {
-          "score": 257.33,
-          "rank": 153
-        },
-        "jungle": {
-          "score": 6566.02,
-          "rank": 145
-        },
-        "global": {
-          "score": 13438.19,
-          "rank": 140
-        }
       }
     },
     {
@@ -10728,24 +6984,6 @@
         "background": "aquamarine",
         "cat": "tomato",
         "eyes": "coral"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.696,
-          "rank": 11
-        },
-        "rarity": {
-          "score": 498.58,
-          "rank": 13
-        },
-        "jungle": {
-          "score": 12500.77,
-          "rank": 15
-        },
-        "global": {
-          "score": 25392.06,
-          "rank": 14
-        }
       }
     },
     {
@@ -10779,24 +7017,6 @@
         "background": "maroon",
         "cat": "moccasin",
         "eyes": "lightseagreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.592,
-          "rank": 15
-        },
-        "rarity": {
-          "score": 434.25,
-          "rank": 34
-        },
-        "jungle": {
-          "score": 10578.81,
-          "rank": 37
-        },
-        "global": {
-          "score": 21788.44,
-          "rank": 31
-        }
       }
     },
     {
@@ -10830,24 +7050,6 @@
         "background": "moccasin",
         "cat": "coral",
         "eyes": "midnightblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 63
-        },
-        "rarity": {
-          "score": 305.58,
-          "rank": 127
-        },
-        "jungle": {
-          "score": 7265.65,
-          "rank": 129
-        },
-        "global": {
-          "score": 14866.94,
-          "rank": 123
-        }
       }
     },
     {
@@ -10881,24 +7083,6 @@
         "background": "cadetblue",
         "cat": "mediumaquamarine",
         "eyes": "gray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.634,
-          "rank": 165
-        },
-        "rarity": {
-          "score": 267.49,
-          "rank": 148
-        },
-        "jungle": {
-          "score": 6970.43,
-          "rank": 139
-        },
-        "global": {
-          "score": 14171.36,
-          "rank": 135
-        }
       }
     },
     {
@@ -10932,24 +7116,6 @@
         "background": "lawngreen",
         "cat": "mediumvioletred",
         "eyes": "lightcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.815,
-          "rank": 136
-        },
-        "rarity": {
-          "score": 362.22,
-          "rank": 94
-        },
-        "jungle": {
-          "score": 9449.66,
-          "rank": 85
-        },
-        "global": {
-          "score": 19140.86,
-          "rank": 76
-        }
       }
     },
     {
@@ -10983,24 +7149,6 @@
         "background": "limegreen",
         "cat": "dimgrey",
         "eyes": "springgreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.946,
-          "rank": 114
-        },
-        "rarity": {
-          "score": 353.83,
-          "rank": 98
-        },
-        "jungle": {
-          "score": 9243.9,
-          "rank": 88
-        },
-        "global": {
-          "score": 18819.81,
-          "rank": 79
-        }
       }
     },
     {
@@ -11034,24 +7182,6 @@
         "background": "dimgray",
         "cat": "darkcyan",
         "eyes": "blanchedalmond"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 27
-        },
-        "rarity": {
-          "score": 353.83,
-          "rank": 99
-        },
-        "jungle": {
-          "score": 8218.58,
-          "rank": 114
-        },
-        "global": {
-          "score": 16891,
-          "rank": 102
-        }
       }
     },
     {
@@ -11085,24 +7215,6 @@
         "background": "teal",
         "cat": "steelblue",
         "eyes": "slateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.978,
-          "rank": 101
-        },
-        "rarity": {
-          "score": 307.05,
-          "rank": 125
-        },
-        "jungle": {
-          "score": 7855.98,
-          "rank": 120
-        },
-        "global": {
-          "score": 16036.64,
-          "rank": 111
-        }
       }
     },
     {
@@ -11136,24 +7248,6 @@
         "background": "springgreen",
         "cat": "darkkhaki",
         "eyes": "palegreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.8,
-          "rank": 8
-        },
-        "rarity": {
-          "score": 514.67,
-          "rank": 9
-        },
-        "jungle": {
-          "score": 12528.92,
-          "rank": 14
-        },
-        "global": {
-          "score": 25749.25,
-          "rank": 13
-        }
       }
     },
     {
@@ -11187,24 +7281,6 @@
         "background": "mediumturquoise",
         "cat": "violet",
         "eyes": "mintcream"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.592,
-          "rank": 16
-        },
-        "rarity": {
-          "score": 434.25,
-          "rank": 35
-        },
-        "jungle": {
-          "score": 10651.19,
-          "rank": 35
-        },
-        "global": {
-          "score": 21740.81,
-          "rank": 33
-        }
       }
     },
     {
@@ -11238,24 +7314,6 @@
         "background": "darkorange",
         "cat": "forestgreen",
         "eyes": "lightyellow"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.521,
-          "rank": 174
-        },
-        "rarity": {
-          "score": 223.93,
-          "rank": 177
-        },
-        "jungle": {
-          "score": 5643.7,
-          "rank": 175
-        },
-        "global": {
-          "score": 11582.03,
-          "rank": 169
-        }
       }
     },
     {
@@ -11289,24 +7347,6 @@
         "background": "palegreen",
         "cat": "saddlebrown",
         "eyes": "mediumslateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.719,
-          "rank": 154
-        },
-        "rarity": {
-          "score": 215.52,
-          "rank": 180
-        },
-        "jungle": {
-          "score": 4999.5,
-          "rank": 185
-        },
-        "global": {
-          "score": 10285.41,
-          "rank": 179
-        }
       }
     },
     {
@@ -11340,24 +7380,6 @@
         "background": "lightgrey",
         "cat": "darksalmon",
         "eyes": "lime"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.696,
-          "rank": 12
-        },
-        "rarity": {
-          "score": 450.33,
-          "rank": 26
-        },
-        "jungle": {
-          "score": 10703.46,
-          "rank": 33
-        },
-        "global": {
-          "score": 22082.13,
-          "rank": 29
-        }
       }
     },
     {
@@ -11391,24 +7413,6 @@
         "background": "mintcream",
         "cat": "limegreen",
         "eyes": "goldenrod"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.696,
-          "rank": 13
-        },
-        "rarity": {
-          "score": 450.33,
-          "rank": 27
-        },
-        "jungle": {
-          "score": 10896.46,
-          "rank": 32
-        },
-        "global": {
-          "score": 22272.63,
-          "rank": 28
-        }
       }
     },
     {
@@ -11442,24 +7446,6 @@
         "background": "lightyellow",
         "cat": "ghostwhite",
         "eyes": "aquamarine"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 7.092,
-          "rank": 2
-        },
-        "rarity": {
-          "score": 579,
-          "rank": 6
-        },
-        "jungle": {
-          "score": 11893.63,
-          "rank": 21
-        },
-        "global": {
-          "score": 24622.13,
-          "rank": 18
-        }
       }
     },
     {
@@ -11493,24 +7479,6 @@
         "background": "lightcoral",
         "cat": "lemonchiffon",
         "eyes": "antiquewhite"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.228,
-          "rank": 59
-        },
-        "rarity": {
-          "score": 403.55,
-          "rank": 45
-        },
-        "jungle": {
-          "score": 10533.85,
-          "rank": 40
-        },
-        "global": {
-          "score": 21169.8,
-          "rank": 42
-        }
       }
     },
     {
@@ -11544,24 +7512,6 @@
         "background": "orange",
         "cat": "mistyrose",
         "eyes": "indigo"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.815,
-          "rank": 137
-        },
-        "rarity": {
-          "score": 362.22,
-          "rank": 95
-        },
-        "jungle": {
-          "score": 9610.49,
-          "rank": 77
-        },
-        "global": {
-          "score": 14739.15,
-          "rank": 126
-        }
       }
     },
     {
@@ -11595,24 +7545,6 @@
         "background": "wheat",
         "cat": "lightsteelblue",
         "eyes": "darkcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.823,
-          "rank": 134
-        },
-        "rarity": {
-          "score": 231.6,
-          "rank": 174
-        },
-        "jungle": {
-          "score": 4931.15,
-          "rank": 186
-        },
-        "global": {
-          "score": 10217.15,
-          "rank": 180
-        }
       }
     },
     {
@@ -11646,24 +7578,6 @@
         "background": "chartreuse",
         "cat": "plum",
         "eyes": "cadetblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.866,
-          "rank": 126
-        },
-        "rarity": {
-          "score": 276.63,
-          "rank": 138
-        },
-        "jungle": {
-          "score": 6976.95,
-          "rank": 138
-        },
-        "global": {
-          "score": 14274.8,
-          "rank": 133
-        }
       }
     },
     {
@@ -11697,24 +7611,6 @@
         "background": "firebrick",
         "cat": "darksalmon",
         "eyes": "navy"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.946,
-          "rank": 115
-        },
-        "rarity": {
-          "score": 257.33,
-          "rank": 154
-        },
-        "jungle": {
-          "score": 5926.71,
-          "rank": 170
-        },
-        "global": {
-          "score": 12176.13,
-          "rank": 164
-        }
       }
     },
     {
@@ -11748,24 +7644,6 @@
         "background": "mediumpurple",
         "cat": "rosybrown",
         "eyes": "navy"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.831,
-          "rank": 131
-        },
-        "rarity": {
-          "score": 323.13,
-          "rank": 119
-        },
-        "jungle": {
-          "score": 8246,
-          "rank": 113
-        },
-        "global": {
-          "score": 16510.49,
-          "rank": 107
-        }
       }
     },
     {
@@ -11799,24 +7677,6 @@
         "background": "crimson",
         "cat": "mediumslateblue",
         "eyes": "lightyellow"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 4.881,
-          "rank": 193
-        },
-        "rarity": {
-          "score": 143.49,
-          "rank": 193
-        },
-        "jungle": {
-          "score": 3676.55,
-          "rank": 193
-        },
-        "global": {
-          "score": 7414,
-          "rank": 192
-        }
       }
     },
     {
@@ -11850,24 +7710,6 @@
         "background": "palevioletred",
         "cat": "lightseagreen",
         "eyes": "violet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.384,
-          "rank": 186
-        },
-        "rarity": {
-          "score": 235.32,
-          "rank": 168
-        },
-        "jungle": {
-          "score": 6013.47,
-          "rank": 168
-        },
-        "global": {
-          "score": 12313.99,
-          "rank": 159
-        }
       }
     },
     {
@@ -11901,24 +7743,6 @@
         "background": "chocolate",
         "cat": "brown",
         "eyes": "palegoldenrod"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.478,
-          "rank": 24
-        },
-        "rarity": {
-          "score": 500.05,
-          "rank": 10
-        },
-        "jungle": {
-          "score": 13091.1,
-          "rank": 8
-        },
-        "global": {
-          "score": 16320.21,
-          "rank": 108
-        }
       }
     },
     {
@@ -11952,24 +7776,6 @@
         "background": "darkblue",
         "cat": "limegreen",
         "eyes": "mediumslateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.78,
-          "rank": 147
-        },
-        "rarity": {
-          "score": 347.91,
-          "rank": 107
-        },
-        "jungle": {
-          "score": 8944.66,
-          "rank": 98
-        },
-        "global": {
-          "score": 18402.05,
-          "rank": 86
-        }
       }
     },
     {
@@ -12003,24 +7809,6 @@
         "background": "cornflowerblue",
         "cat": "mediumturquoise",
         "eyes": "cadetblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.969,
-          "rank": 104
-        },
-        "rarity": {
-          "score": 340.97,
-          "rank": 111
-        },
-        "jungle": {
-          "score": 8609.41,
-          "rank": 110
-        },
-        "global": {
-          "score": 17751.43,
-          "rank": 95
-        }
       }
     },
     {
@@ -12054,24 +7842,6 @@
         "background": "darkslategrey",
         "cat": "mediumslateblue",
         "eyes": "powderblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.512,
-          "rank": 176
-        },
-        "rarity": {
-          "score": 212.3,
-          "rank": 184
-        },
-        "jungle": {
-          "score": 5252.01,
-          "rank": 183
-        },
-        "global": {
-          "score": 10806.11,
-          "rank": 177
-        }
       }
     },
     {
@@ -12105,24 +7875,6 @@
         "background": "mediumpurple",
         "cat": "indigo",
         "eyes": "darkred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 89
-        },
-        "rarity": {
-          "score": 369.92,
-          "rank": 81
-        },
-        "jungle": {
-          "score": 9694.23,
-          "rank": 66
-        },
-        "global": {
-          "score": 19661.19,
-          "rank": 61
-        }
       }
     },
     {
@@ -12156,24 +7908,6 @@
         "background": "darkgrey",
         "cat": "palegoldenrod",
         "eyes": "darkorange"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 64
-        },
-        "rarity": {
-          "score": 305.58,
-          "rank": 128
-        },
-        "jungle": {
-          "score": 7265.65,
-          "rank": 130
-        },
-        "global": {
-          "score": 14866.94,
-          "rank": 124
-        }
       }
     },
     {
@@ -12207,24 +7941,6 @@
         "background": "tan",
         "cat": "darkblue",
         "eyes": "mediumvioletred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.331,
-          "rank": 44
-        },
-        "rarity": {
-          "score": 467.88,
-          "rank": 22
-        },
-        "jungle": {
-          "score": 12262.81,
-          "rank": 16
-        },
-        "global": {
-          "score": 24831.39,
-          "rank": 15
-        }
       }
     },
     {
@@ -12258,24 +7974,6 @@
         "background": "lightslategrey",
         "cat": "silver",
         "eyes": "darkgrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.417,
-          "rank": 38
-        },
-        "rarity": {
-          "score": 497.35,
-          "rank": 15
-        },
-        "jungle": {
-          "score": 12997.81,
-          "rank": 11
-        },
-        "global": {
-          "score": 26560.1,
-          "rank": 8
-        }
       }
     },
     {
@@ -12309,24 +8007,6 @@
         "background": "white",
         "cat": "paleturquoise",
         "eyes": "blueviolet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.366,
-          "rank": 40
-        },
-        "rarity": {
-          "score": 392.43,
-          "rank": 65
-        },
-        "jungle": {
-          "score": 9748.11,
-          "rank": 61
-        },
-        "global": {
-          "score": 19834.22,
-          "rank": 56
-        }
       }
     },
     {
@@ -12360,24 +8040,6 @@
         "background": "goldenrod",
         "cat": "lightpink",
         "eyes": "olivedrab"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.012,
-          "rank": 100
-        },
-        "rarity": {
-          "score": 279.85,
-          "rank": 136
-        },
-        "jungle": {
-          "score": 6559.59,
-          "rank": 146
-        },
-        "global": {
-          "score": 13511.21,
-          "rank": 139
-        }
       }
     },
     {
@@ -12411,24 +8073,6 @@
         "background": "lightsalmon",
         "cat": "wheat",
         "eyes": "blueviolet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 28
-        },
-        "rarity": {
-          "score": 353.83,
-          "rank": 100
-        },
-        "jungle": {
-          "score": 8218.58,
-          "rank": 115
-        },
-        "global": {
-          "score": 16891,
-          "rank": 103
-        }
       }
     },
     {
@@ -12462,24 +8106,6 @@
         "background": "darkgreen",
         "cat": "aquamarine",
         "eyes": "darkslategrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.978,
-          "rank": 102
-        },
-        "rarity": {
-          "score": 355.3,
-          "rank": 97
-        },
-        "jungle": {
-          "score": 9062.23,
-          "rank": 93
-        },
-        "global": {
-          "score": 18407.55,
-          "rank": 85
-        }
       }
     },
     {
@@ -12513,24 +8139,6 @@
         "background": "violet",
         "cat": "darkolivegreen",
         "eyes": "indianred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 65
-        },
-        "rarity": {
-          "score": 450.33,
-          "rank": 28
-        },
-        "jungle": {
-          "score": 11547.83,
-          "rank": 26
-        },
-        "global": {
-          "score": 23653.75,
-          "rank": 21
-        }
       }
     },
     {
@@ -12564,24 +8172,6 @@
         "background": "seashell",
         "cat": "burlywood",
         "eyes": "dodgerblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.446,
-          "rank": 181
-        },
-        "rarity": {
-          "score": 209.08,
-          "rank": 186
-        },
-        "jungle": {
-          "score": 5323.58,
-          "rank": 181
-        },
-        "global": {
-          "score": 10842.63,
-          "rank": 175
-        }
       }
     },
     {
@@ -12615,24 +8205,6 @@
         "background": "goldenrod",
         "cat": "darkslateblue",
         "eyes": "azure"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 66
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 47
-        },
-        "jungle": {
-          "score": 10522.52,
-          "rank": 41
-        },
-        "global": {
-          "score": 21391.56,
-          "rank": 35
-        }
       }
     },
     {
@@ -12666,24 +8238,6 @@
         "background": "indigo",
         "cat": "gold",
         "eyes": "indianred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.728,
-          "rank": 153
-        },
-        "rarity": {
-          "score": 258.8,
-          "rank": 152
-        },
-        "jungle": {
-          "score": 6517.04,
-          "rank": 148
-        },
-        "global": {
-          "score": 8639.66,
-          "rank": 189
-        }
       }
     },
     {
@@ -12717,24 +8271,6 @@
         "background": "oldlace",
         "cat": "tan",
         "eyes": "gray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.587,
-          "rank": 171
-        },
-        "rarity": {
-          "score": 246.45,
-          "rank": 161
-        },
-        "jungle": {
-          "score": 6344.13,
-          "rank": 151
-        },
-        "global": {
-          "score": 12872.67,
-          "rank": 144
-        }
       }
     },
     {
@@ -12768,24 +8304,6 @@
         "background": "cornsilk",
         "cat": "magenta",
         "eyes": "peachpuff"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.462,
-          "rank": 26
-        },
-        "rarity": {
-          "score": 587.39,
-          "rank": 5
-        },
-        "jungle": {
-          "score": 15505.03,
-          "rank": 4
-        },
-        "global": {
-          "score": 31507.48,
-          "rank": 4
-        }
       }
     },
     {
@@ -12819,24 +8337,6 @@
         "background": "navy",
         "cat": "chocolate",
         "eyes": "darkkhaki"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.712,
-          "rank": 157
-        },
-        "rarity": {
-          "score": 346.14,
-          "rank": 108
-        },
-        "jungle": {
-          "score": 8991.28,
-          "rank": 96
-        },
-        "global": {
-          "score": 18410.61,
-          "rank": 84
-        }
       }
     },
     {
@@ -12870,24 +8370,6 @@
         "background": "firebrick",
         "cat": "darkmagenta",
         "eyes": "honeydew"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.669,
-          "rank": 162
-        },
-        "rarity": {
-          "score": 330.06,
-          "rank": 117
-        },
-        "jungle": {
-          "score": 8782.2,
-          "rank": 106
-        },
-        "global": {
-          "score": 17727.98,
-          "rank": 96
-        }
       }
     },
     {
@@ -12921,24 +8403,6 @@
         "background": "lightseagreen",
         "cat": "maroon",
         "eyes": "linen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 29
-        },
-        "rarity": {
-          "score": 498.58,
-          "rank": 14
-        },
-        "jungle": {
-          "score": 13079.77,
-          "rank": 9
-        },
-        "global": {
-          "score": 26535.06,
-          "rank": 9
-        }
       }
     },
     {
@@ -12972,24 +8436,6 @@
         "background": "lightpink",
         "cat": "saddlebrown",
         "eyes": "burlywood"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.081,
-          "rank": 85
-        },
-        "rarity": {
-          "score": 371.38,
-          "rank": 76
-        },
-        "jungle": {
-          "score": 9488.44,
-          "rank": 83
-        },
-        "global": {
-          "score": 19264.8,
-          "rank": 74
-        }
       }
     },
     {
@@ -13023,24 +8469,6 @@
         "background": "crimson",
         "cat": "darkorange",
         "eyes": "mediumpurple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.7,
-          "rank": 159
-        },
-        "rarity": {
-          "score": 338.26,
-          "rank": 113
-        },
-        "jungle": {
-          "score": 8865.05,
-          "rank": 102
-        },
-        "global": {
-          "score": 17930.56,
-          "rank": 94
-        }
       }
     },
     {
@@ -13074,24 +8502,6 @@
         "background": "tomato",
         "cat": "hotpink",
         "eyes": "silver"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.946,
-          "rank": 4
-        },
-        "rarity": {
-          "score": 546.83,
-          "rank": 8
-        },
-        "jungle": {
-          "score": 13260.71,
-          "rank": 7
-        },
-        "global": {
-          "score": 27225.63,
-          "rank": 7
-        }
       }
     },
     {
@@ -13125,24 +8535,6 @@
         "background": "forestgreen",
         "cat": "olivedrab",
         "eyes": "darkorange"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.842,
-          "rank": 6
-        },
-        "rarity": {
-          "score": 482.5,
-          "rank": 18
-        },
-        "jungle": {
-          "score": 11025.13,
-          "rank": 30
-        },
-        "global": {
-          "score": 22621.88,
-          "rank": 27
-        }
       }
     },
     {
@@ -13176,24 +8568,6 @@
         "background": "yellowgreen",
         "cat": "lightskyblue",
         "eyes": "lightgray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.512,
-          "rank": 21
-        },
-        "rarity": {
-          "score": 424.6,
-          "rank": 38
-        },
-        "jungle": {
-          "score": 9611.4,
-          "rank": 76
-        },
-        "global": {
-          "score": 19773.9,
-          "rank": 57
-        }
       }
     },
     {
@@ -13227,24 +8601,6 @@
         "background": "black",
         "cat": "powderblue",
         "eyes": "darkcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.897,
-          "rank": 121
-        },
-        "rarity": {
-          "score": 345.65,
-          "rank": 109
-        },
-        "jungle": {
-          "score": 8806.5,
-          "rank": 104
-        },
-        "global": {
-          "score": 17951.16,
-          "rank": 93
-        }
       }
     },
     {
@@ -13278,24 +8634,6 @@
         "background": "lightblue",
         "cat": "mediumpurple",
         "eyes": "saddlebrown"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.212,
-          "rank": 61
-        },
-        "rarity": {
-          "score": 490.89,
-          "rank": 16
-        },
-        "jungle": {
-          "score": 13020.16,
-          "rank": 10
-        },
-        "global": {
-          "score": 26316.36,
-          "rank": 11
-        }
       }
     },
     {
@@ -13329,24 +8667,6 @@
         "background": "palevioletred",
         "cat": "orchid",
         "eyes": "darkgreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 30
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 48
-        },
-        "jungle": {
-          "score": 9919.4,
-          "rank": 59
-        },
-        "global": {
-          "score": 20264.44,
-          "rank": 51
-        }
       }
     },
     {
@@ -13380,24 +8700,6 @@
         "background": "limegreen",
         "cat": "silver",
         "eyes": "navajowhite"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.831,
-          "rank": 132
-        },
-        "rarity": {
-          "score": 274.88,
-          "rank": 139
-        },
-        "jungle": {
-          "score": 6963.35,
-          "rank": 141
-        },
-        "global": {
-          "score": 13994.3,
-          "rank": 137
-        }
       }
     },
     {
@@ -13431,24 +8733,6 @@
         "background": "royalblue",
         "cat": "orange",
         "eyes": "rebeccapurple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.141,
-          "rank": 76
-        },
-        "rarity": {
-          "score": 317.07,
-          "rank": 123
-        },
-        "jungle": {
-          "score": 7933.68,
-          "rank": 118
-        },
-        "global": {
-          "score": 16219.71,
-          "rank": 109
-        }
       }
     },
     {
@@ -13482,24 +8766,6 @@
         "background": "saddlebrown",
         "cat": "coral",
         "eyes": "moccasin"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.884,
-          "rank": 124
-        },
-        "rarity": {
-          "score": 363.99,
-          "rank": 91
-        },
-        "jungle": {
-          "score": 9390.97,
-          "rank": 86
-        },
-        "global": {
-          "score": 19298.99,
-          "rank": 73
-        }
       }
     },
     {
@@ -13533,24 +8799,6 @@
         "background": "snow",
         "cat": "lightcyan",
         "eyes": "darkmagenta"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.488,
-          "rank": 178
-        },
-        "rarity": {
-          "score": 235.32,
-          "rank": 169
-        },
-        "jungle": {
-          "score": 6118.02,
-          "rank": 158
-        },
-        "global": {
-          "score": 12456.86,
-          "rank": 156
-        }
       }
     },
     {
@@ -13584,24 +8832,6 @@
         "background": "rosybrown",
         "cat": "mintcream",
         "eyes": "mediumseagreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.78,
-          "rank": 148
-        },
-        "rarity": {
-          "score": 299.66,
-          "rank": 130
-        },
-        "jungle": {
-          "score": 7798.72,
-          "rank": 123
-        },
-        "global": {
-          "score": 15901.74,
-          "rank": 114
-        }
       }
     },
     {
@@ -13635,24 +8865,6 @@
         "background": "paleturquoise",
         "cat": "ghostwhite",
         "eyes": "mediumblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.842,
-          "rank": 7
-        },
-        "rarity": {
-          "score": 482.5,
-          "rank": 19
-        },
-        "jungle": {
-          "score": 10952.75,
-          "rank": 31
-        },
-        "global": {
-          "score": 22669.5,
-          "rank": 26
-        }
       }
     },
     {
@@ -13686,24 +8898,6 @@
         "background": "black",
         "cat": "royalblue",
         "eyes": "mediumspringgreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.081,
-          "rank": 86
-        },
-        "rarity": {
-          "score": 371.38,
-          "rank": 77
-        },
-        "jungle": {
-          "score": 9681.44,
-          "rank": 70
-        },
-        "global": {
-          "score": 19455.3,
-          "rank": 69
-        }
       }
     },
     {
@@ -13737,24 +8931,6 @@
         "background": "palegreen",
         "cat": "sienna",
         "eyes": "forestgreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 90
-        },
-        "rarity": {
-          "score": 369.92,
-          "rank": 82
-        },
-        "jungle": {
-          "score": 9694.23,
-          "rank": 67
-        },
-        "global": {
-          "score": 19661.19,
-          "rank": 62
-        }
       }
     },
     {
@@ -13788,24 +8964,6 @@
         "background": "orange",
         "cat": "sandybrown",
         "eyes": "silver"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 50
-        },
-        "rarity": {
-          "score": 407.44,
-          "rank": 42
-        },
-        "jungle": {
-          "score": 10443.44,
-          "rank": 47
-        },
-        "global": {
-          "score": 16532.13,
-          "rank": 106
-        }
       }
     },
     {
@@ -13839,24 +8997,6 @@
         "background": "lightcyan",
         "cat": "sienna",
         "eyes": "darkorchid"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 109
-        },
-        "rarity": {
-          "score": 394.39,
-          "rank": 61
-        },
-        "jungle": {
-          "score": 10462.91,
-          "rank": 45
-        },
-        "global": {
-          "score": 21172.86,
-          "rank": 40
-        }
       }
     },
     {
@@ -13890,24 +9030,6 @@
         "background": "oldlace",
         "cat": "slategrey",
         "eyes": "bisque"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.087,
-          "rank": 83
-        },
-        "rarity": {
-          "score": 439.45,
-          "rank": 32
-        },
-        "jungle": {
-          "score": 11579.26,
-          "rank": 24
-        },
-        "global": {
-          "score": 23397.8,
-          "rank": 25
-        }
       }
     },
     {
@@ -13941,24 +9063,6 @@
         "background": "forestgreen",
         "cat": "grey",
         "eyes": "purple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.831,
-          "rank": 133
-        },
-        "rarity": {
-          "score": 274.88,
-          "rank": 140
-        },
-        "jungle": {
-          "score": 6963.35,
-          "rank": 142
-        },
-        "global": {
-          "score": 9422.3,
-          "rank": 184
-        }
       }
     },
     {
@@ -13992,24 +9096,6 @@
         "background": "turquoise",
         "cat": "lightskyblue",
         "eyes": "moccasin"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.323,
-          "rank": 188
-        },
-        "rarity": {
-          "score": 183.35,
-          "rank": 191
-        },
-        "jungle": {
-          "score": 4589.38,
-          "rank": 190
-        },
-        "global": {
-          "score": 9399.59,
-          "rank": 185
-        }
       }
     },
     {
@@ -14043,24 +9129,6 @@
         "background": "mediumorchid",
         "cat": "grey",
         "eyes": "white"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.262,
-          "rank": 56
-        },
-        "rarity": {
-          "score": 405.3,
-          "rank": 44
-        },
-        "jungle": {
-          "score": 10547.45,
-          "rank": 39
-        },
-        "global": {
-          "score": 16878.3,
-          "rank": 105
-        }
       }
     },
     {
@@ -14094,24 +9162,6 @@
         "background": "palegreen",
         "cat": "indianred",
         "eyes": "mediumorchid"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 31
-        },
-        "rarity": {
-          "score": 353.83,
-          "rank": 101
-        },
-        "jungle": {
-          "score": 7639.58,
-          "rank": 124
-        },
-        "global": {
-          "score": 15748,
-          "rank": 115
-        }
       }
     },
     {
@@ -14145,24 +9195,6 @@
         "background": "sienna",
         "cat": "floralwhite",
         "eyes": "teal"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 91
-        },
-        "rarity": {
-          "score": 369.92,
-          "rank": 83
-        },
-        "jungle": {
-          "score": 9694.23,
-          "rank": 68
-        },
-        "global": {
-          "score": 19661.19,
-          "rank": 63
-        }
       }
     },
     {
@@ -14196,24 +9228,6 @@
         "background": "deeppink",
         "cat": "lightpink",
         "eyes": "skyblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.181,
-          "rank": 70
-        },
-        "rarity": {
-          "score": 443.9,
-          "rank": 29
-        },
-        "jungle": {
-          "score": 11497.98,
-          "rank": 28
-        },
-        "global": {
-          "score": 23555.33,
-          "rank": 23
-        }
       }
     },
     {
@@ -14247,24 +9261,6 @@
         "background": "mediumslateblue",
         "cat": "lightgoldenrodyellow",
         "eyes": "whitesmoke"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 7.342,
-          "rank": 1
-        },
-        "rarity": {
-          "score": 675.5,
-          "rank": 1
-        },
-        "jungle": {
-          "score": 14378.5,
-          "rank": 5
-        },
-        "global": {
-          "score": 29813.25,
-          "rank": 5
-        }
       }
     },
     {
@@ -14298,24 +9294,6 @@
         "background": "seashell",
         "cat": "rebeccapurple",
         "eyes": "pink"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 139
-        },
-        "rarity": {
-          "score": 321.67,
-          "rank": 121
-        },
-        "jungle": {
-          "score": 8427.67,
-          "rank": 111
-        },
-        "global": {
-          "score": 17081.5,
-          "rank": 101
-        }
       }
     },
     {
@@ -14349,24 +9327,6 @@
         "background": "crimson",
         "cat": "forestgreen",
         "eyes": "mediumorchid"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.719,
-          "rank": 155
-        },
-        "rarity": {
-          "score": 231.6,
-          "rank": 175
-        },
-        "jungle": {
-          "score": 5625.95,
-          "rank": 177
-        },
-        "global": {
-          "score": 11474.45,
-          "rank": 171
-        }
       }
     },
     {
@@ -14400,24 +9360,6 @@
         "background": "aquamarine",
         "cat": "springgreen",
         "eyes": "slategrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.081,
-          "rank": 87
-        },
-        "rarity": {
-          "score": 371.38,
-          "rank": 78
-        },
-        "jungle": {
-          "score": 9705.56,
-          "rank": 64
-        },
-        "global": {
-          "score": 19687.89,
-          "rank": 60
-        }
       }
     },
     {
@@ -14451,24 +9393,6 @@
         "background": "salmon",
         "cat": "seashell",
         "eyes": "rosybrown"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 51
-        },
-        "rarity": {
-          "score": 321.67,
-          "rank": 122
-        },
-        "jungle": {
-          "score": 7390.29,
-          "rank": 128
-        },
-        "global": {
-          "score": 15160.63,
-          "rank": 122
-        }
       }
     },
     {
@@ -14502,24 +9426,6 @@
         "background": "olive",
         "cat": "gainsboro",
         "eyes": "cornflowerblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.904,
-          "rank": 119
-        },
-        "rarity": {
-          "score": 278.78,
-          "rank": 137
-        },
-        "jungle": {
-          "score": 6993.57,
-          "rank": 136
-        },
-        "global": {
-          "score": 14313.96,
-          "rank": 129
-        }
       }
     },
     {
@@ -14553,24 +9459,6 @@
         "background": "darkgrey",
         "cat": "navajowhite",
         "eyes": "darkgoldenrod"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.685,
-          "rank": 161
-        },
-        "rarity": {
-          "score": 242.71,
-          "rank": 162
-        },
-        "jungle": {
-          "score": 6135.06,
-          "rank": 157
-        },
-        "global": {
-          "score": 12512.39,
-          "rank": 152
-        }
       }
     },
     {
@@ -14604,24 +9492,6 @@
         "background": "orchid",
         "cat": "crimson",
         "eyes": "fuchsia"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.081,
-          "rank": 88
-        },
-        "rarity": {
-          "score": 371.38,
-          "rank": 79
-        },
-        "jungle": {
-          "score": 9520.6,
-          "rank": 79
-        },
-        "global": {
-          "score": 19386.26,
-          "rank": 71
-        }
       }
     },
     {
@@ -14655,24 +9525,6 @@
         "background": "floralwhite",
         "cat": "lightsteelblue",
         "eyes": "yellow"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.331,
-          "rank": 45
-        },
-        "rarity": {
-          "score": 467.88,
-          "rank": 23
-        },
-        "jungle": {
-          "score": 12166.31,
-          "rank": 19
-        },
-        "global": {
-          "score": 15420.78,
-          "rank": 119
-        }
       }
     },
     {
@@ -14706,24 +9558,6 @@
         "background": "darkorchid",
         "cat": "mediumturquoise",
         "eyes": "midnightblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 32
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 49
-        },
-        "jungle": {
-          "score": 9726.4,
-          "rank": 63
-        },
-        "global": {
-          "score": 20073.94,
-          "rank": 53
-        }
       }
     },
     {
@@ -14757,24 +9591,6 @@
         "background": "wheat",
         "cat": "darkgrey",
         "eyes": "rebeccapurple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.884,
-          "rank": 125
-        },
-        "rarity": {
-          "score": 363.99,
-          "rank": 92
-        },
-        "jungle": {
-          "score": 9527.68,
-          "rank": 78
-        },
-        "global": {
-          "score": 19314.86,
-          "rank": 72
-        }
       }
     },
     {
@@ -14808,24 +9624,6 @@
         "background": "lightyellow",
         "cat": "oldlace",
         "eyes": "lightcoral"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.021,
-          "rank": 99
-        },
-        "rarity": {
-          "score": 368.68,
-          "rank": 86
-        },
-        "jungle": {
-          "score": 9660.52,
-          "rank": 73
-        },
-        "global": {
-          "score": 19654.47,
-          "rank": 64
-        }
       }
     },
     {
@@ -14859,24 +9657,6 @@
         "background": "crimson",
         "cat": "green",
         "eyes": "slategray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.31,
-          "rank": 47
-        },
-        "rarity": {
-          "score": 452.17,
-          "rank": 25
-        },
-        "jungle": {
-          "score": 11677.88,
-          "rank": 22
-        },
-        "global": {
-          "score": 23630.16,
-          "rank": 22
-        }
       }
     },
     {
@@ -14910,24 +9690,6 @@
         "background": "greenyellow",
         "cat": "orange",
         "eyes": "olive"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 33
-        },
-        "rarity": {
-          "score": 353.83,
-          "rank": 102
-        },
-        "jungle": {
-          "score": 8218.58,
-          "rank": 116
-        },
-        "global": {
-          "score": 16891,
-          "rank": 104
-        }
       }
     },
     {
@@ -14961,24 +9723,6 @@
         "background": "deepskyblue",
         "cat": "dimgrey",
         "eyes": "mediumslateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.212,
-          "rank": 191
-        },
-        "rarity": {
-          "score": 201.39,
-          "rank": 187
-        },
-        "jungle": {
-          "score": 5167.47,
-          "rank": 184
-        },
-        "global": {
-          "score": 10528.67,
-          "rank": 178
-        }
       }
     },
     {
@@ -15012,24 +9756,6 @@
         "background": "teal",
         "cat": "royalblue",
         "eyes": "darkviolet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.419,
-          "rank": 184
-        },
-        "rarity": {
-          "score": 233.56,
-          "rank": 172
-        },
-        "jungle": {
-          "score": 6039.99,
-          "rank": 166
-        },
-        "global": {
-          "score": 12282.86,
-          "rank": 161
-        }
       }
     },
     {
@@ -15063,24 +9789,6 @@
         "background": "sandybrown",
         "cat": "aqua",
         "eyes": "darkgoldenrod"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.625,
-          "rank": 169
-        },
-        "rarity": {
-          "score": 240.01,
-          "rank": 166
-        },
-        "jungle": {
-          "score": 6114.14,
-          "rank": 161
-        },
-        "global": {
-          "score": 12463.1,
-          "rank": 155
-        }
       }
     },
     {
@@ -15114,24 +9822,6 @@
         "background": "lightgreen",
         "cat": "lightskyblue",
         "eyes": "olivedrab"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.969,
-          "rank": 105
-        },
-        "rarity": {
-          "score": 349.54,
-          "rank": 104
-        },
-        "jungle": {
-          "score": 8836.72,
-          "rank": 103
-        },
-        "global": {
-          "score": 18212.86,
-          "rank": 88
-        }
       }
     },
     {
@@ -15165,24 +9855,6 @@
         "background": "darkolivegreen",
         "cat": "lightyellow",
         "eyes": "steelblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.478,
-          "rank": 25
-        },
-        "rarity": {
-          "score": 500.05,
-          "rank": 11
-        },
-        "jungle": {
-          "score": 12898.1,
-          "rank": 12
-        },
-        "global": {
-          "score": 26371.26,
-          "rank": 10
-        }
       }
     },
     {
@@ -15216,24 +9888,6 @@
         "background": "darkmagenta",
         "cat": "wheat",
         "eyes": "darkgoldenrod"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 34
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 50
-        },
-        "jungle": {
-          "score": 9686.19,
-          "rank": 69
-        },
-        "global": {
-          "score": 19994.56,
-          "rank": 54
-        }
       }
     },
     {
@@ -15267,24 +9921,6 @@
         "background": "midnightblue",
         "cat": "darkgreen",
         "eyes": "lightslategray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.946,
-          "rank": 116
-        },
-        "rarity": {
-          "score": 305.58,
-          "rank": 129
-        },
-        "jungle": {
-          "score": 7844.65,
-          "rank": 122
-        },
-        "global": {
-          "score": 16009.94,
-          "rank": 113
-        }
       }
     },
     {
@@ -15318,24 +9954,6 @@
         "background": "indigo",
         "cat": "aliceblue",
         "eyes": "rosybrown"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.167,
-          "rank": 72
-        },
-        "rarity": {
-          "score": 400.85,
-          "rank": 56
-        },
-        "jungle": {
-          "score": 10392.31,
-          "rank": 51
-        },
-        "global": {
-          "score": 21130.85,
-          "rank": 45
-        }
       }
     },
     {
@@ -15369,24 +9987,6 @@
         "background": "papayawhip",
         "cat": "lightcoral",
         "eyes": "lightsteelblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 67
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 51
-        },
-        "jungle": {
-          "score": 10329.52,
-          "rank": 56
-        },
-        "global": {
-          "score": 21201.06,
-          "rank": 39
-        }
       }
     },
     {
@@ -15420,24 +10020,6 @@
         "background": "lightcyan",
         "cat": "mediumturquoise",
         "eyes": "darkgray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.55,
-          "rank": 18
-        },
-        "rarity": {
-          "score": 418.17,
-          "rank": 39
-        },
-        "jungle": {
-          "score": 10044.04,
-          "rank": 57
-        },
-        "global": {
-          "score": 20558.13,
-          "rank": 50
-        }
       }
     },
     {
@@ -15471,24 +10053,6 @@
         "background": "peachpuff",
         "cat": "palegoldenrod",
         "eyes": "violet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.384,
-          "rank": 187
-        },
-        "rarity": {
-          "score": 235.32,
-          "rank": 170
-        },
-        "jungle": {
-          "score": 6013.47,
-          "rank": 169
-        },
-        "global": {
-          "score": 12313.99,
-          "rank": 160
-        }
       }
     },
     {
@@ -15522,24 +10086,6 @@
         "background": "lightsteelblue",
         "cat": "mediumblue",
         "eyes": "lightslategrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.212,
-          "rank": 62
-        },
-        "rarity": {
-          "score": 490.89,
-          "rank": 17
-        },
-        "jungle": {
-          "score": 12827.16,
-          "rank": 13
-        },
-        "global": {
-          "score": 26125.86,
-          "rank": 12
-        }
       }
     },
     {
@@ -15573,24 +10119,6 @@
         "background": "lightslategray",
         "cat": "azure",
         "eyes": "lavenderblush"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.592,
-          "rank": 17
-        },
-        "rarity": {
-          "score": 434.25,
-          "rank": 36
-        },
-        "jungle": {
-          "score": 10578.81,
-          "rank": 38
-        },
-        "global": {
-          "score": 21788.44,
-          "rank": 32
-        }
       }
     },
     {
@@ -15624,24 +10152,6 @@
         "background": "pink",
         "cat": "lightgray",
         "eyes": "tan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.342,
-          "rank": 41
-        },
-        "rarity": {
-          "score": 337.75,
-          "rank": 114
-        },
-        "jungle": {
-          "score": 8093.94,
-          "rank": 117
-        },
-        "global": {
-          "score": 11665.74,
-          "rank": 168
-        }
       }
     },
     {
@@ -15675,24 +10185,6 @@
         "background": "plum",
         "cat": "lightskyblue",
         "eyes": "mintcream"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.181,
-          "rank": 71
-        },
-        "rarity": {
-          "score": 366.7,
-          "rank": 87
-        },
-        "jungle": {
-          "score": 8969.67,
-          "rank": 97
-        },
-        "global": {
-          "score": 18526.13,
-          "rank": 83
-        }
       }
     },
     {
@@ -15726,24 +10218,6 @@
         "background": "oldlace",
         "cat": "blueviolet",
         "eyes": "black"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.087,
-          "rank": 84
-        },
-        "rarity": {
-          "score": 439.45,
-          "rank": 33
-        },
-        "jungle": {
-          "score": 11579.26,
-          "rank": 25
-        },
-        "global": {
-          "score": 12837.63,
-          "rank": 145
-        }
       }
     },
     {
@@ -15777,24 +10251,6 @@
         "background": "burlywood",
         "cat": "lavender",
         "eyes": "cornsilk"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.728,
-          "rank": 9
-        },
-        "rarity": {
-          "score": 596.55,
-          "rank": 3
-        },
-        "jungle": {
-          "score": 15575.98,
-          "rank": 2
-        },
-        "global": {
-          "score": 31752.89,
-          "rank": 2
-        }
       }
     },
     {
@@ -15828,24 +10284,6 @@
         "background": "salmon",
         "cat": "cornflowerblue",
         "eyes": "deeppink"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.815,
-          "rank": 138
-        },
-        "rarity": {
-          "score": 362.22,
-          "rank": 96
-        },
-        "jungle": {
-          "score": 9513.99,
-          "rank": 80
-        },
-        "global": {
-          "score": 19204.36,
-          "rank": 75
-        }
       }
     },
     {
@@ -15879,24 +10317,6 @@
         "background": "moccasin",
         "cat": "dimgrey",
         "eyes": "mediumpurple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 92
-        },
-        "rarity": {
-          "score": 273.42,
-          "rank": 141
-        },
-        "jungle": {
-          "score": 6111.67,
-          "rank": 162
-        },
-        "global": {
-          "score": 12588.88,
-          "rank": 149
-        }
       }
     },
     {
@@ -15930,24 +10350,6 @@
         "background": "oldlace",
         "cat": "honeydew",
         "eyes": "mediumseagreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.441,
-          "rank": 182
-        },
-        "rarity": {
-          "score": 214.28,
-          "rank": 182
-        },
-        "jungle": {
-          "score": 5491.72,
-          "rank": 178
-        },
-        "global": {
-          "score": 11158.17,
-          "rank": 173
-        }
       }
     },
     {
@@ -15981,24 +10383,6 @@
         "background": "snow",
         "cat": "mediumaquamarine",
         "eyes": "blanchedalmond"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.634,
-          "rank": 166
-        },
-        "rarity": {
-          "score": 267.49,
-          "rank": 149
-        },
-        "jungle": {
-          "score": 6970.43,
-          "rank": 140
-        },
-        "global": {
-          "score": 14171.36,
-          "rank": 136
-        }
       }
     },
     {
@@ -16032,24 +10416,6 @@
         "background": "sandybrown",
         "cat": "khaki",
         "eyes": "wheat"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.244,
-          "rank": 58
-        },
-        "rarity": {
-          "score": 381.4,
-          "rank": 72
-        },
-        "jungle": {
-          "score": 9662.64,
-          "rank": 72
-        },
-        "global": {
-          "score": 19632.84,
-          "rank": 66
-        }
       }
     },
     {
@@ -16083,24 +10449,6 @@
         "background": "salmon",
         "cat": "slateblue",
         "eyes": "violet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.848,
-          "rank": 128
-        },
-        "rarity": {
-          "score": 317.07,
-          "rank": 124
-        },
-        "jungle": {
-          "score": 7877.39,
-          "rank": 119
-        },
-        "global": {
-          "score": 16045.09,
-          "rank": 110
-        }
       }
     },
     {
@@ -16134,24 +10482,6 @@
         "background": "khaki",
         "cat": "white",
         "eyes": "lightseagreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 52
-        },
-        "rarity": {
-          "score": 407.44,
-          "rank": 43
-        },
-        "jungle": {
-          "score": 10443.44,
-          "rank": 48
-        },
-        "global": {
-          "score": 11162.16,
-          "rank": 172
-        }
       }
     },
     {
@@ -16185,24 +10515,6 @@
         "background": "mintcream",
         "cat": "oldlace",
         "eyes": "lightskyblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 140
-        },
-        "rarity": {
-          "score": 273.42,
-          "rank": 142
-        },
-        "jungle": {
-          "score": 6992.23,
-          "rank": 137
-        },
-        "global": {
-          "score": 14295.44,
-          "rank": 130
-        }
       }
     },
     {
@@ -16236,24 +10548,6 @@
         "background": "mediumblue",
         "cat": "darkseagreen",
         "eyes": "gold"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.891,
-          "rank": 5
-        },
-        "rarity": {
-          "score": 606.57,
-          "rank": 2
-        },
-        "jungle": {
-          "score": 15653.68,
-          "rank": 1
-        },
-        "global": {
-          "score": 31935.96,
-          "rank": 1
-        }
       }
     },
     {
@@ -16287,24 +10581,6 @@
         "background": "orangered",
         "cat": "orchid",
         "eyes": "lightgrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.098,
-          "rank": 81
-        },
-        "rarity": {
-          "score": 349.24,
-          "rank": 105
-        },
-        "jungle": {
-          "score": 8930.85,
-          "rank": 99
-        },
-        "global": {
-          "score": 18156.46,
-          "rank": 89
-        }
       }
     },
     {
@@ -16338,24 +10614,6 @@
         "background": "blanchedalmond",
         "cat": "burlywood",
         "eyes": "salmon"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 110
-        },
-        "rarity": {
-          "score": 442.64,
-          "rank": 31
-        },
-        "jungle": {
-          "score": 11669.16,
-          "rank": 23
-        },
-        "global": {
-          "score": 23792.23,
-          "rank": 19
-        }
       }
     },
     {
@@ -16389,24 +10647,6 @@
         "background": "peachpuff",
         "cat": "lightcyan",
         "eyes": "dimgray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 53
-        },
-        "rarity": {
-          "score": 386,
-          "rank": 66
-        },
-        "jungle": {
-          "score": 9794.75,
-          "rank": 60
-        },
-        "global": {
-          "score": 19970.75,
-          "rank": 55
-        }
       }
     },
     {
@@ -16440,24 +10680,6 @@
         "background": "darkviolet",
         "cat": "lightgray",
         "eyes": "powderblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 141
-        },
-        "rarity": {
-          "score": 262.69,
-          "rank": 150
-        },
-        "jungle": {
-          "score": 6547.26,
-          "rank": 147
-        },
-        "global": {
-          "score": 13417.02,
-          "rank": 141
-        }
       }
     },
     {
@@ -16491,24 +10713,6 @@
         "background": "slategray",
         "cat": "honeydew",
         "eyes": "khaki"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.116,
-          "rank": 79
-        },
-        "rarity": {
-          "score": 373.13,
-          "rank": 74
-        },
-        "jungle": {
-          "score": 9695.03,
-          "rank": 65
-        },
-        "global": {
-          "score": 19735.8,
-          "rank": 59
-        }
       }
     },
     {
@@ -16542,24 +10746,6 @@
         "background": "whitesmoke",
         "cat": "royalblue",
         "eyes": "darkslategrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.848,
-          "rank": 129
-        },
-        "rarity": {
-          "score": 252.74,
-          "rank": 155
-        },
-        "jungle": {
-          "score": 6252.97,
-          "rank": 152
-        },
-        "global": {
-          "score": 12774.84,
-          "rank": 146
-        }
       }
     },
     {
@@ -16593,24 +10779,6 @@
         "background": "orchid",
         "cat": "azure",
         "eyes": "violet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.744,
-          "rank": 152
-        },
-        "rarity": {
-          "score": 252.74,
-          "rank": 156
-        },
-        "jungle": {
-          "score": 6148.43,
-          "rank": 156
-        },
-        "global": {
-          "score": 12631.96,
-          "rank": 148
-        }
       }
     },
     {
@@ -16644,24 +10812,6 @@
         "background": "lavender",
         "cat": "snow",
         "eyes": "darkslateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 111
-        },
-        "rarity": {
-          "score": 394.39,
-          "rank": 62
-        },
-        "jungle": {
-          "score": 10342.28,
-          "rank": 53
-        },
-        "global": {
-          "score": 20934.73,
-          "rank": 48
-        }
       }
     },
     {
@@ -16695,24 +10845,6 @@
         "background": "mediumturquoise",
         "cat": "darkmagenta",
         "eyes": "purple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.419,
-          "rank": 185
-        },
-        "rarity": {
-          "score": 233.56,
-          "rank": 173
-        },
-        "jungle": {
-          "score": 6039.99,
-          "rank": 167
-        },
-        "global": {
-          "score": 12282.86,
-          "rank": 162
-        }
       }
     },
     {
@@ -16746,24 +10878,6 @@
         "background": "blue",
         "cat": "darkkhaki",
         "eyes": "fuchsia"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.702,
-          "rank": 158
-        },
-        "rarity": {
-          "score": 220.57,
-          "rank": 179
-        },
-        "jungle": {
-          "score": 5360.35,
-          "rank": 180
-        },
-        "global": {
-          "score": 7935.5,
-          "rank": 190
-        }
       }
     },
     {
@@ -16797,24 +10911,6 @@
         "background": "aliceblue",
         "cat": "beige",
         "eyes": "beige"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.331,
-          "rank": 46
-        },
-        "rarity": {
-          "score": 467.88,
-          "rank": 24
-        },
-        "jungle": {
-          "score": 12262.81,
-          "rank": 17
-        },
-        "global": {
-          "score": 24831.39,
-          "rank": 16
-        }
       }
     },
     {
@@ -16848,24 +10944,6 @@
         "background": "orangered",
         "cat": "darkkhaki",
         "eyes": "lightslategray"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.488,
-          "rank": 179
-        },
-        "rarity": {
-          "score": 235.32,
-          "rank": 171
-        },
-        "jungle": {
-          "score": 6118.02,
-          "rank": 159
-        },
-        "global": {
-          "score": 12456.86,
-          "rank": 157
-        }
       }
     },
     {
@@ -16899,24 +10977,6 @@
         "background": "pink",
         "cat": "aquamarine",
         "eyes": "lime"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.946,
-          "rank": 117
-        },
-        "rarity": {
-          "score": 273.42,
-          "rank": 143
-        },
-        "jungle": {
-          "score": 6690.67,
-          "rank": 143
-        },
-        "global": {
-          "score": 8800.31,
-          "rank": 187
-        }
       }
     },
     {
@@ -16950,24 +11010,6 @@
         "background": "ivory",
         "cat": "lightgoldenrodyellow",
         "eyes": "navajowhite"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 93
-        },
-        "rarity": {
-          "score": 289.5,
-          "rank": 132
-        },
-        "jungle": {
-          "score": 7076.67,
-          "rank": 131
-        },
-        "global": {
-          "score": 14509.75,
-          "rank": 127
-        }
       }
     },
     {
@@ -17001,24 +11043,6 @@
         "background": "darkgrey",
         "cat": "orangered",
         "eyes": "papayawhip"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.55,
-          "rank": 19
-        },
-        "rarity": {
-          "score": 418.17,
-          "rank": 40
-        },
-        "jungle": {
-          "score": 7494.83,
-          "rank": 125
-        },
-        "global": {
-          "score": 15716.25,
-          "rank": 116
-        }
       }
     },
     {
@@ -17052,24 +11076,6 @@
         "background": "olivedrab",
         "cat": "honeydew",
         "eyes": "gainsboro"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.116,
-          "rank": 80
-        },
-        "rarity": {
-          "score": 373.13,
-          "rank": 75
-        },
-        "jungle": {
-          "score": 9502.03,
-          "rank": 81
-        },
-        "global": {
-          "score": 19545.3,
-          "rank": 68
-        }
       }
     },
     {
@@ -17103,24 +11109,6 @@
         "background": "darkgoldenrod",
         "cat": "darkred",
         "eyes": "yellowgreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.696,
-          "rank": 14
-        },
-        "rarity": {
-          "score": 595.08,
-          "rank": 4
-        },
-        "jungle": {
-          "score": 15564.65,
-          "rank": 3
-        },
-        "global": {
-          "score": 31726.19,
-          "rank": 3
-        }
       }
     },
     {
@@ -17154,24 +11142,6 @@
         "background": "sandybrown",
         "cat": "springgreen",
         "eyes": "mediumslateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 142
-        },
-        "rarity": {
-          "score": 241.25,
-          "rank": 163
-        },
-        "jungle": {
-          "score": 5802.06,
-          "rank": 173
-        },
-        "global": {
-          "score": 11882.44,
-          "rank": 166
-        }
       }
     },
     {
@@ -17205,24 +11175,6 @@
         "background": "white",
         "cat": "lightcyan",
         "eyes": "lightsalmon"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.669,
-          "rank": 163
-        },
-        "rarity": {
-          "score": 330.06,
-          "rank": 118
-        },
-        "jungle": {
-          "score": 8782.2,
-          "rank": 107
-        },
-        "global": {
-          "score": 17727.98,
-          "rank": 97
-        }
       }
     },
     {
@@ -17256,24 +11208,6 @@
         "background": "coral",
         "cat": "ivory",
         "eyes": "violet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 54
-        },
-        "rarity": {
-          "score": 386,
-          "rank": 67
-        },
-        "jungle": {
-          "score": 8315.08,
-          "rank": 112
-        },
-        "global": {
-          "score": 17367.25,
-          "rank": 100
-        }
       }
     },
     {
@@ -17307,24 +11241,6 @@
         "background": "cadetblue",
         "cat": "indianred",
         "eyes": "lavenderblush"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.771,
-          "rank": 149
-        },
-        "rarity": {
-          "score": 272.18,
-          "rank": 147
-        },
-        "jungle": {
-          "score": 7006.77,
-          "rank": 135
-        },
-        "global": {
-          "score": 14256.97,
-          "rank": 134
-        }
       }
     },
     {
@@ -17358,24 +11274,6 @@
         "background": "azure",
         "cat": "orangered",
         "eyes": "darksalmon"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.228,
-          "rank": 60
-        },
-        "rarity": {
-          "score": 403.55,
-          "rank": 46
-        },
-        "jungle": {
-          "score": 10340.85,
-          "rank": 55
-        },
-        "global": {
-          "score": 20979.3,
-          "rank": 46
-        }
       }
     },
     {
@@ -17409,24 +11307,6 @@
         "background": "sienna",
         "cat": "rebeccapurple",
         "eyes": "palevioletred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.3,
-          "rank": 55
-        },
-        "rarity": {
-          "score": 369.92,
-          "rank": 84
-        },
-        "jungle": {
-          "score": 9091.1,
-          "rank": 91
-        },
-        "global": {
-          "score": 18534.06,
-          "rank": 82
-        }
       }
     },
     {
@@ -17460,24 +11340,6 @@
         "background": "rosybrown",
         "cat": "olive",
         "eyes": "powderblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.342,
-          "rank": 42
-        },
-        "rarity": {
-          "score": 386,
-          "rank": 68
-        },
-        "jungle": {
-          "score": 9312.25,
-          "rank": 87
-        },
-        "global": {
-          "score": 19050,
-          "rank": 77
-        }
       }
     },
     {
@@ -17511,24 +11373,6 @@
         "background": "firebrick",
         "cat": "lightseagreen",
         "eyes": "olive"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 143
-        },
-        "rarity": {
-          "score": 273.42,
-          "rank": 144
-        },
-        "jungle": {
-          "score": 7016.35,
-          "rank": 133
-        },
-        "global": {
-          "score": 14279.56,
-          "rank": 131
-        }
       }
     },
     {
@@ -17562,24 +11406,6 @@
         "background": "olive",
         "cat": "seashell",
         "eyes": "orange"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.03,
-          "rank": 97
-        },
-        "rarity": {
-          "score": 396.16,
-          "rank": 58
-        },
-        "jungle": {
-          "score": 10476.6,
-          "rank": 43
-        },
-        "global": {
-          "score": 21283.36,
-          "rank": 37
-        }
       }
     },
     {
@@ -17613,24 +11439,6 @@
         "background": "darkviolet",
         "cat": "oldlace",
         "eyes": "lightcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.154,
-          "rank": 74
-        },
-        "rarity": {
-          "score": 289.5,
-          "rank": 133
-        },
-        "jungle": {
-          "score": 6473.54,
-          "rank": 149
-        },
-        "global": {
-          "score": 13382.63,
-          "rank": 142
-        }
       }
     },
     {
@@ -17664,24 +11472,6 @@
         "background": "steelblue",
         "cat": "cyan",
         "eyes": "indianred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.141,
-          "rank": 77
-        },
-        "rarity": {
-          "score": 365.32,
-          "rank": 88
-        },
-        "jungle": {
-          "score": 9079.62,
-          "rank": 92
-        },
-        "global": {
-          "score": 18720.03,
-          "rank": 81
-        }
       }
     },
     {
@@ -17715,24 +11505,6 @@
         "background": "slategray",
         "cat": "dimgrey",
         "eyes": "firebrick"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.342,
-          "rank": 43
-        },
-        "rarity": {
-          "score": 386,
-          "rank": 69
-        },
-        "jungle": {
-          "score": 9493.19,
-          "rank": 82
-        },
-        "global": {
-          "score": 19407.19,
-          "rank": 70
-        }
       }
     },
     {
@@ -17766,24 +11538,6 @@
         "background": "seashell",
         "cat": "tan",
         "eyes": "navy"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.092,
-          "rank": 82
-        },
-        "rarity": {
-          "score": 289.5,
-          "rank": 134
-        },
-        "jungle": {
-          "score": 5886.5,
-          "rank": 171
-        },
-        "global": {
-          "score": 12192,
-          "rank": 163
-        }
       }
     },
     {
@@ -17817,24 +11571,6 @@
         "background": "chocolate",
         "cat": "gainsboro",
         "eyes": "orangered"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 35
-        },
-        "rarity": {
-          "score": 418.17,
-          "rank": 41
-        },
-        "jungle": {
-          "score": 10647.17,
-          "rank": 36
-        },
-        "global": {
-          "score": 21685.25,
-          "rank": 34
-        }
       }
     },
     {
@@ -17868,24 +11604,6 @@
         "background": "moccasin",
         "cat": "darkcyan",
         "eyes": "darkseagreen"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 36
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 52
-        },
-        "jungle": {
-          "score": 9943.52,
-          "rank": 58
-        },
-        "global": {
-          "score": 20248.56,
-          "rank": 52
-        }
       }
     },
     {
@@ -17919,24 +11637,6 @@
         "background": "chartreuse",
         "cat": "lightskyblue",
         "eyes": "lightcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.441,
-          "rank": 183
-        },
-        "rarity": {
-          "score": 214.28,
-          "rank": 183
-        },
-        "jungle": {
-          "score": 5408.08,
-          "rank": 179
-        },
-        "global": {
-          "score": 11107.37,
-          "rank": 174
-        }
       }
     },
     {
@@ -17970,24 +11670,6 @@
         "background": "darkorange",
         "cat": "rebeccapurple",
         "eyes": "purple"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.654,
-          "rank": 164
-        },
-        "rarity": {
-          "score": 241.25,
-          "rank": 164
-        },
-        "jungle": {
-          "score": 6099.6,
-          "rank": 163
-        },
-        "global": {
-          "score": 12501.56,
-          "rank": 153
-        }
       }
     },
     {
@@ -18021,24 +11703,6 @@
         "background": "khaki",
         "cat": "thistle",
         "eyes": "darkmagenta"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 68
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 53
-        },
-        "jungle": {
-          "score": 10401.9,
-          "rank": 49
-        },
-        "global": {
-          "score": 21153.44,
-          "rank": 43
-        }
       }
     },
     {
@@ -18072,24 +11736,6 @@
         "background": "wheat",
         "cat": "aquamarine",
         "eyes": "turquoise"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.238,
-          "rank": 190
-        },
-        "rarity": {
-          "score": 187.07,
-          "rank": 190
-        },
-        "jungle": {
-          "score": 4799.18,
-          "rank": 189
-        },
-        "global": {
-          "score": 9805.74,
-          "rank": 183
-        }
       }
     },
     {
@@ -18123,24 +11769,6 @@
         "background": "lightseagreen",
         "cat": "orchid",
         "eyes": "indianred"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.521,
-          "rank": 175
-        },
-        "rarity": {
-          "score": 223.93,
-          "rank": 178
-        },
-        "jungle": {
-          "score": 5643.7,
-          "rank": 176
-        },
-        "global": {
-          "score": 11582.03,
-          "rank": 170
-        }
       }
     },
     {
@@ -18174,24 +11802,6 @@
         "background": "mediumvioletred",
         "cat": "darkgreen",
         "eyes": "darkslateblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.978,
-          "rank": 103
-        },
-        "rarity": {
-          "score": 307.05,
-          "rank": 126
-        },
-        "jungle": {
-          "score": 7855.98,
-          "rank": 121
-        },
-        "global": {
-          "score": 16036.64,
-          "rank": 112
-        }
       }
     },
     {
@@ -18225,24 +11835,6 @@
         "background": "royalblue",
         "cat": "lightsteelblue",
         "eyes": "fuchsia"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.154,
-          "rank": 75
-        },
-        "rarity": {
-          "score": 289.5,
-          "rank": 135
-        },
-        "jungle": {
-          "score": 6473.54,
-          "rank": 150
-        },
-        "global": {
-          "score": 13382.63,
-          "rank": 143
-        }
       }
     },
     {
@@ -18276,24 +11868,6 @@
         "background": "powderblue",
         "cat": "burlywood",
         "eyes": "darkkhaki"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.141,
-          "rank": 78
-        },
-        "rarity": {
-          "score": 365.32,
-          "rank": 89
-        },
-        "jungle": {
-          "score": 9139.93,
-          "rank": 90
-        },
-        "global": {
-          "score": 18839.09,
-          "rank": 78
-        }
       }
     },
     {
@@ -18327,24 +11901,6 @@
         "background": "oldlace",
         "cat": "lightblue",
         "eyes": "steelblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.897,
-          "rank": 122
-        },
-        "rarity": {
-          "score": 345.65,
-          "rank": 110
-        },
-        "jungle": {
-          "score": 8922.3,
-          "rank": 101
-        },
-        "global": {
-          "score": 18065.46,
-          "rank": 91
-        }
       }
     },
     {
@@ -18378,24 +11934,6 @@
         "background": "tan",
         "cat": "burlywood",
         "eyes": "burlywood"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.616,
-          "rank": 170
-        },
-        "rarity": {
-          "score": 228.38,
-          "rank": 176
-        },
-        "jungle": {
-          "score": 5762.66,
-          "rank": 174
-        },
-        "global": {
-          "score": 11766.55,
-          "rank": 167
-        }
       }
     },
     {
@@ -18429,24 +11967,6 @@
         "background": "mediumvioletred",
         "cat": "darkslateblue",
         "eyes": "darkblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 112
-        },
-        "rarity": {
-          "score": 394.39,
-          "rank": 63
-        },
-        "jungle": {
-          "score": 10462.91,
-          "rank": 46
-        },
-        "global": {
-          "score": 21172.86,
-          "rank": 41
-        }
       }
     },
     {
@@ -18480,24 +12000,6 @@
         "background": "yellowgreen",
         "cat": "mediumslateblue",
         "eyes": "royalblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.946,
-          "rank": 118
-        },
-        "rarity": {
-          "score": 353.83,
-          "rank": 103
-        },
-        "jungle": {
-          "score": 9243.9,
-          "rank": 89
-        },
-        "global": {
-          "score": 18819.81,
-          "rank": 80
-        }
       }
     },
     {
@@ -18531,24 +12033,6 @@
         "background": "dimgray",
         "cat": "saddlebrown",
         "eyes": "navy"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.446,
-          "rank": 37
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 54
-        },
-        "jungle": {
-          "score": 7024.4,
-          "rank": 132
-        },
-        "global": {
-          "score": 14835.19,
-          "rank": 125
-        }
       }
     },
     {
@@ -18582,24 +12066,6 @@
         "background": "blue",
         "cat": "lime",
         "eyes": "cadetblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.404,
-          "rank": 39
-        },
-        "rarity": {
-          "score": 386,
-          "rank": 70
-        },
-        "jungle": {
-          "score": 9054.92,
-          "rank": 94
-        },
-        "global": {
-          "score": 15464.79,
-          "rank": 117
-        }
       }
     },
     {
@@ -18633,24 +12099,6 @@
         "background": "deepskyblue",
         "cat": "lightcoral",
         "eyes": "ghostwhite"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.03,
-          "rank": 98
-        },
-        "rarity": {
-          "score": 396.16,
-          "rank": 59
-        },
-        "jungle": {
-          "score": 10476.6,
-          "rank": 44
-        },
-        "global": {
-          "score": 21283.36,
-          "rank": 38
-        }
       }
     },
     {
@@ -18684,24 +12132,6 @@
         "background": "beige",
         "cat": "forestgreen",
         "eyes": "blue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 94
-        },
-        "rarity": {
-          "score": 369.92,
-          "rank": 85
-        },
-        "jungle": {
-          "score": 9477.1,
-          "rank": 84
-        },
-        "global": {
-          "score": 14344.12,
-          "rank": 128
-        }
       }
     },
     {
@@ -18735,24 +12165,6 @@
         "background": "midnightblue",
         "cat": "gray",
         "eyes": "wheat"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.962,
-          "rank": 113
-        },
-        "rarity": {
-          "score": 394.39,
-          "rank": 64
-        },
-        "jungle": {
-          "score": 10342.28,
-          "rank": 54
-        },
-        "global": {
-          "score": 20934.73,
-          "rank": 49
-        }
       }
     },
     {
@@ -18786,24 +12198,6 @@
         "background": "honeydew",
         "cat": "lightpink",
         "eyes": "turquoise"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.089,
-          "rank": 192
-        },
-        "rarity": {
-          "score": 175.66,
-          "rank": 192
-        },
-        "jungle": {
-          "score": 4529.77,
-          "rank": 191
-        },
-        "global": {
-          "score": 9180.88,
-          "rank": 186
-        }
       }
     },
     {
@@ -18837,24 +12231,6 @@
         "background": "lightsalmon",
         "cat": "teal",
         "eyes": "mediumblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.196,
-          "rank": 69
-        },
-        "rarity": {
-          "score": 402.08,
-          "rank": 55
-        },
-        "jungle": {
-          "score": 10401.9,
-          "rank": 50
-        },
-        "global": {
-          "score": 21153.44,
-          "rank": 44
-        }
       }
     },
     {
@@ -18888,24 +12264,6 @@
         "background": "turquoise",
         "cat": "darkmagenta",
         "eyes": "blue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.848,
-          "rank": 130
-        },
-        "rarity": {
-          "score": 252.74,
-          "rank": 157
-        },
-        "jungle": {
-          "score": 6252.97,
-          "rank": 153
-        },
-        "global": {
-          "score": 7632.4,
-          "rank": 191
-        }
       }
     },
     {
@@ -18939,24 +12297,6 @@
         "background": "tan",
         "cat": "purple",
         "eyes": "darkviolet"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.969,
-          "rank": 106
-        },
-        "rarity": {
-          "score": 340.97,
-          "rank": 112
-        },
-        "jungle": {
-          "score": 8705.91,
-          "rank": 108
-        },
-        "global": {
-          "score": 17687.93,
-          "rank": 98
-        }
       }
     },
     {
@@ -18990,24 +12330,6 @@
         "background": "aliceblue",
         "cat": "lemonchiffon",
         "eyes": "lightslategrey"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 144
-        },
-        "rarity": {
-          "score": 273.42,
-          "rank": 145
-        },
-        "jungle": {
-          "score": 7016.35,
-          "rank": 134
-        },
-        "global": {
-          "score": 14279.56,
-          "rank": 132
-        }
       }
     },
     {
@@ -19041,24 +12363,6 @@
         "background": "aquamarine",
         "cat": "floralwhite",
         "eyes": "powderblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.866,
-          "rank": 127
-        },
-        "rarity": {
-          "score": 247.68,
-          "rank": 158
-        },
-        "jungle": {
-          "score": 5851.92,
-          "rank": 172
-        },
-        "global": {
-          "score": 11999.91,
-          "rank": 165
-        }
       }
     },
     {
@@ -19092,24 +12396,6 @@
         "background": "mediumseagreen",
         "cat": "lightgrey",
         "eyes": "papayawhip"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.494,
-          "rank": 23
-        },
-        "rarity": {
-          "score": 477.9,
-          "rank": 20
-        },
-        "jungle": {
-          "score": 12083.18,
-          "rank": 20
-        },
-        "global": {
-          "score": 24760.46,
-          "rank": 17
-        }
       }
     },
     {
@@ -19143,24 +12429,6 @@
         "background": "aliceblue",
         "cat": "mistyrose",
         "eyes": "tan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.757,
-          "rank": 150
-        },
-        "rarity": {
-          "score": 246.61,
-          "rank": 159
-        },
-        "jungle": {
-          "score": 6205.49,
-          "rank": 154
-        },
-        "global": {
-          "score": 12662.96,
-          "rank": 147
-        }
       }
     },
     {
@@ -19194,24 +12462,6 @@
         "background": "mediumaquamarine",
         "cat": "yellow",
         "eyes": "darkcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.512,
-          "rank": 22
-        },
-        "rarity": {
-          "score": 472.85,
-          "rank": 21
-        },
-        "jungle": {
-          "score": 11529.34,
-          "rank": 27
-        },
-        "global": {
-          "score": 23702.96,
-          "rank": 20
-        }
       }
     },
     {
@@ -19245,24 +12495,6 @@
         "background": "greenyellow",
         "cat": "chocolate",
         "eyes": "papayawhip"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 6.05,
-          "rank": 95
-        },
-        "rarity": {
-          "score": 273.42,
-          "rank": 146
-        },
-        "jungle": {
-          "score": 6047.33,
-          "rank": 165
-        },
-        "global": {
-          "score": 12525.38,
-          "rank": 151
-        }
       }
     },
     {
@@ -19296,24 +12528,6 @@
         "background": "orangered",
         "cat": "skyblue",
         "eyes": "moccasin"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.904,
-          "rank": 120
-        },
-        "rarity": {
-          "score": 337.75,
-          "rank": 115
-        },
-        "jungle": {
-          "score": 8680.98,
-          "rank": 109
-        },
-        "global": {
-          "score": 17629.19,
-          "rank": 99
-        }
       }
     },
     {
@@ -19347,24 +12561,6 @@
         "background": "turquoise",
         "cat": "ivory",
         "eyes": "cornflowerblue"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.573,
-          "rank": 172
-        },
-        "rarity": {
-          "score": 212.3,
-          "rank": 185
-        },
-        "jungle": {
-          "score": 5296.24,
-          "rank": 182
-        },
-        "global": {
-          "score": 10829.93,
-          "rank": 176
-        }
       }
     },
     {
@@ -19398,24 +12594,6 @@
         "background": "whitesmoke",
         "cat": "steelblue",
         "eyes": "turquoise"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.757,
-          "rank": 151
-        },
-        "rarity": {
-          "score": 246.61,
-          "rank": 160
-        },
-        "jungle": {
-          "score": 6165.28,
-          "rank": 155
-        },
-        "global": {
-          "score": 12583.58,
-          "rank": 150
-        }
       }
     },
     {
@@ -19449,24 +12627,6 @@
         "background": "seashell",
         "cat": "mintcream",
         "eyes": "gainsboro"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.8,
-          "rank": 145
-        },
-        "rarity": {
-          "score": 262.69,
-          "rank": 151
-        },
-        "jungle": {
-          "score": 6643.76,
-          "rank": 144
-        },
-        "global": {
-          "score": 13512.27,
-          "rank": 138
-        }
       }
     },
     {
@@ -19500,27 +12660,9 @@
         "background": "white",
         "cat": "mistyrose",
         "eyes": "darkcyan"
-      },
-      "rankings": {
-        "openRarity": {
-          "score": 5.719,
-          "rank": 156
-        },
-        "rarity": {
-          "score": 215.52,
-          "rank": 181
-        },
-        "jungle": {
-          "score": 4806.5,
-          "rank": 188
-        },
-        "global": {
-          "score": 9923.46,
-          "rank": 181
-        }
       }
     }
   ],
-  "etag": "\"4c64582484c8fe58786f866b46ecd8b5371a26c54e295d92faca5ebca30b0bef\"",
-  "timestamp": 1761871068852
+  "etag": "\"1a217924833a2a6dfc3161bba93e32a437bcfc6cf0f8f7938dc270c85aedc7b4\"",
+  "timestamp": 1761680064659
 }
