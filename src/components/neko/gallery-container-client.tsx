@@ -19,10 +19,10 @@ export function GalleryContainerClient({
 
   // Fetch paginated gallery data with infinite scroll
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
-    useNekoGallery(filters);
+    useNekoGallery(baseURL, filters);
 
   // Fetch all nekos for filter options
-  const { data: allNekos } = useAllNekos();
+  const { data: allNekos } = useAllNekos(baseURL);
 
   // Flatten paginated results into single array
   const items = useMemo(() => {

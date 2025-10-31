@@ -37,11 +37,11 @@ export function createQueryClient() {
 /**
  * Fetch all Nekos (full immutable dataset)
  */
-export function useAllNekos() {
+export function useAllNekos(baseURL: string) {
   return useQuery({
     queryKey: ["v2", "nekos", "all"],
     queryFn: async () => {
-      return (await getAllNekos(new URL(window.location.href).origin)).data;
+      return (await getAllNekos(baseURL)).data;
     },
   });
 }
@@ -51,7 +51,10 @@ export function useAllNekos() {
  * Accepts filters object directly from URL params
  * Uses Suspense for proper SSR hydration
  */
-export function useNekoGallery(filters: GalleryFiltersWithPagination) {
+export function useNekoGallery(
+  baseURL: string,
+  filters: GalleryFiltersWithPagination,
+) {
   const queryKey = ["v2", "nekos", "paginated", filters];
 
   return useSuspenseInfiniteQuery({
@@ -75,14 +78,11 @@ export function useNekoGallery(filters: GalleryFiltersWithPagination) {
       const skip = Math.max(0, pageParam);
       const take = 50;
 
-      const { items, total, hasMore } = await getPaginatedNekos(
-        new URL(window.location.href).origin,
-        {
-          skip,
-          take,
-          ...filters,
-        },
-      );
+      const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
+        skip,
+        take,
+        ...filters,
+      });
 
       const result = {
         items,

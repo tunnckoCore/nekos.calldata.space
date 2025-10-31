@@ -16,15 +16,19 @@ interface GalleryContentProps {
 
 export async function GalleryContent({ searchParams }: GalleryContentProps) {
   const headersList = await headers();
-  console.log(...headersList.entries());
+  const host =
+    headersList.get("host") ||
+    headersList.get("x-forwarded-host") ||
+    "localhost:3000";
 
-  const baseURL = headersList.get("origin") || "http://localhost:3000";
+  const proto = headersList.get("x-forwarded-proto") || "https";
+  const baseURL = `${proto}://${host}`;
 
   const filters = await gallerySearchParamsCache.parse(searchParams);
 
   const queryClient = createQueryClient();
 
-  console.log("GalleryContent props:", { baseURL });
+  console.log("GalleryContent props:", { host });
 
   try {
     // Prefetch all nekos for filter options
@@ -42,11 +46,11 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
     <HydrationBoundary state={dehydratedState}>
       <div className="flex flex-col h-full w-full">
         {/* Sticky filter bar at top */}
-        <GalleryFilters />
+        <GalleryFilters baseURL={baseURL} />
 
         {/* Full-height virtualizable gallery container */}
         <div className="flex-1 overflow-hidden">
-          <GalleryContainerClient baseURL={url.origin} filters={filters} />
+          <GalleryContainerClient baseURL={baseURL} filters={filters} />
         </div>
       </div>
     </HydrationBoundary>

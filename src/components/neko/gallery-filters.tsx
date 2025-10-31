@@ -24,9 +24,9 @@ import { useFilters } from "@/lib/gallery-search-params";
 import { getDynamicTraitOptions } from "@/lib/neko-fetch";
 import { useAllNekos } from "@/lib/queries";
 
-export function GalleryFilters() {
+export function GalleryFilters({ baseURL }: { baseURL: string }) {
   const [isPending, startTransition] = useTransition();
-  const { data: allNekos } = useAllNekos();
+  const { data: allNekos } = useAllNekos(baseURL);
   const inputRef = useRef<HTMLInputElement>(null);
   const isMobile = useIsMobile();
 
