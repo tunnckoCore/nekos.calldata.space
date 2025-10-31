@@ -1,4 +1,4 @@
-// import { Databuddy } from "@databuddy/sdk/react";
+import { Databuddy } from "@databuddy/sdk/react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/*<Databuddy
+        <Databuddy
           clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
           trackAttributes={true}
           trackInteractions={true}
@@ -40,7 +40,7 @@ export default function RootLayout({
           trackWebVitals={true}
           trackErrors={true}
           enableBatching={true}
-        />*/}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>
