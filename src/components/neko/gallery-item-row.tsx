@@ -3,7 +3,7 @@
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
 import { Badge } from "../ui/badge";
-import { useSearchParams } from "next/navigation";
+import { useQueryState } from "nuqs";
 // import { Button } from "@/components/ui/button";
 
 export function GalleryItemRow({
@@ -13,7 +13,7 @@ export function GalleryItemRow({
   item: Neko;
   children: React.ReactNode;
 }) {
-  const params = useSearchParams();
+  const [sort] = useQueryState("sort");
 
   const cursorItem = allCursors.find((c) => c.name === item.traits.cursor);
   const cursorEmoji = cursorItem!.emoji;
@@ -21,13 +21,13 @@ export function GalleryItemRow({
   const patchedColors = item.colors || item.traits;
   const rankings = item.rankings;
 
-  const sortMethod = params.get("sort");
+  const globalRank = rankings?.global?.rank ?? 0;
   const itemRank =
-    sortMethod === "rank_rarity"
+    sort === "rank_rarity"
       ? (rankings?.rarity?.rank ?? 0)
-      : sortMethod === "rank_jungle"
+      : sort === "rank_jungle"
         ? (rankings?.jungle?.rank ?? 0)
-        : sortMethod === "rank_open_rarity"
+        : sort === "rank_open_rarity"
           ? (rankings?.openRarity?.rank ?? 0)
           : (rankings?.jungle?.rank ?? 0);
 
@@ -72,7 +72,7 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              {item.name} 💠 {rankings?.global?.rank ?? "zzz"}
+              {item.name} 💠 {globalRank}
             </div>
           }
         </div>

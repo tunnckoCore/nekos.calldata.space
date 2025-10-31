@@ -1,4 +1,6 @@
-import { z } from "zod";
+import z from "zod/v4";
+
+z.email();
 
 const ethereumAddressSchema = z
   .string()
@@ -56,14 +58,14 @@ export const NekoSchema = z.object({
     eyes: z.string(),
     cursor: z.string(),
   }),
-  sequence: z.number().optional(), // Added by fetchAllNekos for stable ordering
+  sequence: z.number(),
   colors: z
     .object({
       background: z.string(),
       cat: z.string(),
       eyes: z.string(),
     })
-    .optional(),
+    .strict(),
   rankings: z
     .object({
       openRarity: z.object({
@@ -83,7 +85,7 @@ export const NekoSchema = z.object({
         rank: z.number(),
       }),
     })
-    .optional(),
+    .strict(),
 });
 
 export type Neko = z.infer<typeof NekoSchema>;
