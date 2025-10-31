@@ -15,9 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "0xNeko Gallery",
-  description:
-    "Browse and explore 380 0xNeko NFTs, Ordinals, and Ethscriptions",
+  title: "0xNekos Gallery",
+  description: "Explore 381 0xNeko NFTs, Ordinals, and Ethscriptions",
 };
 
 export default function RootLayout({

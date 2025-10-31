@@ -7,6 +7,32 @@ const nextConfig: NextConfig = {
   experimental: {
     turbopackFileSystemCacheForDev: true,
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/ethscriptions",
+          destination: "/?gen=Ethscriptions",
+        },
+        {
+          source: "/nfts",
+          destination: "/?gen=og",
+        },
+        {
+          source: "/nft",
+          destination: "/?gen=og",
+        },
+        {
+          source: "/og",
+          destination: "/?gen=og",
+        },
+        {
+          source: "/ordinals",
+          destination: "/?gen=ordinals",
+        },
+      ],
+    };
+  },
 };
 
 export default nextConfig;

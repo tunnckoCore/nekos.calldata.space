@@ -1,7 +1,7 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
 import { useAllNekos, useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
@@ -16,6 +16,7 @@ export function GalleryContainerClient({
   filters,
 }: GalleryContainerClientProps) {
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
+  const [openItemId, setOpenItemId] = useState<string | null>(null);
 
   // Fetch paginated gallery data with infinite scroll
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
@@ -135,7 +136,13 @@ export function GalleryContainerClient({
                   key={virtualItem.key}
                   ref={virtualizer.measureElement}
                 >
-                  <GalleryItemRow item={item}>
+                  <GalleryItemRow
+                    item={item}
+                    isOpen={openItemId === item.id}
+                    onToggle={() =>
+                      setOpenItemId(openItemId === item.id ? null : item.id)
+                    }
+                  >
                     {isNfts && (
                       <iframe
                         className="m-0 block h-[80dvh] w-full border-0 p-0"
@@ -160,7 +167,7 @@ export function GalleryContainerClient({
                       <iframe
                         className="m-0 block h-[80dvh] w-full border-0 p-0"
                         sandbox="allow-scripts"
-                        src={`https://mainnet.api.calldata.space/ethscriptions/${item.id}/content`}
+                        src={`https://api.ethscriptions.com/v2/ethscriptions/${item.id}/data`}
                         style={{
                           backgroundColor: patchedColors.background,
                         }}

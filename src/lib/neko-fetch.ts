@@ -1,5 +1,5 @@
 import { fuzzySearch } from "./fuzzy-search";
-import { type GalleryFiltersWithPagination } from "./gallery-search-params";
+import type { GalleryFiltersWithPagination } from "./gallery-search-params";
 import type { Neko } from "./neko";
 import { getAllNekos } from "./preps";
 
@@ -257,7 +257,9 @@ export async function getPaginatedNekos(
     filtered = filtered.filter((n) => n.traits.cursor === cursor);
   }
   if (gen) {
-    filtered = filtered.filter((n) => n.traits.gen === gen);
+    filtered = filtered.filter(
+      (n) => n.traits.gen.toLowerCase() === gen.toLowerCase(),
+    );
   }
   if (year) {
     filtered = filtered.filter(

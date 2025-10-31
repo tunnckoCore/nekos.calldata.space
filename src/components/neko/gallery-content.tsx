@@ -8,7 +8,6 @@ import {
 } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
 import { GalleryFilters } from "./gallery-filters";
-import { headers } from "next/headers";
 
 interface GalleryContentProps {
   searchParams: Promise<SearchParams>;
