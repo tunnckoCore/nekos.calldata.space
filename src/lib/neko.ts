@@ -88,6 +88,8 @@ export const NekoSchema = z.object({
     .strict(),
 });
 
+export const NekoSchemaList = z.array(NekoSchema);
+
 export type Neko = z.infer<typeof NekoSchema>;
 
 export type SortField =

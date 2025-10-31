@@ -3,7 +3,7 @@ import {
   useSuspenseInfiniteQuery,
   useQuery,
 } from "@tanstack/react-query";
-import type { Neko } from "./neko";
+import { NekoSchema, NekoSchemaList, type Neko } from "./neko";
 
 const SITE_URL_ORIGIN =
   typeof window !== "undefined"
@@ -38,11 +38,11 @@ export function createQueryClient() {
  */
 export function useAllNekos() {
   return useQuery({
-    queryKey: ["nekos", "all"],
+    queryKey: ["v2", "nekos", "all"],
     queryFn: async () => {
       const response = await fetch(`${SITE_URL_ORIGIN}/api/neko`);
       if (!response.ok) throw new Error("Failed to fetch all Nekos");
-      return (await response.json()) as Neko[];
+      return NekoSchema.parse(await response.json());
     },
   });
 }
@@ -63,7 +63,7 @@ export function useNekoGallery(filters: {
   sort?: string;
   order?: "asc" | "desc";
 }) {
-  const queryKey = ["nekos", "paginated", filters];
+  const queryKey = ["v2", "nekos", "paginated", filters];
 
   return useSuspenseInfiniteQuery({
     queryKey,
@@ -87,7 +87,12 @@ export function useNekoGallery(filters: {
         `${SITE_URL_ORIGIN}/api/neko/paginated?${params}`,
       );
       if (!response.ok) throw new Error("Failed to fetch paginated Nekos");
-      return (await response.json()) as PaginatedResponse;
+
+      const res = (await response.json()) as PaginatedResponse;
+
+      NekoSchemaList.parse(res.items);
+
+      return res;
     },
     getNextPageParam: (lastPage) => {
       if (!lastPage.hasMore) return undefined;
@@ -102,7 +107,7 @@ export function useNekoGallery(filters: {
  */
 export function useNekoById(id: string | undefined) {
   return useQuery({
-    queryKey: ["neko", id],
+    queryKey: ["v2", "neko", id],
     queryFn: async () => {
       const allNekos = await fetch(`${SITE_URL_ORIGIN}/api/neko`).then((r) =>
         r.json(),
@@ -118,11 +123,11 @@ export function useNekoById(id: string | undefined) {
  */
 export async function prefetchAllNekos(queryClient: QueryClient) {
   return queryClient.prefetchQuery({
-    queryKey: ["nekos", "all"],
+    queryKey: ["v2", "nekos", "all"],
     queryFn: async () => {
       const response = await fetch(`${SITE_URL_ORIGIN}/api/neko`);
       if (!response.ok) throw new Error("Failed to prefetch Nekos");
-      return (await response.json()) as Neko[];
+      return NekoSchemaList.parse(await response.json());
     },
   });
 }
@@ -145,7 +150,7 @@ export async function prefetchPaginatedNekos(
     order?: "asc" | "desc";
   } = {},
 ) {
-  const queryKey = ["nekos", "paginated", filters];
+  const queryKey = ["v2", "nekos", "paginated", filters];
 
   return queryClient.prefetchInfiniteQuery({
     queryKey,
@@ -155,8 +160,9 @@ export async function prefetchPaginatedNekos(
       url.searchParams.set("take", "50");
 
       if (filters.search) url.searchParams.set("search", filters.search);
-      if (filters.background)
+      if (filters.background) {
         url.searchParams.set("background", filters.background);
+      }
       if (filters.cat) url.searchParams.set("cat", filters.cat);
       if (filters.eyes) url.searchParams.set("eyes", filters.eyes);
       if (filters.cursor) url.searchParams.set("cursor", filters.cursor);
@@ -166,8 +172,15 @@ export async function prefetchPaginatedNekos(
       if (filters.order) url.searchParams.set("order", filters.order);
 
       const response = await fetch(url.toString());
-      if (!response.ok) throw new Error("Failed to prefetch paginated Nekos");
-      return (await response.json()) as PaginatedResponse;
+      if (!response.ok) {
+        throw new Error("Failed to prefetch paginated Nekos");
+      }
+
+      const res = (await response.json()) as PaginatedResponse;
+
+      NekoSchemaList.parse(res.items);
+
+      return res;
     },
     initialPageParam: 0,
   });
