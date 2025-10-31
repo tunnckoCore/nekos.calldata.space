@@ -22,13 +22,13 @@
       "!build",
       "!**/src/components/ui/*",
       "!**/src/hooks/use-mobile.ts",
-      "!convex/betterAuth/schema.ts",
-    ],
+      "!convex/betterAuth/schema.ts"
+    ]
   },
   "linter": {
     "domains": {
       "next": "recommended",
-      "react": "recommended",
-    },
-  },
+      "react": "recommended"
+    }
+  }
 }

@@ -1,5 +1,5 @@
 // import { fetchAllNekos } from "@/lib/neko-fetch";
-import { type NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 import { fetchNFTContent, fetchOrdinalContent } from "@/lib/preps";
 
 export async function GET(

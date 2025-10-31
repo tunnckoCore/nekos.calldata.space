@@ -34,7 +34,9 @@ function sortItems(items: any[]) {
       sortedItem[key] =
         item[key] && typeof item[key] === "object"
           ? Object.fromEntries(
-              Object.entries(item[key]).sort((a, b) => a[0].localeCompare(b[0]))
+              Object.entries(item[key]).sort((a, b) =>
+                a[0].localeCompare(b[0]),
+              ),
             )
           : item[key];
     });
@@ -74,6 +76,6 @@ console.log(
   JSON.stringify(
     sortItems(nekoOrdinals).sort((a, b) => a.index - b.index),
     null,
-    2
-  )
+    2,
+  ),
 );

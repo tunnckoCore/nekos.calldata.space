@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { Neko } from "@/lib/neko";
+import type { Neko } from "@/lib/neko";
 
 interface NekoTrait {
   block: number;

@@ -1,9 +1,9 @@
 "use client";
 
-import { useNekoGallery, useAllNekos } from "@/lib/queries";
-import { useMemo, useEffect, useRef } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import { useEffect, useMemo, useRef } from "react";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
+import { useAllNekos, useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
 
 interface GalleryContainerClientProps {

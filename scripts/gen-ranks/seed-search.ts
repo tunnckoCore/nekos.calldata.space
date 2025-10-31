@@ -101,7 +101,7 @@ async function seedSearchIndex() {
           name: result.metadata?.name,
           cursor: result.content.traits.cursor,
         };
-      })
+      }),
     );
 
     // Upsert all sample data

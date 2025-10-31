@@ -33,5 +33,10 @@ export type GalleryFilters = Awaited<
   ReturnType<typeof gallerySearchParamsCache.parse>
 >;
 
+export type GalleryFiltersWithPagination = GalleryFilters & {
+  skip?: number;
+  take?: number;
+};
+
 export const useFilters = (options: Options = {}) =>
   useQueryStates(filters, { ...options, shallow: false });

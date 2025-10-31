@@ -112,7 +112,7 @@ class NekoRarityCalculator {
   private debugStatisticalRarity(item: NekoItem): void {
     const traits = item.traits;
     console.log(
-      `\n=== DEBUG Statistical Rarity for #${item.ethscription_number} ===`
+      `\n=== DEBUG Statistical Rarity for #${item.ethscription_number} ===`,
     );
 
     let multipliedRarity = 1;
@@ -121,17 +121,17 @@ class NekoRarityCalculator {
       const count = this.traitCounts.get(category)!.get(value) || 1;
       const rarity = count / this.totalItems;
       console.log(
-        `${category}: "${value}" appears ${count}/${this.totalItems} times = ${(rarity * 100).toFixed(4)}%`
+        `${category}: "${value}" appears ${count}/${this.totalItems} times = ${(rarity * 100).toFixed(4)}%`,
       );
       multipliedRarity *= rarity;
       console.log(
-        `Running multiplied rarity: ${multipliedRarity.toExponential()}`
+        `Running multiplied rarity: ${multipliedRarity.toExponential()}`,
       );
     });
 
     const percentage = multipliedRarity * 100;
     console.log(
-      `Final percentage: ${percentage.toExponential()} = ${percentage.toPrecision(6)}%`
+      `Final percentage: ${percentage.toExponential()} = ${percentage.toPrecision(6)}%`,
     );
   }
 
@@ -263,33 +263,33 @@ class NekoRarityCalculator {
   private assignRanks(results: RarityResult[]): void {
     // Sort by rarity score (higher = rarer)
     const sortedByRarity = [...results].sort(
-      (a, b) => b.rarityScore - a.rarityScore
+      (a, b) => b.rarityScore - a.rarityScore,
     );
     sortedByRarity.forEach((item, index) => {
       const original = results.find(
-        (r) => r.ethscription_number === item.ethscription_number
+        (r) => r.ethscription_number === item.ethscription_number,
       )!;
       original.rarityRank = index + 1;
     });
 
     // Sort by jungle rarity score (higher = rarer)
     const sortedByJungle = [...results].sort(
-      (a, b) => b.jungleRarityScore - a.jungleRarityScore
+      (a, b) => b.jungleRarityScore - a.jungleRarityScore,
     );
     sortedByJungle.forEach((item, index) => {
       const original = results.find(
-        (r) => r.ethscription_number === item.ethscription_number
+        (r) => r.ethscription_number === item.ethscription_number,
       )!;
       original.jungleRank = index + 1;
     });
 
     // Sort by OpenRarity (higher IC = rarer, but OpenRarity ranks with lower numbers for rarer items)
     const sortedByOpenRarity = [...results].sort(
-      (a, b) => b.openRarity - a.openRarity
+      (a, b) => b.openRarity - a.openRarity,
     );
     sortedByOpenRarity.forEach((item, index) => {
       const original = results.find(
-        (r) => r.ethscription_number === item.ethscription_number
+        (r) => r.ethscription_number === item.ethscription_number,
       )!;
       original.openRarityRank = index + 1;
     });
@@ -309,7 +309,7 @@ class NekoRarityCalculator {
         rarityRankWithGlitched: 0,
         jungleRankWithGlitched: 0,
         openRarityRankWithGlitched: 0,
-      })
+      }),
     );
 
     // Calculate ranks with glitched trait
@@ -321,11 +321,11 @@ class NekoRarityCalculator {
   private assignRanksWithGlitched(results: RarityResultWithGlitched[]): void {
     // Sort by rarity score with glitched (higher = rarer)
     const sortedByRarity = [...results].sort(
-      (a, b) => b.rarityScoreWithGlitched - a.rarityScoreWithGlitched
+      (a, b) => b.rarityScoreWithGlitched - a.rarityScoreWithGlitched,
     );
     sortedByRarity.forEach((item, index) => {
       const original = results.find(
-        (r) => r.ethscription_number === item.ethscription_number
+        (r) => r.ethscription_number === item.ethscription_number,
       )!;
       original.rarityRankWithGlitched = index + 1;
     });
@@ -333,22 +333,22 @@ class NekoRarityCalculator {
     // Sort by jungle rarity score with glitched (higher = rarer)
     const sortedByJungle = [...results].sort(
       (a, b) =>
-        b.jungleRarityScoreWithGlitched - a.jungleRarityScoreWithGlitched
+        b.jungleRarityScoreWithGlitched - a.jungleRarityScoreWithGlitched,
     );
     sortedByJungle.forEach((item, index) => {
       const original = results.find(
-        (r) => r.ethscription_number === item.ethscription_number
+        (r) => r.ethscription_number === item.ethscription_number,
       )!;
       original.jungleRankWithGlitched = index + 1;
     });
 
     // Sort by OpenRarity with glitched (higher IC = rarer)
     const sortedByOpenRarity = [...results].sort(
-      (a, b) => b.openRarityWithGlitched - a.openRarityWithGlitched
+      (a, b) => b.openRarityWithGlitched - a.openRarityWithGlitched,
     );
     sortedByOpenRarity.forEach((item, index) => {
       const original = results.find(
-        (r) => r.ethscription_number === item.ethscription_number
+        (r) => r.ethscription_number === item.ethscription_number,
       )!;
       original.openRarityRankWithGlitched = index + 1;
     });
@@ -393,7 +393,7 @@ class NekoRarityCalculator {
       byOpenRarity: allResults
         .filter((r) => r.openRarityRankWithGlitched <= count)
         .sort(
-          (a, b) => a.openRarityRankWithGlitched - b.openRarityRankWithGlitched
+          (a, b) => a.openRarityRankWithGlitched - b.openRarityRankWithGlitched,
         ),
     };
   }
@@ -416,7 +416,7 @@ class NekoRarityCalculator {
       const counts = Array.from(categoryMap.values());
       const minCount = Math.min(...counts);
       const mostRareTraits = Array.from(categoryMap.entries()).filter(
-        ([_, count]) => count === minCount
+        ([_, count]) => count === minCount,
       );
 
       // Calculate entropy (measure of randomness/diversity)
@@ -456,7 +456,7 @@ class NekoRarityCalculator {
       const counts = Array.from(categoryMap.values());
       const minCount = Math.min(...counts);
       const mostRareTraits = Array.from(categoryMap.entries()).filter(
-        ([_, count]) => count === minCount
+        ([_, count]) => count === minCount,
       );
 
       // Calculate entropy (measure of randomness/diversity)
@@ -481,7 +481,7 @@ class NekoRarityCalculator {
   // Public method to debug a specific item's statistical rarity
   debugItem(ethscriptionNumber: number): void {
     const item = this.collection.find(
-      (n) => n.ethscription_number === ethscriptionNumber
+      (n) => n.ethscription_number === ethscriptionNumber,
     );
     if (item) {
       this.debugStatisticalRarity(item);
@@ -501,10 +501,10 @@ class NekoRarityCalculator {
     | null {
     const allResults = this.calculateAllRarities();
     const result = allResults.find(
-      (r) => r.ethscription_number === ethscriptionNumber
+      (r) => r.ethscription_number === ethscriptionNumber,
     );
     const item = this.collection.find(
-      (n) => n.ethscription_number === ethscriptionNumber
+      (n) => n.ethscription_number === ethscriptionNumber,
     );
 
     if (!result || !item) {
@@ -557,7 +557,7 @@ function analyzeNekoCollection(nekosData: NekoItem[]) {
     console.log(`  Total items: ${data.total}`);
     console.log(`  Unique values: ${data.unique}`);
     console.log(
-      `  Rarest traits: ${data.mostRare} (${data.rarest} occurrences)`
+      `  Rarest traits: ${data.mostRare} (${data.rarest} occurrences)`,
     );
     console.log(`  Entropy: ${data.entropy}`);
   });
@@ -568,7 +568,7 @@ function analyzeNekoCollection(nekosData: NekoItem[]) {
     console.log(`  Total items: ${data.total}`);
     console.log(`  Unique values: ${data.unique}`);
     console.log(
-      `  Rarest traits: ${data.mostRare} (${data.rarest} occurrences)`
+      `  Rarest traits: ${data.mostRare} (${data.rarest} occurrences)`,
     );
     console.log(`  Entropy: ${data.entropy}`);
   });
@@ -576,76 +576,76 @@ function analyzeNekoCollection(nekosData: NekoItem[]) {
   console.log("\n=== TOP 10 RAREST (by Rarity Score) ===");
   topRarest.byRarityScore.forEach((item, i) => {
     const neko = nekosData.find(
-      (n) => n.ethscription_number === item.ethscription_number
+      (n) => n.ethscription_number === item.ethscription_number,
     )!;
     console.log(
-      `${i + 1}. #${item.ethscription_number} - Score: ${item.rarityScore} | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`
+      `${i + 1}. #${item.ethscription_number} - Score: ${item.rarityScore} | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`,
     );
   });
 
   console.log("\n=== TOP 10 RAREST (by Jungle Rarity Score) ===");
   topRarest.byJungleScore.forEach((item, i) => {
     const neko = nekosData.find(
-      (n) => n.ethscription_number === item.ethscription_number
+      (n) => n.ethscription_number === item.ethscription_number,
     )!;
     console.log(
-      `${i + 1}. #${item.ethscription_number} - JRS: ${item.jungleRarityScore} | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`
+      `${i + 1}. #${item.ethscription_number} - JRS: ${item.jungleRarityScore} | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`,
     );
   });
 
   console.log("\n=== TOP 10 RAREST (by OpenRarity) ===");
   topRarest.byOpenRarity.forEach((item, i) => {
     const neko = nekosData.find(
-      (n) => n.ethscription_number === item.ethscription_number
+      (n) => n.ethscription_number === item.ethscription_number,
     )!;
     console.log(
-      `${i + 1}. #${item.ethscription_number} - OpenRarity: ${item.openRarity} | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`
+      `${i + 1}. #${item.ethscription_number} - OpenRarity: ${item.openRarity} | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`,
     );
   });
 
   console.log("\n=== TOP 10 RAREST (by Rarity Score WITH GLITCHED TRAIT) ===");
   topRarestWithGlitched.byRarityScore.forEach((item, i) => {
     const neko = nekosData.find(
-      (n) => n.ethscription_number === item.ethscription_number
+      (n) => n.ethscription_number === item.ethscription_number,
     )!;
     const glitchedStatus = neko.traits.glitched ? "" : "";
     console.log(
-      `${i + 1}. #${item.ethscription_number} - Score: ${item.rarityScoreWithGlitched} [${glitchedStatus}] | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`
+      `${i + 1}. #${item.ethscription_number} - Score: ${item.rarityScoreWithGlitched} [${glitchedStatus}] | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`,
     );
   });
 
   console.log(
-    "\n=== TOP 10 RAREST (by Jungle Rarity Score WITH GLITCHED TRAIT) ==="
+    "\n=== TOP 10 RAREST (by Jungle Rarity Score WITH GLITCHED TRAIT) ===",
   );
   topRarestWithGlitched.byJungleScore.forEach((item, i) => {
     const neko = nekosData.find(
-      (n) => n.ethscription_number === item.ethscription_number
+      (n) => n.ethscription_number === item.ethscription_number,
     )!;
     const glitchedStatus = neko.traits.glitched ? "" : "";
     console.log(
-      `${i + 1}. #${item.ethscription_number} - JRS: ${item.jungleRarityScoreWithGlitched} [${glitchedStatus}] | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`
+      `${i + 1}. #${item.ethscription_number} - JRS: ${item.jungleRarityScoreWithGlitched} [${glitchedStatus}] | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`,
     );
   });
 
   console.log("\n=== TOP 10 RAREST (by OpenRarity WITH GLITCHED TRAIT) ===");
   topRarestWithGlitched.byOpenRarity.forEach((item, i) => {
     const neko = nekosData.find(
-      (n) => n.ethscription_number === item.ethscription_number
+      (n) => n.ethscription_number === item.ethscription_number,
     )!;
     const glitchedStatus = neko.traits.glitched ? "" : "";
     console.log(
-      `${i + 1}. #${item.ethscription_number} - OpenRarity: ${item.openRarityWithGlitched} [${glitchedStatus}] | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`
+      `${i + 1}. #${item.ethscription_number} - OpenRarity: ${item.openRarityWithGlitched} [${glitchedStatus}] | ${neko.traits.background} ${neko.traits.cat} ${neko.traits.eyes} ${neko.traits.cursor}`,
     );
   });
 
   // Show detailed analysis for the rarest item
   const rarest = topRarest.byRarityScore[0];
   const detailedAnalysis = calculator.getItemAnalysis(
-    rarest.ethscription_number
+    rarest.ethscription_number,
   );
   if (detailedAnalysis) {
     console.log(
-      `\n=== DETAILED ANALYSIS FOR RAREST ITEM #${rarest.ethscription_number} ===`
+      `\n=== DETAILED ANALYSIS FOR RAREST ITEM #${rarest.ethscription_number} ===`,
     );
     console.log("Trait Breakdown:");
     console.table(detailedAnalysis.traitBreakdown);
@@ -669,7 +669,7 @@ if (import.meta.main) {
         return nekos.map((neko, idx) => {
           return { ...neko, index: idx + 1 };
         });
-      })
+      }),
   );
 }
 

@@ -1,4 +1,4 @@
-import { type Neko, NekoSchema } from "@/lib/neko";
+import { type Neko, NekoListSchema, NekoSchema } from "@/lib/neko";
 import { initFuzzySearch } from "./fuzzy-search";
 
 const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
@@ -18,7 +18,7 @@ interface CacheEntry {
 }
 
 // In-memory cache for the merged dataset
-let dataCache: CacheEntry | null = null;
+const dataCache: CacheEntry | null = null;
 const CACHE_TTL = 1000 * 60 * 60; // Cache for 1 hour to ensure consistent ordering across paginated requests
 
 /**
@@ -217,107 +217,107 @@ export async function fetchNFTContent(id: string): Promise<{
  * Uses sequential fetching to guarantee consistent merge order: NFTs → Ordinals → Ethscriptions
  * Caches result for 1 hour with ETag support
  */
-export async function fetchAllNekos(): Promise<CacheEntry> {
-  // Check cache validity
-  if (dataCache && Date.now() - dataCache.timestamp < CACHE_TTL) {
-    return {
-      hash: dataCache.hash,
-      data: dataCache.data,
-      etag: dataCache.etag,
-      timestamp: dataCache.timestamp,
-    };
-  }
+// export async function fetchAllNekos(): Promise<CacheEntry> {
+//   // Check cache validity
+//   if (dataCache && Date.now() - dataCache.timestamp < CACHE_TTL) {
+//     return {
+//       hash: dataCache.hash,
+//       data: dataCache.data,
+//       etag: dataCache.etag,
+//       timestamp: dataCache.timestamp,
+//     };
+//   }
 
-  try {
-    // Fetch all three sources sequentially to guarantee merge order
-    const nfts = await fetchAndValidateSource(NFTS_URL);
-    const ords = await fetchAndValidateSource(ORDS_URL);
-    const eths = await fetchAndValidateSource(ETHS_URL);
+//   try {
+//     // Fetch all three sources sequentially to guarantee merge order
+//     const nfts = await fetchAndValidateSource(NFTS_URL);
+//     const ords = await fetchAndValidateSource(ORDS_URL);
+//     const eths = await fetchAndValidateSource(ETHS_URL);
 
-    if (!nfts || !ords || !eths) {
-      console.warn("One or more sources failed to fetch valid Neko data");
-      // Return cached data if available, even if expired
+//     if (!nfts || !ords || !eths) {
+//       console.warn("One or more sources failed to fetch valid Neko data");
+//       // Return cached data if available, even if expired
 
-      return dataCache ?? Promise.reject(new Error("No cached data available"));
-    }
+//       return dataCache ?? Promise.reject(new Error("No cached data available"));
+//     }
 
-    const merged = [
-      ...nfts.map((x) => ({ ...x, id: `${x.id}e${x.event_log_index}` })),
-      ...ords.sort((a, b) => a.number - b.number),
-      ...eths.sort((a, b) => a.number - b.number),
-    ].map((item, idx) => {
-      const isNft = item.traits.gen.toLowerCase().includes("og");
-      const isOrdinal = item.traits.gen.toLowerCase().includes("ordinal");
+//     const merged = [
+//       ...nfts.map((x) => ({ ...x, id: `${x.id}e${x.event_log_index}` })),
+//       ...ords.sort((a, b) => a.number - b.number),
+//       ...eths.sort((a, b) => a.number - b.number),
+//     ].map((item, idx) => {
+//       const isNft = item.traits.gen.toLowerCase().includes("og");
+//       const isOrdinal = item.traits.gen.toLowerCase().includes("ordinal");
 
-      // Create a copy before applying patches to avoid mutating cached objects
-      const patchedItem = {
-        ...item,
-        traits: { ...item.traits },
-        sequence: idx + 1,
-      };
+//       // Create a copy before applying patches to avoid mutating cached objects
+//       const patchedItem = {
+//         ...item,
+//         traits: { ...item.traits },
+//         sequence: idx + 1,
+//       };
 
-      // patches for HTML of bugged cats
-      if ((isOrdinal || isNft) && patchedItem.index === 4) {
-        patchedItem.traits.eyes = "red";
-      }
-      if ((isOrdinal || isNft) && patchedItem.index === 16) {
-        patchedItem.traits.cat = "gold";
-        patchedItem.traits.eyes = "red";
-      }
-      if ((isOrdinal || isNft) && patchedItem.index === 97) {
-        patchedItem.traits.cat = "gold";
-        patchedItem.traits.eyes = "red";
-      }
+//       // patches for HTML of bugged cats
+//       if ((isOrdinal || isNft) && patchedItem.index === 4) {
+//         patchedItem.traits.eyes = "red";
+//       }
+//       if ((isOrdinal || isNft) && patchedItem.index === 16) {
+//         patchedItem.traits.cat = "gold";
+//         patchedItem.traits.eyes = "red";
+//       }
+//       if ((isOrdinal || isNft) && patchedItem.index === 97) {
+//         patchedItem.traits.cat = "gold";
+//         patchedItem.traits.eyes = "red";
+//       }
 
-      return patchedItem;
-    });
+//       return patchedItem;
+//     });
 
-    const patchedAndMerged = await Promise.all(
-      merged.map(async (x) => ({ ...x, colors: await extractProperColors(x) })),
-    );
+//     const patchedAndMerged = await Promise.all(
+//       merged.map(async (x) => ({ ...x, colors: await extractProperColors(x) })),
+//     );
 
-    if (patchedAndMerged.length === 0) {
-      console.warn("No valid Neko data found from any source");
-      // Return cached data if available, even if expired
+//     if (patchedAndMerged.length === 0) {
+//       console.warn("No valid Neko data found from any source");
+//       // Return cached data if available, even if expired
 
-      return dataCache ?? Promise.reject(new Error("No cached data available"));
-    }
+//       return dataCache ?? Promise.reject(new Error("No cached data available"));
+//     }
 
-    // Generate ETag and update cache
-    const hash = await generateDigest(patchedAndMerged);
-    const now = Date.now();
-    dataCache = {
-      hash,
-      data: patchedAndMerged,
-      etag: `"${hash}"`,
-      timestamp: now,
-    };
+//     // Generate ETag and update cache
+//     const hash = await generateDigest(patchedAndMerged);
+//     const now = Date.now();
+//     dataCache = {
+//       hash,
+//       data: patchedAndMerged,
+//       etag: `"${hash}"`,
+//       timestamp: now,
+//     };
 
-    // Initialize fuzzy search index for faster searching
-    // initFuzzySearch(patchedAndMerged);
+//     // Initialize fuzzy search index for faster searching
+//     // initFuzzySearch(patchedAndMerged);
 
-    return {
-      hash,
-      data: patchedAndMerged,
-      etag: `"${hash}"`,
-      timestamp: now,
-    };
-  } catch (error) {
-    console.error("Error in fetchAllNekos:", error);
+//     return {
+//       hash,
+//       data: patchedAndMerged,
+//       etag: `"${hash}"`,
+//       timestamp: now,
+//     };
+//   } catch (error) {
+//     console.error("Error in fetchAllNekos:", error);
 
-    // Fallback to cached data if fetch fails
-    if (dataCache) {
-      return {
-        hash: dataCache.hash,
-        data: dataCache.data,
-        etag: dataCache.etag,
-        timestamp: dataCache.timestamp,
-      };
-    }
+//     // Fallback to cached data if fetch fails
+//     if (dataCache) {
+//       return {
+//         hash: dataCache.hash,
+//         data: dataCache.data,
+//         etag: dataCache.etag,
+//         timestamp: dataCache.timestamp,
+//       };
+//     }
 
-    throw error;
-  }
-}
+//     throw error;
+//   }
+// }
 
 export async function getAllNekos(): Promise<CacheEntry> {
   if (dataCache) {
@@ -334,6 +334,8 @@ export async function getAllNekos(): Promise<CacheEntry> {
   if (!result || result.data?.length === 0) {
     throw new Error("No valid Neko data found");
   }
+
+  result.data = NekoListSchema.parse(result.data);
 
   initFuzzySearch(result.data);
   return result;

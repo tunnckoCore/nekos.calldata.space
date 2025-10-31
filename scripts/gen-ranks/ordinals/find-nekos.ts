@@ -30,7 +30,7 @@ const uniques = items
       sat_rarity,
       sat_coinbase_height,
       content_length,
-    })
+    }),
   )
   .sort((a, b) => a.content_length - b.content_length)
   .reduce((acc: any, x) => {
@@ -270,14 +270,14 @@ const allNekos = (
       //   digest: json?.digest,
       // };
       const isORD721 = Boolean(
-        json.protocol && json.protocol.type && json.token
+        json.protocol && json.protocol.type && json.token,
       );
       const isBTC721 = Boolean(
         json.protocol &&
           !json.protocol.type &&
           json.protocol.name &&
           json.content &&
-          json.attributes
+          json.attributes,
       );
 
       if (isBTC721) {
@@ -294,7 +294,7 @@ const allNekos = (
                   ...acc,
                   [attr.trait_type]: attr.value,
                 }),
-                {} as any
+                {} as any,
               ),
               uri: json.content,
             },
@@ -314,7 +314,7 @@ const allNekos = (
         return { data: json, meta: x };
       }
       return null;
-    })
+    }),
   )
 ).filter(Boolean);
 
@@ -333,8 +333,8 @@ console.log(
   JSON.stringify(
     allNekos.sort((a: any, b: any) => a.data.token.id - b.data.token.id),
     null,
-    2
-  )
+    2,
+  ),
 );
 
 // console.log(

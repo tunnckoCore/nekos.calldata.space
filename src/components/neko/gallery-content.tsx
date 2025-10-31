@@ -1,4 +1,6 @@
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import type { SearchParams } from "nuqs/server";
+import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
 import {
   createQueryClient,
   prefetchAllNekos,
@@ -6,8 +8,6 @@ import {
 } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
 import { GalleryFilters } from "./gallery-filters";
-import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
-import type { SearchParams } from "nuqs/server";
 
 interface GalleryContentProps {
   searchParams: Promise<SearchParams>;

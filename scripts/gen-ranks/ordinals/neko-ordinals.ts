@@ -12,7 +12,7 @@ async function fetchInscriptions(offset = 0) {
     console.error(
       `Failed to fetch inscriptions at offset ${offset}`,
       response.status,
-      response.statusText
+      response.statusText,
     );
     return;
   }
@@ -28,7 +28,7 @@ async function fetchInscriptions(offset = 0) {
     "Page inscriptions",
     inscriptions[0].number,
     inscriptions.at(-1).number,
-    data
+    data,
   );
 
   const filteredInscriptions = inscriptions.filter((x: any) => {
@@ -38,17 +38,17 @@ async function fetchInscriptions(offset = 0) {
   if (filteredInscriptions.length > 0) {
     console.log(
       `========================= Found potential 0xNeko inscriptions ========================= `,
-      filteredInscriptions.length
+      filteredInscriptions.length,
     );
 
     const nekos = JSON.parse(await fs.readFile("./nekos.json", "utf8"));
 
     await fs.writeFile(
       "./nekos.json",
-      JSON.stringify([...nekos, ...filteredInscriptions])
+      JSON.stringify([...nekos, ...filteredInscriptions]),
     );
     console.log(
-      `========================= Saved ${filteredInscriptions.length} neko inscriptions ========================= `
+      `========================= Saved ${filteredInscriptions.length} neko inscriptions ========================= `,
     );
   }
 

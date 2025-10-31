@@ -1,9 +1,9 @@
 "use client";
 
+import { useQueryState } from "nuqs";
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
 import { Badge } from "../ui/badge";
-import { useQueryState } from "nuqs";
 // import { Button } from "@/components/ui/button";
 
 export function GalleryItemRow({
