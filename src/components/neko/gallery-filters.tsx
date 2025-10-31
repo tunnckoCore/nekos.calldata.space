@@ -22,10 +22,8 @@ import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
 import { useFilters } from "@/lib/gallery-search-params";
 import { getDynamicTraitOptions } from "@/lib/neko-fetch";
 import { useAllNekos } from "@/lib/queries";
-import { usePathname } from "next/navigation";
 
 export function GalleryFilters({ baseURL }: { baseURL: string }) {
-  const urlPathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const { data: allNekos } = useAllNekos(baseURL);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -33,20 +31,6 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
   const [filters, setFilters] = useFilters({
     startTransition,
   });
-
-  // const pathnameGen = urlPathname
-  //   .replace(/^\//, "")
-  //   .replace(/\/$/, "")
-  //   .toLowerCase();
-
-  // const genFromPathname =
-  //   pathnameGen === "nfts" || pathnameGen === "nft" || pathnameGen === "og"
-  //     ? "og"
-  //     : pathnameGen === "ordinals"
-  //       ? "ordinals"
-  //       : pathnameGen === "eths" || pathnameGen === "ethscriptions"
-  //         ? "ethscriptions"
-  //         : "";
 
   // Compute dynamic trait options based on current filters
   const traitOptions = useMemo(() => {
@@ -109,15 +93,7 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
     options: any[],
     placeholder: string,
   ) => {
-    let selectValue = filters[key as keyof typeof filters] || "all";
-
-    // For gen select from pathname, find the matching option with case-insensitive match
-    // if (key === "gen" && !filters.gen && genFromPathname) {
-    //   const matchingOption = options.find(
-    //     (o) => o.value.toLowerCase() === genFromPathname.toLowerCase(),
-    //   );
-    //   selectValue = matchingOption ? matchingOption.value : "all";
-    // }
+    const selectValue = filters[key as keyof typeof filters] || "all";
 
     return (
       <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
