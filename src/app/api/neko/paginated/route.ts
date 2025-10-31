@@ -23,7 +23,7 @@ export async function GET(request: Request) {
     );
 
     // Fetch paginated data
-    const { items, total, hasMore } = await getPaginatedNekos({
+    const { items, total, hasMore } = await getPaginatedNekos(url.origin, {
       skip,
       take,
       ...filters,

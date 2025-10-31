@@ -46,7 +46,7 @@ export function useAllNekos() {
   return useQuery({
     queryKey: ["v2", "nekos", "all"],
     queryFn: async () => {
-      return (await getAllNekos()).data;
+      return (await getAllNekos(SITE_URL_ORIGIN)).data;
     },
   });
 }
@@ -80,11 +80,14 @@ export function useNekoGallery(filters: GalleryFiltersWithPagination) {
       const skip = Math.max(0, pageParam);
       const take = 50;
 
-      const { items, total, hasMore } = await getPaginatedNekos({
-        skip,
-        take,
-        ...filters,
-      });
+      const { items, total, hasMore } = await getPaginatedNekos(
+        SITE_URL_ORIGIN,
+        {
+          skip,
+          take,
+          ...filters,
+        },
+      );
 
       const result = {
         items,
@@ -121,7 +124,7 @@ export function useNekoById(id: string | undefined) {
   return useQuery({
     queryKey: ["v2", "neko", id],
     queryFn: async () => {
-      return (await getAllNekos()).data.find((n) => n.id === id);
+      return (await getAllNekos(SITE_URL_ORIGIN)).data.find((n) => n.id === id);
     },
     enabled: !!id,
   });
@@ -133,7 +136,7 @@ export function useNekoById(id: string | undefined) {
 export async function prefetchAllNekos(queryClient: QueryClient) {
   return queryClient.prefetchQuery({
     queryKey: ["v2", "nekos", "all"],
-    queryFn: async () => (await getAllNekos()).data,
+    queryFn: async () => (await getAllNekos(SITE_URL_ORIGIN)).data,
   });
 }
 
@@ -176,11 +179,14 @@ export async function prefetchPaginatedNekos(
       const skip = Math.max(0, pageParam);
       const take = 50;
 
-      const { items, total, hasMore } = await getPaginatedNekos({
-        ...filtersCopy,
-        skip,
-        take,
-      });
+      const { items, total, hasMore } = await getPaginatedNekos(
+        SITE_URL_ORIGIN,
+        {
+          ...filtersCopy,
+          skip,
+          take,
+        },
+      );
 
       const result = {
         items,

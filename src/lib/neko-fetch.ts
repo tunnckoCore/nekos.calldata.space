@@ -210,6 +210,7 @@ export function getDynamicTraitOptions(
  * Gets paginated, filtered, sorted Neko data for API
  */
 export async function getPaginatedNekos(
+  baseURL: string,
   opts: GalleryFiltersWithPagination,
 ): Promise<{
   items: Neko[];
@@ -229,7 +230,7 @@ export async function getPaginatedNekos(
     sort,
     order = "asc",
   } = { ...opts };
-  const { data: allNekos } = await getAllNekos();
+  const { data: allNekos } = await getAllNekos(baseURL);
 
   if (!allNekos || allNekos.length === 0) {
     return { items: [], total: 0, hasMore: false };

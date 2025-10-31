@@ -3,9 +3,10 @@ import { getAllNekos } from "@/lib/preps";
 export async function GET(request: Request) {
   try {
     const clientETag = request.headers.get("if-none-match");
+    const origin = new URL(request.url).origin;
 
     // Fetch merged data
-    const { data, etag } = await getAllNekos();
+    const { data, etag } = await getAllNekos(origin);
 
     // ETag validation - if client has matching ETag, return 304
     if (clientETag === etag) {
