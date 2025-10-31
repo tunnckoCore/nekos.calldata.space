@@ -154,28 +154,6 @@ export async function prefetchPaginatedNekos(
   return queryClient.prefetchInfiniteQuery({
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
-      // const url = new URL(`${SITE_URL_ORIGIN}/api/neko/paginated`);
-      // url.searchParams.set("skip", String(pageParam));
-      // url.searchParams.set("take", "50");
-      // if (filters.search) url.searchParams.set("search", filters.search);
-      // if (filters.background) {
-      //   url.searchParams.set("background", filters.background);
-      // }
-      // if (filters.cat) url.searchParams.set("cat", filters.cat);
-      // if (filters.eyes) url.searchParams.set("eyes", filters.eyes);
-      // if (filters.cursor) url.searchParams.set("cursor", filters.cursor);
-      // if (filters.gen) url.searchParams.set("gen", filters.gen);
-      // if (filters.year) url.searchParams.set("year", filters.year);
-      // if (filters.sort) url.searchParams.set("sort", filters.sort);
-      // if (filters.order) url.searchParams.set("order", filters.order);
-      // const response = await fetch(url.toString());
-      // if (!response.ok) {
-      //   throw new Error("Failed to prefetch paginated Nekos");
-      // }
-      // const res = (await response.json()) as PaginatedResponse;
-      // NekoSchemaList.parse(res.items);
-      // return res;
-
       const skip = Math.max(0, pageParam);
       const take = 50;
 

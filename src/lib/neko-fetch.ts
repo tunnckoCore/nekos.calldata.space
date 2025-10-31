@@ -247,13 +247,26 @@ export async function getPaginatedNekos(
   }
 
   // Apply trait filters
-  if (background)
+  if (background) {
     filtered = filtered.filter((n) => n.traits.background === background);
-  if (cat) filtered = filtered.filter((n) => n.traits.cat === cat);
-  if (eyes) filtered = filtered.filter((n) => n.traits.eyes === eyes);
-  if (cursor) filtered = filtered.filter((n) => n.traits.cursor === cursor);
-  if (gen) filtered = filtered.filter((n) => n.traits.gen === gen);
-  if (year) filtered = filtered.filter((n) => n.traits.year === parseInt(year));
+  }
+  if (cat) {
+    filtered = filtered.filter((n) => n.traits.cat === cat);
+  }
+  if (eyes) {
+    filtered = filtered.filter((n) => n.traits.eyes === eyes);
+  }
+  if (cursor) {
+    filtered = filtered.filter((n) => n.traits.cursor === cursor);
+  }
+  if (gen) {
+    filtered = filtered.filter((n) => n.traits.gen === gen);
+  }
+  if (year) {
+    filtered = filtered.filter(
+      (n) => n.traits.year === Number.parseInt(year, 10),
+    );
+  }
 
   const total = filtered.length;
 
