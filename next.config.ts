@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         {
+          source: "/eths",
+          destination: "/?gen=Ethscriptions",
+        },
+        {
           source: "/ethscriptions",
           destination: "/?gen=Ethscriptions",
         },

@@ -22,8 +22,10 @@ import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
 import { useFilters } from "@/lib/gallery-search-params";
 import { getDynamicTraitOptions } from "@/lib/neko-fetch";
 import { useAllNekos } from "@/lib/queries";
+import { usePathname } from "next/navigation";
 
 export function GalleryFilters({ baseURL }: { baseURL: string }) {
+  const urlPathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const { data: allNekos } = useAllNekos(baseURL);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -31,6 +33,20 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
   const [filters, setFilters] = useFilters({
     startTransition,
   });
+
+  const pathnameGen = urlPathname
+    .replace(/^\//, "")
+    .replace(/\/$/, "")
+    .toLowerCase();
+
+  const genFromPathname =
+    pathnameGen === "nfts" || pathnameGen === "nft" || pathnameGen === "og"
+      ? "og"
+      : pathnameGen === "ordinals"
+        ? "ordinals"
+        : pathnameGen === "eths" || pathnameGen === "ethscriptions"
+          ? "ethscriptions"
+          : "";
 
   // Compute dynamic trait options based on current filters
   const traitOptions = useMemo(() => {
@@ -92,33 +108,47 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
     label: string,
     options: any[],
     placeholder: string,
-  ) => (
-    <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
-      <Select
-        value={filters[key as keyof typeof filters] || "all"}
-        onValueChange={(val) => handleSetFilters(key, val === "all" ? "" : val)}
-        disabled={isPending}
-      >
-        <SelectTrigger className="w-full h-9 cursor-pointer text-sm">
-          <SelectValue placeholder={placeholder} />
-        </SelectTrigger>
-        <SelectContent className="max-h-64">
-          <SelectItem value="all" className="cursor-pointer">
-            {label}
-          </SelectItem>
-          {options.map((option) => (
-            <SelectItem
-              key={option.value}
-              value={option.value}
-              className="cursor-pointer"
-            >
-              {option.value} ({option.count})
+  ) => {
+    let selectValue = filters[key as keyof typeof filters] || "all";
+
+    // For gen select from pathname, find the matching option with case-insensitive match
+    if (key === "gen" && !filters.gen && genFromPathname) {
+      const matchingOption = options.find(
+        (o) => o.value.toLowerCase() === genFromPathname.toLowerCase(),
+      );
+      selectValue = matchingOption ? matchingOption.value : "all";
+    }
+
+    return (
+      <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+        <Select
+          value={selectValue}
+          onValueChange={(val) =>
+            handleSetFilters(key, val === "all" ? "" : val)
+          }
+          disabled={isPending}
+        >
+          <SelectTrigger className="w-full h-9 cursor-pointer text-sm">
+            <SelectValue placeholder={placeholder} />
+          </SelectTrigger>
+          <SelectContent className="max-h-64">
+            <SelectItem value="all" className="cursor-pointer">
+              {label}
             </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </div>
-  );
+            {options.map((option) => (
+              <SelectItem
+                key={option.value}
+                value={option.value}
+                className="cursor-pointer"
+              >
+                {option.value} ({option.count})
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+    );
+  };
 
   return (
     <div className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -158,7 +188,12 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
               traitOptions.backgrounds,
               "Backgrounds",
             )}
-            {renderTraitSelect("gen", "All Gens", traitOptions.gens, "Gen")}
+            {renderTraitSelect(
+              "gen",
+              genFromPathname || "All Gens",
+              traitOptions.gens,
+              "Gen",
+            )}
             {renderTraitSelect(
               "cursor",
               "All Cursors",
@@ -201,22 +236,22 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
                   </SelectItem>
                   <SelectItem
                     value="rank_open_rarity"
-                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
-                    disabled={!filters.gen}
+                    className={`cursor-pointer ${!filters.gen && !genFromPathname ? "opacity-50 cursor-not-allowed" : ""}`}
+                    disabled={!filters.gen && !genFromPathname}
                   >
                     Rank: OpenRarity
                   </SelectItem>
                   <SelectItem
                     value="rank_jungle"
-                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
-                    disabled={!filters.gen}
+                    className={`cursor-pointer ${!filters.gen && !genFromPathname ? "opacity-50 cursor-not-allowed" : ""}`}
+                    disabled={!filters.gen && !genFromPathname}
                   >
                     Rank: Jungle
                   </SelectItem>
                   <SelectItem
                     value="rank_rarity"
-                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
-                    disabled={!filters.gen}
+                    className={`cursor-pointer ${!filters.gen && !genFromPathname ? "opacity-50 cursor-not-allowed" : ""}`}
+                    disabled={!filters.gen && !genFromPathname}
                   >
                     Rank: RarityScore
                   </SelectItem>

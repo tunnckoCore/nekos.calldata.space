@@ -186,7 +186,9 @@ export function getDynamicTraitOptions(
       );
     } else if (typeof value === "string") {
       if (key === "gen") {
-        filtered = filtered.filter((n) => n.traits.gen === value);
+        filtered = filtered.filter(
+          (n) => n.traits.gen.toLowerCase() === value.toLowerCase(),
+        );
       } else if (key === "background") {
         filtered = filtered.filter((n) => n.traits.background === value);
       } else if (key === "cat") {
