@@ -15,20 +15,16 @@ interface GalleryContentProps {
 }
 
 export async function GalleryContent({ searchParams }: GalleryContentProps) {
-  const headersList = await headers();
-  const host =
-    headersList.get("host") ||
-    headersList.get("x-forwarded-host") ||
-    "localhost:3000";
-
-  const proto = headersList.get("x-forwarded-proto") || "https";
-  const baseURL = `${proto}://${host}`;
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? `https://nekos.calldata.space`
+      : `http://localhost:3000`;
 
   const filters = await gallerySearchParamsCache.parse(searchParams);
 
   const queryClient = createQueryClient();
 
-  console.log("GalleryContent props:", { host });
+  console.log("GalleryContent props:", { baseURL });
 
   try {
     // Prefetch all nekos for filter options
