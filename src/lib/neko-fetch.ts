@@ -1,8 +1,5 @@
 import { fuzzySearch } from "./fuzzy-search";
-import {
-  GalleryFilters,
-  type GalleryFiltersWithPagination,
-} from "./gallery-search-params";
+import { type GalleryFiltersWithPagination } from "./gallery-search-params";
 import type { Neko } from "./neko";
 import { getAllNekos } from "./preps";
 

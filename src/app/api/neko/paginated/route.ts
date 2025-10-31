@@ -5,6 +5,7 @@ import { getPaginatedNekos } from "@/lib/neko-fetch";
 export async function GET(request: Request) {
   try {
     const url = new URL(request.url);
+    const baseURL = url.origin;
     const searchParams = url.searchParams;
     const filters = await gallerySearchParamsCache.parse(
       Promise.resolve(searchParams),
@@ -21,7 +22,7 @@ export async function GET(request: Request) {
     );
 
     // Fetch paginated data
-    const { items, total, hasMore } = await getPaginatedNekos(url.origin, {
+    const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
       skip,
       take,
       ...filters,

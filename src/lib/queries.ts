@@ -11,11 +11,6 @@ import type { Neko } from "./neko";
 import { getPaginatedNekos } from "./neko-fetch";
 import { getAllNekos } from "./preps";
 
-const SITE_URL_ORIGIN =
-  typeof window !== "undefined"
-    ? new URL(window.location.href).origin
-    : "http://localhost:3000";
-
 interface PaginatedResponse {
   items: Neko[];
   total: number;
@@ -46,7 +41,7 @@ export function useAllNekos() {
   return useQuery({
     queryKey: ["v2", "nekos", "all"],
     queryFn: async () => {
-      return (await getAllNekos(SITE_URL_ORIGIN)).data;
+      return (await getAllNekos(new URL(window.location.href).origin)).data;
     },
   });
 }
@@ -81,7 +76,7 @@ export function useNekoGallery(filters: GalleryFiltersWithPagination) {
       const take = 50;
 
       const { items, total, hasMore } = await getPaginatedNekos(
-        SITE_URL_ORIGIN,
+        new URL(window.location.href).origin,
         {
           skip,
           take,
@@ -124,7 +119,9 @@ export function useNekoById(id: string | undefined) {
   return useQuery({
     queryKey: ["v2", "neko", id],
     queryFn: async () => {
-      return (await getAllNekos(SITE_URL_ORIGIN)).data.find((n) => n.id === id);
+      return (
+        await getAllNekos(new URL(window.location.href).origin)
+      ).data.find((n) => n.id === id);
     },
     enabled: !!id,
   });
@@ -133,10 +130,13 @@ export function useNekoById(id: string | undefined) {
 /**
  * Prefetch all Nekos on the server (for SSR)
  */
-export async function prefetchAllNekos(queryClient: QueryClient) {
+export async function prefetchAllNekos(
+  baseURL: string,
+  queryClient: QueryClient,
+) {
   return queryClient.prefetchQuery({
     queryKey: ["v2", "nekos", "all"],
-    queryFn: async () => (await getAllNekos(SITE_URL_ORIGIN)).data,
+    queryFn: async () => (await getAllNekos(baseURL)).data,
   });
 }
 
@@ -145,6 +145,7 @@ export async function prefetchAllNekos(queryClient: QueryClient) {
  * Accepts filters object directly
  */
 export async function prefetchPaginatedNekos(
+  baseURL: string,
   queryClient: QueryClient,
   filters: GalleryFilters,
 ) {
@@ -157,14 +158,11 @@ export async function prefetchPaginatedNekos(
       const skip = Math.max(0, pageParam);
       const take = 50;
 
-      const { items, total, hasMore } = await getPaginatedNekos(
-        SITE_URL_ORIGIN,
-        {
-          ...filtersCopy,
-          skip,
-          take,
-        },
-      );
+      const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
+        ...filtersCopy,
+        skip,
+        take,
+      });
 
       const result = {
         items,

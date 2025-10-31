@@ -7,15 +7,12 @@ import { useAllNekos, useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
 
 interface GalleryContainerClientProps {
+  baseURL: string;
   filters: GalleryFilters;
 }
 
-const SITE_URL_ORIGIN =
-  typeof window !== "undefined"
-    ? new URL(window.location.href).origin
-    : "http://localhost:3000";
-
 export function GalleryContainerClient({
+  baseURL,
   filters,
 }: GalleryContainerClientProps) {
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
@@ -146,7 +143,7 @@ export function GalleryContainerClient({
                       <iframe
                         className="m-0 block h-[80dvh] w-full border-0 p-0"
                         sandbox="allow-scripts"
-                        src={`${SITE_URL_ORIGIN}/api/content/${item.number}?gen=og`}
+                        src={`${baseURL}/api/content/${item.number}?gen=og`}
                         style={{
                           backgroundColor: patchedColors.background,
                         }}
@@ -156,7 +153,7 @@ export function GalleryContainerClient({
                       <iframe
                         className="m-0 block h-[80dvh] w-full border-0 p-0"
                         sandbox="allow-scripts"
-                        src={`${SITE_URL_ORIGIN}/api/content/${item.id}?gen=ordinals`}
+                        src={`${baseURL}/api/content/${item.id}?gen=ordinals`}
                         style={{
                           backgroundColor: patchedColors.background,
                         }}
