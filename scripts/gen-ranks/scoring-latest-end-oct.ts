@@ -17,7 +17,6 @@ interface NekoTrait {
 interface NekoItem {
   index: number;
   traits: NekoTrait;
-  // other properties...
 }
 
 interface RarityResult {
