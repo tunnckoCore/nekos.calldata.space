@@ -34,19 +34,19 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
     startTransition,
   });
 
-  const pathnameGen = urlPathname
-    .replace(/^\//, "")
-    .replace(/\/$/, "")
-    .toLowerCase();
+  // const pathnameGen = urlPathname
+  //   .replace(/^\//, "")
+  //   .replace(/\/$/, "")
+  //   .toLowerCase();
 
-  const genFromPathname =
-    pathnameGen === "nfts" || pathnameGen === "nft" || pathnameGen === "og"
-      ? "og"
-      : pathnameGen === "ordinals"
-        ? "ordinals"
-        : pathnameGen === "eths" || pathnameGen === "ethscriptions"
-          ? "ethscriptions"
-          : "";
+  // const genFromPathname =
+  //   pathnameGen === "nfts" || pathnameGen === "nft" || pathnameGen === "og"
+  //     ? "og"
+  //     : pathnameGen === "ordinals"
+  //       ? "ordinals"
+  //       : pathnameGen === "eths" || pathnameGen === "ethscriptions"
+  //         ? "ethscriptions"
+  //         : "";
 
   // Compute dynamic trait options based on current filters
   const traitOptions = useMemo(() => {
@@ -112,12 +112,12 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
     let selectValue = filters[key as keyof typeof filters] || "all";
 
     // For gen select from pathname, find the matching option with case-insensitive match
-    if (key === "gen" && !filters.gen && genFromPathname) {
-      const matchingOption = options.find(
-        (o) => o.value.toLowerCase() === genFromPathname.toLowerCase(),
-      );
-      selectValue = matchingOption ? matchingOption.value : "all";
-    }
+    // if (key === "gen" && !filters.gen && genFromPathname) {
+    //   const matchingOption = options.find(
+    //     (o) => o.value.toLowerCase() === genFromPathname.toLowerCase(),
+    //   );
+    //   selectValue = matchingOption ? matchingOption.value : "all";
+    // }
 
     return (
       <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
@@ -188,12 +188,7 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
               traitOptions.backgrounds,
               "Backgrounds",
             )}
-            {renderTraitSelect(
-              "gen",
-              genFromPathname || "All Gens",
-              traitOptions.gens,
-              "Gen",
-            )}
+            {renderTraitSelect("gen", "All Gens", traitOptions.gens, "Gen")}
             {renderTraitSelect(
               "cursor",
               "All Cursors",
@@ -236,22 +231,22 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
                   </SelectItem>
                   <SelectItem
                     value="rank_open_rarity"
-                    className={`cursor-pointer ${!filters.gen && !genFromPathname ? "opacity-50 cursor-not-allowed" : ""}`}
-                    disabled={!filters.gen && !genFromPathname}
+                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                    disabled={!filters.gen}
                   >
                     Rank: OpenRarity
                   </SelectItem>
                   <SelectItem
                     value="rank_jungle"
-                    className={`cursor-pointer ${!filters.gen && !genFromPathname ? "opacity-50 cursor-not-allowed" : ""}`}
-                    disabled={!filters.gen && !genFromPathname}
+                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                    disabled={!filters.gen}
                   >
                     Rank: Jungle
                   </SelectItem>
                   <SelectItem
                     value="rank_rarity"
-                    className={`cursor-pointer ${!filters.gen && !genFromPathname ? "opacity-50 cursor-not-allowed" : ""}`}
-                    disabled={!filters.gen && !genFromPathname}
+                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                    disabled={!filters.gen}
                   >
                     Rank: RarityScore
                   </SelectItem>
