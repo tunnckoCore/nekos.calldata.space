@@ -2,6 +2,8 @@
 
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
+import { Badge } from "../ui/badge";
+import { useSearchParams } from "next/navigation";
 // import { Button } from "@/components/ui/button";
 
 export function GalleryItemRow({
@@ -11,11 +13,23 @@ export function GalleryItemRow({
   item: Neko;
   children: React.ReactNode;
 }) {
+  const params = useSearchParams();
+
   const cursorItem = allCursors.find((c) => c.name === item.traits.cursor);
   const cursorEmoji = cursorItem!.emoji;
 
   const patchedColors = item.colors || item.traits;
   const rankings = item.rankings!;
+
+  const sortMethod = params.get("sort");
+  const itemRank =
+    sortMethod === "rank_rarity"
+      ? rankings.rarity.rank
+      : sortMethod === "rank_jungle"
+        ? rankings.jungle.rank
+        : sortMethod === "rank_open_rarity"
+          ? rankings.openRarity.rank
+          : rankings.jungle.rank;
 
   return (
     <div
@@ -75,14 +89,9 @@ export function GalleryItemRow({
             data-eyes-color={patchedColors.eyes}
             style={{ backgroundColor: patchedColors.eyes }}
           />
-          {/*<div
-            className="text-xs bg-slate-100 flex items-center justify-center rounded-md px-2 text-slate-800 shadow-lg drop-shadow-md"
-            // href={`https://etherscan.io/tx/${item.transaction_hash}`}
-            // rel="noopener noreferrer"
-            // target="_blank"
-          >
-            💠 {rankings.global.rank}
-          </div>*/}
+          {/*<Badge variant="secondary" className="px-2.5">
+            {item.sequence}
+          </Badge>*/}
           {/*<div
             className="text-xs bg-slate-100 flex items-center justify-center rounded-md px-2 text-slate-800 shadow-lg drop-shadow-md"
             // href={`https://etherscan.io/tx/${item.transaction_hash}`}
@@ -117,7 +126,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              NFT #{item.number.toLocaleString()} 💎 {rankings.openRarity.rank}
+              NFT #{item.number.toLocaleString()}{" "}
+              {itemRank ? `💎 ${itemRank}` : ""}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("ordinal") && (
@@ -127,8 +137,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              Ordinal #{item.number.toLocaleString()} 💎{" "}
-              {rankings.openRarity.rank}
+              Ordinal #{item.number.toLocaleString()}{" "}
+              {itemRank ? `💎 ${itemRank}` : ""}
             </div>
           )}
           {item.traits.gen.toLowerCase().includes("eths") && (
@@ -138,8 +148,8 @@ export function GalleryItemRow({
               // rel="noopener noreferrer"
               // target="_blank"
             >
-              Ethscription #{item.number.toLocaleString()} 💎{" "}
-              {rankings.jungle.rank}
+              Ethscription #{item.number.toLocaleString()}{" "}
+              {itemRank ? `💎 ${itemRank}` : ""}
             </div>
           )}
           {/*{item.traits.gen.toLowerCase().includes("og") && (

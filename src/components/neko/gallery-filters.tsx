@@ -300,9 +300,9 @@ export function GalleryFilters() {
               {renderTraitSelect("eyes", "All Eyes", traitOptions.eyes, "Eyes")}
               {renderTraitSelect(
                 "background",
-                "All BG",
+                "All Backgrounds",
                 traitOptions.backgrounds,
-                "BG",
+                "Backgrounds",
               )}
               {renderTraitSelect("gen", "All Gens", traitOptions.gens, "Gen")}
               {renderTraitSelect(
@@ -328,7 +328,7 @@ export function GalleryFilters() {
                   onValueChange={(val) => handleSetFilters("sort", val)}
                   disabled={isPending}
                 >
-                  <SelectTrigger className="w-48 h-9 cursor-pointer">
+                  <SelectTrigger className="w-full h-9 cursor-pointer">
                     <SelectValue placeholder="Sort" />
                   </SelectTrigger>
                   <SelectContent>
@@ -342,10 +342,10 @@ export function GalleryFilters() {
                       value="transaction_fee"
                       className="cursor-pointer"
                     >
-                      Fee
+                      Transaction Fee
                     </SelectItem>
                     <SelectItem value="number" className="cursor-pointer">
-                      Number
+                      Protocol Number
                     </SelectItem>
                     <SelectItem value="rank_global" className="cursor-pointer">
                       Global Rank

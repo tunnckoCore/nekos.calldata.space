@@ -1,4 +1,5 @@
 import { type Neko, NekoSchema } from "@/lib/neko";
+import { initFuzzySearch } from "./fuzzy-search";
 
 const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
 const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
@@ -293,7 +294,7 @@ export async function fetchAllNekos(): Promise<CacheEntry> {
     };
 
     // Initialize fuzzy search index for faster searching
-    // initFuzzySearch(merged);
+    // initFuzzySearch(patchedAndMerged);
 
     return {
       hash,
@@ -334,5 +335,6 @@ export async function getAllNekos(): Promise<CacheEntry> {
     throw new Error("No valid Neko data found");
   }
 
+  initFuzzySearch(result.data);
   return result;
 }
