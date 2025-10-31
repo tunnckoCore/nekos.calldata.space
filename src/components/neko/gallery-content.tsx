@@ -16,21 +16,22 @@ interface GalleryContentProps {
 
 export async function GalleryContent({ searchParams }: GalleryContentProps) {
   const headersList = await headers();
-  const host = headersList.get("host") || "http://localhost:3000";
-  const url = new URL(host);
+  console.log(...headersList.entries());
+
+  const baseURL = headersList.get("origin") || "http://localhost:3000";
 
   const filters = await gallerySearchParamsCache.parse(searchParams);
 
   const queryClient = createQueryClient();
 
-  console.log("GalleryContent props:", { host });
+  console.log("GalleryContent props:", { baseURL });
 
   try {
     // Prefetch all nekos for filter options
-    await prefetchAllNekos(host, queryClient);
+    await prefetchAllNekos(baseURL, queryClient);
 
     // Prefetch first page with current filters
-    await prefetchPaginatedNekos(host, queryClient, filters);
+    await prefetchPaginatedNekos(baseURL, queryClient, filters);
   } catch (error) {
     console.error("Error prefetching data:", error);
   }
