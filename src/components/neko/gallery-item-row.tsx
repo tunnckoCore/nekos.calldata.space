@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useQueryState } from "nuqs";
 import { Badge } from "@/components/ui/badge";
 // import Link from "next/link";
@@ -19,6 +20,52 @@ export function GalleryItemRow({
   onToggle?: () => void;
 }) {
   const [sort] = useQueryState("sort");
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    // Debounce prefetch - only trigger after 200ms of hover
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      // Preconnect and prefetch iframe sources
+      const baseURL =
+        typeof window !== "undefined"
+          ? new URL(window.location.href).origin
+          : "";
+
+      if (item.traits.gen.toLowerCase().includes("og")) {
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.as = "fetch";
+        link.href = `${baseURL}/api/content/${item.number}?gen=og`;
+        document.head.appendChild(link);
+      }
+      if (item.traits.gen.toLowerCase().includes("ordinals")) {
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.as = "fetch";
+        link.href = `${baseURL}/api/content/${item.id}?gen=ordinals`;
+        document.head.appendChild(link);
+      }
+      if (item.traits.gen.toLowerCase().includes("eths")) {
+        const prefetch = document.createElement("link");
+        prefetch.rel = "prefetch";
+        prefetch.as = "fetch";
+        prefetch.href = `https://mainnet.api.calldata.space/ethscriptions/${item.id}/data`;
+        document.head.appendChild(prefetch);
+      }
+    }, 200);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const cursorItem = allCursors.find((c) => c.name === item.traits.cursor);
   const cursorEmoji = cursorItem!.emoji;
@@ -40,6 +87,7 @@ export function GalleryItemRow({
     <>
       <div
         onClick={onToggle}
+        onMouseEnter={handleMouseEnter}
         className="flex relative w-full items-center justify-between cursor-pointer"
       >
         <div
@@ -107,8 +155,7 @@ export function GalleryItemRow({
         >
           <div className="flex w-full justify-start">
             <div className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md">
-              {cursorEmoji} {item.traits.cursor} / {item.traits.background} /{" "}
-              {patchedColors.background}
+              {cursorEmoji} {item.traits.cursor}
             </div>
           </div>
           <div className="flex w-full justify-end">

@@ -24,7 +24,8 @@ export function GalleryContainerClient({
 }: GalleryContainerClientProps) {
   const firstPagedNekos = use(paginatedNekosPromise);
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
-  const [openItemId, setOpenItemId] = useState<string | null>(null);
+  const [openItemIds, setOpenItemIds] = useState<Set<string>>(new Set());
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   // Fetch paginated gallery data with infinite scroll
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
@@ -33,8 +34,15 @@ export function GalleryContainerClient({
       pageParams: [0],
     });
 
-  // Fetch all nekos for filter options
-  // const { data: allNekos } = useAllNekos(baseURL);
+  useEffect(() => {
+    if (isFetchingNextPage) {
+      setIsLoadingMore(true);
+    } else if (!isFetchingNextPage && isLoadingMore) {
+      // Delay clearing to show the message briefly
+      const timer = setTimeout(() => setIsLoadingMore(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isFetchingNextPage, isLoadingMore]);
 
   // Flatten paginated results into single array
   const items = useMemo(() => {
@@ -74,7 +82,7 @@ export function GalleryContainerClient({
     count: items.length,
     getScrollElement: () => scrollerRef.current,
     estimateSize: () => 72,
-    overscan: 15,
+    overscan: 20,
   });
 
   const virtualItems = virtualizer.getVirtualItems();
@@ -87,7 +95,7 @@ export function GalleryContainerClient({
       !hasNextPage ||
       isFetchingNextPage ||
       !lastItem ||
-      lastItem.index < items.length - 1
+      lastItem.index < items.length - 5
     ) {
       return;
     }
@@ -148,10 +156,16 @@ export function GalleryContainerClient({
                 >
                   <GalleryItemRow
                     item={item}
-                    isOpen={openItemId === item.id}
-                    onToggle={() =>
-                      setOpenItemId(openItemId === item.id ? null : item.id)
-                    }
+                    isOpen={openItemIds.has(item.id)}
+                    onToggle={() => {
+                      const newSet = new Set(openItemIds);
+                      if (newSet.has(item.id)) {
+                        newSet.delete(item.id);
+                      } else {
+                        newSet.add(item.id);
+                      }
+                      setOpenItemIds(newSet);
+                    }}
                   >
                     {isNfts && (
                       <iframe
@@ -192,11 +206,9 @@ export function GalleryContainerClient({
       </div>
 
       {/* Loading and end states */}
-      {(isFetchingNextPage || (!hasNextPage && items.length > 0)) && (
-        <div className="px-4 py-2 border-t border-border bg-background/50 text-xs text-muted-foreground text-center flex-shrink-0">
-          {isFetchingNextPage
-            ? "Loading more items..."
-            : "No more items to load"}
+      {(isLoadingMore || (!hasNextPage && items.length > 0)) && (
+        <div className="p-4 border-t border-border bg-background/50 text-sm text-muted-foreground text-center flex-shrink-0">
+          {isLoadingMore ? "Loading more items..." : "No more items to load"}
         </div>
       )}
     </div>

@@ -61,7 +61,7 @@ export function useAllNekos(baseURL: string) {
 export function useNekoGallery(
   baseURL: string,
   filters: GalleryFiltersWithPagination,
-  initialData: any,
+  initialData?: any,
 ) {
   const queryKey = ["v2", "nekos", "paginated", filters];
 
@@ -70,7 +70,7 @@ export function useNekoGallery(
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const skip = Math.max(0, pageParam);
-      const take = 20;
+      const take = 25;
 
       const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
         skip,
@@ -87,20 +87,14 @@ export function useNekoGallery(
       };
 
       return result as PaginatedResponse;
-      // const response = await fetch(
-      //   `${SITE_URL_ORIGIN}/api/neko/paginated?${params}`,
-      // );
-      // if (!response.ok) throw new Error("Failed to fetch paginated Nekos");
-
-      // const res = (await response.json()) as PaginatedResponse;
-
-      // NekoSchemaList.parse(res.items);
-
-      // return res;
     },
     getNextPageParam: (lastPage) => {
-      if (!lastPage.hasMore) return undefined;
-      return lastPage.skip + lastPage.take;
+      if (!lastPage.hasMore) {
+        return undefined;
+      }
+      const skip = lastPage.skip ?? 0;
+      const take = lastPage.take ?? 25;
+      return skip + take;
     },
     initialPageParam: 0,
   });
@@ -150,7 +144,7 @@ export async function prefetchPaginatedNekos(
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const skip = Math.max(0, pageParam);
-      const take = 20;
+      const take = 25;
 
       const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
         ...filtersCopy,

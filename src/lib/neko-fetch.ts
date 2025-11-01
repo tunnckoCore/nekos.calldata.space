@@ -219,7 +219,7 @@ export async function getPaginatedNekos(
 }> {
   const {
     skip = 0,
-    take = 20,
+    take = 25,
     search,
     background,
     cat,

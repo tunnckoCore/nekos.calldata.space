@@ -26,6 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/*https://mainnet.api.calldata.space*/}
+        <link rel="preconnect" href="https://mainnet.api.calldata.space" />
+      </head>
       <body
         className={`antialiased`}
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
