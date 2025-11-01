@@ -1,12 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { useQueryState } from "nuqs";
-import { Badge } from "@/components/ui/badge";
+import { useEffect, useRef } from "react";
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
-
-// import { Button } from "@/components/ui/button";
 
 export function GalleryItemRow({
   item,
@@ -56,7 +54,7 @@ export function GalleryItemRow({
         prefetch.href = `https://mainnet.api.calldata.space/ethscriptions/${item.id}/data`;
         document.head.appendChild(prefetch);
       }
-    }, 200);
+    }, 500);
   };
 
   useEffect(() => {
@@ -97,35 +95,8 @@ export function GalleryItemRow({
           style={{ backgroundColor: patchedColors.cat }}
         >
           <div className="relative z-10 flex w-full justify-start">
-            {/*{item.traits.gen.toLowerCase().includes("og") && (
-            <div
-              className="relative z-20 rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
-
-              // href={`https://opensea.io/item/ethereum/0x7c3219045a87bc7001495117e1bb560b69e910db/${item.index}`}
-              // rel="noopener noreferrer"
-              // target="_blank"
-            >
-              {item.index}
-            </div>
-          )}
-          {item.traits.gen.toLowerCase().includes("ordinal") && (
-            <div
-              className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
-              // href={`https://ordiscan.com/inscription/${item.id}`}
-              // rel="noopener noreferrer"
-              // target="_blank"
-            >
-              0xNeko Ordinals #{item.index}
-            </div>
-          )}*/}
-            {/*{item.traits.gen.toLowerCase().includes("eths") && (*/}
             {
-              <div
-                className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
-                // href={`https://etherscan.io/tx/${item.transaction_hash}`}
-                // rel="noopener noreferrer"
-                // target="_blank"
-              >
+              <div className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md">
                 {item.name} 💠 {globalRank}
               </div>
             }
@@ -160,81 +131,38 @@ export function GalleryItemRow({
           </div>
           <div className="flex w-full justify-end">
             {item.traits.gen.toLowerCase().includes("og") && (
-              <div
+              <Link
                 className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
-                // href={`https://opensea.io/item/ethereum/0x7c3219045a87bc7001495117e1bb560b69e910db/${item.index}`}
-                // rel="noopener noreferrer"
-                // target="_blank"
+                href={`https://opensea.io/item/ethereum/0x7c3219045a87bc7001495117e1bb560b69e910db/${item.index}`}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 NFT #{item.number.toLocaleString()}{" "}
                 {itemRank ? `💎 ${itemRank}` : ""}
-              </div>
+              </Link>
             )}
             {item.traits.gen.toLowerCase().includes("ordinal") && (
-              <div
+              <Link
                 className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
-                // href={`https://ordiscan.com/inscription/${item.id}`}
-                // rel="noopener noreferrer"
-                // target="_blank"
+                href={`https://ordiscan.com/inscription/${item.id}`}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Ordinal #{item.number.toLocaleString()}{" "}
                 {itemRank ? `💎 ${itemRank}` : ""}
-              </div>
+              </Link>
             )}
             {item.traits.gen.toLowerCase().includes("eths") && (
-              <div
+              <Link
                 className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
-                // href={`https://etherscan.io/tx/${item.transaction_hash}`}
-                // rel="noopener noreferrer"
-                // target="_blank"
+                href={`https://etherscan.io/tx/${item.transaction_hash}`}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Ethscription #{item.number.toLocaleString()}{" "}
                 {itemRank ? `💎 ${itemRank}` : ""}
-              </div>
+              </Link>
             )}
-            {/*{item.traits.gen.toLowerCase().includes("og") && (
-            <a
-              href={`https://opensea.io/item/ethereum/0x7c3219045a87bc7001495117e1bb560b69e910db/${item.index}`}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              NFT #{item.index}
-            </a>
-          )}
-          {item.traits.gen.toLowerCase().includes("ordinal") && (
-            <a
-              href={`https://ordiscan.com/inscription/${item.id}`}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ordinal #{item.number.toLocaleString()}
-            </a>
-          )}
-          {item.traits.gen.toLowerCase().includes("eths") && (
-            <a
-              href={`https://ethscriptions.com/ethscriptions/${item.number}`}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ethscription #{item.number.toLocaleString()}
-            </a>
-          )}*/}
-            {/*<svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>external link icon</title>
-            <path d="M0 0h24v24H0z" fill="none" stroke="none" />
-            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-            <path d="M11 13l9 -9" />
-            <path d="M15 4h5v5" />
-          </svg>*/}
           </div>
         </div>
       </div>

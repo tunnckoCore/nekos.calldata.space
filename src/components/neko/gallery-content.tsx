@@ -3,11 +3,7 @@ import type { SearchParams } from "nuqs/server";
 import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
 import { getPaginatedNekos } from "@/lib/neko-fetch";
 import { getAllNekos } from "@/lib/preps";
-import {
-  createQueryClient,
-  // prefetchAllNekos,
-  // prefetchPaginatedNekos,
-} from "@/lib/queries";
+import { createQueryClient } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
 import { GalleryFiltersComp } from "./gallery-filters";
 
@@ -27,8 +23,6 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   const nekoEntry = await getAllNekos(baseURL);
   const paginatedNekosPromise = getPaginatedNekos(baseURL, filters, nekoEntry);
-
-  // await prefetchPaginatedNekos(baseURL, queryClient, filters);
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>

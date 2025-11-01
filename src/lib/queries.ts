@@ -10,7 +10,7 @@ import type {
 } from "./gallery-search-params";
 import type { Neko } from "./neko";
 import { getPaginatedNekos } from "./neko-fetch";
-import { getAllNekos } from "./preps";
+import { getAllNekos, type NekoCacheEntry } from "./preps";
 
 interface PaginatedResponse {
   items: Neko[];
@@ -33,9 +33,12 @@ export function createQueryClient() {
       },
       dehydrate: {
         // Include pending queries in SSR payload
-        shouldDehydrateQuery: (query) =>
-          defaultShouldDehydrateQuery(query) ||
-          query.state.status === "pending",
+        shouldDehydrateQuery: (query) => {
+          return (
+            defaultShouldDehydrateQuery(query) ||
+            query.state.status === "pending"
+          );
+        },
       },
     },
   });
@@ -136,21 +139,30 @@ export async function prefetchPaginatedNekos(
   baseURL: string,
   queryClient: QueryClient,
   filters: GalleryFilters,
+  nekoEntry?: NekoCacheEntry,
 ) {
   const filtersCopy = { ...filters };
   const queryKey = ["v2", "nekos", "paginated", filtersCopy];
 
   return queryClient.prefetchInfiniteQuery({
+    initialData: {
+      pages: [nekoEntry?.data ?? []],
+      pageParams: [0],
+    },
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const skip = Math.max(0, pageParam);
       const take = 25;
 
-      const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
-        ...filtersCopy,
-        skip,
-        take,
-      });
+      const { items, total, hasMore } = await getPaginatedNekos(
+        baseURL,
+        {
+          ...filtersCopy,
+          skip,
+          take,
+        },
+        nekoEntry,
+      );
 
       const result = {
         items,

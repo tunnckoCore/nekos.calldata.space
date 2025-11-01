@@ -4,7 +4,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import { use, useEffect, useMemo, useRef, useState } from "react";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
 import type { Neko } from "@/lib/neko";
-import { useAllNekos, useNekoGallery } from "@/lib/queries";
+import { useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
 
 interface GalleryContainerClientProps {
@@ -28,7 +28,7 @@ export function GalleryContainerClient({
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   // Fetch paginated gallery data with infinite scroll
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useNekoGallery(baseURL, filters, {
       pages: [firstPagedNekos],
       pageParams: [0],
@@ -102,14 +102,6 @@ export function GalleryContainerClient({
 
     fetchNextPage();
   }, [hasNextPage, isFetchingNextPage, virtualItems]);
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center h-full text-red-500">
-        Error loading gallery: {error.message}
-      </div>
-    );
-  }
 
   return (
     <div className="flex flex-col h-full w-full">
