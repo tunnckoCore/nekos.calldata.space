@@ -23,22 +23,12 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   const queryClient = createQueryClient();
 
-  console.log("GalleryContent props:", { baseURL });
+  await prefetchPaginatedNekos(baseURL, queryClient, filters);
 
-  // try {
-  // Prefetch all nekos for filter options
   prefetchAllNekos(baseURL, queryClient);
 
-  // Prefetch first page with current filters
-  prefetchPaginatedNekos(baseURL, queryClient, filters);
-  // } catch (error) {
-  //   console.error("Error prefetching data:", error);
-  // }
-
-  const dehydratedState = dehydrate(queryClient);
-
   return (
-    <HydrationBoundary state={dehydratedState}>
+    <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="flex flex-col h-full w-full">
         {/* Sticky filter bar at top */}
         <GalleryFilters baseURL={baseURL} />

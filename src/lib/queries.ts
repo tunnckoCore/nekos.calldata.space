@@ -1,4 +1,5 @@
 import {
+  defaultShouldDehydrateQuery,
   QueryClient,
   useQuery,
   useSuspenseInfiniteQuery,
@@ -27,8 +28,14 @@ export function createQueryClient() {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 30, // Data is immutable and never becomes stale
-        gcTime: 30, // Keep in cache indefinitely
+        staleTime: 1000 * 60 * 60 * 24, // 24hrs
+        gcTime: 1000 * 60 * 60 * 24, // 24hrs
+      },
+      dehydrate: {
+        // Include pending queries in SSR payload
+        shouldDehydrateQuery: (query) =>
+          defaultShouldDehydrateQuery(query) ||
+          query.state.status === "pending",
       },
     },
   });
@@ -76,7 +83,7 @@ export function useNekoGallery(
       // if (filters.order) params.set("order", filters.order);
 
       const skip = Math.max(0, pageParam);
-      const take = 50;
+      const take = 20;
 
       const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
         skip,
@@ -156,7 +163,7 @@ export async function prefetchPaginatedNekos(
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const skip = Math.max(0, pageParam);
-      const take = 50;
+      const take = 20;
 
       const { items, total, hasMore } = await getPaginatedNekos(baseURL, {
         ...filtersCopy,
