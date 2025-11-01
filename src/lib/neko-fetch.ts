@@ -1,7 +1,7 @@
 import { fuzzySearch } from "./fuzzy-search";
 import type { GalleryFiltersWithPagination } from "./gallery-search-params";
 import type { Neko } from "./neko";
-import { getAllNekos } from "./preps";
+import { getAllNekos, type NekoCacheEntry } from "./preps";
 
 /**
  * Filters Neko array by traits
@@ -210,7 +210,8 @@ export function getDynamicTraitOptions(
  */
 export async function getPaginatedNekos(
   baseURL: string,
-  opts: GalleryFiltersWithPagination,
+  opts?: GalleryFiltersWithPagination | null,
+  nekoEntry?: NekoCacheEntry,
 ): Promise<{
   items: Neko[];
   total: number;
@@ -218,7 +219,7 @@ export async function getPaginatedNekos(
 }> {
   const {
     skip = 0,
-    take = 50,
+    take = 20,
     search,
     background,
     cat,
@@ -229,7 +230,7 @@ export async function getPaginatedNekos(
     sort,
     order = "asc",
   } = { ...opts };
-  const { data: allNekos } = await getAllNekos(baseURL);
+  const { data: allNekos } = nekoEntry || (await getAllNekos(baseURL));
 
   if (!allNekos || allNekos.length === 0) {
     return { items: [], total: 0, hasMore: false };

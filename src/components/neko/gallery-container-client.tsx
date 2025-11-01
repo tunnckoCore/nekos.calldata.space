@@ -1,26 +1,37 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { use, useEffect, useMemo, useRef, useState } from "react";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
+import type { Neko } from "@/lib/neko";
 import { useAllNekos, useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
 
 interface GalleryContainerClientProps {
   baseURL: string;
   filters: GalleryFilters;
+  paginatedNekosPromise: Promise<{
+    items: Neko[];
+    total: number;
+    hasMore: boolean;
+  }>;
 }
 
 export function GalleryContainerClient({
   baseURL,
   filters,
+  paginatedNekosPromise,
 }: GalleryContainerClientProps) {
+  const firstPagedNekos = use(paginatedNekosPromise);
   const scrollKey = `gallery-scroll-${JSON.stringify(filters)}`;
   const [openItemId, setOpenItemId] = useState<string | null>(null);
 
   // Fetch paginated gallery data with infinite scroll
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, error } =
-    useNekoGallery(baseURL, filters);
+    useNekoGallery(baseURL, filters, {
+      pages: [firstPagedNekos],
+      pageParams: [0],
+    });
 
   // Fetch all nekos for filter options
   // const { data: allNekos } = useAllNekos(baseURL);

@@ -1,13 +1,15 @@
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import type { SearchParams } from "nuqs/server";
 import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
+import { getPaginatedNekos } from "@/lib/neko-fetch";
+import { getAllNekos } from "@/lib/preps";
 import {
   createQueryClient,
-  prefetchAllNekos,
-  prefetchPaginatedNekos,
+  // prefetchAllNekos,
+  // prefetchPaginatedNekos,
 } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
-import { GalleryFilters } from "./gallery-filters";
+import { GalleryFiltersComp } from "./gallery-filters";
 
 interface GalleryContentProps {
   searchParams: Promise<SearchParams>;
@@ -23,19 +25,24 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   const queryClient = createQueryClient();
 
-  await prefetchPaginatedNekos(baseURL, queryClient, filters);
+  const nekoEntry = await getAllNekos(baseURL);
+  const paginatedNekosPromise = getPaginatedNekos(baseURL, filters, nekoEntry);
 
-  prefetchAllNekos(baseURL, queryClient);
+  // await prefetchPaginatedNekos(baseURL, queryClient, filters);
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="flex flex-col h-full w-full">
         {/* Sticky filter bar at top */}
-        <GalleryFilters baseURL={baseURL} />
+        <GalleryFiltersComp allNekos={nekoEntry.data} filters={filters} />
 
         {/* Full-height virtualizable gallery container */}
         <div className="flex-1 overflow-hidden">
-          <GalleryContainerClient baseURL={baseURL} filters={filters} />
+          <GalleryContainerClient
+            baseURL={baseURL}
+            filters={filters}
+            paginatedNekosPromise={paginatedNekosPromise}
+          />
         </div>
       </div>
     </HydrationBoundary>

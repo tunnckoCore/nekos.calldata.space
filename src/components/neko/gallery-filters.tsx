@@ -2,7 +2,7 @@
 
 import { ArrowDown, ArrowUp, Loader2, X } from "lucide-react";
 import { debounce } from "nuqs";
-import { useMemo, useRef, useTransition } from "react";
+import { use, useMemo, useRef, useTransition } from "react";
 import { Button } from "@/components/ui/button";
 import {
   InputGroup,
@@ -19,16 +19,35 @@ import {
 } from "@/components/ui/select";
 import { Spinner } from "@/components/ui/spinner";
 import { useSearchShortcuts } from "@/hooks/use-search-shortcuts";
-import { useFilters } from "@/lib/gallery-search-params";
+import { type GalleryFilters, useFilters } from "@/lib/gallery-search-params";
+// import { useAllNekos } from "@/lib/queries";
+// import type { NekoCacheEntry } from "@/lib/preps";
+import type { Neko } from "@/lib/neko";
 import { getDynamicTraitOptions } from "@/lib/neko-fetch";
-import { useAllNekos } from "@/lib/queries";
 
-export function GalleryFilters({ baseURL }: { baseURL: string }) {
+const SORT_LABELS: Record<string, string> = {
+  sequence: "Created At",
+  block_number: "Block & Index",
+  transaction_fee: "Transaction Fee",
+  number: "Protocol Number",
+  rank_global: "Global Rank",
+  rank_open_rarity: "Rank: OpenRarity",
+  rank_jungle: "Rank: Jungle",
+  rank_rarity: "Rank: RarityScore",
+};
+
+export function GalleryFiltersComp({
+  allNekos,
+  filters,
+}: {
+  allNekos: Neko[];
+  filters: GalleryFilters;
+}) {
   const [isPending, startTransition] = useTransition();
-  const { data: allNekos } = useAllNekos(baseURL);
+  // const { data: allNekos } = useAllNekos(baseURL);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const [filters, setFilters] = useFilters({
+  const [clientFilters, setFilters] = useFilters({
     startTransition,
   });
 
@@ -46,14 +65,18 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
     }
 
     return {
-      backgrounds: getDynamicTraitOptions(allNekos, "background", filters),
-      cats: getDynamicTraitOptions(allNekos, "cat", filters),
-      eyes: getDynamicTraitOptions(allNekos, "eyes", filters),
-      cursors: getDynamicTraitOptions(allNekos, "cursor", filters),
-      gens: getDynamicTraitOptions(allNekos, "gen", filters),
-      years: getDynamicTraitOptions(allNekos, "year", filters),
+      backgrounds: getDynamicTraitOptions(
+        allNekos,
+        "background",
+        clientFilters,
+      ),
+      cats: getDynamicTraitOptions(allNekos, "cat", clientFilters),
+      eyes: getDynamicTraitOptions(allNekos, "eyes", clientFilters),
+      cursors: getDynamicTraitOptions(allNekos, "cursor", clientFilters),
+      gens: getDynamicTraitOptions(allNekos, "gen", clientFilters),
+      years: getDynamicTraitOptions(allNekos, "year", clientFilters),
     };
-  }, [allNekos, filters]);
+  }, [allNekos, clientFilters]);
 
   // Check if any filter is active
   const isFiltered =
@@ -105,7 +128,12 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
           disabled={isPending}
         >
           <SelectTrigger className="w-full h-9 cursor-pointer text-sm">
-            <SelectValue placeholder={placeholder} />
+            {selectValue === "" || selectValue === "all" ? (
+              <span>{label}</span>
+            ) : (
+              <SelectValue placeholder={placeholder} />
+            )}
+            {/*<SelectValue placeholder={placeholder} />*/}
           </SelectTrigger>
           <SelectContent className="max-h-64">
             <SelectItem value="all" className="cursor-pointer">
@@ -184,7 +212,7 @@ export function GalleryFilters({ baseURL }: { baseURL: string }) {
                 disabled={isPending}
               >
                 <SelectTrigger className="w-full h-9 cursor-pointer">
-                  <SelectValue placeholder="Sort" />
+                  <span>{SORT_LABELS[filters.sort] || "Sort By"}</span>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="sequence" className="cursor-pointer">

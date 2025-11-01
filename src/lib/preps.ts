@@ -1,16 +1,16 @@
 import { type Neko, NekoListSchema, NekoSchema } from "@/lib/neko";
 import { initFuzzySearch } from "./fuzzy-search";
 
-const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
-const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
-const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
+// const NFTS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-nfts.json`;
+// const ORDS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-ords.json`;
+// const ETHS_URL = `https://gistcdn.githack.com/tunnckoCore/03ed31ce9dba74c2ec75e43d29682042/raw/218b012ffb3ce83ddf89c410b9713f39da7d3f55/0xnekos-eths.json`;
 
 // const SITE_URL_ORIGIN =
 //   process.env.NODE_ENV === "production"
 //     ? "https://next16-nekos-oct28.vercel.app"
 //     : "http://localhost:3000";
 
-interface CacheEntry {
+export interface NekoCacheEntry {
   hash: string;
   data: Neko[];
   etag: string;
@@ -18,7 +18,7 @@ interface CacheEntry {
 }
 
 // In-memory cache for the merged dataset
-let dataCache: CacheEntry | null = null;
+let dataCache: NekoCacheEntry | null = null;
 const CACHE_TTL = 1000 * 60 * 60; // Cache for 1 hour to ensure consistent ordering across paginated requests
 
 /**
@@ -220,7 +220,7 @@ export async function fetchNFTContent(id: string): Promise<{
  * Uses sequential fetching to guarantee consistent merge order: NFTs → Ordinals → Ethscriptions
  * Caches result for 1 hour with ETag support
  */
-// export async function fetchAllNekos(): Promise<CacheEntry> {
+// export async function fetchAllNekos(): Promise<NekoCacheEntry> {
 //   // Check cache validity
 //   if (dataCache && Date.now() - dataCache.timestamp < CACHE_TTL) {
 //     return {
@@ -322,7 +322,7 @@ export async function fetchNFTContent(id: string): Promise<{
 //   }
 // }
 
-export async function getAllNekos(baseURL: string): Promise<CacheEntry> {
+export async function getAllNekos(baseURL: string): Promise<NekoCacheEntry> {
   if (dataCache) {
     return dataCache;
   }
@@ -332,7 +332,7 @@ export async function getAllNekos(baseURL: string): Promise<CacheEntry> {
     throw new Error(`Failed to fetch nekos: ${res.status} ${res.statusText}`);
   }
 
-  const result = (await res.json()) as CacheEntry;
+  const result = (await res.json()) as NekoCacheEntry;
 
   if (!result || result.data?.length === 0) {
     throw new Error("No valid Neko data found");

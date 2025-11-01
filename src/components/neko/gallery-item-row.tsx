@@ -95,17 +95,6 @@ export function GalleryItemRow({
               data-eyes-color={patchedColors.eyes}
               style={{ backgroundColor: patchedColors.eyes }}
             />
-            {/*<Badge variant="secondary" className="px-2.5">
-            {item.sequence}
-          </Badge>*/}
-            {/*<div
-            className="text-xs bg-slate-100 flex items-center justify-center rounded-md px-2 text-slate-800 shadow-lg drop-shadow-md"
-            // href={`https://etherscan.io/tx/${item.transaction_hash}`}
-            // rel="noopener noreferrer"
-            // target="_blank"
-          >
-            💎 {rankings.jungle.rank}
-          </div>*/}
           </div>
         </div>
         <div
@@ -118,7 +107,8 @@ export function GalleryItemRow({
         >
           <div className="flex w-full justify-start">
             <div className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md">
-              {cursorEmoji} {item.traits.cursor}
+              {cursorEmoji} {item.traits.cursor} / {item.traits.background} /{" "}
+              {patchedColors.background}
             </div>
           </div>
           <div className="flex w-full justify-end">

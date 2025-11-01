@@ -61,27 +61,14 @@ export function useAllNekos(baseURL: string) {
 export function useNekoGallery(
   baseURL: string,
   filters: GalleryFiltersWithPagination,
+  initialData: any,
 ) {
   const queryKey = ["v2", "nekos", "paginated", filters];
 
   return useSuspenseInfiniteQuery({
+    initialData,
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
-      // const params = new URLSearchParams();
-      // params.set("skip", String(pageParam));
-      // params.set("take", "50");
-
-      // // Only add non-empty filters to query params
-      // if (filters.search) params.set("search", filters.search);
-      // if (filters.background) params.set("background", filters.background);
-      // if (filters.cat) params.set("cat", filters.cat);
-      // if (filters.eyes) params.set("eyes", filters.eyes);
-      // if (filters.cursor) params.set("cursor", filters.cursor);
-      // if (filters.gen) params.set("gen", filters.gen);
-      // if (filters.year) params.set("year", filters.year);
-      // if (filters.sort) params.set("sort", filters.sort);
-      // if (filters.order) params.set("order", filters.order);
-
       const skip = Math.max(0, pageParam);
       const take = 20;
 
