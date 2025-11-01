@@ -25,15 +25,15 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   console.log("GalleryContent props:", { baseURL });
 
-  try {
-    // Prefetch all nekos for filter options
-    await prefetchAllNekos(baseURL, queryClient);
+  // try {
+  // Prefetch all nekos for filter options
+  prefetchAllNekos(baseURL, queryClient);
 
-    // Prefetch first page with current filters
-    await prefetchPaginatedNekos(baseURL, queryClient, filters);
-  } catch (error) {
-    console.error("Error prefetching data:", error);
-  }
+  // Prefetch first page with current filters
+  prefetchPaginatedNekos(baseURL, queryClient, filters);
+  // } catch (error) {
+  //   console.error("Error prefetching data:", error);
+  // }
 
   const dehydratedState = dehydrate(queryClient);
 
