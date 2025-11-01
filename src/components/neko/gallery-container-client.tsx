@@ -23,7 +23,7 @@ export function GalleryContainerClient({
     useNekoGallery(baseURL, filters);
 
   // Fetch all nekos for filter options
-  const { data: allNekos } = useAllNekos(baseURL);
+  // const { data: allNekos } = useAllNekos(baseURL);
 
   // Flatten paginated results into single array
   const items = useMemo(() => {
@@ -96,7 +96,7 @@ export function GalleryContainerClient({
     <div className="flex flex-col h-full w-full">
       {/* Item count header */}
       <div className="px-4 py-2 bg-background/50 text-xs text-muted-foreground shrink-0">
-        Showing {items.length} items {allNekos && `from ${itemsCount} total`}
+        Showing {items.length} items from {itemsCount} total
       </div>
 
       {/* Virtualized scrollable container - key: overflow-y-auto with proper ref */}
