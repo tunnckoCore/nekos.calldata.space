@@ -88,7 +88,7 @@ export function GalleryItemRow({
       <div
         onClick={onToggle}
         onMouseEnter={handleMouseEnter}
-        className="relative flex w-full cursor-pointer items-center justify-between"
+        className="relative flex w-full cursor-pointer flex-col items-center justify-between sm:flex-row"
       >
         <div
           className="flex w-full items-center justify-between p-5"
@@ -98,20 +98,25 @@ export function GalleryItemRow({
         >
           <div className="relative z-10 flex w-full justify-start">
             {
-              <div className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md">
-                {item.name} 💠 {globalRank}
+              <div className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base">
+                {/*<span className="sm:hidden">
+                  {item.name} 💠 {globalRank}
+                </span>*/}
+                <span className="inline">
+                  {item.name} 💠 {globalRank}
+                </span>
               </div>
             }
           </div>
           <div className="flex w-full justify-end gap-2">
             <div
-              className="rounded-full p-4 shadow-lg drop-shadow-md"
+              className="rounded-full p-3 sm:p-4 shadow-lg drop-shadow-md"
               data-eyes-trait={item.traits.eyes}
               data-eyes-color={colors.eyes}
               style={{ backgroundColor: colors.eyes }}
             />
             <div
-              className="rounded-full p-4 shadow-lg drop-shadow-md"
+              className="rounded-full p-3 sm:p-4 shadow-lg drop-shadow-md"
               data-eyes-trait={item.traits.eyes}
               data-eyes-color={colors.eyes}
               style={{ backgroundColor: colors.eyes }}
@@ -119,22 +124,25 @@ export function GalleryItemRow({
           </div>
         </div>
         <div
-          className="flex w-full items-center justify-between p-5"
+          className="flex w-full flex-row-reverse items-center justify-between p-5 sm:flex-row"
           data-bg-trait={item.traits.background}
           data-bg-color={colors.background}
           style={{
             backgroundColor: colors.background,
           }}
         >
-          <div className="flex w-full justify-start">
-            <div className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md">
-              {cursorEmoji} {item.traits.cursor}
+          <div className="flex w-full justify-end sm:justify-start">
+            <div className="rounded-full bg-slate-100 px-2 py-1 text-slate-800  text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base">
+              <span className="sm:hidden">{cursorEmoji}</span>
+              <span className="hidden sm:inline">
+                {cursorEmoji} {item.traits.cursor}
+              </span>
             </div>
           </div>
-          <div className="flex w-full justify-end">
+          <div className="flex w-full justify-start sm:justify-end">
             {item.traits.gen.toLowerCase().includes("og") && (
               <Link
-                className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
+                className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base"
                 href={`https://opensea.io/item/ethereum/0x7c3219045a87bc7001495117e1bb560b69e910db/${item.index}`}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -145,7 +153,7 @@ export function GalleryItemRow({
             )}
             {item.traits.gen.toLowerCase().includes("ordinal") && (
               <Link
-                className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
+                className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base"
                 href={`https://ordiscan.com/inscription/${item.id}`}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -156,7 +164,7 @@ export function GalleryItemRow({
             )}
             {item.traits.gen.toLowerCase().includes("eths") && (
               <Link
-                className="rounded-full bg-slate-100 px-3 py-1 text-slate-800 shadow-lg drop-shadow-md"
+                className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base"
                 href={`https://etherscan.io/tx/${item.transaction_hash}`}
                 rel="noopener noreferrer"
                 target="_blank"
