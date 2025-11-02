@@ -200,7 +200,7 @@ export function GalleryContainerClient({
 
       {/* Loading and end states */}
       {(isLoadingMore || (!hasNextPage && items.length > 0)) && (
-        <div className="flex-shrink-0 border-border border-t bg-background/50 p-4 text-center text-muted-foreground text-sm">
+        <div className="shrink-0 border-border border-t bg-background/50 p-4 text-center text-muted-foreground text-sm">
           {isLoadingMore ? "Loading more items..." : "No more items to load"}
         </div>
       )}
