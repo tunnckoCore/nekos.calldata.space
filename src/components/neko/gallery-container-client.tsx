@@ -162,7 +162,7 @@ export function GalleryContainerClient({
                   >
                     {isNfts && (
                       <iframe
-                        className="m-0 block h-[70dvh] w-full border-0 p-0 sm:h-[80dvh]"
+                        className="m-0 block h-[70dvh] w-full border-0 p-0 md:h-[80dvh]"
                         sandbox="allow-scripts"
                         src={`${baseURL}/api/content/${item.number}?gen=og`}
                         style={{
@@ -172,7 +172,7 @@ export function GalleryContainerClient({
                     )}
                     {isOrdinals && (
                       <iframe
-                        className="m-0 block h-[70dvh] w-full border-0 p-0 sm:h-[80dvh]"
+                        className="m-0 block h-[70dvh] w-full border-0 p-0 md:h-[80dvh]"
                         sandbox="allow-scripts"
                         src={`${baseURL}/api/content/${item.id}?gen=ordinals`}
                         style={{
@@ -182,7 +182,7 @@ export function GalleryContainerClient({
                     )}
                     {isEthscription && (
                       <iframe
-                        className="m-0 block h-[70dvh] w-full border-0 p-0 sm:h-[80dvh]"
+                        className="m-0 block h-[70dvh] w-full border-0 p-0 md:h-[80dvh]"
                         sandbox="allow-scripts"
                         src={`https://mainnet.api.calldata.space/ethscriptions/${item.id}/data`}
                         style={{
