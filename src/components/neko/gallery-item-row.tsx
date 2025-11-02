@@ -5,6 +5,7 @@ import { useQueryState } from "nuqs";
 import { useEffect, useRef } from "react";
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
+import { getProperColors } from "@/lib/colors";
 
 export function GalleryItemRow({
   item,
@@ -68,7 +69,8 @@ export function GalleryItemRow({
   const cursorItem = allCursors.find((c) => c.name === item.traits.cursor);
   const cursorEmoji = cursorItem!.emoji;
 
-  const patchedColors = item.colors || item.traits;
+  const colors = getProperColors(item);
+
   const rankings = item.rankings;
 
   const globalRank = rankings?.global?.rank ?? 0;
@@ -91,8 +93,8 @@ export function GalleryItemRow({
         <div
           className="flex w-full items-center justify-between p-5"
           data-cat-trait={item.traits.cat}
-          data-cat-color={patchedColors.cat}
-          style={{ backgroundColor: patchedColors.cat }}
+          data-cat-color={colors.cat}
+          style={{ backgroundColor: colors.cat }}
         >
           <div className="relative z-10 flex w-full justify-start">
             {
@@ -105,23 +107,23 @@ export function GalleryItemRow({
             <div
               className="rounded-full p-4 shadow-lg drop-shadow-md"
               data-eyes-trait={item.traits.eyes}
-              data-eyes-color={patchedColors.eyes}
-              style={{ backgroundColor: patchedColors.eyes }}
+              data-eyes-color={colors.eyes}
+              style={{ backgroundColor: colors.eyes }}
             />
             <div
               className="rounded-full p-4 shadow-lg drop-shadow-md"
               data-eyes-trait={item.traits.eyes}
-              data-eyes-color={patchedColors.eyes}
-              style={{ backgroundColor: patchedColors.eyes }}
+              data-eyes-color={colors.eyes}
+              style={{ backgroundColor: colors.eyes }}
             />
           </div>
         </div>
         <div
           className="flex w-full items-center justify-between p-5"
           data-bg-trait={item.traits.background}
-          data-bg-color={patchedColors.background}
+          data-bg-color={colors.background}
           style={{
-            backgroundColor: patchedColors.background,
+            backgroundColor: colors.background,
           }}
         >
           <div className="flex w-full justify-start">

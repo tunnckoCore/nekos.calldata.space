@@ -22,13 +22,18 @@
       "!build",
       "!**/src/components/ui/*",
       "!**/src/hooks/use-mobile.ts",
-      "!convex/betterAuth/schema.ts"
-    ]
+      "!convex/betterAuth/schema.ts",
+    ],
   },
   "linter": {
+    "rules": {
+      "style": {
+        "useImportType": "error",
+      },
+    },
     "domains": {
       "next": "recommended",
-      "react": "recommended"
-    }
-  }
+      "react": "recommended",
+    },
+  },
 }

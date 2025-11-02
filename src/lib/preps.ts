@@ -103,12 +103,6 @@ export async function extractProperColors(
     eyes = "red";
   }
 
-  console.log("WHAT?????", item.id, {
-    background,
-    cat,
-    eyes,
-  });
-
   CACHED_PROPER_COLORS.set(item.id, {
     background,
     cat,

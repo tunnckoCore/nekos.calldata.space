@@ -59,7 +59,7 @@ export const NekoSchema = z.object({
     cursor: z.string(),
   }),
   sequence: z.number(),
-  colors: z
+  extractedColors: z
     .object({
       background: z.string(),
       cat: z.string(),

@@ -6,6 +6,7 @@ import type { GalleryFilters } from "@/lib/gallery-search-params";
 import type { Neko } from "@/lib/neko";
 import { useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
+import { getProperColors } from "@/lib/colors";
 
 interface GalleryContainerClientProps {
   baseURL: string;
@@ -82,7 +83,7 @@ export function GalleryContainerClient({
     count: items.length,
     getScrollElement: () => scrollerRef.current,
     estimateSize: () => 72,
-    overscan: 20,
+    // overscan: 10,
   });
 
   const virtualItems = virtualizer.getVirtualItems();
@@ -134,7 +135,7 @@ export function GalleryContainerClient({
                 .includes("eths");
               const isOrdinals = item.traits.gen.toLowerCase().includes("ord");
               const isNfts = item.traits.gen.toLowerCase().includes("og");
-              const patchedColors = item.colors;
+              const colors = getProperColors(item);
 
               if (item.index === 1) {
                 console.log({ item });
@@ -165,7 +166,7 @@ export function GalleryContainerClient({
                         sandbox="allow-scripts"
                         src={`${baseURL}/api/content/${item.number}?gen=og`}
                         style={{
-                          backgroundColor: patchedColors.background,
+                          backgroundColor: colors.background,
                         }}
                       />
                     )}
@@ -175,7 +176,7 @@ export function GalleryContainerClient({
                         sandbox="allow-scripts"
                         src={`${baseURL}/api/content/${item.id}?gen=ordinals`}
                         style={{
-                          backgroundColor: patchedColors.background,
+                          backgroundColor: colors.background,
                         }}
                       />
                     )}
@@ -185,7 +186,7 @@ export function GalleryContainerClient({
                         sandbox="allow-scripts"
                         src={`https://mainnet.api.calldata.space/ethscriptions/${item.id}/data`}
                         style={{
-                          backgroundColor: patchedColors.background,
+                          backgroundColor: colors.background,
                         }}
                       />
                     )}

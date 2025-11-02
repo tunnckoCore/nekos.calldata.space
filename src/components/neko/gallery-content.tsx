@@ -6,6 +6,8 @@ import { getAllNekos } from "@/lib/preps";
 import { createQueryClient } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
 import { GalleryFiltersComp } from "./gallery-filters";
+import { Suspense } from "react";
+import { SkeletonRow } from "./skeleton-row";
 
 interface GalleryContentProps {
   searchParams: Promise<SearchParams>;
@@ -21,22 +23,39 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   const queryClient = createQueryClient();
 
+  // turns out.. it DOES block the whole page.. on fresh reload...
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const nekoEntry = await getAllNekos(baseURL);
   const paginatedNekosPromise = getPaginatedNekos(baseURL, filters, nekoEntry);
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="flex flex-col h-full w-full">
-        {/* Sticky filter bar at top */}
         <GalleryFiltersComp allNekos={nekoEntry.data} filters={filters} />
 
-        {/* Full-height virtualizable gallery container */}
         <div className="flex-1 overflow-hidden">
-          <GalleryContainerClient
-            baseURL={baseURL}
-            filters={filters}
-            paginatedNekosPromise={paginatedNekosPromise}
-          />
+          <Suspense
+            fallback={
+              <div className="flex w-full">
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+                <SkeletonRow />
+              </div>
+            }
+          >
+            <GalleryContainerClient
+              baseURL={baseURL}
+              filters={filters}
+              paginatedNekosPromise={paginatedNekosPromise}
+            />
+          </Suspense>
         </div>
       </div>
     </HydrationBoundary>

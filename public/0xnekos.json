@@ -28,7 +28,7 @@
         "cursor": "yarn"
       },
       "sequence": 1,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
@@ -79,7 +79,7 @@
         "cursor": "milk"
       },
       "sequence": 2,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -130,7 +130,7 @@
         "cursor": "yarn"
       },
       "sequence": 3,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#ffffff",
         "eyes": "#5567ff"
@@ -181,7 +181,7 @@
         "cursor": "sausage"
       },
       "sequence": 4,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#979797",
         "eyes": "red"
@@ -232,7 +232,7 @@
         "cursor": "tuna"
       },
       "sequence": 5,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -283,7 +283,7 @@
         "cursor": "sausage"
       },
       "sequence": 6,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -334,7 +334,7 @@
         "cursor": "sausage"
       },
       "sequence": 7,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -385,7 +385,7 @@
         "cursor": "tuna"
       },
       "sequence": 8,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#fff324"
@@ -436,7 +436,7 @@
         "cursor": "sausage"
       },
       "sequence": 9,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -487,7 +487,7 @@
         "cursor": "sausage"
       },
       "sequence": 10,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -538,7 +538,7 @@
         "cursor": "sausage"
       },
       "sequence": 11,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#979797"
@@ -589,7 +589,7 @@
         "cursor": "milk"
       },
       "sequence": 12,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
@@ -640,7 +640,7 @@
         "cursor": "salmon"
       },
       "sequence": 13,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
@@ -691,7 +691,7 @@
         "cursor": "milk"
       },
       "sequence": 14,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
@@ -742,7 +742,7 @@
         "cursor": "tuna"
       },
       "sequence": 15,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
@@ -793,7 +793,7 @@
         "cursor": "tuna"
       },
       "sequence": 16,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "gold",
         "eyes": "red"
@@ -844,7 +844,7 @@
         "cursor": "yarn"
       },
       "sequence": 17,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
@@ -895,7 +895,7 @@
         "cursor": "tuna"
       },
       "sequence": 18,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#3d3d3d"
@@ -946,7 +946,7 @@
         "cursor": "yarn"
       },
       "sequence": 19,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -997,7 +997,7 @@
         "cursor": "yarn"
       },
       "sequence": 20,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#57c657"
@@ -1048,7 +1048,7 @@
         "cursor": "tuna"
       },
       "sequence": 21,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -1099,7 +1099,7 @@
         "cursor": "salmon"
       },
       "sequence": 22,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
@@ -1150,7 +1150,7 @@
         "cursor": "milk"
       },
       "sequence": 23,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#57c657"
@@ -1201,7 +1201,7 @@
         "cursor": "yarn"
       },
       "sequence": 24,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#5567ff"
@@ -1252,7 +1252,7 @@
         "cursor": "yarn"
       },
       "sequence": 25,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -1303,7 +1303,7 @@
         "cursor": "yarn"
       },
       "sequence": 26,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#ffffff",
         "eyes": "#979797"
@@ -1354,7 +1354,7 @@
         "cursor": "sausage"
       },
       "sequence": 27,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -1405,7 +1405,7 @@
         "cursor": "sausage"
       },
       "sequence": 28,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#535353",
         "eyes": "#3d3d3d"
@@ -1456,7 +1456,7 @@
         "cursor": "salmon"
       },
       "sequence": 29,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#ffffff",
         "eyes": "#979797"
@@ -1507,7 +1507,7 @@
         "cursor": "tuna"
       },
       "sequence": 30,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#535353",
         "eyes": "#979797"
@@ -1558,7 +1558,7 @@
         "cursor": "tuna"
       },
       "sequence": 31,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#c2ab99",
         "eyes": "#ff5555"
@@ -1609,7 +1609,7 @@
         "cursor": "yarn"
       },
       "sequence": 32,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -1660,7 +1660,7 @@
         "cursor": "salmon"
       },
       "sequence": 33,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -1711,7 +1711,7 @@
         "cursor": "milk"
       },
       "sequence": 34,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#ffffff",
         "eyes": "#57c657"
@@ -1762,7 +1762,7 @@
         "cursor": "sausage"
       },
       "sequence": 35,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -1813,7 +1813,7 @@
         "cursor": "tuna"
       },
       "sequence": 36,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
@@ -1864,7 +1864,7 @@
         "cursor": "sausage"
       },
       "sequence": 37,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#feff55",
         "eyes": "#979797"
@@ -1915,7 +1915,7 @@
         "cursor": "tuna"
       },
       "sequence": 38,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#fff324"
@@ -1966,7 +1966,7 @@
         "cursor": "tuna"
       },
       "sequence": 39,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -2017,7 +2017,7 @@
         "cursor": "sausage"
       },
       "sequence": 40,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -2068,7 +2068,7 @@
         "cursor": "sausage"
       },
       "sequence": 41,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -2119,7 +2119,7 @@
         "cursor": "salmon"
       },
       "sequence": 42,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#535353",
         "eyes": "#57c657"
@@ -2170,7 +2170,7 @@
         "cursor": "rubberduck"
       },
       "sequence": 43,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -2221,7 +2221,7 @@
         "cursor": "yarn"
       },
       "sequence": 44,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
@@ -2272,7 +2272,7 @@
         "cursor": "salmon"
       },
       "sequence": 45,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
@@ -2323,7 +2323,7 @@
         "cursor": "salmon"
       },
       "sequence": 46,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#ffffff",
         "eyes": "#979797"
@@ -2374,7 +2374,7 @@
         "cursor": "tuna"
       },
       "sequence": 47,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#35bed7",
         "eyes": "#57c657"
@@ -2425,7 +2425,7 @@
         "cursor": "tuna"
       },
       "sequence": 48,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#5567ff"
@@ -2476,7 +2476,7 @@
         "cursor": "tuna"
       },
       "sequence": 49,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#5567ff"
@@ -2527,7 +2527,7 @@
         "cursor": "tuna"
       },
       "sequence": 50,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -2578,7 +2578,7 @@
         "cursor": "tuna"
       },
       "sequence": 51,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -2629,7 +2629,7 @@
         "cursor": "salmon"
       },
       "sequence": 52,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -2680,7 +2680,7 @@
         "cursor": "sausage"
       },
       "sequence": 53,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -2731,7 +2731,7 @@
         "cursor": "yarn"
       },
       "sequence": 54,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#ffffff",
         "eyes": "#57c657"
@@ -2782,7 +2782,7 @@
         "cursor": "tuna"
       },
       "sequence": 55,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#feff55",
         "eyes": "#57c657"
@@ -2833,7 +2833,7 @@
         "cursor": "tuna"
       },
       "sequence": 56,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -2884,7 +2884,7 @@
         "cursor": "yarn"
       },
       "sequence": 57,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
@@ -2935,7 +2935,7 @@
         "cursor": "milk"
       },
       "sequence": 58,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#ffffff",
         "eyes": "#57c657"
@@ -2986,7 +2986,7 @@
         "cursor": "sausage"
       },
       "sequence": 59,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -3037,7 +3037,7 @@
         "cursor": "milk"
       },
       "sequence": 60,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -3088,7 +3088,7 @@
         "cursor": "yarn"
       },
       "sequence": 61,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
@@ -3139,7 +3139,7 @@
         "cursor": "tuna"
       },
       "sequence": 62,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#979797"
@@ -3190,7 +3190,7 @@
         "cursor": "tuna"
       },
       "sequence": 63,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#535353",
         "eyes": "#3d3d3d"
@@ -3241,7 +3241,7 @@
         "cursor": "tuna"
       },
       "sequence": 64,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -3292,7 +3292,7 @@
         "cursor": "yarn"
       },
       "sequence": 65,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
@@ -3343,7 +3343,7 @@
         "cursor": "yarn"
       },
       "sequence": 66,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#ffffff",
         "eyes": "#57c657"
@@ -3394,7 +3394,7 @@
         "cursor": "milk"
       },
       "sequence": 67,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -3445,7 +3445,7 @@
         "cursor": "milk"
       },
       "sequence": 68,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#a27555",
         "eyes": "#979797"
@@ -3496,7 +3496,7 @@
         "cursor": "tuna"
       },
       "sequence": 69,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#535353",
         "eyes": "#ff5555"
@@ -3547,7 +3547,7 @@
         "cursor": "milk"
       },
       "sequence": 70,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -3598,7 +3598,7 @@
         "cursor": "salmon"
       },
       "sequence": 71,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -3649,7 +3649,7 @@
         "cursor": "yarn"
       },
       "sequence": 72,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#a27555",
         "eyes": "#57c657"
@@ -3700,7 +3700,7 @@
         "cursor": "sausage"
       },
       "sequence": 73,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#ff5555"
@@ -3751,7 +3751,7 @@
         "cursor": "milk"
       },
       "sequence": 74,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -3802,7 +3802,7 @@
         "cursor": "sausage"
       },
       "sequence": 75,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
@@ -3853,7 +3853,7 @@
         "cursor": "rubberduck"
       },
       "sequence": 76,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#35bed7",
         "eyes": "#3d3d3d"
@@ -3904,7 +3904,7 @@
         "cursor": "milk"
       },
       "sequence": 77,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -3955,7 +3955,7 @@
         "cursor": "tuna"
       },
       "sequence": 78,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#57c657"
@@ -4006,7 +4006,7 @@
         "cursor": "sausage"
       },
       "sequence": 79,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
@@ -4057,7 +4057,7 @@
         "cursor": "milk"
       },
       "sequence": 80,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#35bed7",
         "eyes": "#979797"
@@ -4108,7 +4108,7 @@
         "cursor": "tuna"
       },
       "sequence": 81,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -4159,7 +4159,7 @@
         "cursor": "milk"
       },
       "sequence": 82,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#feff55",
         "eyes": "#3d3d3d"
@@ -4210,7 +4210,7 @@
         "cursor": "salmon"
       },
       "sequence": 83,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
@@ -4261,7 +4261,7 @@
         "cursor": "salmon"
       },
       "sequence": 84,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -4312,7 +4312,7 @@
         "cursor": "yarn"
       },
       "sequence": 85,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#ffffff",
         "eyes": "#979797"
@@ -4363,7 +4363,7 @@
         "cursor": "tuna"
       },
       "sequence": 86,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -4414,7 +4414,7 @@
         "cursor": "salmon"
       },
       "sequence": 87,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#191919",
         "eyes": "#979797"
@@ -4465,7 +4465,7 @@
         "cursor": "rubberduck"
       },
       "sequence": 88,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#ffffff",
         "eyes": "#979797"
@@ -4516,7 +4516,7 @@
         "cursor": "tuna"
       },
       "sequence": 89,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -4567,7 +4567,7 @@
         "cursor": "sausage"
       },
       "sequence": 90,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#ffffff",
         "eyes": "#57c657"
@@ -4618,7 +4618,7 @@
         "cursor": "salmon"
       },
       "sequence": 91,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#57c657"
@@ -4669,7 +4669,7 @@
         "cursor": "milk"
       },
       "sequence": 92,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
@@ -4720,7 +4720,7 @@
         "cursor": "sausage"
       },
       "sequence": 93,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#fff324"
@@ -4771,7 +4771,7 @@
         "cursor": "salmon"
       },
       "sequence": 94,
-      "colors": {
+      "extractedColors": {
         "background": "#bbbbbb",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -4822,7 +4822,7 @@
         "cursor": "yarn"
       },
       "sequence": 95,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#ffffff",
         "eyes": "#3d3d3d"
@@ -4873,7 +4873,7 @@
         "cursor": "salmon"
       },
       "sequence": 96,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -4924,8 +4924,8 @@
         "cursor": "salmon"
       },
       "sequence": 97,
-      "colors": {
-        "background": "#3d3d3d",
+      "extractedColors": {
+        "background": "#ffc9f7",
         "cat": "gold",
         "eyes": "red"
       },
@@ -4975,7 +4975,7 @@
         "cursor": "milk"
       },
       "sequence": 98,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
@@ -5026,7 +5026,7 @@
         "cursor": "yarn"
       },
       "sequence": 99,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -5077,7 +5077,7 @@
         "cursor": "salmon"
       },
       "sequence": 100,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
@@ -5129,7 +5129,7 @@
         "cursor": "mouse"
       },
       "sequence": 101,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#57c657"
@@ -5181,7 +5181,7 @@
         "cursor": "mouse"
       },
       "sequence": 102,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#35bed7",
         "eyes": "#57c657"
@@ -5233,7 +5233,7 @@
         "cursor": "yarn"
       },
       "sequence": 103,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
@@ -5285,7 +5285,7 @@
         "cursor": "snake"
       },
       "sequence": 104,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -5337,7 +5337,7 @@
         "cursor": "snake"
       },
       "sequence": 105,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#fff",
         "eyes": "#979797"
@@ -5389,7 +5389,7 @@
         "cursor": "yarn"
       },
       "sequence": 106,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
@@ -5441,7 +5441,7 @@
         "cursor": "salmon"
       },
       "sequence": 107,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
@@ -5493,7 +5493,7 @@
         "cursor": "mouse"
       },
       "sequence": 108,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#fff324"
@@ -5545,7 +5545,7 @@
         "cursor": "yarn"
       },
       "sequence": 109,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -5597,7 +5597,7 @@
         "cursor": "sausage"
       },
       "sequence": 110,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -5649,7 +5649,7 @@
         "cursor": "salmon"
       },
       "sequence": 111,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -5701,7 +5701,7 @@
         "cursor": "sausage"
       },
       "sequence": 112,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#535353",
         "eyes": "#3d3d3d"
@@ -5753,7 +5753,7 @@
         "cursor": "mouse"
       },
       "sequence": 113,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#feff55",
         "eyes": "#57c657"
@@ -5805,7 +5805,7 @@
         "cursor": "mouse"
       },
       "sequence": 114,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -5857,7 +5857,7 @@
         "cursor": "mouse"
       },
       "sequence": 115,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#fff324"
@@ -5909,7 +5909,7 @@
         "cursor": "milk"
       },
       "sequence": 116,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -5961,7 +5961,7 @@
         "cursor": "salmon"
       },
       "sequence": 117,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
@@ -6013,7 +6013,7 @@
         "cursor": "yarn"
       },
       "sequence": 118,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#fff",
         "eyes": "#5567ff"
@@ -6065,7 +6065,7 @@
         "cursor": "mouse"
       },
       "sequence": 119,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -6117,7 +6117,7 @@
         "cursor": "yarn"
       },
       "sequence": 120,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
@@ -6169,7 +6169,7 @@
         "cursor": "mouse"
       },
       "sequence": 121,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#979797"
@@ -6221,7 +6221,7 @@
         "cursor": "yarn"
       },
       "sequence": 122,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#fff",
         "eyes": "#979797"
@@ -6273,7 +6273,7 @@
         "cursor": "sausage"
       },
       "sequence": 123,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#f55"
@@ -6325,7 +6325,7 @@
         "cursor": "sausage"
       },
       "sequence": 124,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -6377,7 +6377,7 @@
         "cursor": "salmon"
       },
       "sequence": 125,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#fff",
         "eyes": "#979797"
@@ -6429,7 +6429,7 @@
         "cursor": "mouse"
       },
       "sequence": 126,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -6481,7 +6481,7 @@
         "cursor": "mouse"
       },
       "sequence": 127,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#535353",
         "eyes": "#f55"
@@ -6533,7 +6533,7 @@
         "cursor": "yarn"
       },
       "sequence": 128,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#57c657"
@@ -6585,7 +6585,7 @@
         "cursor": "salmon"
       },
       "sequence": 129,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#5567ff"
@@ -6637,7 +6637,7 @@
         "cursor": "salmon"
       },
       "sequence": 130,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -6689,7 +6689,7 @@
         "cursor": "mouse"
       },
       "sequence": 131,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -6741,7 +6741,7 @@
         "cursor": "snake"
       },
       "sequence": 132,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#35bed7",
         "eyes": "#3d3d3d"
@@ -6793,7 +6793,7 @@
         "cursor": "mouse"
       },
       "sequence": 133,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -6845,7 +6845,7 @@
         "cursor": "mouse"
       },
       "sequence": 134,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "gold",
         "eyes": "red"
@@ -6897,7 +6897,7 @@
         "cursor": "sausage"
       },
       "sequence": 135,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -6949,7 +6949,7 @@
         "cursor": "salmon"
       },
       "sequence": 136,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -7001,7 +7001,7 @@
         "cursor": "mouse"
       },
       "sequence": 137,
-      "colors": {
+      "extractedColors": {
         "background": "#1d1d1d",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
@@ -7053,7 +7053,7 @@
         "cursor": "milk"
       },
       "sequence": 138,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
@@ -7105,7 +7105,7 @@
         "cursor": "yarn"
       },
       "sequence": 139,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#fff",
         "eyes": "#979797"
@@ -7157,7 +7157,7 @@
         "cursor": "milk"
       },
       "sequence": 140,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
@@ -7209,7 +7209,7 @@
         "cursor": "sausage"
       },
       "sequence": 141,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#fff324"
@@ -7261,7 +7261,7 @@
         "cursor": "sausage"
       },
       "sequence": 142,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#979797",
         "eyes": "red"
@@ -7313,7 +7313,7 @@
         "cursor": "milk"
       },
       "sequence": 143,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -7365,7 +7365,7 @@
         "cursor": "sausage"
       },
       "sequence": 144,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
@@ -7417,7 +7417,7 @@
         "cursor": "yarn"
       },
       "sequence": 145,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#fff",
         "eyes": "#57c657"
@@ -7469,7 +7469,7 @@
         "cursor": "sausage"
       },
       "sequence": 146,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#5567ff"
@@ -7521,7 +7521,7 @@
         "cursor": "yarn"
       },
       "sequence": 147,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#a27555",
         "eyes": "#57c657"
@@ -7573,7 +7573,7 @@
         "cursor": "milk"
       },
       "sequence": 148,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#fff",
         "eyes": "#57c657"
@@ -7625,7 +7625,7 @@
         "cursor": "sausage"
       },
       "sequence": 149,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -7677,7 +7677,7 @@
         "cursor": "salmon"
       },
       "sequence": 150,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#535353",
         "eyes": "#57c657"
@@ -7729,7 +7729,7 @@
         "cursor": "sausage"
       },
       "sequence": 151,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -7781,7 +7781,7 @@
         "cursor": "mouse"
       },
       "sequence": 152,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#5567ff"
@@ -7833,7 +7833,7 @@
         "cursor": "mouse"
       },
       "sequence": 153,
-      "colors": {
+      "extractedColors": {
         "background": "#d5ffc9",
         "cat": "#c2ab99",
         "eyes": "#f55"
@@ -7885,7 +7885,7 @@
         "cursor": "salmon"
       },
       "sequence": 154,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -7937,7 +7937,7 @@
         "cursor": "milk"
       },
       "sequence": 155,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -7989,7 +7989,7 @@
         "cursor": "sausage"
       },
       "sequence": 156,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -8041,7 +8041,7 @@
         "cursor": "yarn"
       },
       "sequence": 157,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#fff",
         "eyes": "#57c657"
@@ -8093,7 +8093,7 @@
         "cursor": "salmon"
       },
       "sequence": 158,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#fff",
         "eyes": "#979797"
@@ -8145,7 +8145,7 @@
         "cursor": "sausage"
       },
       "sequence": 159,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -8197,7 +8197,7 @@
         "cursor": "mouse"
       },
       "sequence": 160,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -8249,7 +8249,7 @@
         "cursor": "salmon"
       },
       "sequence": 161,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#979797"
@@ -8301,7 +8301,7 @@
         "cursor": "yarn"
       },
       "sequence": 162,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#35bed7",
         "eyes": "#5567ff"
@@ -8353,7 +8353,7 @@
         "cursor": "salmon"
       },
       "sequence": 163,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -8405,7 +8405,7 @@
         "cursor": "mouse"
       },
       "sequence": 164,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#535353",
         "eyes": "#979797"
@@ -8457,7 +8457,7 @@
         "cursor": "salmon"
       },
       "sequence": 165,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
@@ -8509,7 +8509,7 @@
         "cursor": "salmon"
       },
       "sequence": 166,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#57c657"
@@ -8561,7 +8561,7 @@
         "cursor": "sausage"
       },
       "sequence": 167,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#fff",
         "eyes": "#57c657"
@@ -8613,7 +8613,7 @@
         "cursor": "milk"
       },
       "sequence": 168,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#191919",
         "eyes": "#5567ff"
@@ -8665,7 +8665,7 @@
         "cursor": "milk"
       },
       "sequence": 169,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#a27555",
         "eyes": "#3d3d3d"
@@ -8717,7 +8717,7 @@
         "cursor": "yarn"
       },
       "sequence": 170,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "#191919",
         "eyes": "#979797"
@@ -8769,7 +8769,7 @@
         "cursor": "mouse"
       },
       "sequence": 171,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
@@ -8821,7 +8821,7 @@
         "cursor": "mouse"
       },
       "sequence": 172,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#191919",
         "eyes": "#3d3d3d"
@@ -8873,7 +8873,7 @@
         "cursor": "yarn"
       },
       "sequence": 173,
-      "colors": {
+      "extractedColors": {
         "background": "#fffcc9",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -8925,7 +8925,7 @@
         "cursor": "yarn"
       },
       "sequence": 174,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -8977,7 +8977,7 @@
         "cursor": "mouse"
       },
       "sequence": 175,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#191919",
         "eyes": "#5567ff"
@@ -9029,7 +9029,7 @@
         "cursor": "yarn"
       },
       "sequence": 176,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -9081,7 +9081,7 @@
         "cursor": "mouse"
       },
       "sequence": 177,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#535353",
         "eyes": "#3d3d3d"
@@ -9133,7 +9133,7 @@
         "cursor": "yarn"
       },
       "sequence": 178,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#fff",
         "eyes": "#5567ff"
@@ -9185,7 +9185,7 @@
         "cursor": "salmon"
       },
       "sequence": 179,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#c2ab99",
         "eyes": "#3d3d3d"
@@ -9237,7 +9237,7 @@
         "cursor": "mouse"
       },
       "sequence": 180,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#c2ab99",
         "eyes": "#979797"
@@ -9289,7 +9289,7 @@
         "cursor": "sausage"
       },
       "sequence": 181,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#feff55",
         "eyes": "#979797"
@@ -9341,7 +9341,7 @@
         "cursor": "salmon"
       },
       "sequence": 182,
-      "colors": {
+      "extractedColors": {
         "background": "#bbb",
         "cat": "#191919",
         "eyes": "#979797"
@@ -9393,7 +9393,7 @@
         "cursor": "mouse"
       },
       "sequence": 183,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#535353",
         "eyes": "#3d3d3d"
@@ -9445,7 +9445,7 @@
         "cursor": "milk"
       },
       "sequence": 184,
-      "colors": {
+      "extractedColors": {
         "background": "#ff9d9d",
         "cat": "#feff55",
         "eyes": "#3d3d3d"
@@ -9497,7 +9497,7 @@
         "cursor": "milk"
       },
       "sequence": 185,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#fff",
         "eyes": "#3d3d3d"
@@ -9549,7 +9549,7 @@
         "cursor": "yarn"
       },
       "sequence": 186,
-      "colors": {
+      "extractedColors": {
         "background": "#ffc9f7",
         "cat": "#feff55",
         "eyes": "#979797"
@@ -9601,7 +9601,7 @@
         "cursor": "yarn"
       },
       "sequence": 187,
-      "colors": {
+      "extractedColors": {
         "background": "#ffdb9d",
         "cat": "#a27555",
         "eyes": "#979797"
@@ -9653,7 +9653,7 @@
         "cursor": "milk"
       },
       "sequence": 188,
-      "colors": {
+      "extractedColors": {
         "background": "#ebc9ff",
         "cat": "#a27555",
         "eyes": "#5567ff"
@@ -9704,7 +9704,7 @@
         "cursor": "mouse"
       },
       "sequence": 189,
-      "colors": {
+      "extractedColors": {
         "background": "#c9e0ff",
         "cat": "gold",
         "eyes": "red"
@@ -9755,7 +9755,7 @@
         "cursor": "cheese wedge"
       },
       "sequence": 190,
-      "colors": {
+      "extractedColors": {
         "background": "cadetblue",
         "cat": "aquamarine",
         "eyes": "snow"
@@ -9806,7 +9806,7 @@
         "cursor": "shrimp"
       },
       "sequence": 191,
-      "colors": {
+      "extractedColors": {
         "background": "whitesmoke",
         "cat": "navajowhite",
         "eyes": "maroon"
@@ -9857,7 +9857,7 @@
         "cursor": "popcorn"
       },
       "sequence": 192,
-      "colors": {
+      "extractedColors": {
         "background": "mediumpurple",
         "cat": "darkgoldenrod",
         "eyes": "lightskyblue"
@@ -9908,7 +9908,7 @@
         "cursor": "lobster"
       },
       "sequence": 193,
-      "colors": {
+      "extractedColors": {
         "background": "crimson",
         "cat": "lightpink",
         "eyes": "slateblue"
@@ -9959,7 +9959,7 @@
         "cursor": "blowfish"
       },
       "sequence": 194,
-      "colors": {
+      "extractedColors": {
         "background": "darkslateblue",
         "cat": "chocolate",
         "eyes": "darkcyan"
@@ -10010,7 +10010,7 @@
         "cursor": "blowfish"
       },
       "sequence": 195,
-      "colors": {
+      "extractedColors": {
         "background": "mediumorchid",
         "cat": "palevioletred",
         "eyes": "lightyellow"
@@ -10061,7 +10061,7 @@
         "cursor": "mouse"
       },
       "sequence": 196,
-      "colors": {
+      "extractedColors": {
         "background": "darkslategrey",
         "cat": "lightpink",
         "eyes": "darkolivegreen"
@@ -10112,7 +10112,7 @@
         "cursor": "mouse"
       },
       "sequence": 197,
-      "colors": {
+      "extractedColors": {
         "background": "lemonchiffon",
         "cat": "whitesmoke",
         "eyes": "lightyellow"
@@ -10163,7 +10163,7 @@
         "cursor": "mouse"
       },
       "sequence": 198,
-      "colors": {
+      "extractedColors": {
         "background": "lavender",
         "cat": "peru",
         "eyes": "deeppink"
@@ -10214,7 +10214,7 @@
         "cursor": "pineapple"
       },
       "sequence": 199,
-      "colors": {
+      "extractedColors": {
         "background": "rebeccapurple",
         "cat": "blue",
         "eyes": "darkviolet"
@@ -10265,7 +10265,7 @@
         "cursor": "grapes"
       },
       "sequence": 200,
-      "colors": {
+      "extractedColors": {
         "background": "ivory",
         "cat": "plum",
         "eyes": "crimson"
@@ -10316,7 +10316,7 @@
         "cursor": "tangerine"
       },
       "sequence": 201,
-      "colors": {
+      "extractedColors": {
         "background": "snow",
         "cat": "moccasin",
         "eyes": "dodgerblue"
@@ -10367,7 +10367,7 @@
         "cursor": "blowfish"
       },
       "sequence": 202,
-      "colors": {
+      "extractedColors": {
         "background": "lawngreen",
         "cat": "indigo",
         "eyes": "orchid"
@@ -10418,7 +10418,7 @@
         "cursor": "blowfish"
       },
       "sequence": 203,
-      "colors": {
+      "extractedColors": {
         "background": "honeydew",
         "cat": "aqua",
         "eyes": "navajowhite"
@@ -10469,7 +10469,7 @@
         "cursor": "tangerine"
       },
       "sequence": 204,
-      "colors": {
+      "extractedColors": {
         "background": "silver",
         "cat": "pink",
         "eyes": "lightsteelblue"
@@ -10520,7 +10520,7 @@
         "cursor": "pineapple"
       },
       "sequence": 205,
-      "colors": {
+      "extractedColors": {
         "background": "honeydew",
         "cat": "chocolate",
         "eyes": "violet"
@@ -10571,7 +10571,7 @@
         "cursor": "oyster"
       },
       "sequence": 206,
-      "colors": {
+      "extractedColors": {
         "background": "sienna",
         "cat": "cyan",
         "eyes": "cornflowerblue"
@@ -10622,7 +10622,7 @@
         "cursor": "blowfish"
       },
       "sequence": 207,
-      "colors": {
+      "extractedColors": {
         "background": "lightcoral",
         "cat": "ivory",
         "eyes": "dimgrey"
@@ -10673,7 +10673,7 @@
         "cursor": "lobster"
       },
       "sequence": 208,
-      "colors": {
+      "extractedColors": {
         "background": "lightblue",
         "cat": "mediumslateblue",
         "eyes": "darksalmon"
@@ -10724,7 +10724,7 @@
         "cursor": "ear of corn"
       },
       "sequence": 209,
-      "colors": {
+      "extractedColors": {
         "background": "aquamarine",
         "cat": "tomato",
         "eyes": "coral"
@@ -10775,7 +10775,7 @@
         "cursor": "ear of corn"
       },
       "sequence": 210,
-      "colors": {
+      "extractedColors": {
         "background": "maroon",
         "cat": "moccasin",
         "eyes": "lightseagreen"
@@ -10826,7 +10826,7 @@
         "cursor": "ear of corn"
       },
       "sequence": 211,
-      "colors": {
+      "extractedColors": {
         "background": "moccasin",
         "cat": "coral",
         "eyes": "midnightblue"
@@ -10877,7 +10877,7 @@
         "cursor": "blowfish"
       },
       "sequence": 212,
-      "colors": {
+      "extractedColors": {
         "background": "cadetblue",
         "cat": "mediumaquamarine",
         "eyes": "gray"
@@ -10928,7 +10928,7 @@
         "cursor": "mouse"
       },
       "sequence": 213,
-      "colors": {
+      "extractedColors": {
         "background": "lawngreen",
         "cat": "mediumvioletred",
         "eyes": "lightcyan"
@@ -10979,7 +10979,7 @@
         "cursor": "shark"
       },
       "sequence": 214,
-      "colors": {
+      "extractedColors": {
         "background": "limegreen",
         "cat": "dimgrey",
         "eyes": "springgreen"
@@ -11030,7 +11030,7 @@
         "cursor": "tangerine"
       },
       "sequence": 215,
-      "colors": {
+      "extractedColors": {
         "background": "dimgray",
         "cat": "darkcyan",
         "eyes": "blanchedalmond"
@@ -11081,7 +11081,7 @@
         "cursor": "watermelon"
       },
       "sequence": 216,
-      "colors": {
+      "extractedColors": {
         "background": "teal",
         "cat": "steelblue",
         "eyes": "slateblue"
@@ -11132,7 +11132,7 @@
         "cursor": "cheese wedge"
       },
       "sequence": 217,
-      "colors": {
+      "extractedColors": {
         "background": "springgreen",
         "cat": "darkkhaki",
         "eyes": "palegreen"
@@ -11183,7 +11183,7 @@
         "cursor": "tropical fish"
       },
       "sequence": 218,
-      "colors": {
+      "extractedColors": {
         "background": "mediumturquoise",
         "cat": "violet",
         "eyes": "mintcream"
@@ -11234,7 +11234,7 @@
         "cursor": "oyster"
       },
       "sequence": 219,
-      "colors": {
+      "extractedColors": {
         "background": "darkorange",
         "cat": "forestgreen",
         "eyes": "lightyellow"
@@ -11285,7 +11285,7 @@
         "cursor": "grapes"
       },
       "sequence": 220,
-      "colors": {
+      "extractedColors": {
         "background": "palegreen",
         "cat": "saddlebrown",
         "eyes": "mediumslateblue"
@@ -11336,7 +11336,7 @@
         "cursor": "bacon"
       },
       "sequence": 221,
-      "colors": {
+      "extractedColors": {
         "background": "lightgrey",
         "cat": "darksalmon",
         "eyes": "lime"
@@ -11387,7 +11387,7 @@
         "cursor": "cheese wedge"
       },
       "sequence": 222,
-      "colors": {
+      "extractedColors": {
         "background": "mintcream",
         "cat": "limegreen",
         "eyes": "goldenrod"
@@ -11438,7 +11438,7 @@
         "cursor": "octopus"
       },
       "sequence": 223,
-      "colors": {
+      "extractedColors": {
         "background": "lightyellow",
         "cat": "ghostwhite",
         "eyes": "aquamarine"
@@ -11489,7 +11489,7 @@
         "cursor": "yarn"
       },
       "sequence": 224,
-      "colors": {
+      "extractedColors": {
         "background": "lightcoral",
         "cat": "lemonchiffon",
         "eyes": "antiquewhite"
@@ -11540,7 +11540,7 @@
         "cursor": "mouse"
       },
       "sequence": 225,
-      "colors": {
+      "extractedColors": {
         "background": "orange",
         "cat": "mistyrose",
         "eyes": "indigo"
@@ -11591,7 +11591,7 @@
         "cursor": "bacon"
       },
       "sequence": 226,
-      "colors": {
+      "extractedColors": {
         "background": "wheat",
         "cat": "lightsteelblue",
         "eyes": "darkcyan"
@@ -11642,7 +11642,7 @@
         "cursor": "cucumber"
       },
       "sequence": 227,
-      "colors": {
+      "extractedColors": {
         "background": "chartreuse",
         "cat": "plum",
         "eyes": "cadetblue"
@@ -11693,7 +11693,7 @@
         "cursor": "fish"
       },
       "sequence": 228,
-      "colors": {
+      "extractedColors": {
         "background": "firebrick",
         "cat": "darksalmon",
         "eyes": "navy"
@@ -11744,7 +11744,7 @@
         "cursor": "yarn"
       },
       "sequence": 229,
-      "colors": {
+      "extractedColors": {
         "background": "mediumpurple",
         "cat": "rosybrown",
         "eyes": "navy"
@@ -11795,7 +11795,7 @@
         "cursor": "mouse"
       },
       "sequence": 230,
-      "colors": {
+      "extractedColors": {
         "background": "crimson",
         "cat": "mediumslateblue",
         "eyes": "lightyellow"
@@ -11846,7 +11846,7 @@
         "cursor": "blowfish"
       },
       "sequence": 231,
-      "colors": {
+      "extractedColors": {
         "background": "palevioletred",
         "cat": "lightseagreen",
         "eyes": "violet"
@@ -11897,7 +11897,7 @@
         "cursor": "yarn"
       },
       "sequence": 232,
-      "colors": {
+      "extractedColors": {
         "background": "chocolate",
         "cat": "brown",
         "eyes": "palegoldenrod"
@@ -11948,7 +11948,7 @@
         "cursor": "blowfish"
       },
       "sequence": 233,
-      "colors": {
+      "extractedColors": {
         "background": "darkblue",
         "cat": "limegreen",
         "eyes": "mediumslateblue"
@@ -11999,7 +11999,7 @@
         "cursor": "cucumber"
       },
       "sequence": 234,
-      "colors": {
+      "extractedColors": {
         "background": "cornflowerblue",
         "cat": "mediumturquoise",
         "eyes": "cadetblue"
@@ -12050,7 +12050,7 @@
         "cursor": "cucumber"
       },
       "sequence": 235,
-      "colors": {
+      "extractedColors": {
         "background": "darkslategrey",
         "cat": "mediumslateblue",
         "eyes": "powderblue"
@@ -12101,7 +12101,7 @@
         "cursor": "lobster"
       },
       "sequence": 236,
-      "colors": {
+      "extractedColors": {
         "background": "mediumpurple",
         "cat": "indigo",
         "eyes": "darkred"
@@ -12152,7 +12152,7 @@
         "cursor": "fish"
       },
       "sequence": 237,
-      "colors": {
+      "extractedColors": {
         "background": "darkgrey",
         "cat": "palegoldenrod",
         "eyes": "darkorange"
@@ -12203,7 +12203,7 @@
         "cursor": "watermelon"
       },
       "sequence": 238,
-      "colors": {
+      "extractedColors": {
         "background": "tan",
         "cat": "darkblue",
         "eyes": "mediumvioletred"
@@ -12254,7 +12254,7 @@
         "cursor": "oyster"
       },
       "sequence": 239,
-      "colors": {
+      "extractedColors": {
         "background": "lightslategrey",
         "cat": "silver",
         "eyes": "darkgrey"
@@ -12305,7 +12305,7 @@
         "cursor": "grapes"
       },
       "sequence": 240,
-      "colors": {
+      "extractedColors": {
         "background": "white",
         "cat": "paleturquoise",
         "eyes": "blueviolet"
@@ -12356,7 +12356,7 @@
         "cursor": "tropical fish"
       },
       "sequence": 241,
-      "colors": {
+      "extractedColors": {
         "background": "goldenrod",
         "cat": "lightpink",
         "eyes": "olivedrab"
@@ -12407,7 +12407,7 @@
         "cursor": "crab"
       },
       "sequence": 242,
-      "colors": {
+      "extractedColors": {
         "background": "lightsalmon",
         "cat": "wheat",
         "eyes": "blueviolet"
@@ -12458,7 +12458,7 @@
         "cursor": "yarn"
       },
       "sequence": 243,
-      "colors": {
+      "extractedColors": {
         "background": "darkgreen",
         "cat": "aquamarine",
         "eyes": "darkslategrey"
@@ -12509,7 +12509,7 @@
         "cursor": "shark"
       },
       "sequence": 244,
-      "colors": {
+      "extractedColors": {
         "background": "violet",
         "cat": "darkolivegreen",
         "eyes": "indianred"
@@ -12560,7 +12560,7 @@
         "cursor": "lobster"
       },
       "sequence": 245,
-      "colors": {
+      "extractedColors": {
         "background": "seashell",
         "cat": "burlywood",
         "eyes": "dodgerblue"
@@ -12611,7 +12611,7 @@
         "cursor": "shark"
       },
       "sequence": 246,
-      "colors": {
+      "extractedColors": {
         "background": "goldenrod",
         "cat": "darkslateblue",
         "eyes": "azure"
@@ -12662,7 +12662,7 @@
         "cursor": "yarn"
       },
       "sequence": 247,
-      "colors": {
+      "extractedColors": {
         "background": "indigo",
         "cat": "gold",
         "eyes": "indianred"
@@ -12713,7 +12713,7 @@
         "cursor": "oyster"
       },
       "sequence": 248,
-      "colors": {
+      "extractedColors": {
         "background": "oldlace",
         "cat": "tan",
         "eyes": "gray"
@@ -12764,7 +12764,7 @@
         "cursor": "mouse"
       },
       "sequence": 249,
-      "colors": {
+      "extractedColors": {
         "background": "cornsilk",
         "cat": "magenta",
         "eyes": "peachpuff"
@@ -12815,7 +12815,7 @@
         "cursor": "mouse"
       },
       "sequence": 250,
-      "colors": {
+      "extractedColors": {
         "background": "navy",
         "cat": "chocolate",
         "eyes": "darkkhaki"
@@ -12866,7 +12866,7 @@
         "cursor": "mouse"
       },
       "sequence": 251,
-      "colors": {
+      "extractedColors": {
         "background": "firebrick",
         "cat": "darkmagenta",
         "eyes": "honeydew"
@@ -12917,7 +12917,7 @@
         "cursor": "lobster"
       },
       "sequence": 252,
-      "colors": {
+      "extractedColors": {
         "background": "lightseagreen",
         "cat": "maroon",
         "eyes": "linen"
@@ -12968,7 +12968,7 @@
         "cursor": "yarn"
       },
       "sequence": 253,
-      "colors": {
+      "extractedColors": {
         "background": "lightpink",
         "cat": "saddlebrown",
         "eyes": "burlywood"
@@ -13019,7 +13019,7 @@
         "cursor": "blowfish"
       },
       "sequence": 254,
-      "colors": {
+      "extractedColors": {
         "background": "crimson",
         "cat": "darkorange",
         "eyes": "mediumpurple"
@@ -13070,7 +13070,7 @@
         "cursor": "bacon"
       },
       "sequence": 255,
-      "colors": {
+      "extractedColors": {
         "background": "tomato",
         "cat": "hotpink",
         "eyes": "silver"
@@ -13121,7 +13121,7 @@
         "cursor": "mango"
       },
       "sequence": 256,
-      "colors": {
+      "extractedColors": {
         "background": "forestgreen",
         "cat": "olivedrab",
         "eyes": "darkorange"
@@ -13172,7 +13172,7 @@
         "cursor": "mango"
       },
       "sequence": 257,
-      "colors": {
+      "extractedColors": {
         "background": "yellowgreen",
         "cat": "lightskyblue",
         "eyes": "lightgray"
@@ -13223,7 +13223,7 @@
         "cursor": "watermelon"
       },
       "sequence": 258,
-      "colors": {
+      "extractedColors": {
         "background": "black",
         "cat": "powderblue",
         "eyes": "darkcyan"
@@ -13274,7 +13274,7 @@
         "cursor": "mouse"
       },
       "sequence": 259,
-      "colors": {
+      "extractedColors": {
         "background": "lightblue",
         "cat": "mediumpurple",
         "eyes": "saddlebrown"
@@ -13325,7 +13325,7 @@
         "cursor": "eggplant"
       },
       "sequence": 260,
-      "colors": {
+      "extractedColors": {
         "background": "palevioletred",
         "cat": "orchid",
         "eyes": "darkgreen"
@@ -13376,7 +13376,7 @@
         "cursor": "yarn"
       },
       "sequence": 261,
-      "colors": {
+      "extractedColors": {
         "background": "limegreen",
         "cat": "silver",
         "eyes": "navajowhite"
@@ -13427,7 +13427,7 @@
         "cursor": "squid"
       },
       "sequence": 262,
-      "colors": {
+      "extractedColors": {
         "background": "royalblue",
         "cat": "orange",
         "eyes": "rebeccapurple"
@@ -13478,7 +13478,7 @@
         "cursor": "blowfish"
       },
       "sequence": 263,
-      "colors": {
+      "extractedColors": {
         "background": "saddlebrown",
         "cat": "coral",
         "eyes": "moccasin"
@@ -13529,7 +13529,7 @@
         "cursor": "blowfish"
       },
       "sequence": 264,
-      "colors": {
+      "extractedColors": {
         "background": "snow",
         "cat": "lightcyan",
         "eyes": "darkmagenta"
@@ -13580,7 +13580,7 @@
         "cursor": "blowfish"
       },
       "sequence": 265,
-      "colors": {
+      "extractedColors": {
         "background": "rosybrown",
         "cat": "mintcream",
         "eyes": "mediumseagreen"
@@ -13631,7 +13631,7 @@
         "cursor": "fish cake"
       },
       "sequence": 266,
-      "colors": {
+      "extractedColors": {
         "background": "paleturquoise",
         "cat": "ghostwhite",
         "eyes": "mediumblue"
@@ -13682,7 +13682,7 @@
         "cursor": "yarn"
       },
       "sequence": 267,
-      "colors": {
+      "extractedColors": {
         "background": "black",
         "cat": "royalblue",
         "eyes": "mediumspringgreen"
@@ -13733,7 +13733,7 @@
         "cursor": "shark"
       },
       "sequence": 268,
-      "colors": {
+      "extractedColors": {
         "background": "palegreen",
         "cat": "sienna",
         "eyes": "forestgreen"
@@ -13784,7 +13784,7 @@
         "cursor": "shrimp"
       },
       "sequence": 269,
-      "colors": {
+      "extractedColors": {
         "background": "orange",
         "cat": "sandybrown",
         "eyes": "silver"
@@ -13835,7 +13835,7 @@
         "cursor": "mouse"
       },
       "sequence": 270,
-      "colors": {
+      "extractedColors": {
         "background": "lightcyan",
         "cat": "sienna",
         "eyes": "darkorchid"
@@ -13886,7 +13886,7 @@
         "cursor": "oyster"
       },
       "sequence": 271,
-      "colors": {
+      "extractedColors": {
         "background": "oldlace",
         "cat": "slategrey",
         "eyes": "bisque"
@@ -13937,7 +13937,7 @@
         "cursor": "yarn"
       },
       "sequence": 272,
-      "colors": {
+      "extractedColors": {
         "background": "forestgreen",
         "cat": "grey",
         "eyes": "purple"
@@ -13988,7 +13988,7 @@
         "cursor": "shark"
       },
       "sequence": 273,
-      "colors": {
+      "extractedColors": {
         "background": "turquoise",
         "cat": "lightskyblue",
         "eyes": "moccasin"
@@ -14039,7 +14039,7 @@
         "cursor": "cucumber"
       },
       "sequence": 274,
-      "colors": {
+      "extractedColors": {
         "background": "mediumorchid",
         "cat": "grey",
         "eyes": "white"
@@ -14090,7 +14090,7 @@
         "cursor": "fish cake"
       },
       "sequence": 275,
-      "colors": {
+      "extractedColors": {
         "background": "palegreen",
         "cat": "indianred",
         "eyes": "mediumorchid"
@@ -14141,7 +14141,7 @@
         "cursor": "lobster"
       },
       "sequence": 276,
-      "colors": {
+      "extractedColors": {
         "background": "sienna",
         "cat": "floralwhite",
         "eyes": "teal"
@@ -14192,7 +14192,7 @@
         "cursor": "cucumber"
       },
       "sequence": 277,
-      "colors": {
+      "extractedColors": {
         "background": "deeppink",
         "cat": "lightpink",
         "eyes": "skyblue"
@@ -14243,7 +14243,7 @@
         "cursor": "peach"
       },
       "sequence": 278,
-      "colors": {
+      "extractedColors": {
         "background": "mediumslateblue",
         "cat": "lightgoldenrodyellow",
         "eyes": "whitesmoke"
@@ -14294,7 +14294,7 @@
         "cursor": "lobster"
       },
       "sequence": 279,
-      "colors": {
+      "extractedColors": {
         "background": "seashell",
         "cat": "rebeccapurple",
         "eyes": "pink"
@@ -14345,7 +14345,7 @@
         "cursor": "pretzel"
       },
       "sequence": 280,
-      "colors": {
+      "extractedColors": {
         "background": "crimson",
         "cat": "forestgreen",
         "eyes": "mediumorchid"
@@ -14396,7 +14396,7 @@
         "cursor": "watermelon"
       },
       "sequence": 281,
-      "colors": {
+      "extractedColors": {
         "background": "aquamarine",
         "cat": "springgreen",
         "eyes": "slategrey"
@@ -14447,7 +14447,7 @@
         "cursor": "sushi"
       },
       "sequence": 282,
-      "colors": {
+      "extractedColors": {
         "background": "salmon",
         "cat": "seashell",
         "eyes": "rosybrown"
@@ -14498,7 +14498,7 @@
         "cursor": "shrimp"
       },
       "sequence": 283,
-      "colors": {
+      "extractedColors": {
         "background": "olive",
         "cat": "gainsboro",
         "eyes": "cornflowerblue"
@@ -14549,7 +14549,7 @@
         "cursor": "watermelon"
       },
       "sequence": 284,
-      "colors": {
+      "extractedColors": {
         "background": "darkgrey",
         "cat": "navajowhite",
         "eyes": "darkgoldenrod"
@@ -14600,7 +14600,7 @@
         "cursor": "watermelon"
       },
       "sequence": 285,
-      "colors": {
+      "extractedColors": {
         "background": "orchid",
         "cat": "crimson",
         "eyes": "fuchsia"
@@ -14651,7 +14651,7 @@
         "cursor": "yarn"
       },
       "sequence": 286,
-      "colors": {
+      "extractedColors": {
         "background": "floralwhite",
         "cat": "lightsteelblue",
         "eyes": "yellow"
@@ -14702,7 +14702,7 @@
         "cursor": "ear of corn"
       },
       "sequence": 287,
-      "colors": {
+      "extractedColors": {
         "background": "darkorchid",
         "cat": "mediumturquoise",
         "eyes": "midnightblue"
@@ -14753,7 +14753,7 @@
         "cursor": "blowfish"
       },
       "sequence": 288,
-      "colors": {
+      "extractedColors": {
         "background": "wheat",
         "cat": "darkgrey",
         "eyes": "rebeccapurple"
@@ -14804,7 +14804,7 @@
         "cursor": "oyster"
       },
       "sequence": 289,
-      "colors": {
+      "extractedColors": {
         "background": "lightyellow",
         "cat": "oldlace",
         "eyes": "lightcoral"
@@ -14855,7 +14855,7 @@
         "cursor": "popcorn"
       },
       "sequence": 290,
-      "colors": {
+      "extractedColors": {
         "background": "crimson",
         "cat": "green",
         "eyes": "slategray"
@@ -14906,7 +14906,7 @@
         "cursor": "sushi"
       },
       "sequence": 291,
-      "colors": {
+      "extractedColors": {
         "background": "greenyellow",
         "cat": "orange",
         "eyes": "olive"
@@ -14957,7 +14957,7 @@
         "cursor": "mouse"
       },
       "sequence": 292,
-      "colors": {
+      "extractedColors": {
         "background": "deepskyblue",
         "cat": "dimgrey",
         "eyes": "mediumslateblue"
@@ -15008,7 +15008,7 @@
         "cursor": "mouse"
       },
       "sequence": 293,
-      "colors": {
+      "extractedColors": {
         "background": "teal",
         "cat": "royalblue",
         "eyes": "darkviolet"
@@ -15059,7 +15059,7 @@
         "cursor": "oyster"
       },
       "sequence": 294,
-      "colors": {
+      "extractedColors": {
         "background": "sandybrown",
         "cat": "aqua",
         "eyes": "darkgoldenrod"
@@ -15110,7 +15110,7 @@
         "cursor": "shrimp"
       },
       "sequence": 295,
-      "colors": {
+      "extractedColors": {
         "background": "lightgreen",
         "cat": "lightskyblue",
         "eyes": "olivedrab"
@@ -15161,7 +15161,7 @@
         "cursor": "watermelon"
       },
       "sequence": 296,
-      "colors": {
+      "extractedColors": {
         "background": "darkolivegreen",
         "cat": "lightyellow",
         "eyes": "steelblue"
@@ -15212,7 +15212,7 @@
         "cursor": "eggplant"
       },
       "sequence": 297,
-      "colors": {
+      "extractedColors": {
         "background": "darkmagenta",
         "cat": "wheat",
         "eyes": "darkgoldenrod"
@@ -15263,7 +15263,7 @@
         "cursor": "shark"
       },
       "sequence": 298,
-      "colors": {
+      "extractedColors": {
         "background": "midnightblue",
         "cat": "darkgreen",
         "eyes": "lightslategray"
@@ -15314,7 +15314,7 @@
         "cursor": "oyster"
       },
       "sequence": 299,
-      "colors": {
+      "extractedColors": {
         "background": "indigo",
         "cat": "aliceblue",
         "eyes": "rosybrown"
@@ -15365,7 +15365,7 @@
         "cursor": "shark"
       },
       "sequence": 300,
-      "colors": {
+      "extractedColors": {
         "background": "papayawhip",
         "cat": "lightcoral",
         "eyes": "lightsteelblue"
@@ -15416,7 +15416,7 @@
         "cursor": "cut of meat"
       },
       "sequence": 301,
-      "colors": {
+      "extractedColors": {
         "background": "lightcyan",
         "cat": "mediumturquoise",
         "eyes": "darkgray"
@@ -15467,7 +15467,7 @@
         "cursor": "blowfish"
       },
       "sequence": 302,
-      "colors": {
+      "extractedColors": {
         "background": "peachpuff",
         "cat": "palegoldenrod",
         "eyes": "violet"
@@ -15518,7 +15518,7 @@
         "cursor": "mouse"
       },
       "sequence": 303,
-      "colors": {
+      "extractedColors": {
         "background": "lightsteelblue",
         "cat": "mediumblue",
         "eyes": "lightslategrey"
@@ -15569,7 +15569,7 @@
         "cursor": "fish"
       },
       "sequence": 304,
-      "colors": {
+      "extractedColors": {
         "background": "lightslategray",
         "cat": "azure",
         "eyes": "lavenderblush"
@@ -15620,7 +15620,7 @@
         "cursor": "eggplant"
       },
       "sequence": 305,
-      "colors": {
+      "extractedColors": {
         "background": "pink",
         "cat": "lightgray",
         "eyes": "tan"
@@ -15671,7 +15671,7 @@
         "cursor": "grapes"
       },
       "sequence": 306,
-      "colors": {
+      "extractedColors": {
         "background": "plum",
         "cat": "lightskyblue",
         "eyes": "mintcream"
@@ -15722,7 +15722,7 @@
         "cursor": "oyster"
       },
       "sequence": 307,
-      "colors": {
+      "extractedColors": {
         "background": "oldlace",
         "cat": "blueviolet",
         "eyes": "black"
@@ -15773,7 +15773,7 @@
         "cursor": "watermelon"
       },
       "sequence": 308,
-      "colors": {
+      "extractedColors": {
         "background": "burlywood",
         "cat": "lavender",
         "eyes": "cornsilk"
@@ -15824,7 +15824,7 @@
         "cursor": "mouse"
       },
       "sequence": 309,
-      "colors": {
+      "extractedColors": {
         "background": "salmon",
         "cat": "cornflowerblue",
         "eyes": "deeppink"
@@ -15875,7 +15875,7 @@
         "cursor": "cut of meat"
       },
       "sequence": 310,
-      "colors": {
+      "extractedColors": {
         "background": "moccasin",
         "cat": "dimgrey",
         "eyes": "mediumpurple"
@@ -15926,7 +15926,7 @@
         "cursor": "oyster"
       },
       "sequence": 311,
-      "colors": {
+      "extractedColors": {
         "background": "oldlace",
         "cat": "honeydew",
         "eyes": "mediumseagreen"
@@ -15977,7 +15977,7 @@
         "cursor": "blowfish"
       },
       "sequence": 312,
-      "colors": {
+      "extractedColors": {
         "background": "snow",
         "cat": "mediumaquamarine",
         "eyes": "blanchedalmond"
@@ -16028,7 +16028,7 @@
         "cursor": "popcorn"
       },
       "sequence": 313,
-      "colors": {
+      "extractedColors": {
         "background": "sandybrown",
         "cat": "khaki",
         "eyes": "wheat"
@@ -16079,7 +16079,7 @@
         "cursor": "squid"
       },
       "sequence": 314,
-      "colors": {
+      "extractedColors": {
         "background": "salmon",
         "cat": "slateblue",
         "eyes": "violet"
@@ -16130,7 +16130,7 @@
         "cursor": "shrimp"
       },
       "sequence": 315,
-      "colors": {
+      "extractedColors": {
         "background": "khaki",
         "cat": "white",
         "eyes": "lightseagreen"
@@ -16181,7 +16181,7 @@
         "cursor": "lobster"
       },
       "sequence": 316,
-      "colors": {
+      "extractedColors": {
         "background": "mintcream",
         "cat": "oldlace",
         "eyes": "lightskyblue"
@@ -16232,7 +16232,7 @@
         "cursor": "squid"
       },
       "sequence": 317,
-      "colors": {
+      "extractedColors": {
         "background": "mediumblue",
         "cat": "darkseagreen",
         "eyes": "gold"
@@ -16283,7 +16283,7 @@
         "cursor": "squid"
       },
       "sequence": 318,
-      "colors": {
+      "extractedColors": {
         "background": "orangered",
         "cat": "orchid",
         "eyes": "lightgrey"
@@ -16334,7 +16334,7 @@
         "cursor": "mouse"
       },
       "sequence": 319,
-      "colors": {
+      "extractedColors": {
         "background": "blanchedalmond",
         "cat": "burlywood",
         "eyes": "salmon"
@@ -16385,7 +16385,7 @@
         "cursor": "pretzel"
       },
       "sequence": 320,
-      "colors": {
+      "extractedColors": {
         "background": "peachpuff",
         "cat": "lightcyan",
         "eyes": "dimgray"
@@ -16436,7 +16436,7 @@
         "cursor": "shrimp"
       },
       "sequence": 321,
-      "colors": {
+      "extractedColors": {
         "background": "darkviolet",
         "cat": "lightgray",
         "eyes": "powderblue"
@@ -16487,7 +16487,7 @@
         "cursor": "cucumber"
       },
       "sequence": 322,
-      "colors": {
+      "extractedColors": {
         "background": "slategray",
         "cat": "honeydew",
         "eyes": "khaki"
@@ -16538,7 +16538,7 @@
         "cursor": "squid"
       },
       "sequence": 323,
-      "colors": {
+      "extractedColors": {
         "background": "whitesmoke",
         "cat": "royalblue",
         "eyes": "darkslategrey"
@@ -16589,7 +16589,7 @@
         "cursor": "popcorn"
       },
       "sequence": 324,
-      "colors": {
+      "extractedColors": {
         "background": "orchid",
         "cat": "azure",
         "eyes": "violet"
@@ -16640,7 +16640,7 @@
         "cursor": "mouse"
       },
       "sequence": 325,
-      "colors": {
+      "extractedColors": {
         "background": "lavender",
         "cat": "snow",
         "eyes": "darkslateblue"
@@ -16691,7 +16691,7 @@
         "cursor": "mouse"
       },
       "sequence": 326,
-      "colors": {
+      "extractedColors": {
         "background": "mediumturquoise",
         "cat": "darkmagenta",
         "eyes": "purple"
@@ -16742,7 +16742,7 @@
         "cursor": "popcorn"
       },
       "sequence": 327,
-      "colors": {
+      "extractedColors": {
         "background": "blue",
         "cat": "darkkhaki",
         "eyes": "fuchsia"
@@ -16793,7 +16793,7 @@
         "cursor": "watermelon"
       },
       "sequence": 328,
-      "colors": {
+      "extractedColors": {
         "background": "aliceblue",
         "cat": "beige",
         "eyes": "beige"
@@ -16844,7 +16844,7 @@
         "cursor": "blowfish"
       },
       "sequence": 329,
-      "colors": {
+      "extractedColors": {
         "background": "orangered",
         "cat": "darkkhaki",
         "eyes": "lightslategray"
@@ -16895,7 +16895,7 @@
         "cursor": "pretzel"
       },
       "sequence": 330,
-      "colors": {
+      "extractedColors": {
         "background": "pink",
         "cat": "aquamarine",
         "eyes": "lime"
@@ -16946,7 +16946,7 @@
         "cursor": "pretzel"
       },
       "sequence": 331,
-      "colors": {
+      "extractedColors": {
         "background": "ivory",
         "cat": "lightgoldenrodyellow",
         "eyes": "navajowhite"
@@ -16997,7 +16997,7 @@
         "cursor": "fried shrimp"
       },
       "sequence": 332,
-      "colors": {
+      "extractedColors": {
         "background": "darkgrey",
         "cat": "orangered",
         "eyes": "papayawhip"
@@ -17048,7 +17048,7 @@
         "cursor": "cucumber"
       },
       "sequence": 333,
-      "colors": {
+      "extractedColors": {
         "background": "olivedrab",
         "cat": "honeydew",
         "eyes": "gainsboro"
@@ -17099,7 +17099,7 @@
         "cursor": "lobster"
       },
       "sequence": 334,
-      "colors": {
+      "extractedColors": {
         "background": "darkgoldenrod",
         "cat": "darkred",
         "eyes": "yellowgreen"
@@ -17150,7 +17150,7 @@
         "cursor": "pretzel"
       },
       "sequence": 335,
-      "colors": {
+      "extractedColors": {
         "background": "sandybrown",
         "cat": "springgreen",
         "eyes": "mediumslateblue"
@@ -17201,7 +17201,7 @@
         "cursor": "mouse"
       },
       "sequence": 336,
-      "colors": {
+      "extractedColors": {
         "background": "white",
         "cat": "lightcyan",
         "eyes": "lightsalmon"
@@ -17252,7 +17252,7 @@
         "cursor": "meat on bone"
       },
       "sequence": 337,
-      "colors": {
+      "extractedColors": {
         "background": "coral",
         "cat": "ivory",
         "eyes": "violet"
@@ -17303,7 +17303,7 @@
         "cursor": "oyster"
       },
       "sequence": 338,
-      "colors": {
+      "extractedColors": {
         "background": "cadetblue",
         "cat": "indianred",
         "eyes": "lavenderblush"
@@ -17354,7 +17354,7 @@
         "cursor": "yarn"
       },
       "sequence": 339,
-      "colors": {
+      "extractedColors": {
         "background": "azure",
         "cat": "orangered",
         "eyes": "darksalmon"
@@ -17405,7 +17405,7 @@
         "cursor": "eggplant"
       },
       "sequence": 340,
-      "colors": {
+      "extractedColors": {
         "background": "sienna",
         "cat": "rebeccapurple",
         "eyes": "palevioletred"
@@ -17456,7 +17456,7 @@
         "cursor": "pineapple"
       },
       "sequence": 341,
-      "colors": {
+      "extractedColors": {
         "background": "rosybrown",
         "cat": "olive",
         "eyes": "powderblue"
@@ -17507,7 +17507,7 @@
         "cursor": "shark"
       },
       "sequence": 342,
-      "colors": {
+      "extractedColors": {
         "background": "firebrick",
         "cat": "lightseagreen",
         "eyes": "olive"
@@ -17558,7 +17558,7 @@
         "cursor": "blowfish"
       },
       "sequence": 343,
-      "colors": {
+      "extractedColors": {
         "background": "olive",
         "cat": "seashell",
         "eyes": "orange"
@@ -17609,7 +17609,7 @@
         "cursor": "crab"
       },
       "sequence": 344,
-      "colors": {
+      "extractedColors": {
         "background": "darkviolet",
         "cat": "oldlace",
         "eyes": "lightcyan"
@@ -17660,7 +17660,7 @@
         "cursor": "squid"
       },
       "sequence": 345,
-      "colors": {
+      "extractedColors": {
         "background": "steelblue",
         "cat": "cyan",
         "eyes": "indianred"
@@ -17711,7 +17711,7 @@
         "cursor": "tropical fish"
       },
       "sequence": 346,
-      "colors": {
+      "extractedColors": {
         "background": "slategray",
         "cat": "dimgrey",
         "eyes": "firebrick"
@@ -17762,7 +17762,7 @@
         "cursor": "meat on bone"
       },
       "sequence": 347,
-      "colors": {
+      "extractedColors": {
         "background": "seashell",
         "cat": "tan",
         "eyes": "navy"
@@ -17813,7 +17813,7 @@
         "cursor": "pretzel"
       },
       "sequence": 348,
-      "colors": {
+      "extractedColors": {
         "background": "chocolate",
         "cat": "gainsboro",
         "eyes": "orangered"
@@ -17864,7 +17864,7 @@
         "cursor": "fish"
       },
       "sequence": 349,
-      "colors": {
+      "extractedColors": {
         "background": "moccasin",
         "cat": "darkcyan",
         "eyes": "darkseagreen"
@@ -17915,7 +17915,7 @@
         "cursor": "oyster"
       },
       "sequence": 350,
-      "colors": {
+      "extractedColors": {
         "background": "chartreuse",
         "cat": "lightskyblue",
         "eyes": "lightcyan"
@@ -17966,7 +17966,7 @@
         "cursor": "shark"
       },
       "sequence": 351,
-      "colors": {
+      "extractedColors": {
         "background": "darkorange",
         "cat": "rebeccapurple",
         "eyes": "purple"
@@ -18017,7 +18017,7 @@
         "cursor": "lobster"
       },
       "sequence": 352,
-      "colors": {
+      "extractedColors": {
         "background": "khaki",
         "cat": "thistle",
         "eyes": "darkmagenta"
@@ -18068,7 +18068,7 @@
         "cursor": "blowfish"
       },
       "sequence": 353,
-      "colors": {
+      "extractedColors": {
         "background": "wheat",
         "cat": "aquamarine",
         "eyes": "turquoise"
@@ -18119,7 +18119,7 @@
         "cursor": "oyster"
       },
       "sequence": 354,
-      "colors": {
+      "extractedColors": {
         "background": "lightseagreen",
         "cat": "orchid",
         "eyes": "indianred"
@@ -18170,7 +18170,7 @@
         "cursor": "watermelon"
       },
       "sequence": 355,
-      "colors": {
+      "extractedColors": {
         "background": "mediumvioletred",
         "cat": "darkgreen",
         "eyes": "darkslateblue"
@@ -18221,7 +18221,7 @@
         "cursor": "cut of meat"
       },
       "sequence": 356,
-      "colors": {
+      "extractedColors": {
         "background": "royalblue",
         "cat": "lightsteelblue",
         "eyes": "fuchsia"
@@ -18272,7 +18272,7 @@
         "cursor": "popcorn"
       },
       "sequence": 357,
-      "colors": {
+      "extractedColors": {
         "background": "powderblue",
         "cat": "burlywood",
         "eyes": "darkkhaki"
@@ -18323,7 +18323,7 @@
         "cursor": "watermelon"
       },
       "sequence": 358,
-      "colors": {
+      "extractedColors": {
         "background": "oldlace",
         "cat": "lightblue",
         "eyes": "steelblue"
@@ -18374,7 +18374,7 @@
         "cursor": "cucumber"
       },
       "sequence": 359,
-      "colors": {
+      "extractedColors": {
         "background": "tan",
         "cat": "burlywood",
         "eyes": "burlywood"
@@ -18425,7 +18425,7 @@
         "cursor": "mouse"
       },
       "sequence": 360,
-      "colors": {
+      "extractedColors": {
         "background": "mediumvioletred",
         "cat": "darkslateblue",
         "eyes": "darkblue"
@@ -18476,7 +18476,7 @@
         "cursor": "shark"
       },
       "sequence": 361,
-      "colors": {
+      "extractedColors": {
         "background": "yellowgreen",
         "cat": "mediumslateblue",
         "eyes": "royalblue"
@@ -18527,7 +18527,7 @@
         "cursor": "banana"
       },
       "sequence": 362,
-      "colors": {
+      "extractedColors": {
         "background": "dimgray",
         "cat": "saddlebrown",
         "eyes": "navy"
@@ -18578,7 +18578,7 @@
         "cursor": "crab"
       },
       "sequence": 363,
-      "colors": {
+      "extractedColors": {
         "background": "blue",
         "cat": "lime",
         "eyes": "cadetblue"
@@ -18629,7 +18629,7 @@
         "cursor": "blowfish"
       },
       "sequence": 364,
-      "colors": {
+      "extractedColors": {
         "background": "deepskyblue",
         "cat": "lightcoral",
         "eyes": "ghostwhite"
@@ -18680,7 +18680,7 @@
         "cursor": "shark"
       },
       "sequence": 365,
-      "colors": {
+      "extractedColors": {
         "background": "beige",
         "cat": "forestgreen",
         "eyes": "blue"
@@ -18731,7 +18731,7 @@
         "cursor": "mouse"
       },
       "sequence": 366,
-      "colors": {
+      "extractedColors": {
         "background": "midnightblue",
         "cat": "gray",
         "eyes": "wheat"
@@ -18782,7 +18782,7 @@
         "cursor": "mouse"
       },
       "sequence": 367,
-      "colors": {
+      "extractedColors": {
         "background": "honeydew",
         "cat": "lightpink",
         "eyes": "turquoise"
@@ -18833,7 +18833,7 @@
         "cursor": "shark"
       },
       "sequence": 368,
-      "colors": {
+      "extractedColors": {
         "background": "lightsalmon",
         "cat": "teal",
         "eyes": "mediumblue"
@@ -18884,7 +18884,7 @@
         "cursor": "squid"
       },
       "sequence": 369,
-      "colors": {
+      "extractedColors": {
         "background": "turquoise",
         "cat": "darkmagenta",
         "eyes": "blue"
@@ -18935,7 +18935,7 @@
         "cursor": "cucumber"
       },
       "sequence": 370,
-      "colors": {
+      "extractedColors": {
         "background": "tan",
         "cat": "purple",
         "eyes": "darkviolet"
@@ -18986,7 +18986,7 @@
         "cursor": "lobster"
       },
       "sequence": 371,
-      "colors": {
+      "extractedColors": {
         "background": "aliceblue",
         "cat": "lemonchiffon",
         "eyes": "lightslategrey"
@@ -19037,7 +19037,7 @@
         "cursor": "grapes"
       },
       "sequence": 372,
-      "colors": {
+      "extractedColors": {
         "background": "aquamarine",
         "cat": "floralwhite",
         "eyes": "powderblue"
@@ -19088,7 +19088,7 @@
         "cursor": "popcorn"
       },
       "sequence": 373,
-      "colors": {
+      "extractedColors": {
         "background": "mediumseagreen",
         "cat": "lightgrey",
         "eyes": "papayawhip"
@@ -19139,7 +19139,7 @@
         "cursor": "shrimp"
       },
       "sequence": 374,
-      "colors": {
+      "extractedColors": {
         "background": "aliceblue",
         "cat": "mistyrose",
         "eyes": "tan"
@@ -19190,7 +19190,7 @@
         "cursor": "tropical fish"
       },
       "sequence": 375,
-      "colors": {
+      "extractedColors": {
         "background": "mediumaquamarine",
         "cat": "yellow",
         "eyes": "darkcyan"
@@ -19241,7 +19241,7 @@
         "cursor": "sushi"
       },
       "sequence": 376,
-      "colors": {
+      "extractedColors": {
         "background": "greenyellow",
         "cat": "chocolate",
         "eyes": "papayawhip"
@@ -19292,7 +19292,7 @@
         "cursor": "lobster"
       },
       "sequence": 377,
-      "colors": {
+      "extractedColors": {
         "background": "orangered",
         "cat": "skyblue",
         "eyes": "moccasin"
@@ -19343,7 +19343,7 @@
         "cursor": "cucumber"
       },
       "sequence": 378,
-      "colors": {
+      "extractedColors": {
         "background": "turquoise",
         "cat": "ivory",
         "eyes": "cornflowerblue"
@@ -19394,7 +19394,7 @@
         "cursor": "shrimp"
       },
       "sequence": 379,
-      "colors": {
+      "extractedColors": {
         "background": "whitesmoke",
         "cat": "steelblue",
         "eyes": "turquoise"
@@ -19445,7 +19445,7 @@
         "cursor": "shrimp"
       },
       "sequence": 380,
-      "colors": {
+      "extractedColors": {
         "background": "seashell",
         "cat": "mintcream",
         "eyes": "gainsboro"
@@ -19496,7 +19496,7 @@
         "cursor": "pineapple"
       },
       "sequence": 381,
-      "colors": {
+      "extractedColors": {
         "background": "white",
         "cat": "mistyrose",
         "eyes": "darkcyan"
