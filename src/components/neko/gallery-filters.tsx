@@ -192,13 +192,13 @@ export function GalleryFiltersComp({
               traitOptions.backgrounds,
               "Backgrounds",
             )}
-            {renderTraitSelect("gen", "All Gens", traitOptions.gens, "Gen")}
             {renderTraitSelect(
               "cursor",
               "All Cursors",
               traitOptions.cursors,
               "Cursor",
             )}
+            {renderTraitSelect("gen", "All Gens", traitOptions.gens, "Gen")}
             {renderTraitSelect("year", "All Years", traitOptions.years, "Year")}
           </InputGroup>
 
