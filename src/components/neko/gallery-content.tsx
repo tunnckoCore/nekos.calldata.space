@@ -1,12 +1,12 @@
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import type { SearchParams } from "nuqs/server";
+import { Suspense } from "react";
 import { gallerySearchParamsCache } from "@/lib/gallery-search-params";
 import { getPaginatedNekos } from "@/lib/neko-fetch";
 import { getAllNekos } from "@/lib/preps";
 import { createQueryClient } from "@/lib/queries";
 import { GalleryContainerClient } from "./gallery-container-client";
 import { GalleryFiltersComp } from "./gallery-filters";
-import { Suspense } from "react";
 import { SkeletonRow } from "./skeleton-row";
 
 interface GalleryContentProps {
@@ -31,7 +31,7 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <div className="flex flex-col h-full w-full">
+      <div className="flex h-full w-full flex-col">
         <GalleryFiltersComp allNekos={nekoEntry.data} filters={filters} />
 
         <div className="flex-1 overflow-hidden">

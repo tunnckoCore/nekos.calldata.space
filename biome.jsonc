@@ -22,18 +22,28 @@
       "!build",
       "!**/src/components/ui/*",
       "!**/src/hooks/use-mobile.ts",
-      "!convex/betterAuth/schema.ts",
-    ],
+      "!convex/betterAuth/schema.ts"
+    ]
   },
   "linter": {
     "rules": {
       "style": {
-        "useImportType": "error",
+        "useImportType": "error"
       },
+      "nursery": {
+        "useSortedClasses": "info"
+      },
+      // lint/performance/noDelete
+      "performance": {
+        "noDelete": "off"
+      },
+      "correctness": {
+        "noUnusedFunctionParameters": "off"
+      }
     },
     "domains": {
       "next": "recommended",
-      "react": "recommended",
-    },
-  },
+      "react": "recommended"
+    }
+  }
 }

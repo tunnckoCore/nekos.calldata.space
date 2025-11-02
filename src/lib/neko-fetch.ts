@@ -239,7 +239,7 @@ export async function getPaginatedNekos(
   let filtered = [...allNekos];
 
   // Apply search filter using fuzzy search
-  if (search && search.trim()) {
+  if (search?.trim()) {
     const searchResults = fuzzySearch(search);
     filtered = filtered.filter((neko) =>
       searchResults.some((result) => result.id === neko.id),

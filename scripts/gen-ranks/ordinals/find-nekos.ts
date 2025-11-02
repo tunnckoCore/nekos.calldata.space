@@ -269,9 +269,7 @@ const allNekos = (
       //   collectionInscriptionId: json?.collectionInscriptionId,
       //   digest: json?.digest,
       // };
-      const isORD721 = Boolean(
-        json.protocol && json.protocol.type && json.token,
-      );
+      const isORD721 = Boolean(json.protocol?.type && json.token);
       const isBTC721 = Boolean(
         json.protocol &&
           !json.protocol.type &&

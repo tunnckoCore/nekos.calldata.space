@@ -14,7 +14,7 @@ interface PageProps {
 
 export default async function GalleryPage({ searchParams }: PageProps) {
   return (
-    <div className="h-screen w-screen overflow-hidden bg-background flex flex-col">
+    <div className="flex h-screen w-screen flex-col overflow-hidden bg-background">
       <Suspense fallback={<div className="flex-1" />}>
         <GalleryContent searchParams={searchParams} />
       </Suspense>

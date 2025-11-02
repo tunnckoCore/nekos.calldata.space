@@ -19,7 +19,7 @@ export interface NekoCacheEntry {
 
 // In-memory cache for the merged dataset
 let dataCache: NekoCacheEntry | null = null;
-const CACHE_TTL = 1000 * 60 * 60; // Cache for 1 hour to ensure consistent ordering across paginated requests
+const _CACHE_TTL = 1000 * 60 * 60; // Cache for 1 hour to ensure consistent ordering across paginated requests
 
 /**
  * Generates an ETag for a dataset
@@ -119,7 +119,7 @@ export async function extractProperColors(
 /**
  * Fetches and validates data from a single CDN source
  */
-async function fetchAndValidateSource(url: string): Promise<Neko[] | null> {
+async function _fetchAndValidateSource(url: string): Promise<Neko[] | null> {
   try {
     const response = await fetch(url);
     if (!response.ok) {

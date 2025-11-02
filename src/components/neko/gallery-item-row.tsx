@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useQueryState } from "nuqs";
 import { useEffect, useRef } from "react";
+import { getProperColors } from "@/lib/colors";
 // import Link from "next/link";
 import { allCursors, type Neko } from "@/lib/neko";
-import { getProperColors } from "@/lib/colors";
 
 export function GalleryItemRow({
   item,
@@ -88,7 +88,7 @@ export function GalleryItemRow({
       <div
         onClick={onToggle}
         onMouseEnter={handleMouseEnter}
-        className="flex relative w-full items-center justify-between cursor-pointer"
+        className="relative flex w-full cursor-pointer items-center justify-between"
       >
         <div
           className="flex w-full items-center justify-between p-5"

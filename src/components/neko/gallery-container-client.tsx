@@ -2,11 +2,11 @@
 
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { use, useEffect, useMemo, useRef, useState } from "react";
+import { getProperColors } from "@/lib/colors";
 import type { GalleryFilters } from "@/lib/gallery-search-params";
 import type { Neko } from "@/lib/neko";
 import { useNekoGallery } from "@/lib/queries";
 import { GalleryItemRow } from "./gallery-item-row";
-import { getProperColors } from "@/lib/colors";
 
 interface GalleryContainerClientProps {
   baseURL: string;
@@ -105,16 +105,16 @@ export function GalleryContainerClient({
   }, [hasNextPage, isFetchingNextPage, virtualItems]);
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex h-full w-full flex-col">
       {/* Item count header */}
-      <div className="px-4 py-2 bg-background/50 text-xs text-muted-foreground shrink-0">
+      <div className="shrink-0 bg-background/50 px-4 py-2 text-muted-foreground text-xs">
         Showing {items.length} items from {itemsCount} total
       </div>
 
       {/* Virtualized scrollable container - key: overflow-y-auto with proper ref */}
       <div
         ref={scrollerRef}
-        className="flex-1 w-full overflow-y-auto overflow-x-hidden"
+        className="w-full flex-1 overflow-y-auto overflow-x-hidden"
       >
         <div
           style={{
@@ -200,7 +200,7 @@ export function GalleryContainerClient({
 
       {/* Loading and end states */}
       {(isLoadingMore || (!hasNextPage && items.length > 0)) && (
-        <div className="p-4 border-t border-border bg-background/50 text-sm text-muted-foreground text-center flex-shrink-0">
+        <div className="flex-shrink-0 border-border border-t bg-background/50 p-4 text-center text-muted-foreground text-sm">
           {isLoadingMore ? "Loading more items..." : "No more items to load"}
         </div>
       )}

@@ -4,9 +4,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export const SkeletonRow = () => {
   return (
-    <div className="flex relative w-full items-center justify-between cursor-pointer">
+    <div className="relative flex w-full cursor-pointer items-center justify-between">
       {/* Cat section skeleton */}
-      <div className="flex w-full items-center justify-between p-5 bg-muted/30">
+      <div className="flex w-full items-center justify-between bg-muted/30 p-5">
         <div className="relative z-10 flex w-full justify-start">
           <Skeleton className="h-7 w-32 rounded-full" />
         </div>
@@ -17,7 +17,7 @@ export const SkeletonRow = () => {
       </div>
 
       {/* Background section skeleton */}
-      <div className="flex w-full items-center justify-between p-5 bg-muted/20">
+      <div className="flex w-full items-center justify-between bg-muted/20 p-5">
         <div className="flex w-full justify-start">
           <Skeleton className="h-7 w-40 rounded-full" />
         </div>

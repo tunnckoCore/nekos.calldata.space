@@ -2,7 +2,7 @@
 
 import { ArrowDown, ArrowUp, Loader2, X } from "lucide-react";
 import { debounce } from "nuqs";
-import { use, useMemo, useRef, useTransition } from "react";
+import { useMemo, useRef, useTransition } from "react";
 import { Button } from "@/components/ui/button";
 import {
   InputGroup,
@@ -127,7 +127,7 @@ export function GalleryFiltersComp({
           }
           disabled={isPending}
         >
-          <SelectTrigger className="w-full h-9 cursor-pointer text-sm">
+          <SelectTrigger className="h-9 w-full cursor-pointer text-sm">
             {selectValue === "" || selectValue === "all" ? (
               <span>{label}</span>
             ) : (
@@ -155,11 +155,11 @@ export function GalleryFiltersComp({
   };
 
   return (
-    <div className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="sticky top-0 z-50 w-full border-border border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="px-4 py-3">
         <div className="flex items-center gap-3">
           {/* Search Input with Loading State */}
-          <InputGroup className="flex-1 min-w-48">
+          <InputGroup className="min-w-48 flex-1">
             <InputGroupInput
               ref={inputRef}
               autoFocus
@@ -183,7 +183,7 @@ export function GalleryFiltersComp({
           </InputGroup>
 
           {/* Trait Selects Group - Wrapped in InputGroup */}
-          <InputGroup className="flex-none flex w-auto">
+          <InputGroup className="flex w-auto flex-none">
             {renderTraitSelect("cat", "All Cats", traitOptions.cats, "Cat")}
             {renderTraitSelect("eyes", "All Eyes", traitOptions.eyes, "Eyes")}
             {renderTraitSelect(
@@ -203,7 +203,7 @@ export function GalleryFiltersComp({
           </InputGroup>
 
           {/* Sort, Order and Clear Group - Wrapped in InputGroup */}
-          <InputGroup className="flex-none flex w-auto">
+          <InputGroup className="flex w-auto flex-none">
             {/* Sort By */}
             <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
               <Select
@@ -211,7 +211,7 @@ export function GalleryFiltersComp({
                 onValueChange={(val) => handleSetFilters("sort", val)}
                 disabled={isPending}
               >
-                <SelectTrigger className="w-full h-9 cursor-pointer">
+                <SelectTrigger className="h-9 w-full cursor-pointer">
                   <span>{SORT_LABELS[filters.sort] || "Sort By"}</span>
                 </SelectTrigger>
                 <SelectContent>
@@ -235,21 +235,21 @@ export function GalleryFiltersComp({
                   </SelectItem>
                   <SelectItem
                     value="rank_open_rarity"
-                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                    className={`cursor-pointer ${!filters.gen ? "cursor-not-allowed opacity-50" : ""}`}
                     disabled={!filters.gen}
                   >
                     Rank: OpenRarity
                   </SelectItem>
                   <SelectItem
                     value="rank_jungle"
-                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                    className={`cursor-pointer ${!filters.gen ? "cursor-not-allowed opacity-50" : ""}`}
                     disabled={!filters.gen}
                   >
                     Rank: Jungle
                   </SelectItem>
                   <SelectItem
                     value="rank_rarity"
-                    className={`cursor-pointer ${!filters.gen ? "opacity-50 cursor-not-allowed" : ""}`}
+                    className={`cursor-pointer ${!filters.gen ? "cursor-not-allowed opacity-50" : ""}`}
                     disabled={!filters.gen}
                   >
                     Rank: RarityScore
