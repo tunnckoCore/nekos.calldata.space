@@ -98,7 +98,7 @@ export function GalleryItemRow({
         >
           <div className="relative z-10 flex w-full justify-start">
             {
-              <div className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base">
+              <div className="rounded-full bg-slate-100 px-2 py-1 text-slate-800 text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base">
                 {/*<span className="sm:hidden">
                   {item.name} 💠 {globalRank}
                 </span>*/}
@@ -110,13 +110,13 @@ export function GalleryItemRow({
           </div>
           <div className="flex w-full justify-end gap-2">
             <div
-              className="rounded-full p-3 sm:p-4 shadow-lg drop-shadow-md"
+              className="rounded-full p-3 shadow-lg drop-shadow-md sm:p-4"
               data-eyes-trait={item.traits.eyes}
               data-eyes-color={colors.eyes}
               style={{ backgroundColor: colors.eyes }}
             />
             <div
-              className="rounded-full p-3 sm:p-4 shadow-lg drop-shadow-md"
+              className="rounded-full p-3 shadow-lg drop-shadow-md sm:p-4"
               data-eyes-trait={item.traits.eyes}
               data-eyes-color={colors.eyes}
               style={{ backgroundColor: colors.eyes }}
@@ -132,7 +132,7 @@ export function GalleryItemRow({
           }}
         >
           <div className="flex w-full justify-end sm:justify-start">
-            <div className="rounded-full bg-slate-100 px-2 py-1 text-slate-800  text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base">
+            <div className="rounded-full bg-slate-100 px-2 py-1 text-slate-800 text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base">
               <span className="sm:hidden">{cursorEmoji}</span>
               <span className="hidden sm:inline">
                 {cursorEmoji} {item.traits.cursor}
@@ -142,7 +142,7 @@ export function GalleryItemRow({
           <div className="flex w-full justify-start sm:justify-end">
             {item.traits.gen.toLowerCase().includes("og") && (
               <Link
-                className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base"
+                className="rounded-full bg-slate-100 px-2 py-1 text-slate-800 text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base"
                 href={`https://opensea.io/item/ethereum/0x7c3219045a87bc7001495117e1bb560b69e910db/${item.index}`}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -153,7 +153,7 @@ export function GalleryItemRow({
             )}
             {item.traits.gen.toLowerCase().includes("ordinal") && (
               <Link
-                className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base"
+                className="rounded-full bg-slate-100 px-2 py-1 text-slate-800 text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base"
                 href={`https://ordiscan.com/inscription/${item.id}`}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -164,7 +164,7 @@ export function GalleryItemRow({
             )}
             {item.traits.gen.toLowerCase().includes("eths") && (
               <Link
-                className="rounded-full bg-slate-100 px-2 py-1 text-sm text-slate-800 shadow-lg drop-shadow-md sm:px-3 sm:text-base"
+                className="rounded-full bg-slate-100 px-2 py-1 text-slate-800 text-sm shadow-lg drop-shadow-md sm:px-3 sm:text-base"
                 href={`https://etherscan.io/tx/${item.transaction_hash}`}
                 rel="noopener noreferrer"
                 target="_blank"
