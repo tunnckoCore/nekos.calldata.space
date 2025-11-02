@@ -119,7 +119,7 @@ export function GalleryFiltersComp({
     const selectValue = filters[key as keyof typeof filters] || "all";
 
     return (
-      <div className="[&>button]:rounded-none [&>button]:border-0 [&>button]:bg-transparent [&>button]:shadow-none">
+      <div className="">
         <Select
           value={selectValue}
           onValueChange={(val) =>

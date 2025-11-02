@@ -31,7 +31,7 @@ export async function GalleryContent({ searchParams }: GalleryContentProps) {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <div className="flex h-full w-full flex-col">
+      <div className="flex h-full w-full sm:flex-col flex-col-reverse">
         <GalleryFiltersComp allNekos={nekoEntry.data} filters={filters} />
 
         <div className="flex-1 overflow-hidden">
