@@ -313,7 +313,7 @@
                     );
 
                     const response = await fetch(
-                        "http://localhost:3000/0xnekos.json",
+                        "http://localhost:5173/0xnekos.json",
                     );
                     const json = await response.json();
                     const fetchedNekos = json.data.filter(
@@ -337,6 +337,7 @@
                         const gridItem = document.createElement("div");
                         gridItem.classList.add("grid-item");
                         gridItem.title = `Sequence ${neko.sequence} / ${index + 1}`;
+                        gridItem.dataset.filename = `neko-${neko.sequence}-${index + 1}.png`;
 
                         // Get the actual SVG element from the cloned content
                         const item = svgTemplate.querySelector("svg");
@@ -427,9 +428,15 @@
 
             // Optional: Add click handler for individual cats to download
             document.addEventListener("click", async (e) => {
-                const container = e.target.closest(".grid-item svg");
+                const container = e.target.closest(".grid-item");
                 if (container) {
                     console.log({ svg: container.outerHTML });
+                    const res = await snapshotter.download(container, {
+                        width: 150,
+                        height: 150,
+                        filename: container.dataset.filename,
+                        format: "png",
+                    });
                 }
             });
         </script>
