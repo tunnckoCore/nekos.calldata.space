@@ -1,0 +1,245 @@
+import { useMemo } from "react";
+import { generateWeightedNekos } from "./utils";
+
+const NEKO_COLORS = [
+  "neko-red",
+  "neko-orange",
+  "neko-yellow",
+  "neko-lime",
+  "neko-green",
+  "neko-emerald",
+  "neko-teal",
+  "neko-cyan",
+  "neko-sky",
+  "neko-blue",
+  "neko-indigo",
+  "neko-violet",
+  "neko-purple",
+  "neko-fuchsia",
+  "neko-pink",
+  "neko-rose",
+] as const;
+
+type NekoColor = (typeof NEKO_COLORS)[number];
+
+function createColorEntry<T extends NekoColor>(color: T) {
+  type Name = T extends `neko-${infer N}` ? N : never;
+  return [
+    color,
+    {
+      name: color.replace("neko-", "") as Name,
+      color,
+      var: `var(--color-${color})` as const,
+      bg: `bg-${color}` as const,
+    },
+  ] as const;
+}
+
+const colors = Object.fromEntries(NEKO_COLORS.map(createColorEntry)) as {
+  [K in NekoColor]: ReturnType<typeof createColorEntry<K>>[1];
+};
+
+interface NekoItem {
+  id: string;
+  catEyes: (typeof colors)[NekoColor];
+  bgColor: (typeof colors)[NekoColor];
+  groundColor: (typeof colors)[NekoColor];
+  catColor: (typeof colors)[NekoColor];
+  cursor: { name: string; emoji: string };
+  darkGroundColor?: string;
+}
+
+function NekoCard({ neko }: { neko: NekoItem }) {
+  return (
+    <div
+      className={`relative h-[150px] w-[150px] overflow-hidden ${neko.bgColor.bg}`}
+      data-neko={JSON.stringify({
+        bgColor: neko.bgColor.name,
+        groundColor: neko.groundColor.name,
+        catEyes: neko.catEyes.name,
+        // catHead: neko.catHead.name,
+        // catBody: neko.catBody.name,
+        // catTail: neko.catTail.name,
+        // catLeg1: neko.catLeg1.name,
+        // catLeg2: neko.catLeg2.name,
+        // catLeg3: neko.catLeg3.name,
+        // catLeg4: neko.catLeg4.name,
+        cursor: neko.cursor,
+      })}
+    >
+      {/* Cat container */}
+      <div className="-translate-x-1/2 absolute bottom-[50px] left-1/2 h-[30px] w-[60px]">
+        {/* Head */}
+        <div className="-top-[30px] absolute right-[22px] z-10 h-[40px] w-[48px]">
+          <svg
+            viewBox="0 -0.5 76 61"
+            shapeRendering="crispEdges"
+            className="h-full w-full"
+          >
+            <polygon
+              points="63.8,54.1 50.7,54.1 50.7,59.6 27.1,59.6 27.1,54.1 12.4,54.1 12.4,31.8 63.8,31.8"
+              fill={neko.catEyes.var}
+            />
+            <path
+              d="M15.3,45.9h5.1V35.7h-5.1C15.3,35.7,15.3,45.9,15.3,45.9z M45.8,56.1V51H30.6v5.1H45.8z M61.1,35.7H56v10.2h5.1 V35.7z M10.2,61.2v-5.1H5.1V51H0V25.5h5.1V15.3h5.1V5.1h5.1V0h5.1v5.1h5.1v5.1h5.1v5.1c0,0,15.2,0,15.2,0v-5.1h5.1V5.1H56V0h5.1v5.1h5.1v10.2h5.1v10.2h5.1l0,25.5h-5.1v5.1h-5.1v5.1H10.2z"
+              fill={neko.catColor.var}
+            />
+          </svg>
+
+          {/* Emoji Icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 20 24"
+            className="absolute h-[24px] w-[24px]"
+            style={{ left: "-20px", top: "40px", zIndex: 15 }}
+          >
+            <text
+              y="50%"
+              x="50%"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="20"
+            >
+              {neko.cursor.emoji}
+            </text>
+          </svg>
+        </div>
+
+        {/* Body */}
+        <div className="absolute h-[30px] w-[60px]">
+          <svg
+            viewBox="0 0 91.7 40.8"
+            shapeRendering="crispEdges"
+            className="h-full w-full"
+          >
+            <path
+              d="M91.7,40.8H0V10.2h5.1V5.1h5.1V0h66.2v5.1h10.2v5.1h5.1L91.7,40.8z"
+              fill={neko.catColor.var}
+            />
+          </svg>
+        </div>
+
+        {/* Tail */}
+        <div className="-top-[25px] absolute left-[45px] h-[36px] w-[15px]">
+          <svg
+            viewBox="0 0 25.5 61.1"
+            shapeRendering="crispEdges"
+            className="h-full w-full"
+          >
+            <polygon
+              points="10.2,56 10.2,50.9 5.1,50.9 5.1,40.7 0,40.7 0,20.4 5.1,20.4 5.1,10.2 10.2,10.2 10.2,5.1 15.3,5.1 15.3,0 25.5,0 25.5,10.2 20.4,10.2 20.4,15.3 15.3,15.3 15.3,20.4 10.2,20.4 10.2,40.7 15.3,40.7 15.3,45.8 20.4,45.8 20.4,50.9 25.5,50.9 25.5,61.1 15.3,61.1 15.3,56"
+              fill={neko.catColor.var}
+            />
+          </svg>
+        </div>
+
+        {/* Front Legs */}
+        <div className="absolute right-[30px] h-[30px] w-[30px]">
+          <div className="-bottom-[15px] absolute right-0 h-[20px] w-[10px]">
+            <svg
+              viewBox="0 0 14 30.5"
+              shapeRendering="crispEdges"
+              className="h-full w-full"
+            >
+              <polygon
+                points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                fill={neko.catColor.var}
+              />
+            </svg>
+          </div>
+          <div className="-bottom-[15px] absolute left-0 h-[20px] w-[10px]">
+            <svg
+              viewBox="0 0 14 30.5"
+              shapeRendering="crispEdges"
+              className="h-full w-full"
+            >
+              <polygon
+                points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                fill={neko.catColor.var}
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Back Legs */}
+        <div className="absolute left-[35px] h-[30px] w-[25px]">
+          <div className="-bottom-[15px] absolute right-0 h-[20px] w-[10px]">
+            <svg
+              viewBox="0 0 14 30.5"
+              shapeRendering="crispEdges"
+              className="h-full w-full"
+            >
+              <polygon
+                points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                fill={neko.catColor.var}
+              />
+            </svg>
+          </div>
+          <div className="-bottom-[15px] absolute left-0 h-[20px] w-[10px]">
+            <svg
+              viewBox="0 0 14 30.5"
+              shapeRendering="crispEdges"
+              className="h-full w-full"
+            >
+              <polygon
+                points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                fill={neko.catColor.var}
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      {/* Ground */}
+      <div
+        className="absolute bottom-0 left-0 h-[35px] w-full"
+        style={
+          neko.darkGroundColor
+            ? { backgroundColor: neko.darkGroundColor }
+            : { backgroundColor: `var(--color-${neko.groundColor.color})` }
+        }
+      />
+    </div>
+  );
+}
+
+function App1825() {
+  const nekos = useMemo(() => {
+    const generated = generateWeightedNekos(336);
+    return generated.map((neko) => ({
+      id: neko.id,
+      catEyes: colors[neko.catEyes as NekoColor],
+      bgColor: colors[neko.bgColor as NekoColor],
+      groundColor: colors[neko.groundColor as NekoColor],
+      catColor: colors[neko.catColor as NekoColor],
+      cursor: neko.cursor,
+      darkGroundColor:
+        neko.bgColor === neko.groundColor
+          ? `color-mix(in oklch, var(--color-${neko.bgColor}) 55%, black)`
+          : undefined,
+    }));
+  }, []);
+
+  return (
+    <div className="flex h-screen w-screen flex-col bg-linear-to-br from-gray-900 to-gray-800">
+      <div className="flex-1 overflow-auto p-8">
+        <h1 className="mb-2 font-bold text-4xl text-white">
+          Weighted Neko Collection
+        </h1>
+        <p className="mb-8 text-gray-400">
+          All {nekos.length.toLocaleString()} weighted nekos • Rare and
+          legendary combinations included
+        </p>
+        <div className="mb-24 flex w-full flex-wrap items-start justify-center gap-[4px]">
+          {nekos.map((neko) => (
+            <NekoCard key={neko.id} neko={neko} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App1825;

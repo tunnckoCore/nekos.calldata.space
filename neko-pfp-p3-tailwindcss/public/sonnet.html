@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Neko Cat SVG</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 20px;
+                background: #f5f5f5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <svg
+            width="150"
+            height="150"
+            viewBox="0 0 150 150"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <!-- Background -->
+            <rect width="150" height="150" fill="#c9e0ff" />
+
+            <!-- Ground -->
+            <rect x="0" y="115" width="150" height="35" fill="#79a3ff" />
+
+            <!-- Cat Body -->
+            <g transform="translate(45, 50)">
+                <!-- Body part -->
+                <path
+                    d="M0,10.2 h5.1 v-5.1 h5.1 v-5.1 h46.2 v5.1 h10.2 v5.1 h5.1 v30.6 h-71.7 z"
+                    fill="gold"
+                    transform="scale(0.655)"
+                />
+
+                <!-- Tail -->
+                <path
+                    d="M10.2,56 v-5.1 h-5.1 v-10.2 h-5.1 v-20.3 h5.1 v-10.2 h5.1 v-5.1 h5.1 v-5.1 h10.2 v10.2 h-5.1 v5.1 h-5.1 v5.1 h-5.1 v20.3 h5.1 v5.1 h5.1 v5.1 h5.1 v10.2 h-10.2 v-5.1 z"
+                    fill="gold"
+                    transform="translate(29, -25) scale(0.655)"
+                />
+
+                <!-- Head -->
+                <g transform="translate(14.5, -20) scale(0.655)">
+                    <!-- Head shape -->
+                    <path
+                        d="M10.2,61.2 v-5.1 h-5.1 v-5.1 h-5.1 v-25.5 h5.1 v-10.2 h5.1 v-10.2 h5.1 v-5.1 h5.1 v5.1 h5.1 v5.1 h5.1 v5.1 h15.2 v-5.1 h5.1 v-5.1 h5.1 v-5.1 h5.1 v5.1 h5.1 v10.2 h5.1 v10.2 h5.1 v25.5 h-5.1 v5.1 h-5.1 v5.1 h-56 z"
+                        fill="green"
+                    />
+
+                    <!-- Eyes -->
+                    <path
+                        d="M12.4,31.8 h51.4 v22.3 h-13.1 v5.5 h-23.6 v-5.5 h-14.7 z"
+                        fill="red"
+                    />
+                </g>
+
+                <!-- Front Legs -->
+                <g transform="translate(19.5, 15) scale(0.655)">
+                    <!-- Leg 1 (right) -->
+                    <path
+                        d="M0,0 h15.3 v30.5 h-10.2 v-5.1 h-5.1 z"
+                        fill="blue"
+                    />
+                    <!-- Leg 2 (left) -->
+                    <path
+                        d="M0,0 h15.3 v30.5 h-10.2 v-5.1 h-5.1 z"
+                        fill="orange"
+                        transform="translate(10, 0)"
+                    />
+                </g>
+
+                <!-- Back Legs -->
+                <g transform="translate(23, 15) scale(0.655)">
+                    <!-- Leg 3 (right) -->
+                    <path
+                        d="M0,0 h15.3 v30.5 h-10.2 v-5.1 h-5.1 z"
+                        fill="purple"
+                    />
+                    <!-- Leg 4 (left) -->
+                    <path
+                        d="M0,0 h15.3 v30.5 h-10.2 v-5.1 h-5.1 z"
+                        fill="gold"
+                        transform="translate(10, 0)"
+                    />
+                </g>
+
+                <!-- Emoji (mouse) -->
+                <text
+                    x="-13"
+                    y="20"
+                    font-size="16"
+                    style="font-family: sans-serif"
+                >
+                    🐭
+                </text>
+            </g>
+        </svg>
+    </body>
+</html>

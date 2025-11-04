@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/*:root {
+    --red: oklch(0.63 0.26 25);
+    --orange: oklch(0.72 0.24 55);
+    --yellow: oklch(0.87 0.2 95);
+    --lime: oklch(0.84 0.23 120);
+    --green: oklch(0.79 0.25 145);
+    --emerald: oklch(0.75 0.21 165);
+    --teal: oklch(0.7 0.18 180);
+    --cyan: oklch(0.78 0.17 200);
+    --sky: oklch(0.8 0.15 220);
+    --blue: oklch(0.55 0.28 260);
+    --indigo: oklch(0.5 0.26 275);
+    --violet: oklch(0.6 0.27 295);
+    --purple: oklch(0.55 0.25 310);
+    --fuchsia: oklch(0.65 0.28 330);
+    --pink: oklch(0.75 0.2 5);
+    --rose: oklch(0.68 0.22 15);
+}*/
+
+/* electric */
+:root {
+    --red: oklch(0.63 0.3 25);
+    --orange: oklch(0.72 0.28 55);
+    --yellow: oklch(0.87 0.22 95);
+    --lime: oklch(0.84 0.27 120);
+    --green: oklch(0.79 0.3 145);
+    --emerald: oklch(0.75 0.25 170);
+    --teal: oklch(0.7 0.21 180);
+    --cyan: oklch(0.78 0.2 200);
+    --sky: oklch(0.8 0.18 220);
+    --blue: oklch(0.55 0.33 260);
+    --indigo: oklch(0.5 0.31 275);
+    --violet: oklch(0.6 0.32 295);
+    --purple: oklch(0.55 0.3 310);
+    --fuchsia: oklch(0.65 0.34 330);
+    --pink: oklch(0.75 0.24 5);
+    --rose: oklch(0.68 0.26 15);
+}
+
+@theme {
+    --color-neko-red: var(--red);
+    --color-neko-orange: var(--orange);
+    --color-neko-yellow: var(--yellow);
+    --color-neko-lime: var(--lime);
+    --color-neko-green: var(--green);
+    --color-neko-emerald: var(--emerald);
+    --color-neko-teal: var(--teal);
+    --color-neko-cyan: var(--cyan);
+    --color-neko-sky: var(--sky);
+    --color-neko-blue: var(--blue);
+    --color-neko-indigo: var(--indigo);
+    --color-neko-violet: var(--violet);
+    --color-neko-purple: var(--purple);
+    --color-neko-fuchsia: var(--fuchsia);
+    --color-neko-pink: var(--pink);
+    --color-neko-rose: var(--rose);
+}

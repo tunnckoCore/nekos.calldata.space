@@ -66,6 +66,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2",
+    "@scure/bip39": "^2.0.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^24.9.1",
     "@types/react": "^19",

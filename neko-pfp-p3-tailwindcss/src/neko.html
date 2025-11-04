@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>0xNeko Cat</title>
+
+        <style>
+            /*:root {
+                --background: #a0522d;
+                --ground: #703920;
+                --cat-body: #00ffff;
+                --cat-eyes: #6495ed;
+                --cat-nose: red;
+            }*/
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 100vw;
+                min-height: 100vh;
+                padding: 2rem;
+                background-color: #f5f5f5;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.25rem;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .container {
+                width: 150px;
+                height: 150px;
+                position: relative;
+                overflow: hidden;
+                /*border-radius: 100%;*/
+            }
+
+            .ground {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: transparent;
+            }
+
+            .cat {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 30px;
+            }
+
+            .head {
+                position: absolute;
+                width: 48px;
+                height: 40px;
+                right: 22px;
+                top: -30px;
+                z-index: 10;
+            }
+
+            .body-part {
+                position: absolute;
+                width: 60px;
+                height: 30px;
+            }
+
+            .tail {
+                position: absolute;
+                width: 15px;
+                height: 36px;
+                left: 45px;
+                top: -25px;
+            }
+
+            .front-legs {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                right: 30px;
+            }
+
+            .back-legs {
+                position: absolute;
+                width: 25px;
+                height: 30px;
+                left: 35px;
+            }
+
+            .leg {
+                position: absolute;
+                width: 10px;
+                height: 20px;
+                bottom: -15px;
+            }
+
+            .leg-1,
+            .leg-3 {
+                right: 0;
+            }
+
+            .leg-2,
+            .leg-4 {
+                left: 0;
+            }
+
+            .leg svg {
+                transform: scaleX(-1);
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            .emoji-icon {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -20px;
+                top: 40px;
+                z-index: 15;
+            }
+
+            .download-btn {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                font-family: sans-serif;
+            }
+
+            .download-btn:hover {
+                background-color: #45a049;
+            }
+
+            .download-btn:active {
+                background-color: #3d8b40;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+
+            .neko-item {
+                width: 150px;
+                height: 150px;
+            }
+
+            /**
+             * Customizable
+             */
+
+            :root {
+                --bg-color: #c9e0ff;
+                --ground-color: #79a3ff;
+                --cat-eyes: red;
+                --cat-head: green;
+                --cat-body: gold;
+                --cat-tail: gold;
+                --cat-leg-1: blue;
+                --cat-leg-2: orange;
+                --cat-leg-3: purple;
+                --cat-leg-4: gold;
+            }
+
+            .bg-color {
+                background-color: var(--bg-color);
+            }
+            .ground-color {
+                background-color: var(--ground-color);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container" id="nekos-grid"></div>
+
+        <!-- Template for single cat (hidden) -->
+        <template id="neko-template">
+            <div class="neko-item">
+                <div class="container bg-color">
+                    <div class="cat">
+                        <div class="head">
+                            <svg
+                                viewBox="0 -0.5 76 61"
+                                shape-rendering="crispEdges"
+                            >
+                                <polygon
+                                    class="cat-eyes"
+                                    style="fill: var(--cat-eyes)"
+                                    points="63.8,54.1 50.7,54.1 50.7,59.6 27.1,59.6 27.1,54.1 12.4,54.1 12.4,31.8 63.8,31.8"
+                                ></polygon>
+                                <path
+                                    class="cat-head"
+                                    style="fill: var(--cat-head)"
+                                    d="M15.3,45.9h5.1V35.7h-5.1C15.3,35.7,15.3,45.9,15.3,45.9z M45.8,56.1V51H30.6v5.1H45.8z M61.1,35.7H56v10.2h5.1 V35.7z M10.2,61.2v-5.1H5.1V51H0V25.5h5.1V15.3h5.1V5.1h5.1V0h5.1v5.1h5.1v5.1h5.1v5.1c0,0,15.2,0,15.2,0v-5.1h5.1V5.1H56V0h5.1v5.1h5.1v10.2h5.1v10.2h5.1l0,25.5h-5.1v5.1h-5.1v5.1H10.2z"
+                                ></path>
+                            </svg>
+                            <svg
+                                class="emoji-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="24"
+                                viewBox="0 0 20 24"
+                            >
+                                <text
+                                    y="50%"
+                                    x="50%"
+                                    text-anchor="middle"
+                                    dominant-baseline="middle"
+                                >
+                                    🍍
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="body-part">
+                            <svg
+                                viewBox="0 0 91.7 40.8"
+                                shape-rendering="crispEdges"
+                            >
+                                <path
+                                    class="cat-body"
+                                    style="fill: var(--cat-body)"
+                                    d="M91.7,40.8H0V10.2h5.1V5.1h5.1V0h66.2v5.1h10.2v5.1h5.1L91.7,40.8z"
+                                ></path>
+                            </svg>
+                            <div class="tail">
+                                <svg
+                                    viewBox="0 0 25.5 61.1"
+                                    shape-rendering="crispEdges"
+                                >
+                                    <polygon
+                                        class="cat-tail"
+                                        style="fill: var(--cat-tail)"
+                                        points="10.2,56 10.2,50.9 5.1,50.9 5.1,40.7 0,40.7 0,20.4 5.1,20.4 5.1,10.2 10.2,10.2 10.2,5.1 15.3,5.1 15.3,0 25.5,0 25.5,10.2 20.4,10.2 20.4,15.3 15.3,15.3 15.3,20.4 10.2,20.4 10.2,40.7 15.3,40.7 15.3,45.8 20.4,45.8 20.4,50.9 25.5,50.9 25.5,61.1 15.3,61.1 15.3,56"
+                                    ></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="front-legs">
+                            <div class="leg leg-1">
+                                <svg
+                                    viewBox="0 0 14 30.5"
+                                    shape-rendering="crispEdges"
+                                >
+                                    <polygon
+                                        class="cat-legs cat-front-legs cat-leg-1"
+                                        style="fill: var(--cat-leg-1)"
+                                        points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                                    ></polygon>
+                                </svg>
+                            </div>
+                            <div class="leg leg-2">
+                                <svg
+                                    viewBox="0 0 14 30.5"
+                                    shape-rendering="crispEdges"
+                                >
+                                    <polygon
+                                        class="cat-legs cat-front-legs cat-leg-2"
+                                        style="fill: var(--cat-leg-2)"
+                                        points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                                    ></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="back-legs">
+                            <div class="leg leg-3">
+                                <svg
+                                    viewBox="0 0 14 30.5"
+                                    shape-rendering="crispEdges"
+                                >
+                                    <polygon
+                                        class="cat-legs cat-back-legs cat-leg-3"
+                                        style="fill: var(--cat-leg-3)"
+                                        points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                                    ></polygon>
+                                </svg>
+                            </div>
+                            <div class="leg leg-4">
+                                <svg
+                                    viewBox="0 0 14 30.5"
+                                    shape-rendering="crispEdges"
+                                >
+                                    <polygon
+                                        class="cat-legs cat-back-legs cat-leg-4"
+                                        style="fill: var(--cat-leg-4)"
+                                        points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0"
+                                    ></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ground ground-color"></div>
+                </div>
+            </div>
+        </template>
+
+        <script type="module">
+            import Color from "https://colorjs.io/dist/color.js";
+
+            const allCursors = [
+                { name: "mouse", emoji: "🐭" },
+                { name: "rabbit", emoji: "🐇" },
+                { name: "fish", emoji: "🐟" },
+                { name: "blowfish", emoji: "🐡" },
+                { name: "shark", emoji: "🦈" },
+                { name: "octopus", emoji: "🐙" },
+                { name: "steak", emoji: "🥩" },
+                { name: "cheese", emoji: "🧀" },
+                { name: "snake", emoji: "🐍" },
+                { name: "pretzel", emoji: "🥨" },
+                { name: "lobster", emoji: "🦞" },
+                { name: "yarn", emoji: "🧶" },
+                { name: "pineapple", emoji: "🍍" },
+                { name: "banana", emoji: "🍌" },
+                { name: "pear", emoji: "🍐" },
+                { name: "crab", emoji: "🦀" },
+                { name: "shrimp", emoji: "🦐" },
+                { name: "eggplant", emoji: "🍆" },
+                { name: "cucumber", emoji: "🥒" },
+                { name: "popcorn", emoji: "🍿" },
+                { name: "cheese wedge", emoji: "🧀" },
+                { name: "ear of corn", emoji: "🌽" },
+                { name: "tropical fish", emoji: "🐠" },
+                { name: "oyster", emoji: "🦪" },
+                { name: "grapes", emoji: "🍇" },
+                { name: "bacon", emoji: "🥓" },
+                { name: "watermelon", emoji: "🍉" },
+                { name: "squid", emoji: "🦑" },
+                { name: "fish cake", emoji: "🍥" },
+                { name: "peach", emoji: "🍑" },
+                { name: "sushi", emoji: "🍣" },
+                { name: "tangerine", emoji: "🍊" },
+                { name: "mango", emoji: "🥭" },
+                { name: "cut of meat", emoji: "🥩" },
+                { name: "fried shrimp", emoji: "🍤" },
+                { name: "meat on bone", emoji: "🍖" },
+                { name: "milk", emoji: "🥛" },
+                { name: "sausage", emoji: "🌭" },
+                { name: "tuna", emoji: "🐟" },
+                { name: "salmon", emoji: "🐟" },
+                { name: "rubberduck", emoji: "🦆" },
+            ];
+
+            const cursorMap = Object.fromEntries(
+                allCursors.map((c) => [c.name, c.emoji]),
+            );
+
+            export function isValidColor(color) {
+                try {
+                    new Color(color);
+                    return true;
+                } catch {
+                    return false;
+                }
+            }
+
+            function getColor(item, type) {
+                const isValid = isValidColor(item.traits[type]);
+                const patchColor = new Color(item.extractedColors[type])
+                    .to("oklch")
+                    .toString();
+
+                const traitColor = isValid
+                    ? new Color(item.traits[type]).to("oklch").toString()
+                    : patchColor;
+
+                if (isValid) {
+                    return traitColor !== patchColor ? patchColor : traitColor;
+                }
+
+                return patchColor;
+            }
+            function getProperColors(item) {
+                return {
+                    cat: getColor(item, "cat"),
+                    eyes: getColor(item, "eyes"),
+                    background: getColor(item, "background"),
+                };
+            }
+
+            // Generate random OKLCH color with specified lightness
+            function generateOKLCHColor(lightness) {
+                // If no lightness provided, randomize between 30-90%
+                if (lightness === undefined) {
+                    lightness = 50 + Math.random() * 70;
+                }
+
+                let chroma;
+
+                while (chroma === undefined || chroma < 0.1 || chroma > 0.45) {
+                    chroma = Math.random();
+                }
+
+                const hue = Math.floor(Math.random() * 360);
+                const color = `oklch(${lightness}% ${chroma} ${hue})`;
+                return color;
+            }
+
+            // Generate random neko with WCAG21 compliant colors
+            function generateRandomNeko(index) {
+                let bgColor, catColor, eyesColor;
+                let contrast = 0;
+
+                // Keep generating colors until we get WCAG21 AA compliant contrast (4.5:1)
+                let attempts = 0;
+                while (contrast < 4.5 && attempts < 100) {
+                    bgColor = generateOKLCHColor();
+                    catColor = generateOKLCHColor();
+
+                    // Check contrast using colorjs
+                    const bg = new Color(bgColor);
+                    const cat = new Color(catColor);
+                    contrast = bg.contrastWCAG21(cat);
+                    attempts++;
+                }
+
+                // Generate eye color
+                eyesColor = generateOKLCHColor();
+
+                // Random cursor from the list
+                const randomCursor =
+                    allCursors[Math.floor(Math.random() * allCursors.length)];
+
+                return {
+                    sequence: `random-${index}`,
+                    traits: {
+                        background: bgColor,
+                        cat: catColor,
+                        eyes: eyesColor,
+                        cursor: randomCursor.name,
+                        gen: "random",
+                    },
+                    extractedColors: {
+                        background: bgColor,
+                        cat: catColor,
+                        eyes: eyesColor,
+                    },
+                };
+            }
+
+            // Fetch and render nekos
+            async function loadNekos() {
+                try {
+                    // Generate 1000 random nekos
+                    console.log("Generating 1000 random nekos...");
+                    const randomNekos = Array.from({ length: 55 }, (_, i) =>
+                        generateRandomNeko(i + 1),
+                    );
+
+                    const response = await fetch(
+                        "http://localhost:3000/0xnekos.json",
+                    );
+                    const json = await response.json();
+                    const fetchedNekos = json.data.filter(
+                        (neko) =>
+                            neko.traits.gen.toLowerCase().includes("og") ||
+                            neko.traits.gen.toLowerCase().includes("eths"),
+                    );
+
+                    // Prepend random nekos to fetched ones
+                    const nekos = [...randomNekos, ...fetchedNekos];
+
+                    console.log(
+                        `Total: ${nekos.length} nekos (${randomNekos.length} random + ${fetchedNekos.length} fetched)`,
+                    );
+
+                    const grid = document.getElementById("nekos-grid");
+                    const template = document.getElementById("neko-template");
+
+                    nekos.forEach((neko, index) => {
+                        const clone = template.content.cloneNode(true);
+                        const item = clone.querySelector(".neko-item");
+                        const container = clone.querySelector(".container");
+                        container.title = `Sequence #${neko.sequence} / #${index + 1}`;
+
+                        // Set CSS variables for this specific cat
+                        const colors = getProperColors(neko);
+
+                        const ground = new Color(colors.background);
+                        // if (neko.traits.background === "black") {
+                        //     console.log(
+                        //         `Sequence ${neko.sequence} - ${index}`,
+                        //         ground.toString(),
+                        //     );
+                        // }
+                        if (neko.traits.background === "white") {
+                            console.log(
+                                `Sequence ${neko.sequence} - ${index}`,
+                                ground.toString(),
+                            );
+                        }
+
+                        container.style.setProperty(
+                            "--bg-color",
+                            colors.background,
+                        );
+                        container.style.setProperty(
+                            "--ground-color",
+                            ground.darken(0.5).toString(),
+                        );
+                        container.style.setProperty("--cat-eyes", colors.eyes);
+                        container.style.setProperty("--cat-head", colors.cat);
+                        container.style.setProperty("--cat-body", colors.cat);
+                        container.style.setProperty("--cat-tail", colors.cat);
+                        container.style.setProperty("--cat-leg-1", colors.cat);
+                        container.style.setProperty("--cat-leg-2", colors.cat);
+                        container.style.setProperty("--cat-leg-3", colors.cat);
+                        container.style.setProperty("--cat-leg-4", colors.cat);
+
+                        // Set emoji from cursor trait
+                        const emojiText =
+                            clone.querySelector(".emoji-icon text");
+                        const cursorEmoji =
+                            cursorMap[neko.traits.cursor] || "n/a";
+                        if (emojiText) {
+                            emojiText.textContent = cursorEmoji;
+                        }
+
+                        grid.appendChild(clone);
+                    });
+
+                    console.log(`Loaded ${nekos.length} nekos`);
+                } catch (error) {
+                    console.error("Error loading nekos:", error);
+                }
+            }
+
+            // Load nekos on page load
+            loadNekos();
+        </script>
+        <script type="module">
+            // Snapdom is fast and cool, but the colors of the svg fill are not respected
+            import { snapdom } from "https://unpkg.com/@zumer/snapdom/dist/snapdom.mjs";
+            import domToImageMore from "https://esm.sh/dom-to-image-more@3.2.0";
+            const snapshotter = snapdom;
+
+            // Optional: Add click handler for individual cats to download
+            document.addEventListener("click", async (e) => {
+                const container = e.target.closest(".container");
+                if (container) {
+                    try {
+                        const scaledDown = await snapshotter.toPng(container, {
+                            width: 150,
+                            height: 150,
+                            scale: 0.25,
+                        });
+                        const original = await snapshotter.toPng(container, {
+                            width: 150,
+                            height: 150,
+                            scale: 1,
+                        });
+                        const scaledUp = await snapshotter.toPng(container, {
+                            width: 150,
+                            height: 150,
+                            scale: 5,
+                        });
+
+                        console.log("DataURL scaledDown:", scaledDown.src);
+                        console.log("DataURL original:", original.src);
+                        console.log("DataURL scaledUp:", scaledUp.src);
+
+                        // const link = document.createElement("a");
+                        // link.download = "neko-cat.png";
+                        // link.href = res;
+                        // link.click();
+                    } catch (error) {
+                        console.error("Error generating image:", error);
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
